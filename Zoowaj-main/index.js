@@ -8,7 +8,7 @@ import http from "http";
 import { Server } from "socket.io";
 
 // routes imports
-import UserRoutes from "./routes/user-routes.js";
+import UserRoutes from "../routes/user-routes.js";
 
 dotenv.config();
 
