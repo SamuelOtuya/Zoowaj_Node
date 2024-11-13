@@ -1,52 +1,46 @@
-import express from "express";
-import cors from "cors";
-import dotenv from "dotenv";
-import helmet from "helmet";
-import morgan from "morgan";
-import mongoose from "mongoose";
-import http from "http";
-import { Server } from "socket.io";
-
-// routes imports
-import UserRoutes from "../routes/user-routes.js";
-
-dotenv.config();
+import express from 'express';
+import { createServer } from 'http';
+import { Server } from 'socket.io';
 
 const app = express();
+const server = createServer(app);
 
-const server = http.createServer(app);
-const io = new Server(server);
-
-if (process.env.NODE_ENV !== "production") {
-  app.use(morgan("dev"));
-}
-
-app.set("view engine", "ejs");
-
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-app.use(helmet());
-app.use(cors());
-
-app.get("/", (req, res) => {
-  res.send("Welcome");
+const io = new Server(server, {
+  cors: {
+    origin: "http://localhost:5173", // Replace with your frontend URL if different
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
+    credentials: true,
+  },
 });
 
-// routes
-app.use("/api/v1/auth", UserRoutes);
+// Serve static files (like HTML, CSS, JS for the client)
+app.use(express.static('public'));
 
-const PORT = process.env.PORT || 5001;
+// Route for the root URL
+app.get('/', (req, res) => {
+  res.sendFile(new URL('./public/index.html', import.meta.url).pathname);
+});
 
-const startServer = async () => {
-  try {
-    await mongoose.connect(process.env.MONGO_URI);
+// Set up socket.io connection
+io.on('connection', (socket) => {
+  console.log('A user connected');
 
-    server.listen(PORT, () => {
-      console.log(`Server is running on port ${PORT}...`);
-    });
-  } catch (error) {
-    console.log(error);
-  }
-};
+  // Listen for incoming messages
+  socket.on('chat message', (msg) => {
+    console.log('Message received: ' + msg);
+    // Broadcast the message to all clients
+    io.emit('chat message', msg);
+  });
 
-startServer();
+  // Handle user disconnection
+  socket.on('disconnect', () => {
+    console.log('A user disconnected');
+  });
+});
+
+// Start the server
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
