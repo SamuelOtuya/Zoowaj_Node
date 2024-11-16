@@ -1,52 +1,86 @@
-import express from "express";
-import cors from "cors";
-import dotenv from "dotenv";
-import helmet from "helmet";
-import morgan from "morgan";
-import mongoose from "mongoose";
-import http from "http";
-import { Server } from "socket.io";
-
-// routes imports
-import UserRoutes from "../routes/user-routes.js";
-
+import dotenv from 'dotenv';
 dotenv.config();
 
-const app = express();
+import mongoose from 'mongoose';
+import jwt from 'jsonwebtoken';
+import { createServer } from 'http';
+import { Server } from 'socket.io'; 
+ 
+import app from './app.js'; 
+import './models/User.js'; 
+import './models/Chatroom.js';
+import './models/Message.js';
 
-const server = http.createServer(app);
-const io = new Server(server);
+// Connect to MongoDB
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('MongoDB Connected!'))
+  .catch((err) => console.log('Mongoose Connection ERROR: ' + err.message));
 
-if (process.env.NODE_ENV !== "production") {
-  app.use(morgan("dev"));
-}
-
-app.set("view engine", "ejs");
-
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-app.use(helmet());
-app.use(cors());
-
-app.get("/", (req, res) => {
-  res.send("Welcome");
+// Create HTTP server and set up Socket.io
+const server = createServer(app);
+const io = new Server(server, {
+  allowEIO3: true,
+  cors: {
+    origin: true,
+    methods: ['GET', 'POST'],
+    credentials: true
+  }
 });
 
-// routes
-app.use("/api/v1/auth", UserRoutes);
+// Bring in mongoose models for socket events
+import Message from './models/Message.js';
+import User from './models/User.js';
 
-const PORT = process.env.PORT || 5001;
-
-const startServer = async () => {
+// Authenticate socket connection using JWT
+io.use(async (socket, next) => {
   try {
-    await mongoose.connect(process.env.MONGO_URI);
-
-    server.listen(PORT, () => {
-      console.log(`Server is running on port ${PORT}...`);
-    });
-  } catch (error) {
-    console.log(error);
+    const token = socket.handshake.query.token;
+    const payload = await jwt.verify(token, process.env.SECRET);
+    socket.userId = payload.id;
+    next();
+  } catch (err) {
+    console.error('Authentication error:', err);
   }
-};
+});
 
-startServer();
+// Set up socket event listeners
+io.on('connection', (socket) => {
+  console.log('Connected:', socket.userId);
+
+  socket.on('disconnect', () => {
+    console.log('Disconnected:', socket.userId);
+  });
+
+  socket.on('joinRoom', ({ chatroomId }) => {
+    socket.join(chatroomId);
+    console.log('A user joined chatroom:', chatroomId);
+  });
+
+  socket.on('leaveRoom', ({ chatroomId }) => {
+    socket.leave(chatroomId);
+    console.log('A user left chatroom:', chatroomId);
+  });
+
+  socket.on('chatroomMessage', async ({ chatroomId, message }) => {
+    if (message.trim().length > 0) {
+      const user = await User.findOne({ _id: socket.userId });
+      const newMessage = new Message({
+        chatroom: chatroomId,
+        user: socket.userId,
+        message,
+      });
+      io.to(chatroomId).emit('newMessage', {
+        message,
+        name: user.name,
+        userId: socket.userId,
+      });
+      await newMessage.save();
+    }
+  });
+});
+
+// Start the server
+const PORT = process.env.PORT || 8000;
+server.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
+});

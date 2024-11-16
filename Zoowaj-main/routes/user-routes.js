@@ -1,6 +1,6 @@
 import express from "express";
-import registerUser from "../conrollers/register-ctrl.js";
-import postExtraData from "../conrollers/extradata-ctrl.js";
+import registerUser from "../controllers/register-ctrl.js";
+import postExtraData from "../controllers/extradata-ctrl.js";
 
 const router = express.Router();
 
