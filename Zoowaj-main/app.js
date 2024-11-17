@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import userRoutes from "./routes/user.js";
+import userRoutes from "./routes/user-routes.js";
 import chatroomRoutes from "./routes/chatroom.js";
 import { notFound, mongoseErrors, developmentErrors, productionErrors } from "./handlers/errorHandlers.js";
 
@@ -14,7 +14,6 @@ app.use(cors());
 
 // Bring in the routes
 app.use("/user", userRoutes);
-app.use("/chatroom", chatroomRoutes);
 
 // Setup Error Handlers
 app.use(notFound);
