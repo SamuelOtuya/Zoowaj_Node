@@ -50,32 +50,21 @@ io.on('connection', (socket) => {
     console.log('Disconnected:', socket.userId);
   });
 
-  // socket.on('joinRoom', ({ chatroomId }) => {
-  //   socket.join(chatroomId);
-  //   console.log('A user joined chatroom:', chatroomId);
-  // });
+  socket.on("sendMessage", async ({ user, recepient, message }) => {
+    try {
+      // Save the message to MongoDB
+      const newMessage = await Message.create({ user, recepient, message });
 
-  // socket.on('leaveRoom', ({ chatroomId }) => {
-  //   socket.leave(chatroomId);
-  //   console.log('A user left chatroom:', chatroomId);
-  // });
+      // Emit the message to the recepient in real time
+      io.to(recepient).emit("receiveMessage", newMessage);
+    } catch (error) {
+      console.error("Error saving message:", error);
+    }
+  });
 
-  // socket.on('chatroomMessage', async ({ chatroomId, message }) => {
-  //   if (message.trim().length > 0) {
-  //     const user = await User.findOne({ _id: socket.userId });
-  //     const newMessage = new Message({
-  //       chatroom: chatroomId,
-  //       user: socket.userId,
-  //       message,
-  //     });
-  //     io.to(chatroomId).emit('newMessage', {
-  //       message,
-  //       name: user.name,
-  //       userId: socket.userId,
-  //     });
-  //     await newMessage.save();
-  //   }
-  // });
+  socket.on("disconnect", () => {
+    console.log("A user disconnected:", socket.id);
+  });
 });
 
 // Start the server

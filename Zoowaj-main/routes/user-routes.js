@@ -1,7 +1,6 @@
 import express from "express";
-import registerUser from "../controllers/register-ctrl.js";
+import { registerUser , loginUser} from "../controllers/user-ctrl.js";
 import postExtraData from "../controllers/profiledetails-ctrl.js";
-import loginUser from "../controllers/login-ctrl.js";
 
 const router = express.Router();
 

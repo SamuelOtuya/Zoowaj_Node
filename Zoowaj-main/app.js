@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import userRoutes from "./routes/user-routes.js";
+import messageRoutes from "./routes/message-routes.js";
 import { notFound, mongoseErrors, developmentErrors, productionErrors } from "./handlers/errorHandlers.js";
 
 const app = express();
@@ -13,6 +14,7 @@ app.use(cors());
 
 // Bring in the routes
 app.use("/user", userRoutes);
+app.use("/message", messageRoutes);
 
 // Setup Error Handlers
 app.use(notFound);
