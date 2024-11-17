@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import userRoutes from "./routes/user-routes.js";
-import chatroomRoutes from "./routes/chatroom.js";
 import { notFound, mongoseErrors, developmentErrors, productionErrors } from "./handlers/errorHandlers.js";
 
 const app = express();

@@ -6,7 +6,7 @@ import loginUser from "../controllers/login-ctrl.js";
 const router = express.Router();
 
 router.route("/register").post(registerUser);
-router.route("/login").posy(loginUser);
+router.route("/login").post(loginUser);
 router.route("/extra-data").post(postExtraData);
 
 export default router;

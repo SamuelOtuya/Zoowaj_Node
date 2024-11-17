@@ -20,7 +20,7 @@ const loginUser = async (req, res) => {
         .json({ msg: "Invalid email or password" });
     }
 
-    // Verify the provided password
+    // Verify the provided password using bcrypt
     const isPasswordValid = await user.comparePassword(password);
     if (!isPasswordValid) {
       return res
@@ -32,9 +32,9 @@ const loginUser = async (req, res) => {
     const token = user.createJWT();
 
     // Exclude sensitive fields (like password) from the response
-    user.password = undefined;
+    const { password: _, ...userWithoutPassword } = user.toObject();
 
-    return res.status(StatusCodes.OK).json({ user, token });
+    return res.status(StatusCodes.OK).json({ user: userWithoutPassword, token });
   } catch (error) {
     console.error(error);
     res
