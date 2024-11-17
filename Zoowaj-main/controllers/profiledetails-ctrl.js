@@ -1,5 +1,5 @@
 import { StatusCodes } from "http-status-codes";
-import ExtraData from "../models/ExtraData.js";
+import ExtraData from "../models/ProfileDetails.js";
 
 const postExtraData = async (req, res) => {
   try {
