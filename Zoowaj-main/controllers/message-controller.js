@@ -4,20 +4,22 @@ import Message from "../models/Message.js";
 // Create a new message
 export const createMessage = async (req, res) => {
   try {
-    const { user, recepient, message } = req.body;
+    const { sender, recepient, message, encryptedKey } = req.body;
 
     // Validate required fields
-    if (!user || !recepient || !message) {
+    if (!sender || !recepient || !message) {
       return res
         .status(StatusCodes.BAD_REQUEST)
-        .json({ msg: "User, recepient, and message are required." });
+        .json({ msg: "Sender, recepient, encrypted message, and IV are required." });
     }
 
-    // Create and save the message
+    // Create and save the encrypted message
     const newMessage = await Message.create({
-      user,
+      sender,
       recepient,
-      message,
+      message, // Encrypted message content
+      encryptedKey, // Optional: Encrypted AES key
+      // iv, // Initialization vector
     });
 
     return res.status(StatusCodes.CREATED).json({ message: newMessage });
@@ -32,23 +34,23 @@ export const createMessage = async (req, res) => {
 // Get messages between two users
 export const getMessages = async (req, res) => {
   try {
-    const { userId, recepientId } = req.params;
+    const { senderId, recepientId } = req.params;
 
     // Validate required parameters
-    if (!userId || !recepientId) {
+    if (!senderId || !recepientId) {
       return res
         .status(StatusCodes.BAD_REQUEST)
-        .json({ msg: "Both userId and recepientId are required." });
+        .json({ msg: "Both senderId and recepientId are required." });
     }
 
-    // Fetch messages between the two users
+    // Fetch encrypted messages between the two users
     const messages = await Message.find({
       $or: [
-        { user: userId, recepient: recepientId },
-        { user: recepientId, recepient: userId },
+        { sender: senderId, recepient: recepientId },
+        { sender: recepientId, recepient: senderId },
       ],
     })
-      .populate("user", "username email") // Populate sender details
+      .populate("sender", "username email") // Populate sender details
       .populate("recepient", "username email") // Populate recipient details
       .sort({ createdAt: 1 }); // Sort by oldest to newest
 

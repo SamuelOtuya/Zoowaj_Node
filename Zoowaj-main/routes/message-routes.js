@@ -3,13 +3,13 @@ import { createMessage, getMessages, deleteMessage } from "../controllers/messag
 
 const router = express.Router();
 
-// Create a message
+// Create a message (encrypted content is sent from the client)
 router.post("/", createMessage);
 
-// Get messages between two users
-router.get("/:userId/:recepientId", getMessages);
+// Get messages between two users (returns encrypted content)
+router.get("/:senderId/:recepientId", getMessages);
 
-// Delete a message
+// Delete a message (delete by ID)
 router.delete("/:messageId", deleteMessage);
 
 export default router;
