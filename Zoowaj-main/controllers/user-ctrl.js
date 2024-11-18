@@ -46,10 +46,10 @@ export const loginUser = async (req, res) => {
 
 export const registerUser = async (req, res) => {
   try {
-    const { first_name, last_name, username, email, password, phone_number } = req.body;
+    const { email, password } = req.body;
 
     // Validate all required fields
-    if (!first_name || !last_name || !username || !email || !password || !phone_number) {
+    if (!email || !password) {
       return res
         .status(StatusCodes.BAD_REQUEST)
         .json({ msg: "Please fill in all fields to continue" });
@@ -69,12 +69,8 @@ export const registerUser = async (req, res) => {
 
     // Create the user with the hashed password
     const newUser = await User.create({
-      first_name,
-      last_name,
-      username,
       email,
       password: hashedPassword, // Save the hashed password
-      phone_number,
     });
 
     // Generate a JWT token
