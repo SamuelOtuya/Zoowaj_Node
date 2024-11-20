@@ -1,0 +1,503 @@
+2024-11-19T19:57:13.300Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T19:57:16.506Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T20:12:05.631Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T20:12:10.029Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T20:20:09.831Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T20:20:13.138Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T20:20:51.120Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T20:20:53.560Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T20:22:35.859Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T20:22:38.931Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T20:24:19.319Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T20:24:21.935Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T20:24:24.483Z [my-app] [32minfo[39m: retrieved 6 users
+2024-11-19T20:24:58.514Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T20:25:00.950Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T20:25:03.322Z [my-app] [32minfo[39m: retrieved 6 users
+2024-11-19T20:25:34.627Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T20:25:37.202Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T20:25:39.966Z [my-app] [32minfo[39m: retrieved 6 users
+2024-11-19T20:27:16.652Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T20:27:20.936Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T20:30:07.100Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T20:30:10.508Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T20:32:29.928Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T20:32:32.751Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T20:33:04.067Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T20:33:06.521Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T20:33:44.598Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T20:33:47.385Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T20:43:09.116Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T20:43:19.456Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T20:44:46.025Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T20:44:48.602Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T20:47:57.079Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T20:48:00.425Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T20:49:28.865Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T20:49:32.185Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T20:55:16.588Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T20:55:19.754Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T20:55:43.517Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T20:55:46.181Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T20:57:10.582Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T20:57:14.105Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T21:00:30.332Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T21:00:46.121Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T21:03:03.883Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T21:03:08.466Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T21:03:14.227Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-19T21:03:14.227Z
+2024-11-19T21:05:22.753Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T21:05:39.411Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T21:05:42.012Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-19T21:05:42.012Z
+2024-11-19T21:08:08.788Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T21:08:11.382Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T21:08:13.750Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-19T21:08:13.750Z
+2024-11-19T21:09:44.315Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T21:09:52.041Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T21:09:56.959Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-19T21:09:56.959Z
+2024-11-19T21:09:58.823Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-19T21:09:58.823Z
+2024-11-19T21:11:04.541Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-19T21:11:04.541Z
+2024-11-19T21:11:05.848Z [my-app] [31merror[39m: Error during login: Illegal arguments: string, undefined
+2024-11-19T21:13:25.492Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T21:13:28.310Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-19T21:13:31.452Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-19T21:13:31.452Z
+2024-11-19T21:13:31.708Z [my-app] [34mdebug[39m: user Retrieved {
+  _id: new ObjectId('673cf3407b33f55a9d51b95b'),
+  email: 'ttyy24@gmail.com',
+  createdAt: 2024-11-19T20:21:20.088Z,
+  updatedAt: 2024-11-19T20:21:20.088Z,
+  __v: 0
+}
+2024-11-19T21:13:31.710Z [my-app] [31merror[39m: Error during login: Illegal arguments: string, undefined
+2024-11-19T21:21:36.313Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-19T21:21:39.398Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T07:51:14.952Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T07:51:18.282Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T07:51:22.961Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T07:51:22.961Z
+2024-11-20T07:51:23.335Z [my-app] [34mdebug[39m: user Retrieved {
+  _id: new ObjectId('673cf3407b33f55a9d51b95b'),
+  email: 'ttyy24@gmail.com',
+  createdAt: 2024-11-19T20:21:20.088Z,
+  updatedAt: 2024-11-19T20:21:20.088Z,
+  __v: 0
+}
+2024-11-20T07:51:23.625Z [my-app] [31merror[39m: Error during login: Illegal arguments: undefined, string
+2024-11-20T07:54:02.174Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T07:54:05.813Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T07:54:09.711Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T07:54:09.711Z
+2024-11-20T07:54:09.965Z [my-app] [34mdebug[39m: user Retrieved {
+  _id: new ObjectId('673cf3407b33f55a9d51b95b'),
+  email: 'ttyy24@gmail.com',
+  createdAt: 2024-11-19T20:21:20.088Z,
+  updatedAt: 2024-11-19T20:21:20.088Z,
+  __v: 0
+}
+2024-11-20T07:54:10.225Z [my-app] [31merror[39m: Error during login: Illegal arguments: undefined, string
+2024-11-20T07:59:53.606Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T07:59:56.355Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T08:00:01.359Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T08:00:01.358Z
+2024-11-20T08:00:02.484Z [my-app] [31merror[39m: Error creating user: token is not defined
+2024-11-20T08:03:20.795Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T08:03:23.594Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T08:03:27.745Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T08:03:27.745Z
+2024-11-20T08:03:34.481Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T08:03:34.480Z
+2024-11-20T08:03:51.122Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T08:03:51.122Z
+2024-11-20T08:03:51.355Z [my-app] [34mdebug[39m: user Retrieved {
+  _id: new ObjectId('673d97d784ac0b863bf9e8f0'),
+  email: 'sam2@gmail.com',
+  createdAt: 2024-11-20T08:03:35.047Z,
+  updatedAt: 2024-11-20T08:03:35.047Z,
+  __v: 0
+}
+2024-11-20T08:03:51.659Z [my-app] [31merror[39m: Error during login: logger is not defined
+2024-11-20T08:04:29.259Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T08:04:32.103Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T08:04:35.518Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T08:04:35.518Z
+2024-11-20T08:04:35.825Z [my-app] [34mdebug[39m: user Retrieved {
+  _id: new ObjectId('673d97d784ac0b863bf9e8f0'),
+  email: 'sam2@gmail.com',
+  createdAt: 2024-11-20T08:03:35.047Z,
+  updatedAt: 2024-11-20T08:03:35.047Z,
+  __v: 0
+}
+2024-11-20T08:04:36.034Z [my-app] [34mdebug[39m: Saved Password undefined
+2024-11-20T08:04:36.053Z [my-app] [31merror[39m: Error during login: Illegal arguments: undefined, string
+2024-11-20T08:10:25.947Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T08:10:55.290Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T08:11:00.133Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T08:11:04.277Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T08:11:04.277Z
+2024-11-20T08:11:04.572Z [my-app] [34mdebug[39m: user Retrieved {
+  _id: new ObjectId('673d97d784ac0b863bf9e8f0'),
+  email: 'sam2@gmail.com',
+  createdAt: 2024-11-20T08:03:35.047Z,
+  updatedAt: 2024-11-20T08:03:35.047Z,
+  __v: 0
+}
+2024-11-20T08:11:05.146Z [my-app] [34mdebug[39m: Saved Password $2a$10$6FAPwF52ZLgWBv.A8uVpz.GfCAvRSuOBNMx2k9eBaohz7kJ9aq4Ly
+2024-11-20T08:11:05.151Z [my-app] [34mdebug[39m: User Validated
+2024-11-20T08:11:05.155Z [my-app] [31merror[39m: Error during login: Cannot read properties of null (reading '_id')
+2024-11-20T08:13:43.055Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T08:13:46.852Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T08:13:50.355Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T08:13:50.355Z
+2024-11-20T08:13:50.608Z [my-app] [34mdebug[39m: user Retrieved {
+  _id: new ObjectId('673d97d784ac0b863bf9e8f0'),
+  email: 'sam2@gmail.com',
+  createdAt: 2024-11-20T08:03:35.047Z,
+  updatedAt: 2024-11-20T08:03:35.047Z,
+  __v: 0
+}
+2024-11-20T08:13:51.057Z [my-app] [34mdebug[39m: Saved Password $2a$10$6FAPwF52ZLgWBv.A8uVpz.GfCAvRSuOBNMx2k9eBaohz7kJ9aq4Ly
+2024-11-20T08:13:51.062Z [my-app] [34mdebug[39m: User Validated
+2024-11-20T08:13:51.065Z [my-app] [31merror[39m: Error during login: Cannot read properties of null (reading 'id')
+2024-11-20T08:15:00.222Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T08:15:03.051Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T08:15:05.645Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T08:15:05.645Z
+2024-11-20T08:15:05.934Z [my-app] [34mdebug[39m: user Retrieved {
+  _id: new ObjectId('673d97d784ac0b863bf9e8f0'),
+  email: 'sam2@gmail.com',
+  createdAt: 2024-11-20T08:03:35.047Z,
+  updatedAt: 2024-11-20T08:03:35.047Z,
+  __v: 0
+}
+2024-11-20T08:15:06.525Z [my-app] [34mdebug[39m: Saved Password $2a$10$6FAPwF52ZLgWBv.A8uVpz.GfCAvRSuOBNMx2k9eBaohz7kJ9aq4Ly
+2024-11-20T08:15:06.529Z [my-app] [34mdebug[39m: User Validated
+2024-11-20T08:15:06.532Z [my-app] [31merror[39m: Error during login: Cannot read properties of null (reading '_id')
+2024-11-20T08:22:46.243Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T08:22:49.202Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T08:22:53.491Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T08:22:53.491Z
+2024-11-20T08:22:53.785Z [my-app] [34mdebug[39m: user Retrieved {
+  _id: new ObjectId('673d97d784ac0b863bf9e8f0'),
+  email: 'sam2@gmail.com',
+  createdAt: 2024-11-20T08:03:35.047Z,
+  updatedAt: 2024-11-20T08:03:35.047Z,
+  __v: 0
+}
+2024-11-20T08:22:54.366Z [my-app] [34mdebug[39m: User Validated
+2024-11-20T08:22:54.374Z [my-app] [31merror[39m: Error during login: Cannot read properties of null (reading 'toObject')
+2024-11-20T08:29:06.943Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T08:29:12.809Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T08:29:17.947Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T08:29:17.947Z
+2024-11-20T08:29:18.251Z [my-app] [34mdebug[39m: user Retrieved
+2024-11-20T08:29:18.748Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T08:30:03.913Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T08:30:06.287Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T08:30:13.655Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T08:30:13.655Z
+2024-11-20T08:30:13.957Z [my-app] [34mdebug[39m: user Retrieved
+2024-11-20T08:30:14.551Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T08:33:03.880Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T08:33:11.817Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T08:33:30.934Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T08:33:33.546Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T08:33:35.840Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T08:33:35.840Z
+2024-11-20T08:33:36.099Z [my-app] [34mdebug[39m: user Retrieved
+2024-11-20T08:33:36.697Z [my-app] [34mdebug[39m: userPassword: $2a$10$6FAPwF52ZLgWBv.A8uVpz.GfCAvRSuOBNMx2k9eBaohz7kJ9aq4Ly
+2024-11-20T08:33:36.701Z [my-app] [34mdebug[39m: isPassword Valid false
+2024-11-20T08:33:36.733Z [my-app] [31merror[39m: Error during login: Password Invalid
+2024-11-20T08:37:02.337Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T08:37:02.337Z
+2024-11-20T08:37:02.542Z [my-app] [31merror[39m: Error retrieving user: read ECONNRESET
+2024-11-20T08:37:13.638Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T08:37:16.145Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T08:37:19.277Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T08:37:19.277Z
+2024-11-20T08:43:01.383Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T08:43:01.383Z
+2024-11-20T08:43:03.590Z [my-app] [34mdebug[39m: user Retrieved
+2024-11-20T08:43:04.081Z [my-app] [34mdebug[39m: userPassword: $2a$10$kPzeh7WZKsGzP8osYVqgFeKdKrYZWZGECmwITCiDH7i9m1tnIishK
+2024-11-20T08:43:04.093Z [my-app] [34mdebug[39m: isPassword Valid false
+2024-11-20T08:43:04.119Z [my-app] [31merror[39m: Error during login: Password Invalid
+2024-11-20T08:43:14.055Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T08:43:16.719Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T08:43:19.136Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T08:43:19.136Z
+2024-11-20T08:43:19.409Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673d9fbfd725c99f34ae3958","email":"sam3@gmail.com","createdAt":"2024-11-20T08:37:19.638Z","updatedAt":"2024-11-20T08:37:19.638Z","__v":0}
+2024-11-20T08:43:19.991Z [my-app] [34mdebug[39m: userPassword: $2a$10$kPzeh7WZKsGzP8osYVqgFeKdKrYZWZGECmwITCiDH7i9m1tnIishK
+2024-11-20T08:43:19.994Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T08:47:21.687Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T08:47:29.659Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T08:47:33.369Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T08:47:33.369Z
+2024-11-20T08:47:33.608Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673d9fbfd725c99f34ae3958","email":"sam3@gmail.com","createdAt":"2024-11-20T08:37:19.638Z","updatedAt":"2024-11-20T08:37:19.638Z","__v":0}
+2024-11-20T08:47:34.159Z [my-app] [34mdebug[39m: userPassword: $2a$10$kPzeh7WZKsGzP8osYVqgFeKdKrYZWZGECmwITCiDH7i9m1tnIishK
+2024-11-20T08:47:34.318Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T08:49:36.440Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T08:49:46.062Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T08:50:04.366Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T08:50:04.366Z
+2024-11-20T08:50:14.411Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T08:50:14.411Z
+2024-11-20T08:50:14.733Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673da2bceff7715fc2316276","email":"sam4@gmail.com","createdAt":"2024-11-20T08:50:04.717Z","updatedAt":"2024-11-20T08:50:04.717Z","__v":0}
+2024-11-20T08:50:15.345Z [my-app] [34mdebug[39m: userPassword: $2a$10$eII8ue/D4L9gEg2oFkgexuPf8unlCMWRPE/5Jgt.JymqYmjn1DqZW
+2024-11-20T08:50:15.556Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T08:51:00.688Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T08:51:08.286Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T08:53:14.654Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T08:53:14.654Z
+2024-11-20T08:53:15.611Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673da2bceff7715fc2316276","email":"sam4@gmail.com","createdAt":"2024-11-20T08:50:04.717Z","updatedAt":"2024-11-20T08:50:04.717Z","__v":0}
+2024-11-20T08:53:16.185Z [my-app] [34mdebug[39m: userPassword: $2a$10$eII8ue/D4L9gEg2oFkgexuPf8unlCMWRPE/5Jgt.JymqYmjn1DqZW
+2024-11-20T08:53:16.334Z [my-app] [34mdebug[39m: ispassowrd Valid: false
+2024-11-20T08:53:16.335Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T08:53:17.342Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T08:53:17.342Z
+2024-11-20T08:53:17.589Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673da2bceff7715fc2316276","email":"sam4@gmail.com","createdAt":"2024-11-20T08:50:04.717Z","updatedAt":"2024-11-20T08:50:04.717Z","__v":0}
+2024-11-20T08:53:18.128Z [my-app] [34mdebug[39m: userPassword: $2a$10$eII8ue/D4L9gEg2oFkgexuPf8unlCMWRPE/5Jgt.JymqYmjn1DqZW
+2024-11-20T08:53:18.323Z [my-app] [34mdebug[39m: ispassowrd Valid: false
+2024-11-20T08:53:18.324Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T08:57:21.057Z [my-app] [32minfo[39m: Method: GET, URL: /api/v1/user/all, Timestamp: 2024-11-20T08:57:21.057Z
+2024-11-20T08:57:21.277Z [my-app] [32minfo[39m: retrieved 10 users
+2024-11-20T08:57:49.229Z [my-app] [32minfo[39m: Method: GET, URL: /api/v1/user/all, Timestamp: 2024-11-20T08:57:49.229Z
+2024-11-20T08:57:49.511Z [my-app] [32minfo[39m: retrieved 10 users
+2024-11-20T09:07:31.590Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T09:07:40.325Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T09:11:04.245Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T09:11:04.245Z
+2024-11-20T09:11:04.577Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673da2bceff7715fc2316276","email":"sam4@gmail.com","createdAt":"2024-11-20T08:50:04.717Z","updatedAt":"2024-11-20T08:50:04.717Z","__v":0}
+2024-11-20T09:11:05.060Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T09:20:10.272Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T09:20:10.272Z
+2024-11-20T09:20:10.512Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673da2bceff7715fc2316276","email":"sam4@gmail.com","createdAt":"2024-11-20T08:50:04.717Z","updatedAt":"2024-11-20T08:50:04.717Z","__v":0}
+2024-11-20T09:20:11.013Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T09:20:45.824Z [my-app] [32minfo[39m: Method: GET, URL: /api/v1/user/all, Timestamp: 2024-11-20T09:20:45.824Z
+2024-11-20T09:20:46.039Z [my-app] [32minfo[39m: retrieved 10 users
+2024-11-20T09:21:13.538Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T09:21:13.538Z
+2024-11-20T09:22:01.840Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T09:22:01.840Z
+2024-11-20T09:22:02.117Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673daa0ae653e6ef5717e052","email":"sam5@gmail.com","createdAt":"2024-11-20T09:21:14.017Z","updatedAt":"2024-11-20T09:21:14.017Z","__v":0}
+2024-11-20T09:22:02.472Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T09:25:56.868Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T09:26:00.128Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T09:26:10.165Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T09:26:10.165Z
+2024-11-20T09:26:21.179Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T09:26:21.179Z
+2024-11-20T09:26:21.418Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673daa0ae653e6ef5717e052","email":"sam5@gmail.com","createdAt":"2024-11-20T09:21:14.017Z","updatedAt":"2024-11-20T09:21:14.017Z","__v":0}
+2024-11-20T09:26:21.887Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T09:27:13.236Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T09:27:15.880Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T09:27:18.615Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T09:27:18.615Z
+2024-11-20T09:27:18.962Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673daa0ae653e6ef5717e052","email":"sam5@gmail.com","createdAt":"2024-11-20T09:21:14.017Z","updatedAt":"2024-11-20T09:21:14.017Z","__v":0}
+2024-11-20T09:27:19.441Z [my-app] [34mdebug[39m: false
+2024-11-20T09:27:19.443Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T09:36:34.058Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T09:36:36.913Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T09:36:42.980Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T09:36:42.980Z
+2024-11-20T09:36:43.213Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673daa0ae653e6ef5717e052","email":"sam5@gmail.com","createdAt":"2024-11-20T09:21:14.017Z","updatedAt":"2024-11-20T09:21:14.017Z","__v":0}
+2024-11-20T09:36:43.631Z [my-app] [34mdebug[39m: false
+2024-11-20T09:36:43.632Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T09:42:24.592Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T09:42:27.455Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T09:42:31.297Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T09:42:31.297Z
+2024-11-20T09:42:31.570Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673daa0ae653e6ef5717e052","email":"sam5@gmail.com","createdAt":"2024-11-20T09:21:14.017Z","updatedAt":"2024-11-20T09:21:14.017Z","__v":0}
+2024-11-20T09:42:32.011Z [my-app] [34mdebug[39m: Password validation result for user sam5@gmail.com: false
+2024-11-20T09:42:32.012Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T09:49:24.244Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T09:49:27.210Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T09:49:30.496Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T09:49:30.496Z
+2024-11-20T09:49:30.806Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673daa0ae653e6ef5717e052","email":"sam5@gmail.com","createdAt":"2024-11-20T09:21:14.017Z","updatedAt":"2024-11-20T09:21:14.017Z","__v":0}
+2024-11-20T09:49:31.318Z [my-app] [34mdebug[39m: Password validation result for user sam5@gmail.com: false
+2024-11-20T09:49:31.319Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T09:52:38.399Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T09:52:41.256Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T09:52:45.609Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T09:52:45.609Z
+2024-11-20T09:52:46.064Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673daa0ae653e6ef5717e052","email":"sam5@gmail.com","createdAt":"2024-11-20T09:21:14.017Z","updatedAt":"2024-11-20T09:21:14.017Z","__v":0}
+2024-11-20T09:52:46.508Z [my-app] [34mdebug[39m: Password validation result for user sam5@gmail.com: false
+2024-11-20T09:52:46.509Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T09:55:40.707Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T09:55:43.537Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T09:55:46.677Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T09:55:46.677Z
+2024-11-20T09:55:46.922Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673daa0ae653e6ef5717e052","email":"sam5@gmail.com","createdAt":"2024-11-20T09:21:14.017Z","updatedAt":"2024-11-20T09:21:14.017Z","__v":0}
+2024-11-20T09:55:47.426Z [my-app] [34mdebug[39m: Password validation result for user sam5@gmail.com: false
+2024-11-20T09:55:47.427Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T10:00:32.050Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T10:00:36.283Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T10:00:48.139Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T10:00:48.139Z
+2024-11-20T10:00:48.502Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673daa0ae653e6ef5717e052","email":"sam5@gmail.com","createdAt":"2024-11-20T09:21:14.017Z","updatedAt":"2024-11-20T09:21:14.017Z","__v":0}
+2024-11-20T10:00:48.982Z [my-app] [34mdebug[39m: Password validation result for user sam5@gmail.com: false
+2024-11-20T10:00:48.983Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T10:01:50.366Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T10:01:50.366Z
+2024-11-20T10:01:57.581Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T10:01:57.581Z
+2024-11-20T10:01:57.896Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673daa0ae653e6ef5717e052","email":"sam5@gmail.com","createdAt":"2024-11-20T09:21:14.017Z","updatedAt":"2024-11-20T09:21:14.017Z","__v":0}
+2024-11-20T10:01:58.353Z [my-app] [34mdebug[39m: Password validation result for user sam5@gmail.com: false
+2024-11-20T10:01:58.354Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T10:33:12.169Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T10:33:16.377Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T10:33:25.206Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T10:33:25.206Z
+2024-11-20T10:33:25.490Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673daa0ae653e6ef5717e052","email":"sam5@gmail.com","createdAt":"2024-11-20T09:21:14.017Z","updatedAt":"2024-11-20T09:21:14.017Z","__v":0}
+2024-11-20T10:33:25.920Z [my-app] [34mdebug[39m: Password validation result for user sam5@gmail.com: false
+2024-11-20T10:33:25.921Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T10:34:35.088Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T10:34:56.915Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T10:35:09.616Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T10:35:57.704Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T10:35:57.704Z
+2024-11-20T10:35:58.067Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673daa0ae653e6ef5717e052","email":"sam5@gmail.com","createdAt":"2024-11-20T09:21:14.017Z","updatedAt":"2024-11-20T09:21:14.017Z","__v":0}
+2024-11-20T10:35:58.337Z [my-app] [34mdebug[39m: user passsword from db: $2a$10$uUAUFHIoVr0YFXQDKC2jH.WWrdQbeBjEYZBZI3/kOl5laO6rjiXIe
+2024-11-20T10:35:58.544Z [my-app] [34mdebug[39m: Password validation result for user sam5@gmail.com: false
+2024-11-20T10:35:58.545Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T11:43:15.927Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T11:43:15.934Z [my-app] [32minfo[39m: Mongoose Connection ERROR: querySrv ESERVFAIL _mongodb._tcp.cluster0.m9xuowd.mongodb.net
+2024-11-20T11:43:21.119Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T11:43:21.119Z
+2024-11-20T11:43:31.163Z [my-app] [31merror[39m: Error retrieving user: Operation `users.findOne()` buffering timed out after 10000ms
+2024-11-20T11:43:31.171Z [my-app] [31merror[39m: Error during login: Error retrieving user
+2024-11-20T11:48:19.744Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T11:48:23.648Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T11:48:53.065Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T11:48:53.065Z
+2024-11-20T11:48:53.355Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673daa0ae653e6ef5717e052","email":"sam5@gmail.com","createdAt":"2024-11-20T09:21:14.017Z","updatedAt":"2024-11-20T09:21:14.017Z","__v":0}
+2024-11-20T11:48:53.643Z [my-app] [34mdebug[39m: Comparing passwords: Input Password - 123456win, Stored Hash - $2a$10$uUAUFHIoVr0YFXQDKC2jH.WWrdQbeBjEYZBZI3/kOl5laO6rjiXIe
+2024-11-20T11:48:53.861Z [my-app] [34mdebug[39m: Password validation result for user sam5@gmail.com: false
+2024-11-20T11:48:53.862Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T11:53:00.172Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T11:53:15.505Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T11:53:24.807Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T11:53:24.807Z
+2024-11-20T11:53:25.130Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673daa0ae653e6ef5717e052","email":"sam5@gmail.com","createdAt":"2024-11-20T09:21:14.017Z","updatedAt":"2024-11-20T09:21:14.017Z","__v":0}
+2024-11-20T11:53:25.426Z [my-app] [34mdebug[39m: Comparing passwords: Input Password - 123456win, Stored Hash - $2a$10$uUAUFHIoVr0YFXQDKC2jH.WWrdQbeBjEYZBZI3/kOl5laO6rjiXIe
+2024-11-20T11:53:25.624Z [my-app] [34mdebug[39m: Password validation result for user sam5@gmail.com: false
+2024-11-20T11:53:25.625Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T12:02:23.431Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T12:02:27.905Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T12:02:30.894Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T12:02:30.894Z
+2024-11-20T12:02:31.141Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673daa0ae653e6ef5717e052","email":"sam5@gmail.com","createdAt":"2024-11-20T09:21:14.017Z","updatedAt":"2024-11-20T09:21:14.017Z","__v":0}
+2024-11-20T12:02:31.445Z [my-app] [34mdebug[39m: Comparing passwords: Input Password - 123456win, Stored Hash - $2a$10$uUAUFHIoVr0YFXQDKC2jH.WWrdQbeBjEYZBZI3/kOl5laO6rjiXIe
+2024-11-20T12:02:31.965Z [my-app] [34mdebug[39m: Password validation result for user sam5@gmail.com: false
+2024-11-20T12:02:31.966Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T12:16:22.390Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T12:16:26.849Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T12:17:09.084Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T12:17:11.987Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T12:17:15.498Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T12:17:15.498Z
+2024-11-20T12:17:15.773Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673daa0ae653e6ef5717e052","email":"sam5@gmail.com","createdAt":"2024-11-20T09:21:14.017Z","updatedAt":"2024-11-20T09:21:14.017Z","__v":0}
+2024-11-20T12:17:16.084Z [my-app] [34mdebug[39m: Comparing passwords: Input Password - 123456win, Stored Hash - $2a$10$uUAUFHIoVr0YFXQDKC2jH.WWrdQbeBjEYZBZI3/kOl5laO6rjiXIe
+2024-11-20T12:17:16.505Z [my-app] [34mdebug[39m: Password validation result for user sam5@gmail.com: false
+2024-11-20T12:17:16.506Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T12:17:52.678Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T12:17:57.965Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T12:18:01.642Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T12:18:01.642Z
+2024-11-20T12:18:15.737Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T12:18:15.737Z
+2024-11-20T12:18:15.951Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673dd37aef3fb96a122d163a","email":"sam7@gmail.com","createdAt":"2024-11-20T12:18:02.100Z","updatedAt":"2024-11-20T12:18:02.100Z","__v":0}
+2024-11-20T12:18:16.184Z [my-app] [34mdebug[39m: Comparing passwords: Input Password - 123456win, Stored Hash - $2b$10$wJ5KUoZ3gcU9gp218P9RSuXqhEQI.k9BcamE/QQmFlgjS2wa3dkBq
+2024-11-20T12:18:16.642Z [my-app] [34mdebug[39m: Password validation result for user sam7@gmail.com: false
+2024-11-20T12:18:16.643Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T12:20:10.942Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T12:20:16.336Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T12:20:22.211Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T12:20:22.211Z
+2024-11-20T12:20:22.447Z [my-app] [34mdebug[39m: User retrieved: {"_id":"673dd37aef3fb96a122d163a","email":"sam7@gmail.com","createdAt":"2024-11-20T12:18:02.100Z","updatedAt":"2024-11-20T12:18:02.100Z","__v":0}
+2024-11-20T12:20:22.661Z [my-app] [34mdebug[39m: Comparing passwords: Input Password - 123456win, Stored Hash - $2b$10$wJ5KUoZ3gcU9gp218P9RSuXqhEQI.k9BcamE/QQmFlgjS2wa3dkBq
+2024-11-20T12:20:22.666Z [my-app] [34mdebug[39m: Password validation result for user sam7@gmail.com: false
+2024-11-20T12:20:22.667Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T12:21:12.595Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T12:21:15.313Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T12:21:16.400Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T12:21:16.399Z
+2024-11-20T12:21:16.633Z [my-app] [34mdebug[39m: User retrieved: "sam7@gmail.com"
+2024-11-20T12:21:16.938Z [my-app] [34mdebug[39m: Comparing passwords: Input Password - 123456win, Stored Hash - $2b$10$wJ5KUoZ3gcU9gp218P9RSuXqhEQI.k9BcamE/QQmFlgjS2wa3dkBq
+2024-11-20T12:21:16.953Z [my-app] [34mdebug[39m: Password validation result for user sam7@gmail.com: false
+2024-11-20T12:21:16.957Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T12:23:01.289Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T12:23:07.952Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T12:23:13.622Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T12:23:13.621Z
+2024-11-20T12:23:13.915Z [my-app] [34mdebug[39m: User retrieved: "sam7@gmail.com"
+2024-11-20T12:23:14.124Z [my-app] [34mdebug[39m: Comparing passwords: Input Password - 123456win, Stored Hash - $2b$10$wJ5KUoZ3gcU9gp218P9RSuXqhEQI.k9BcamE/QQmFlgjS2wa3dkBq
+2024-11-20T12:23:14.257Z [my-app] [34mdebug[39m: Password validation result for user sam7@gmail.com: false
+2024-11-20T12:23:14.258Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T12:23:50.793Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T12:24:13.557Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T12:24:16.475Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T12:24:19.023Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T12:24:19.023Z
+2024-11-20T12:24:19.268Z [my-app] [34mdebug[39m: User retrieved: "sam7@gmail.com"
+2024-11-20T12:24:19.479Z [my-app] [34mdebug[39m: Comparing passwords: Input Password - 123456win, Stored Hash - $2b$10$wJ5KUoZ3gcU9gp218P9RSuXqhEQI.k9BcamE/QQmFlgjS2wa3dkBq
+2024-11-20T12:24:19.715Z [my-app] [34mdebug[39m: Password validation result for user sam7@gmail.com: false
+2024-11-20T12:24:19.716Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T12:24:31.493Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T12:24:31.493Z
+2024-11-20T12:24:32.260Z [my-app] [34mdebug[39m: User retrieved: "sam4@gmail.com"
+2024-11-20T12:24:32.549Z [my-app] [34mdebug[39m: Comparing passwords: Input Password - 123456win, Stored Hash - $2a$10$eII8ue/D4L9gEg2oFkgexuPf8unlCMWRPE/5Jgt.JymqYmjn1DqZW
+2024-11-20T12:24:32.694Z [my-app] [34mdebug[39m: Password validation result for user sam4@gmail.com: false
+2024-11-20T12:24:32.695Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T12:24:44.016Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T12:24:44.016Z
+2024-11-20T12:24:52.775Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T12:24:52.775Z
+2024-11-20T12:24:53.463Z [my-app] [32minfo[39m: User Successfully created nsam6@gmail.com
+2024-11-20T12:25:18.239Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T12:25:18.239Z
+2024-11-20T12:25:18.623Z [my-app] [34mdebug[39m: User retrieved: "sam6@gmail.com"
+2024-11-20T12:25:18.856Z [my-app] [34mdebug[39m: Comparing passwords: Input Password - 123456win, Stored Hash - $2b$10$j/EOvHPjNdtxLWFUIGjTsey6pJLkgt.gwbASu6RebLubXuBrYrnFm
+2024-11-20T12:25:19.027Z [my-app] [34mdebug[39m: Password validation result for user sam6@gmail.com: false
+2024-11-20T12:25:19.027Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T12:25:45.724Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T12:25:45.724Z
+2024-11-20T12:25:46.022Z [my-app] [31merror[39m: Error during login: User Account with the Email does not exist
+2024-11-20T12:26:25.395Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T12:26:39.686Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T12:26:43.329Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T12:26:47.557Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T12:26:52.553Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T12:26:52.553Z
+2024-11-20T12:26:52.891Z [my-app] [31merror[39m: Error during login: User Account with the Email does not exist
+2024-11-20T12:27:07.593Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T12:27:07.593Z
+2024-11-20T12:27:07.950Z [my-app] [34mdebug[39m: User retrieved: "sam6@gmail.com"
+2024-11-20T12:27:09.366Z [my-app] [34mdebug[39m: Comparing passwords: Input Password - 123456win, Stored Hash - $2b$10$j/EOvHPjNdtxLWFUIGjTsey6pJLkgt.gwbASu6RebLubXuBrYrnFm
+2024-11-20T12:27:09.592Z [my-app] [34mdebug[39m: Password validation result for user sam6@gmail.com: false
+2024-11-20T12:27:09.593Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T12:28:02.397Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T12:28:11.018Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T12:31:52.099Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T12:32:12.916Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T12:32:23.217Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T12:32:23.217Z
+2024-11-20T12:32:23.992Z [my-app] [32minfo[39m: User Successfully created sam6@gmail.com
+2024-11-20T12:32:38.727Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T12:32:38.727Z
+2024-11-20T12:32:39.034Z [my-app] [34mdebug[39m: User retrieved: "sam6@gmail.com"
+2024-11-20T12:32:39.335Z [my-app] [34mdebug[39m: Comparing passwords: Input Password - 123456win, Stored Hash - $2b$10$hj1HmUn6oz61COJso8cy6edRqx58Va2953j8dtBNxDe.ub6wUHrJq
+2024-11-20T12:32:39.416Z [my-app] [34mdebug[39m: Password validation result for user sam6@gmail.com: false
+2024-11-20T12:32:39.417Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T12:34:58.396Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T12:35:00.841Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T12:36:31.129Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T12:36:31.129Z
+2024-11-20T12:36:32.511Z [my-app] [34mdebug[39m: User retrieved: "sam6@gmail.com"
+2024-11-20T12:36:32.799Z [my-app] [34mdebug[39m: Comparing passwords: Input Password - 123456win, Stored Hash - $2b$10$hj1HmUn6oz61COJso8cy6edRqx58Va2953j8dtBNxDe.ub6wUHrJq
+2024-11-20T12:36:32.967Z [my-app] [34mdebug[39m: Password validation result for user sam6@gmail.com: false
+2024-11-20T12:36:32.968Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T12:36:46.173Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T12:36:46.173Z
+2024-11-20T12:36:47.062Z [my-app] [32minfo[39m: User Successfully created sam@gmail.com
+2024-11-20T12:37:06.154Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T12:37:06.154Z
+2024-11-20T12:37:06.805Z [my-app] [32minfo[39m: User Successfully created sam2@gmail.com
+2024-11-20T12:37:28.549Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T12:37:28.549Z
+2024-11-20T12:37:28.758Z [my-app] [34mdebug[39m: User retrieved: "sam2@gmail.com"
+2024-11-20T12:37:28.963Z [my-app] [34mdebug[39m: Comparing passwords: Input Password - test, Stored Hash - $2a$10$BS22oP2i9t6dR5KPDkSEK.j2C2VjNeZIuGd8Ne7f9X77cTmedvMWi
+2024-11-20T12:37:29.168Z [my-app] [34mdebug[39m: Password validation result for user sam2@gmail.com: false
+2024-11-20T12:37:29.168Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T12:38:01.962Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T12:38:01.962Z
+2024-11-20T12:38:03.171Z [my-app] [32minfo[39m: User Successfully created sam3@gmail.com
+2024-11-20T12:38:10.186Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T12:38:10.186Z
+2024-11-20T12:38:10.417Z [my-app] [34mdebug[39m: User retrieved: "sam3@gmail.com"
+2024-11-20T12:38:10.668Z [my-app] [34mdebug[39m: Comparing passwords: Input Password - test, Stored Hash - $2a$10$mjIBhxwcZafArCmjRGJPe.JR.b0ZQIURCSV.djQ1JsI7t/YU.g9PK
+2024-11-20T12:38:10.899Z [my-app] [34mdebug[39m: Password validation result for user sam3@gmail.com: false
+2024-11-20T12:38:10.899Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T12:48:17.287Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T12:48:21.005Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T12:48:26.443Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T12:48:26.443Z
+2024-11-20T12:48:35.476Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T12:48:35.476Z
+2024-11-20T12:48:35.681Z [my-app] [34mdebug[39m: Salt Rounds: 10
+2024-11-20T12:48:35.881Z [my-app] [34mdebug[39m: Hashed Password: $2a$10$YuegWtyKanGzoDKcHZhVJOgQyCIJ.lJJH8W/3XkgGCzSR2fw62ZRq
+2024-11-20T12:48:36.246Z [my-app] [32minfo[39m: User Successfully created sam4@gmail.com
+2024-11-20T12:49:06.826Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T12:49:06.826Z
+2024-11-20T12:49:07.076Z [my-app] [34mdebug[39m: User retrieved: "sam4@gmail.com"
+2024-11-20T12:49:07.380Z [my-app] [34mdebug[39m: Comparing passwords: 
+2024-11-20T12:49:07.382Z [my-app] [34mdebug[39m: Input Password: test
+2024-11-20T12:49:07.383Z [my-app] [34mdebug[39m: Stored Hash: $2a$10$ba6e571OkeqEQjH3YeCm5OLxY5E5TT.ABsxlg2ofTQmw4kA4PNOpi
+2024-11-20T12:49:07.569Z [my-app] [34mdebug[39m: Password validation result: false
+2024-11-20T12:49:07.569Z [my-app] [31merror[39m: Error during login: Invalid Email or Password
+2024-11-20T13:19:03.178Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T13:19:09.225Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T13:19:14.313Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T13:19:14.313Z
+2024-11-20T13:19:14.666Z [my-app] [34mdebug[39m: Retrieved User: sam4@gmail.com
+2024-11-20T13:21:35.393Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T13:21:46.791Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T13:21:59.323Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T13:21:59.323Z
+2024-11-20T13:21:59.542Z [my-app] [34mdebug[39m: Salt Rounds: 10
+2024-11-20T13:21:59.722Z [my-app] [34mdebug[39m: Hashed Password during registration: $2a$10$KV0E92dStuyXSCNGG7Jhx.qz34lh4bVBzQ3cxLPU9aWLxrGNY2AWy
+2024-11-20T13:21:59.947Z [my-app] [32minfo[39m: User Successfully created tim@gmail.com
+2024-11-20T13:22:07.354Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T13:22:07.354Z
+2024-11-20T13:22:07.562Z [my-app] [34mdebug[39m: Retrieved User: tim@gmail.com
+2024-11-20T13:26:35.799Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T13:26:45.010Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T13:26:59.062Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T13:26:59.062Z
+2024-11-20T13:26:59.323Z [my-app] [34mdebug[39m: Salt Rounds: 10
+2024-11-20T13:26:59.447Z [my-app] [34mdebug[39m: Hashed Password during registration: $2b$10$8EOq1Cjrw7790UNZ.wb6Ke0wQBh3X9WBJKJjmyqs0v8/tvm1oMK9K
+2024-11-20T13:26:59.742Z [my-app] [32minfo[39m: User Successfully created tim2@gmail.com
+2024-11-20T13:27:22.774Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T13:27:22.774Z
+2024-11-20T13:27:23.095Z [my-app] [34mdebug[39m: Retrieved User: tim2@gmail.com
+2024-11-20T13:27:23.400Z [my-app] [34mdebug[39m: Comparing passwords: 
+2024-11-20T13:27:23.402Z [my-app] [34mdebug[39m: Input Password: test
+2024-11-20T13:27:23.405Z [my-app] [34mdebug[39m: Stored Hash: $2b$10$8EOq1Cjrw7790UNZ.wb6Ke0wQBh3X9WBJKJjmyqs0v8/tvm1oMK9K
+2024-11-20T13:27:23.564Z [my-app] [34mdebug[39m: Password validation result: true
+2024-11-20T13:30:59.568Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T13:30:59.568Z
+2024-11-20T13:30:59.780Z [my-app] [34mdebug[39m: Retrieved User: tim2@gmail.com
+2024-11-20T13:31:00.028Z [my-app] [34mdebug[39m: Comparing passwords: 
+2024-11-20T13:31:00.028Z [my-app] [34mdebug[39m: Input Password: test
+2024-11-20T13:31:00.029Z [my-app] [34mdebug[39m: Stored Hash: $2b$10$8EOq1Cjrw7790UNZ.wb6Ke0wQBh3X9WBJKJjmyqs0v8/tvm1oMK9K
+2024-11-20T13:31:00.141Z [my-app] [34mdebug[39m: Password validation result: true
+2024-11-20T13:31:39.157Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T13:31:42.094Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T13:32:07.377Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T13:32:07.377Z
+2024-11-20T13:32:07.706Z [my-app] [34mdebug[39m: Retrieved User: tim2@gmail.com
+2024-11-20T13:34:06.260Z [my-app] [32minfo[39m: Method: GET, URL: /api/v1/user/all, Timestamp: 2024-11-20T13:34:06.260Z
+2024-11-20T13:34:09.903Z [my-app] [32minfo[39m: retrieved 7 users
