@@ -501,3 +501,35 @@
 2024-11-20T13:32:07.706Z [my-app] [34mdebug[39m: Retrieved User: tim2@gmail.com
 2024-11-20T13:34:06.260Z [my-app] [32minfo[39m: Method: GET, URL: /api/v1/user/all, Timestamp: 2024-11-20T13:34:06.260Z
 2024-11-20T13:34:09.903Z [my-app] [32minfo[39m: retrieved 7 users
+2024-11-20T18:23:03.187Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T18:23:05.783Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T18:23:32.007Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T18:23:32.007Z
+2024-11-20T18:24:37.032Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T18:24:37.032Z
+2024-11-20T18:31:27.689Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T18:31:27.689Z
+2024-11-20T18:32:09.208Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T18:32:09.208Z
+2024-11-20T18:32:09.425Z [my-app] [34mdebug[39m: Salt Rounds: 10
+2024-11-20T18:32:10.071Z [my-app] [31merror[39m: Error creating user: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: null }
+2024-11-20T18:32:17.388Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T18:32:17.388Z
+2024-11-20T18:32:17.651Z [my-app] [34mdebug[39m: Salt Rounds: 10
+2024-11-20T18:32:17.964Z [my-app] [31merror[39m: Error creating user: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: null }
+2024-11-20T18:32:40.849Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T18:32:40.849Z
+2024-11-20T18:32:41.101Z [my-app] [34mdebug[39m: Salt Rounds: 10
+2024-11-20T18:32:41.423Z [my-app] [31merror[39m: Error creating user: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: null }
+2024-11-20T18:34:39.975Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T18:34:39.975Z
+2024-11-20T18:34:40.312Z [my-app] [34mdebug[39m: Salt Rounds: 10
+2024-11-20T18:34:40.873Z [my-app] [31merror[39m: Error creating user: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: null }
+2024-11-20T18:34:50.827Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T18:34:50.827Z
+2024-11-20T18:34:51.061Z [my-app] [34mdebug[39m: Salt Rounds: 10
+2024-11-20T18:34:51.361Z [my-app] [31merror[39m: Error creating user: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: null }
+2024-11-20T18:35:38.481Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T18:35:38.481Z
+2024-11-20T18:35:38.731Z [my-app] [34mdebug[39m: Salt Rounds: 10
+2024-11-20T18:35:39.039Z [my-app] [31merror[39m: Error creating user: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: null }
+2024-11-20T19:03:38.401Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T19:03:40.942Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T19:03:47.046Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T19:03:47.045Z
+2024-11-20T19:03:47.291Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-20T19:03:57.620Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T19:03:57.620Z
+2024-11-20T19:03:58.452Z [my-app] [34mdebug[39m: User login successful tim2@gmail.com
+2024-11-21T09:50:31.562Z [my-app] [32minfo[39m: Method: GET, URL: /api/auth/google/callback?code=4%2F0AeanS0YE0AvFYByX4iNYywur582bfgCliRZ3E5TpxrUahRHSyUq5QzGmaBbBL39B4J_iDg&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=consent, Timestamp: 2024-11-21T09:50:31.552Z
+2024-11-21T10:20:39.821Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-21T10:20:45.102Z [my-app] [32minfo[39m: MongoDB Connected!
