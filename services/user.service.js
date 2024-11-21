@@ -2,7 +2,10 @@ import logger from '../logger/logger.js';
 import User from '../models/User.js';
 import mongoose from 'mongoose';
 import AuthService from './auth.service.js';
-import { BadRequestError, InternalServerError } from '../errors/errors.js';
+import {
+  BadRequestError,
+  InternalServerError,
+} from '../errors/application-error.js';
 
 export default class UserService {
   // Retrieve all users
@@ -51,14 +54,8 @@ export default class UserService {
   // Create a new user
   static createUser = async (email, password) => {
     try {
-      // Check if the email already exists
-      const existingUser = await this.getUserByEmail(email);
-      if (existingUser) {
-        throw new BadRequestError('Email already exists');
-      }
-
       //Hash user password
-      const hashedPassword = await AuthService.hashPassword(password);
+      const hashedPassword = await AuthService.hashPassword(password.trim());
 
       // Create the user with the hashed password
       const user = new User({ email, password: hashedPassword });

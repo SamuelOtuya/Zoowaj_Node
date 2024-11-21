@@ -501,3 +501,323 @@
 2024-11-20T13:32:07.706Z [my-app] [34mdebug[39m: Retrieved User: tim2@gmail.com
 2024-11-20T13:34:06.260Z [my-app] [32minfo[39m: Method: GET, URL: /api/v1/user/all, Timestamp: 2024-11-20T13:34:06.260Z
 2024-11-20T13:34:09.903Z [my-app] [32minfo[39m: retrieved 7 users
+2024-11-20T13:49:28.568Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T13:49:49.166Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T13:49:55.370Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T13:49:55.370Z
+2024-11-20T13:49:56.165Z [my-app] [34mdebug[39m: User login successful tim2@gmail.com
+2024-11-20T13:56:17.098Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T13:56:22.463Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T13:56:26.863Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T13:56:26.863Z
+2024-11-20T13:56:27.330Z [my-app] [34mdebug[39m: User login successful tim2@gmail.com
+2024-11-20T17:51:20.114Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T17:51:29.733Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T17:54:51.916Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T17:54:51.915Z
+2024-11-20T17:54:52.377Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T17:54:52.377Z
+2024-11-20T17:54:52.740Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T17:54:52.739Z
+2024-11-20T17:54:53.071Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T17:54:53.070Z
+2024-11-20T17:54:54.154Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T17:54:54.154Z
+2024-11-20T17:54:54.187Z [my-app] [32minfo[39m: User Successfully created ahokielias0969@gmail.com 
+2024-11-20T17:54:54.373Z [my-app] [31merror[39m: Error creating user: E11000 duplicate key error collection: ZooDB2.users index: email_1 dup key: { email: "ahokielias0969@gmail.com " }
+2024-11-20T17:54:54.928Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-20T17:54:55.910Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T17:54:55.910Z
+2024-11-20T17:54:56.090Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:54:56.089Z
+2024-11-20T17:54:56.141Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-20T17:54:56.256Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:54:56.256Z
+2024-11-20T17:54:56.427Z [my-app] [34mdebug[39m: User login successful ahokielias0969@gmail.com 
+2024-11-20T17:54:56.657Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-20T17:54:56.721Z [my-app] [34mdebug[39m: User login successful ahokielias0969@gmail.com 
+2024-11-20T17:54:56.870Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T17:54:56.870Z
+2024-11-20T17:54:57.108Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-20T17:54:57.309Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T17:54:57.309Z
+2024-11-20T17:54:57.532Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-20T17:54:57.544Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T17:54:57.543Z
+2024-11-20T17:54:57.769Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-20T17:54:57.868Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-20T17:55:00.259Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:55:00.259Z
+2024-11-20T17:55:00.670Z [my-app] [34mdebug[39m: User login successful ahokielias0969@gmail.com 
+2024-11-20T17:55:01.070Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:55:01.070Z
+2024-11-20T17:55:01.491Z [my-app] [34mdebug[39m: User login successful ahokielias0969@gmail.com 
+2024-11-20T17:55:02.527Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:55:02.527Z
+2024-11-20T17:55:02.846Z [my-app] [34mdebug[39m: User login successful ahokielias0969@gmail.com 
+2024-11-20T17:55:03.744Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:55:03.744Z
+2024-11-20T17:55:04.138Z [my-app] [34mdebug[39m: User login successful ahokielias0969@gmail.com 
+2024-11-20T17:55:04.560Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:55:04.560Z
+2024-11-20T17:55:04.870Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:55:04.870Z
+2024-11-20T17:55:04.891Z [my-app] [34mdebug[39m: User login successful ahokielias0969@gmail.com 
+2024-11-20T17:55:05.186Z [my-app] [34mdebug[39m: User login successful ahokielias0969@gmail.com 
+2024-11-20T17:55:05.430Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T17:55:05.430Z
+2024-11-20T17:55:05.694Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-20T17:55:05.780Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:55:05.780Z
+2024-11-20T17:55:06.106Z [my-app] [34mdebug[39m: User login successful ahokielias0969@gmail.com 
+2024-11-20T17:55:19.309Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:55:19.309Z
+2024-11-20T17:55:19.627Z [my-app] [34mdebug[39m: User login successful ahokielias0969@gmail.com 
+2024-11-20T17:55:21.148Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:55:21.148Z
+2024-11-20T17:55:21.467Z [my-app] [34mdebug[39m: User login successful ahokielias0969@gmail.com 
+2024-11-20T17:55:21.732Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:55:21.732Z
+2024-11-20T17:55:22.067Z [my-app] [34mdebug[39m: User login successful ahokielias0969@gmail.com 
+2024-11-20T17:55:23.061Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:55:23.061Z
+2024-11-20T17:55:23.411Z [my-app] [34mdebug[39m: User login successful ahokielias0969@gmail.com 
+2024-11-20T17:55:24.114Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T17:55:24.114Z
+2024-11-20T17:55:24.342Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-20T17:55:24.933Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T17:55:24.933Z
+2024-11-20T17:55:25.159Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-20T17:55:25.510Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T17:55:25.510Z
+2024-11-20T17:55:25.764Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-20T17:55:27.917Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:55:27.917Z
+2024-11-20T17:55:28.238Z [my-app] [34mdebug[39m: User login successful ahokielias0969@gmail.com 
+2024-11-20T17:55:28.930Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:55:28.930Z
+2024-11-20T17:55:29.247Z [my-app] [34mdebug[39m: User login successful ahokielias0969@gmail.com 
+2024-11-20T17:55:30.418Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:55:30.418Z
+2024-11-20T17:55:30.767Z [my-app] [34mdebug[39m: User login successful ahokielias0969@gmail.com 
+2024-11-20T17:55:31.060Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:55:31.060Z
+2024-11-20T17:55:31.368Z [my-app] [34mdebug[39m: User login successful ahokielias0969@gmail.com 
+2024-11-20T17:55:32.818Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:55:32.818Z
+2024-11-20T17:55:33.242Z [my-app] [34mdebug[39m: User login successful ahokielias0969@gmail.com 
+2024-11-20T17:55:34.462Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:55:34.462Z
+2024-11-20T17:55:34.862Z [my-app] [34mdebug[39m: User login successful ahokielias0969@gmail.com 
+2024-11-20T17:55:37.634Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:55:37.634Z
+2024-11-20T17:55:38.560Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:55:38.560Z
+2024-11-20T17:55:59.582Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:55:59.581Z
+2024-11-20T17:56:00.370Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:56:00.370Z
+2024-11-20T17:56:03.131Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:56:03.131Z
+2024-11-20T17:56:04.673Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:56:04.673Z
+2024-11-20T17:56:06.102Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:56:06.102Z
+2024-11-20T17:56:07.333Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T17:56:07.333Z
+2024-11-20T17:56:07.642Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-20T17:56:08.664Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:56:08.664Z
+2024-11-20T17:59:26.535Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:59:26.535Z
+2024-11-20T17:59:32.136Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T17:59:32.136Z
+2024-11-20T17:59:35.725Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T17:59:35.725Z
+2024-11-20T17:59:36.333Z [my-app] [32minfo[39m: User Successfully created ahokielias099@gmail.com 
+2024-11-20T18:02:29.733Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T18:02:29.733Z
+2024-11-20T18:02:30.031Z [my-app] [34mdebug[39m: User login successful ahokielias099@gmail.com 
+2024-11-20T18:02:45.166Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T18:02:45.166Z
+2024-11-20T18:03:28.078Z [my-app] [32minfo[39m: Method: GET, URL: /, Timestamp: 2024-11-20T18:03:28.078Z
+2024-11-20T18:03:29.623Z [my-app] [32minfo[39m: Method: GET, URL: /favicon.ico, Timestamp: 2024-11-20T18:03:29.623Z
+2024-11-20T18:04:02.886Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T18:04:02.886Z
+2024-11-20T18:04:03.492Z [my-app] [32minfo[39m: User Successfully created ahokielias099tyy@gmail.com 
+2024-11-20T18:04:07.087Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T18:04:07.087Z
+2024-11-20T18:04:07.412Z [my-app] [34mdebug[39m: User login successful ahokielias099tyy@gmail.com 
+2024-11-20T18:08:42.639Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T18:08:42.639Z
+2024-11-20T18:08:43.459Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T18:08:43.459Z
+2024-11-20T19:55:13.017Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T19:55:12.531Z
+2024-11-20T19:55:22.498Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T19:55:22.498Z
+2024-11-20T19:57:26.279Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T19:57:26.279Z
+2024-11-20T19:57:39.714Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T19:57:39.714Z
+2024-11-20T19:58:33.482Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T19:58:33.482Z
+2024-11-20T19:58:52.959Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T19:58:52.959Z
+2024-11-20T19:58:54.264Z [my-app] [32minfo[39m: User Successfully created ahokielias099355@gmail.com 
+2024-11-20T20:10:59.188Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T20:10:59.188Z
+2024-11-20T20:10:59.582Z [my-app] [34mdebug[39m: User login successful ahokielias099355@gmail.com 
+2024-11-20T20:11:04.374Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T20:11:04.374Z
+2024-11-20T20:11:04.757Z [my-app] [34mdebug[39m: User login successful ahokielias099355@gmail.com 
+2024-11-20T20:11:07.985Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T20:11:07.985Z
+2024-11-20T20:11:08.383Z [my-app] [34mdebug[39m: User login successful ahokielias099355@gmail.com 
+2024-11-20T20:11:11.776Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T20:11:11.776Z
+2024-11-20T20:11:12.586Z [my-app] [34mdebug[39m: User login successful ahokielias099355@gmail.com 
+2024-11-20T20:11:15.340Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T20:11:15.340Z
+2024-11-20T20:11:15.680Z [my-app] [34mdebug[39m: User login successful ahokielias099355@gmail.com 
+2024-11-20T20:11:18.631Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T20:11:18.631Z
+2024-11-20T20:11:19.039Z [my-app] [34mdebug[39m: User login successful ahokielias099355@gmail.com 
+2024-11-20T20:11:22.114Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T20:11:22.114Z
+2024-11-20T20:11:22.511Z [my-app] [34mdebug[39m: User login successful ahokielias099355@gmail.com 
+2024-11-20T20:50:24.889Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T20:50:24.889Z
+2024-11-20T20:50:27.136Z [my-app] [32minfo[39m: User Successfully created ahokielias@gmail.com 
+2024-11-20T20:50:37.378Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T20:50:37.378Z
+2024-11-20T20:50:37.778Z [my-app] [34mdebug[39m: User login successful ahokielias@gmail.com 
+2024-11-20T20:50:53.520Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T20:50:53.520Z
+2024-11-20T20:50:53.827Z [my-app] [34mdebug[39m: User login successful ahokielias@gmail.com 
+2024-11-20T20:51:12.396Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T20:51:12.396Z
+2024-11-20T20:51:12.904Z [my-app] [32minfo[39m: User Successfully created ahokielias100@gmail.com
+2024-11-20T20:51:16.904Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T20:51:16.904Z
+2024-11-20T20:51:17.311Z [my-app] [34mdebug[39m: User login successful ahokielias100@gmail.com
+2024-11-20T20:51:29.604Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T20:51:29.604Z
+2024-11-20T20:51:29.995Z [my-app] [34mdebug[39m: User login successful ahokielias100@gmail.com
+2024-11-20T20:51:32.775Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T20:51:32.775Z
+2024-11-20T20:51:33.151Z [my-app] [34mdebug[39m: User login successful ahokielias100@gmail.com
+2024-11-20T20:53:04.939Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T20:53:04.938Z
+2024-11-20T20:53:05.313Z [my-app] [34mdebug[39m: User login successful ahokielias100@gmail.com
+2024-11-20T20:53:14.240Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T20:53:14.239Z
+2024-11-20T20:53:14.640Z [my-app] [34mdebug[39m: User login successful ahokielias100@gmail.com
+2024-11-20T20:53:22.441Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T20:53:22.441Z
+2024-11-20T20:53:22.836Z [my-app] [34mdebug[39m: User login successful ahokielias100@gmail.com
+2024-11-20T20:53:34.621Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T20:53:34.621Z
+2024-11-20T20:55:03.111Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T20:55:03.111Z
+2024-11-20T20:55:07.076Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T20:55:07.076Z
+2024-11-20T20:55:24.691Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T20:55:24.691Z
+2024-11-20T20:55:24.986Z [my-app] [34mdebug[39m: User login successful ahokielias100@gmail.com
+2024-11-20T20:55:33.803Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T20:55:33.803Z
+2024-11-20T20:55:34.207Z [my-app] [34mdebug[39m: User login successful ahokielias100@gmail.com
+2024-11-20T21:00:05.867Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T21:00:05.867Z
+2024-11-20T21:00:06.266Z [my-app] [34mdebug[39m: User login successful ahokielias100@gmail.com
+2024-11-20T21:00:25.323Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T21:00:25.323Z
+2024-11-20T21:00:25.628Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-20T21:00:29.117Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T21:00:29.117Z
+2024-11-20T21:00:29.418Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-20T21:00:32.389Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T21:00:32.389Z
+2024-11-20T21:00:32.697Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-20T21:00:35.256Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T21:00:35.256Z
+2024-11-20T21:00:35.658Z [my-app] [34mdebug[39m: User login successful ahokielias100@gmail.com
+2024-11-20T21:00:46.928Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T21:00:46.928Z
+2024-11-20T21:00:47.331Z [my-app] [34mdebug[39m: User login successful ahokielias100@gmail.com
+2024-11-20T21:02:40.469Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T21:02:40.469Z
+2024-11-20T21:02:40.845Z [my-app] [34mdebug[39m: User login successful ahokielias100@gmail.com
+2024-11-20T21:02:53.930Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T21:02:53.930Z
+2024-11-20T21:02:54.305Z [my-app] [34mdebug[39m: User login successful ahokielias100@gmail.com
+2024-11-20T21:03:00.047Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T21:03:00.047Z
+2024-11-20T21:03:00.446Z [my-app] [34mdebug[39m: User login successful ahokielias100@gmail.com
+2024-11-20T21:03:05.960Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T21:03:05.960Z
+2024-11-20T21:03:06.356Z [my-app] [34mdebug[39m: User login successful ahokielias100@gmail.com
+2024-11-20T21:03:31.280Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T21:03:31.280Z
+2024-11-20T21:03:31.678Z [my-app] [34mdebug[39m: User login successful ahokielias100@gmail.com
+2024-11-20T21:03:54.631Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T21:03:54.631Z
+2024-11-20T21:03:55.020Z [my-app] [34mdebug[39m: User login successful ahokielias100@gmail.com
+2024-11-20T21:04:02.201Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T21:04:02.201Z
+2024-11-20T21:04:22.968Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T21:04:22.968Z
+2024-11-20T21:04:23.290Z [my-app] [34mdebug[39m: User login successful ahokielias100@gmail.com
+2024-11-20T21:21:24.331Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T21:21:24.331Z
+2024-11-20T21:21:24.713Z [my-app] [34mdebug[39m: User login successful ahokielias100@gmail.com
+2024-11-20T21:28:45.884Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T21:28:45.884Z
+2024-11-20T21:28:46.212Z [my-app] [34mdebug[39m: User login successful ahokielias100@gmail.com
+2024-11-20T21:29:01.837Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T21:29:01.837Z
+2024-11-20T21:29:02.150Z [my-app] [34mdebug[39m: User login successful ahokielias100@gmail.com
+2024-11-20T21:29:07.696Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T21:29:07.696Z
+2024-11-20T21:29:07.962Z [my-app] [34mdebug[39m: User login successful ahokielias100@gmail.com
+2024-11-21T08:25:38.258Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-21T08:25:53.006Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-21T08:26:23.436Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T08:26:23.436Z
+2024-11-21T08:26:54.375Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T08:26:54.375Z
+2024-11-21T08:26:58.275Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T08:26:58.274Z
+2024-11-21T08:52:03.452Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T08:52:03.452Z
+2024-11-21T08:52:07.340Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T08:52:07.340Z
+2024-11-21T08:52:17.324Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T08:52:17.324Z
+2024-11-21T08:52:35.647Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T08:52:35.647Z
+2024-11-21T08:53:05.608Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T08:53:05.608Z
+2024-11-21T08:55:55.409Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T08:55:55.409Z
+2024-11-21T08:56:37.374Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T08:56:37.374Z
+2024-11-21T08:56:58.980Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T08:56:58.980Z
+2024-11-21T08:57:03.085Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T08:57:03.085Z
+2024-11-21T08:58:48.550Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T08:58:48.550Z
+2024-11-21T08:59:23.569Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T08:59:23.569Z
+2024-11-21T09:01:06.584Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:01:06.584Z
+2024-11-21T09:02:22.055Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:02:22.055Z
+2024-11-21T09:08:23.322Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:08:23.322Z
+2024-11-21T09:19:55.079Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:19:55.079Z
+2024-11-21T09:26:00.055Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:26:00.055Z
+2024-11-21T09:26:00.188Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T09:26:03.755Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:26:03.755Z
+2024-11-21T09:26:03.847Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T09:26:06.237Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:26:06.237Z
+2024-11-21T09:26:06.347Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T09:35:06.263Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:35:06.263Z
+2024-11-21T09:35:06.489Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T09:35:10.220Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:35:10.220Z
+2024-11-21T09:35:10.439Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T09:36:04.532Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:36:04.532Z
+2024-11-21T09:36:04.754Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T09:36:11.706Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:36:11.706Z
+2024-11-21T09:36:12.317Z [my-app] [32minfo[39m: User Successfully created ahokielias099100@gmail.com 
+2024-11-21T09:36:22.360Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:36:22.359Z
+2024-11-21T09:36:22.655Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T09:36:53.483Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:36:53.483Z
+2024-11-21T09:36:53.731Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T09:36:59.788Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:36:59.788Z
+2024-11-21T09:37:00.016Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T09:37:46.332Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:37:46.332Z
+2024-11-21T09:37:46.581Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T09:38:42.127Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:38:42.127Z
+2024-11-21T09:38:42.810Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T09:40:46.352Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:40:46.352Z
+2024-11-21T09:40:46.576Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T09:40:52.486Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:40:52.486Z
+2024-11-21T09:40:52.706Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T09:41:36.325Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:41:36.325Z
+2024-11-21T09:41:37.446Z [my-app] [32minfo[39m: User Successfully created ahokielias099678@gmail.com 
+2024-11-21T09:43:46.161Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:43:46.161Z
+2024-11-21T09:43:46.415Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T09:46:49.869Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:46:49.869Z
+2024-11-21T09:46:50.090Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T09:46:58.404Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:46:58.404Z
+2024-11-21T09:46:58.697Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T09:47:27.048Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:47:27.048Z
+2024-11-21T09:47:27.763Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T09:51:30.669Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:51:30.669Z
+2024-11-21T09:51:30.909Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T09:54:46.879Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:54:46.879Z
+2024-11-21T09:54:47.093Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T09:59:28.497Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T09:59:28.497Z
+2024-11-21T09:59:28.716Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T10:02:13.753Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-21T10:02:20.481Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-21T10:02:29.584Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T10:02:29.583Z
+2024-11-21T10:02:30.563Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T10:02:30.573Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 500
+2024-11-21T10:02:30.574Z [my-app] [32minfo[39m: Response Body: {"error":"Internal Server Error"}
+2024-11-21T10:07:39.921Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-21T10:07:45.646Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-21T10:08:11.278Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T10:08:11.278Z
+2024-11-21T10:08:11.509Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T10:08:11.517Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 500
+2024-11-21T10:08:11.518Z [my-app] [32minfo[39m: Response Body: {"error":"Internal Server Error"}
+2024-11-21T10:21:14.659Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-21T10:21:17.485Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-21T10:24:24.831Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T10:24:24.831Z
+2024-11-21T10:24:25.093Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T10:24:25.097Z [my-app] [31merror[39m: Error caught by errorHandler: Error creating user
+Stack Trace: Error: Error creating user
+    at UserService.createUser (file:///home/samuel/Documents/apps/zoowaj/server/services/user.service.js:71:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///home/samuel/Documents/apps/zoowaj/server/controllers/user-ctrl.js:31:19
+2024-11-21T10:24:25.103Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 500
+2024-11-21T10:24:25.105Z [my-app] [32minfo[39m: Response Body: {"message":"Error creating user","status":500}
+2024-11-21T10:26:38.375Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-21T10:26:42.534Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-21T10:26:44.463Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T10:26:44.463Z
+2024-11-21T10:26:44.694Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T10:26:44.698Z [my-app] [31merror[39m: Error caught by errorHandler: Error creating user
+Stack Trace: Error: Error creating user
+    at UserService.createUser (file:///home/samuel/Documents/apps/zoowaj/server/services/user.service.js:71:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///home/samuel/Documents/apps/zoowaj/server/controllers/user-ctrl.js:31:19
+2024-11-21T10:26:44.701Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 500
+2024-11-21T10:26:44.702Z [my-app] [32minfo[39m: Response Body: {"message":"Error creating user","status":500}
+2024-11-21T10:28:25.156Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-21T10:28:28.201Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-21T10:28:34.179Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T10:28:34.178Z
+2024-11-21T10:28:34.412Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T10:28:34.417Z [my-app] [31merror[39m: Error caught by errorHandler: Error creating user
+Stack Trace: Error: Error creating user
+    at UserService.createUser (file:///home/samuel/Documents/apps/zoowaj/server/services/user.service.js:74:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///home/samuel/Documents/apps/zoowaj/server/controllers/user-ctrl.js:35:19
+2024-11-21T10:28:34.423Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 500
+2024-11-21T10:28:34.425Z [my-app] [32minfo[39m: Response Body: {"message":"Error creating user","status":500}
+2024-11-21T10:29:49.651Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-21T10:29:53.302Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-21T10:30:09.515Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T10:30:09.515Z
+2024-11-21T10:30:10.053Z [my-app] [32minfo[39m: User Successfully created ahokieliasf099@gmail.com 
+2024-11-21T10:30:10.075Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-21T10:30:10.076Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"ahokieliasf099@gmail.com ","_id":"673f0bb157a37597c62c9608","createdAt":"2024-11-21T10:30:09.839Z","updatedAt":"2024-11-21T10:30:09.839Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzNmMGJiMTU3YTM3NTk3YzYyYzk2MDgiLCJlbWFpbCI6ImFob2tpZWxpYXNmMDk5QGdtYWlsLmNvbSAiLCJpYXQiOjE3MzIxODUwMTAsImV4cCI6MTczMjE5NTgxMH0.al74elQU-LiyVkHMm-UCkoPZKR_oq-m_UVM1rS65Q_c"}
+2024-11-21T10:30:16.329Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T10:30:16.329Z
+2024-11-21T10:30:16.552Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-21T10:30:16.559Z [my-app] [31merror[39m: Error caught by errorHandler: Error creating user
+2024-11-21T10:30:16.564Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 500
+2024-11-21T10:30:16.566Z [my-app] [32minfo[39m: Response Body: {"message":"Error creating user","status":500}
+2024-11-21T10:31:46.316Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-21T10:31:49.525Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-21T10:31:52.012Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T10:31:52.012Z
+2024-11-21T10:31:52.247Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-21T10:31:52.251Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-21T10:31:52.253Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-21T10:34:19.352Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T10:34:19.351Z
+2024-11-21T10:34:26.197Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-21T10:34:26.200Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-21T10:34:26.201Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-21T10:35:17.685Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T10:35:17.685Z
+2024-11-21T10:35:18.308Z [my-app] [32minfo[39m: User Successfully created ahokielias099345@gmail.com 
+2024-11-21T10:35:18.324Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-21T10:35:18.324Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"ahokielias099345@gmail.com ","_id":"673f0ce65d17ffe48fc20301","createdAt":"2024-11-21T10:35:18.027Z","updatedAt":"2024-11-21T10:35:18.027Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzNmMGNlNjVkMTdmZmU0OGZjMjAzMDEiLCJlbWFpbCI6ImFob2tpZWxpYXMwOTkzNDVAZ21haWwuY29tICIsImlhdCI6MTczMjE4NTMxOCwiZXhwIjoxNzMyMTk2MTE4fQ.EEK4_V5Bg0nZy8SLH6f9-p9_Yg9EnvAEEPogi-gIyY4"}
+2024-11-21T10:37:54.250Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T10:37:54.250Z
+2024-11-21T10:37:57.311Z [my-app] [32minfo[39m: User Successfully created ahokielias0977889@gmail.com 
+2024-11-21T10:37:57.315Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-21T10:37:57.315Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"ahokielias0977889@gmail.com ","_id":"673f0d845d17ffe48fc20304","createdAt":"2024-11-21T10:37:57.000Z","updatedAt":"2024-11-21T10:37:57.000Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzNmMGQ4NDVkMTdmZmU0OGZjMjAzMDQiLCJlbWFpbCI6ImFob2tpZWxpYXMwOTc3ODg5QGdtYWlsLmNvbSAiLCJpYXQiOjE3MzIxODU0NzcsImV4cCI6MTczMjE5NjI3N30.EtvWcarW8OKAa768muF3-afDjdhwfMtd_vieJdqyzwM"}

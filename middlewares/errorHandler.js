@@ -1,38 +1,24 @@
+import {
+  ApplicationError,
+  InternalServerError,
+} from '../errors/application-error.js';
 import logger from '../logger/logger.js';
-import { ApiError, NotFoundError } from '../errors/errors.js';
 
 const errorHandler = (err, req, res, next) => {
-  // Default status code and message
-  const statusCode = err.statusCode || 500;
-  const message = err.message || 'Internal Server Error';
-  const name = err.name || 'Error';
-  const timestamp = err.timestamp || new Date().toISOString(); // Fallback if the error doesn't have a timestamp
+  // Log the error with detailed information
+  logger.error(
+    `Error caught by errorHandler: ${err.message}` //\n` +
+      // `Stack Trace: ${err.stack || 'No stack trace available'}`,
+  );
 
-  // Log the error details
-  if (err instanceof ApiError) {
-    logger.error(
-      `API Error - Status: ${statusCode}, Name: ${name}, Message: ${message}, Stack: ${err.stack}`,
-    );
+  if (err instanceof ApplicationError) {
+    // Custom application-level error handling
+    return res.status(err.status).json(err.serialize());
   } else {
-    logger.error(
-      `Unhandled Error - Status: ${statusCode}, Name: ${name}, Message: ${message}, Stack: ${err.stack}`,
-    );
+    // Handle other unanticipated errors
+    const internalError = new InternalServerError();
+    return res.status(internalError.status).json(internalError.serialize());
   }
-
-  // Send the error response with all fields
-  res.status(statusCode).json({
-    status: 'error',
-    statusCode,
-    name,
-    message,
-    timestamp,
-  });
 };
 
-const handle404Error = (req, res, next) => {
-  // Handle undefined routes
-  const error = new NotFoundError('Resource not found');
-  next(error);
-};
-
-export { errorHandler, handle404Error };
+export default errorHandler;
