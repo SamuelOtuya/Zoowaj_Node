@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const profileDetailesSchema = new mongoose.Schema(
   {
     userId: { type: String },
-    coverPhoto: {
+    profilePhoto: {
       type: Object,
       img: {
         url: String,
@@ -11,7 +11,12 @@ const profileDetailesSchema = new mongoose.Schema(
       },
       default: "https://placeholder/400",
     },
-    hobby: { type: String, default: "uknown" },
+    coverPhotos: [
+      {
+        url: { type: String },
+        public_id: { type: String },
+      },
+    ],
 
     about: {
       first_name: { type: String, required: "Firt name is required" },
