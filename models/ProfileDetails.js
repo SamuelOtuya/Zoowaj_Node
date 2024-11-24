@@ -52,13 +52,6 @@ const profileDetailesSchema = new mongoose.Schema(
           "Drinking",
           "Video Games",
         ],
-        validate: {
-          validator: function (interests) {
-            // Ensure no duplicate interests
-            return new Set(interests).size === interests.length;
-          },
-          message: "Duplicate interests are not allowed",
-        },
       },
     ],
 
@@ -98,5 +91,14 @@ const profileDetailesSchema = new mongoose.Schema(
   },
   { timestamps: true },
 );
+
+// Example Mongoose validation middleware
+profileDetailesSchema.pre("validate", function (next) {
+  if (Array.isArray(this.interests)) {
+    this.interests = [...new Set(this.interests)];
+  }
+  next();
+});
+
 
 export default mongoose.model("ProfileData", profileDetailesSchema);

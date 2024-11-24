@@ -6,32 +6,50 @@ export const postProfileDetails = async (req, res) => {
   try {
     const { files, body } = req;
 
-    if (!files || Object.keys(files).length === 0) {
-      return res.status(StatusCodes.BAD_REQUEST).json({ msg: "No files uploaded" });
+    if (!files || (!files.profilePhoto && !files.coverPhotos)) {
+      return res
+        .status(StatusCodes.BAD_REQUEST)
+        .json({ msg: "No valid files uploaded" });
     }
 
-    const profilePhoto = files.profilePhoto ? files.profilePhoto[0] : null;
+    const profilePhoto = files.profilePhoto?.[0]; // Use optional chaining
     const coverPhotos = files.coverPhotos || [];
 
-    // Upload profile photo to Cloudinary
     let profilePhotoData = null;
-    if (profilePhoto) {
-      const uploadResult = await cloudinary.uploader.upload(profilePhoto.path, {
-        folder: "profile_photos",
-      });
-      profilePhotoData = { url: uploadResult.secure_url, public_id: uploadResult.public_id };
-    }
-
-    // Upload cover photos to Cloudinary
     const coverPhotosData = [];
-    for (const photo of coverPhotos) {
-      const uploadResult = await cloudinary.uploader.upload(photo.path, {
-        folder: "cover_photos",
-      });
-      coverPhotosData.push({ url: uploadResult.secure_url, public_id: uploadResult.public_id });
+
+    if (profilePhoto) {
+      try {
+        const uploadResult = await cloudinary.uploader.upload(profilePhoto.path, {
+          folder: "profile_photos",
+        });
+        profilePhotoData = {
+          url: uploadResult.secure_url,
+          public_id: uploadResult.public_id,
+        };
+      } catch (error) {
+        console.error("Profile photo upload failed:", error);
+        return res
+          .status(StatusCodes.INTERNAL_SERVER_ERROR)
+          .json({ msg: "Profile photo upload failed" });
+      }
     }
 
-    // Prepare the document to save
+    for (const photo of coverPhotos) {
+      try {
+        const uploadResult = await cloudinary.uploader.upload(photo.path, {
+          folder: "cover_photos",
+        });
+        coverPhotosData.push({
+          url: uploadResult.secure_url,
+          public_id: uploadResult.public_id,
+        });
+      } catch (error) {
+        console.error("Cover photo upload failed:", error);
+        // Continue processing other files instead of throwing an error
+      }
+    }
+
     const data = {
       ...body,
       profilePhoto: profilePhotoData,
@@ -39,15 +57,15 @@ export const postProfileDetails = async (req, res) => {
     };
 
     const savedData = await ExtraData.create(data);
-
-    res.status(StatusCodes.OK).json({ savedData });
+    res.status(StatusCodes.CREATED).json({ savedData });
   } catch (error) {
-    console.error(error);
+    console.error("Error in postProfileDetails:", error);
     res
       .status(StatusCodes.INTERNAL_SERVER_ERROR)
       .json({ msg: "An error occurred processing your request" });
   }
 };
+
 
 export const getProfileDetails = async (req, res) => {
   try {
@@ -61,7 +79,7 @@ export const getProfileDetails = async (req, res) => {
     }
 
     // Fetch profile details
-    const profile = await ProfileData.findOne({ userId });
+    const profile = await ExtraData.findOne({ userId });
 
     // Check if profile exists
     if (!profile) {
@@ -83,35 +101,38 @@ export const getProfileDetails = async (req, res) => {
 export const addLike = async (req, res) => {
   try {
     const { profileId } = req.params;
-    const { userId } = req.body; // ID of the user liking the profile
+    const { userId } = req.body;
 
-    const profile = await ProfileData.findById(profileId);
+    const profile = await ExtraData.findOneAndUpdate(
+      { _id: profileId, likes: { $ne: userId } }, // Check if userId is not already in likes
+      { $push: { likes: userId } },
+      { new: true } // Return the updated document
+    );
 
     if (!profile) {
-      return res.status(404).json({ msg: "Profile not found" });
+      return res
+        .status(StatusCodes.BAD_REQUEST)
+        .json({ msg: "You have already liked this profile" });
     }
 
-    // Check if user already liked the profile
-    if (profile.likes.includes(userId)) {
-      return res.status(400).json({ msg: "You have already liked this profile" });
-    }
-
-    profile.likes.push(userId);
-    await profile.save();
-
-    res.status(200).json({ msg: "Profile liked successfully", likes: profile.likes.length });
+    res
+      .status(StatusCodes.OK)
+      .json({ msg: "Profile liked successfully", likes: profile.likes.length });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ msg: "An error occurred while liking the profile" });
+    console.error("Error in addLike:", error);
+    res
+      .status(StatusCodes.INTERNAL_SERVER_ERROR)
+      .json({ msg: "An error occurred while liking the profile" });
   }
 };
+
 
 export const removeLike = async (req, res) => {
   try {
     const { profileId } = req.params;
     const { userId } = req.body;
 
-    const profile = await ProfileData.findById(profileId);
+    const profile = await ExtraData.findById(profileId);
 
     if (!profile) {
       return res.status(404).json({ msg: "Profile not found" });
@@ -133,7 +154,7 @@ export const addFavorite = async (req, res) => {
     const { profileId } = req.params;
     const { userId } = req.body; // ID of the user adding the profile to favorites
 
-    const profile = await ProfileData.findById(profileId);
+    const profile = await ExtraData.findById(profileId);
 
     if (!profile) {
       return res.status(404).json({ msg: "Profile not found" });
@@ -159,7 +180,7 @@ export const removeFavorite = async (req, res) => {
     const { profileId } = req.params;
     const { userId } = req.body;
 
-    const profile = await ProfileData.findById(profileId);
+    const profile = await ExtraData.findById(profileId);
 
     if (!profile) {
       return res.status(404).json({ msg: "Profile not found" });
