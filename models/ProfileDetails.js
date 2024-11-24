@@ -1,3 +1,5 @@
+import mongoose from "mongoose";
+
 const profileDetailesSchema = new mongoose.Schema(
   {
     userId: { type: String },
