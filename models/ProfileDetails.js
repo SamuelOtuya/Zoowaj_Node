@@ -1,5 +1,3 @@
-import mongoose from "mongoose";
-
 const profileDetailesSchema = new mongoose.Schema(
   {
     userId: { type: String },
@@ -17,9 +15,9 @@ const profileDetailesSchema = new mongoose.Schema(
         public_id: { type: String },
       },
     ],
-
+    hobby: { type: String, default: "unknown" },
     about: {
-      first_name: { type: String, required: "Firt name is required" },
+      first_name: { type: String, required: "First name is required" },
       last_name: { type: String, required: "Last name is required" },
       username: { type: String, required: "Username is required", unique: true },
       phone_number: { type: String, required: "Phone number is required" },
@@ -28,11 +26,10 @@ const profileDetailesSchema = new mongoose.Schema(
       height: { type: String },
       maritalStatus: {
         type: String,
-        enum: ["Single", "Seperated", "Divorced", "Widowed"],
+        enum: ["Single", "Separated", "Divorced", "Widowed"],
       },
       tagline: { type: String, maxlength: 120 },
     },
-
     interests: [
       {
         type: String,
@@ -52,48 +49,12 @@ const profileDetailesSchema = new mongoose.Schema(
           "Drinking",
           "Video Games",
         ],
-        validate: {
-          validator: function (interests) {
-            // Ensure no duplicate interests
-            return new Set(interests).size === interests.length;
-          },
-          message: "Duplicate interests are not allowed",
-        },
       },
     ],
-
-    religiosity: {
-      muslimSect: { type: String, enum: ["Sunni", "Shia", "Other"], required: true },
-      isConvert: { type: String, enum: ["Yes", "No"], required: true },
-      religiousPractice: { type: String, enum: ["Strict", "Moderate", "Liberal"], required: true },
-      doYouPray: { type: String, enum: ["Regularly", "Occasionally", "Rarely"], required: true },
-      diet: { type: String, enum: ["Halal", "Halal and Non-Halal", "Vegan", "Vegetarian"], required: true },
-      doYouSmoke: { type: String, enum: ["Yes", "No", "Occasionally"], required: true },
-      hasTattoos: { type: String, enum: ["Yes", "No"], required: true },
-    },
-
-    marriageIntentions: {
-      lookingToMarry: { type: String, enum: ["Within 1 year", "1-2 years", "2-3 years", "3-5 years"], required: true },
-      willingToRelocate: { type: String, enum: ["Yes", "No", "Maybe"], required: true },
-      wantsChildren: { type: String, enum: ["Yes", "No", "Maybe"], required: true },
-      livingArrangments: { type: String, enum: ["Living alone", "Living with family", "Living with roommates"], required: true },
-      iceBreaker: { type: String, maxlength: 120 },
-    },
-
-    languageAndEthnicity: {
-      languages: { type: String, enum: ["English", "Arabic", "Urdu", "Bengali", "Other"], required: true },
-      ethnicGroup: { type: String, enum: ["Asian", "Black", "Hispanic", "Middle Eastern", "White", "Other"], required: true },
-      ethnicOrigin: { type: String, enum: ["Indian", "Pakistani", "Bangladeshi", "Arab", "Turkish", "Other"], required: true },
-      biography: { type: String, maxlength: 500 },
-    },
-
-    educationAndCareer: {
-      profession: { type: String, enum: ["Doctor", "Engineer", "Teacher", "Business", "Other"], required: true },
-      education: { type: String, enum: [ "High School", "Bachelor's", "Master's", "PhD", "Other"], required: true },
-      jobTitle: { type: String, enum: ["Manager", "Developer", "Designer", "Analyst", "Other"], required: true },
-    },
+    likes: [{ type: mongoose.Schema.Types.ObjectId, ref: "ProfileData" }], // Tracks users who liked this profile
+    favorites: [{ type: mongoose.Schema.Types.ObjectId, ref: "ProfileData" }], // Tracks users who marked this profile as favorite
   },
-  { timestamps: true },
+  { timestamps: true }
 );
 
 export default mongoose.model("ProfileData", profileDetailesSchema);

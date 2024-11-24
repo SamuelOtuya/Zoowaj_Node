@@ -912,3 +912,18 @@ Stack Trace: Error: Error creating user
 2024-11-23T10:59:10.555Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: 2024-11-23T10:59:10.555Z
 2024-11-23T10:59:14.921Z [my-app] [32minfo[39m: Response for POST /api/v1/user/profile - Status: 500
 2024-11-23T10:59:14.922Z [my-app] [32minfo[39m: Response Body: {"msg":"An error occurred processing your request"}
+2024-11-23T11:15:50.034Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-23T11:15:52.430Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-23T11:15:56.149Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: 2024-11-23T11:15:56.149Z
+2024-11-23T11:16:00.445Z [my-app] [32minfo[39m: Response for POST /api/v1/user/profile - Status: 500
+2024-11-23T11:16:00.446Z [my-app] [32minfo[39m: Response Body: {"msg":"An error occurred processing your request"}
+2024-11-23T18:04:02.211Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/message, Timestamp: 2024-11-23T18:04:02.211Z
+2024-11-23T18:04:02.216Z [my-app] [32minfo[39m: Response for POST /api/v1/message - Status: 400
+2024-11-23T18:04:02.221Z [my-app] [32minfo[39m: Response Body: {"msg":"User, recepient, and message are required."}
+2024-11-23T18:04:48.318Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/message, Timestamp: 2024-11-23T18:04:48.318Z
+2024-11-23T18:04:49.342Z [my-app] [32minfo[39m: Response for POST /api/v1/message - Status: 201
+2024-11-23T18:04:49.342Z [my-app] [32minfo[39m: Response Body: {"message":{"user":"6739b348f82e6553db495f1b","recepient":"673af51b146f08f91d601c7f","message":"Good","_id":"67421940f8fe1b8274df2709","createdAt":"2024-11-23T18:04:48.326Z","updatedAt":"2024-11-23T18:04:48.326Z","__v":0}}
+2024-11-23T18:04:58.766Z [my-app] [32minfo[39m: Request - Method: GET, URL: /api/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b, Timestamp: 2024-11-23T18:04:58.766Z
+2024-11-23T18:05:06.668Z [my-app] [32minfo[39m: Request - Method: GET, URL: /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b, Timestamp: 2024-11-23T18:05:06.668Z
+2024-11-23T18:05:07.876Z [my-app] [32minfo[39m: Response for GET /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b - Status: 200
+2024-11-23T18:05:07.877Z [my-app] [32minfo[39m: Response Body: {"messages":[{"_id":"67421940f8fe1b8274df2709","user":null,"recepient":null,"message":"Good","createdAt":"2024-11-23T18:04:48.326Z","updatedAt":"2024-11-23T18:04:48.326Z","__v":0}]}
