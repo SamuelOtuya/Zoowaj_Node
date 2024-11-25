@@ -501,6 +501,40 @@
 2024-11-20T13:32:07.706Z [my-app] [34mdebug[39m: Retrieved User: tim2@gmail.com
 2024-11-20T13:34:06.260Z [my-app] [32minfo[39m: Method: GET, URL: /api/v1/user/all, Timestamp: 2024-11-20T13:34:06.260Z
 2024-11-20T13:34:09.903Z [my-app] [32minfo[39m: retrieved 7 users
+<<<<<<< HEAD
+2024-11-20T18:23:03.187Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T18:23:05.783Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T18:23:32.007Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T18:23:32.007Z
+2024-11-20T18:24:37.032Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T18:24:37.032Z
+2024-11-20T18:31:27.689Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T18:31:27.689Z
+2024-11-20T18:32:09.208Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T18:32:09.208Z
+2024-11-20T18:32:09.425Z [my-app] [34mdebug[39m: Salt Rounds: 10
+2024-11-20T18:32:10.071Z [my-app] [31merror[39m: Error creating user: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: null }
+2024-11-20T18:32:17.388Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T18:32:17.388Z
+2024-11-20T18:32:17.651Z [my-app] [34mdebug[39m: Salt Rounds: 10
+2024-11-20T18:32:17.964Z [my-app] [31merror[39m: Error creating user: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: null }
+2024-11-20T18:32:40.849Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T18:32:40.849Z
+2024-11-20T18:32:41.101Z [my-app] [34mdebug[39m: Salt Rounds: 10
+2024-11-20T18:32:41.423Z [my-app] [31merror[39m: Error creating user: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: null }
+2024-11-20T18:34:39.975Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T18:34:39.975Z
+2024-11-20T18:34:40.312Z [my-app] [34mdebug[39m: Salt Rounds: 10
+2024-11-20T18:34:40.873Z [my-app] [31merror[39m: Error creating user: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: null }
+2024-11-20T18:34:50.827Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T18:34:50.827Z
+2024-11-20T18:34:51.061Z [my-app] [34mdebug[39m: Salt Rounds: 10
+2024-11-20T18:34:51.361Z [my-app] [31merror[39m: Error creating user: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: null }
+2024-11-20T18:35:38.481Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T18:35:38.481Z
+2024-11-20T18:35:38.731Z [my-app] [34mdebug[39m: Salt Rounds: 10
+2024-11-20T18:35:39.039Z [my-app] [31merror[39m: Error creating user: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: null }
+2024-11-20T19:03:38.401Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-20T19:03:40.942Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-20T19:03:47.046Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-20T19:03:47.045Z
+2024-11-20T19:03:47.291Z [my-app] [31merror[39m: Error creating user: Email already exists
+2024-11-20T19:03:57.620Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T19:03:57.620Z
+2024-11-20T19:03:58.452Z [my-app] [34mdebug[39m: User login successful tim2@gmail.com
+2024-11-21T09:50:31.562Z [my-app] [32minfo[39m: Method: GET, URL: /api/auth/google/callback?code=4%2F0AeanS0YE0AvFYByX4iNYywur582bfgCliRZ3E5TpxrUahRHSyUq5QzGmaBbBL39B4J_iDg&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=consent, Timestamp: 2024-11-21T09:50:31.552Z
+2024-11-21T10:20:39.821Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-21T10:20:45.102Z [my-app] [32minfo[39m: MongoDB Connected!
+=======
 2024-11-20T13:49:28.568Z [my-app] [32minfo[39m: Server listening on port 8000
 2024-11-20T13:49:49.166Z [my-app] [32minfo[39m: MongoDB Connected!
 2024-11-20T13:49:55.370Z [my-app] [32minfo[39m: Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-20T13:49:55.370Z
@@ -821,6 +855,7 @@ Stack Trace: Error: Error creating user
 2024-11-21T10:37:57.311Z [my-app] [32minfo[39m: User Successfully created ahokielias0977889@gmail.com 
 2024-11-21T10:37:57.315Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
 2024-11-21T10:37:57.315Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"ahokielias0977889@gmail.com ","_id":"673f0d845d17ffe48fc20304","createdAt":"2024-11-21T10:37:57.000Z","updatedAt":"2024-11-21T10:37:57.000Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzNmMGQ4NDVkMTdmZmU0OGZjMjAzMDQiLCJlbWFpbCI6ImFob2tpZWxpYXMwOTc3ODg5QGdtYWlsLmNvbSAiLCJpYXQiOjE3MzIxODU0NzcsImV4cCI6MTczMjE5NjI3N30.EtvWcarW8OKAa768muF3-afDjdhwfMtd_vieJdqyzwM"}
+<<<<<<< HEAD
 2024-11-21T10:49:20.496Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T10:49:20.496Z
 2024-11-21T10:49:22.114Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
 2024-11-21T10:49:22.116Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
@@ -1300,3 +1335,77 @@ Stack Trace: Error: Error creating user
 2024-11-25T21:54:44.433Z [my-app] [32minfo[39m: User Successfully created davidopati750@gmail.com
 2024-11-25T21:54:44.439Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
 2024-11-25T21:54:44.440Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati750@gmail.com","_id":"6744f2249b2b21e9975c97a4","createdAt":"2024-11-25T21:54:44.124Z","updatedAt":"2024-11-25T21:54:44.124Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZjIyNDliMmIyMWU5OTc1Yzk3YTQiLCJlbWFpbCI6ImRhdmlkb3BhdGk3NTBAZ21haWwuY29tIiwiaWF0IjoxNzMyNTcxNjg0LCJleHAiOjE3MzI1ODI0ODR9.6LA-w60oH9qjqNqJTkatLT17lbgdUbQnlykZ2e8g0Pc"}
+=======
+>>>>>>> 42383f24d3eec309f18d2a2ef108c2823d7c893d
+2024-11-23T10:26:21.605Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-23T10:26:23.464Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-23T10:26:43.437Z [my-app] [32minfo[39m: Request - Method: GET, URL: /api/v1/user/all, Timestamp: 2024-11-23T10:26:43.437Z
+2024-11-23T10:26:43.591Z [my-app] [32minfo[39m: retrieved 19 users
+2024-11-23T10:26:43.595Z [my-app] [32minfo[39m: Response for GET /api/v1/user/all - Status: 200
+2024-11-23T10:26:43.595Z [my-app] [32minfo[39m: Response Body: [{"_id":"673dd6d79b44634d2f229925","email":"sam6@gmail.com","createdAt":"2024-11-20T12:32:23.686Z","updatedAt":"2024-11-20T12:32:23.686Z","__v":0},{"_id":"673dd7deb58c8c4e3a4ae81e","email":"sam@gmail.com","createdAt":"2024-11-20T12:36:46.641Z","updatedAt":"2024-11-20T12:36:46.641Z","__v":0},{"_id":"673dd7f2b58c8c4e3a4ae821","email":"sam2@gmail.com","createdAt":"2024-11-20T12:37:06.477Z","updatedAt":"2024-11-20T12:37:06.477Z","__v":0},{"_id":"673dd82ab58c8c4e3a4ae826","email":"sam3@gmail.com","createdAt":"2024-11-20T12:38:02.823Z","updatedAt":"2024-11-20T12:38:02.823Z","__v":0},{"_id":"673ddaa32900ff09fbc35566","email":"sam4@gmail.com","createdAt":"2024-11-20T12:48:35.891Z","updatedAt":"2024-11-20T12:48:35.891Z","__v":0},{"_id":"673de2772189b1cce8289617","email":"tim@gmail.com","createdAt":"2024-11-20T13:21:59.734Z","updatedAt":"2024-11-20T13:21:59.734Z","__v":0},{"_id":"673de3a3a2e08f5b386e41c7","email":"tim2@gmail.com","createdAt":"2024-11-20T13:26:59.463Z","updatedAt":"2024-11-20T13:26:59.463Z","__v":0},{"_id":"673e226df65bc55a878eb193","email":"ahokielias0969@gmail.com ","createdAt":"2024-11-20T17:54:53.952Z","updatedAt":"2024-11-20T17:54:53.952Z","__v":0},{"_id":"673e2388f65bc55a878eb1be","email":"ahokielias099@gmail.com ","createdAt":"2024-11-20T17:59:36.028Z","updatedAt":"2024-11-20T17:59:36.028Z","__v":0},{"_id":"673e2493f65bc55a878eb1c3","email":"ahokielias099tyy@gmail.com ","createdAt":"2024-11-20T18:04:03.201Z","updatedAt":"2024-11-20T18:04:03.201Z","__v":0},{"_id":"673e3f7df65bc55a878eb1cb","email":"ahokielias099355@gmail.com ","createdAt":"2024-11-20T19:58:53.349Z","updatedAt":"2024-11-20T19:58:53.349Z","__v":0},{"_id":"673e4b92f65bc55a878eb1d5","email":"ahokielias@gmail.com ","createdAt":"2024-11-20T20:50:26.866Z","updatedAt":"2024-11-20T20:50:26.866Z","__v":0},{"_id":"673e4bc0f65bc55a878eb1da","email":"ahokielias100@gmail.com","createdAt":"2024-11-20T20:51:12.707Z","updatedAt":"2024-11-20T20:51:12.707Z","__v":0},{"_id":"673eff0c2bf14c71920e0059","email":"ahokielias099100@gmail.com ","createdAt":"2024-11-21T09:36:12.041Z","updatedAt":"2024-11-21T09:36:12.041Z","__v":0},{"_id":"673f00512bf14c71920e0063","email":"ahokielias099678@gmail.com ","createdAt":"2024-11-21T09:41:37.173Z","updatedAt":"2024-11-21T09:41:37.173Z","__v":0},{"_id":"673f0bb157a37597c62c9608","email":"ahokieliasf099@gmail.com ","createdAt":"2024-11-21T10:30:09.839Z","updatedAt":"2024-11-21T10:30:09.839Z","__v":0},{"_id":"673f0ce65d17ffe48fc20301","email":"ahokielias099345@gmail.com ","createdAt":"2024-11-21T10:35:18.027Z","updatedAt":"2024-11-21T10:35:18.027Z","__v":0},{"_id":"673f0d845d17ffe48fc20304","email":"ahokielias0977889@gmail.com ","createdAt":"2024-11-21T10:37:57.000Z","updatedAt":"2024-11-21T10:37:57.000Z","__v":0},{"_id":"673f10ed5d17ffe48fc20308","email":"ahokielias09778896@gmail.com ","createdAt":"2024-11-21T10:52:29.818Z","updatedAt":"2024-11-21T10:52:29.818Z","__v":0}]
+2024-11-23T10:33:05.541Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/profile, Timestamp: 2024-11-23T10:33:05.541Z
+2024-11-23T10:33:18.305Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/profile, Timestamp: 2024-11-23T10:33:18.305Z
+2024-11-23T10:33:42.177Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: 2024-11-23T10:33:42.177Z
+2024-11-23T10:34:26.866Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: 2024-11-23T10:34:26.866Z
+2024-11-23T10:40:35.934Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-23T10:40:38.295Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-23T10:40:41.376Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: 2024-11-23T10:40:41.376Z
+2024-11-23T10:40:57.331Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-23T10:40:59.333Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-23T10:41:37.493Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: 2024-11-23T10:41:37.493Z
+2024-11-23T10:41:37.508Z [my-app] [32minfo[39m: Response for POST /api/v1/user/profile - Status: 500
+2024-11-23T10:41:37.508Z [my-app] [32minfo[39m: Response Body: {"msg":"An error occurred processing your request"}
+2024-11-23T10:43:13.751Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: 2024-11-23T10:43:13.751Z
+2024-11-23T10:43:13.757Z [my-app] [32minfo[39m: Response for POST /api/v1/user/profile - Status: 500
+2024-11-23T10:43:13.759Z [my-app] [32minfo[39m: Response Body: {"msg":"An error occurred processing your request"}
+2024-11-23T10:43:27.547Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: 2024-11-23T10:43:27.547Z
+2024-11-23T10:43:27.551Z [my-app] [32minfo[39m: Response for POST /api/v1/user/profile - Status: 500
+2024-11-23T10:43:27.552Z [my-app] [32minfo[39m: Response Body: {"msg":"An error occurred processing your request"}
+2024-11-23T10:50:05.933Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/login, Timestamp: 2024-11-23T10:50:05.933Z
+2024-11-23T10:50:06.308Z [my-app] [34mdebug[39m: User login successful tim2@gmail.com
+2024-11-23T10:50:06.309Z [my-app] [32minfo[39m: Response for POST /api/v1/user/login - Status: 200
+2024-11-23T10:50:06.310Z [my-app] [32minfo[39m: Response Body: {"message":"Login successful","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzNkZTNhM2EyZTA4ZjViMzg2ZTQxYzciLCJlbWFpbCI6InRpbTJAZ21haWwuY29tIiwiaWF0IjoxNzMyMzU5MDA2LCJleHAiOjE3MzIzNjk4MDZ9.rIT6-Oi-Qv_3eDEOfbfqU8e2yp9mgjXDIMRoCcqrCfk","authUser":{"_id":"673de3a3a2e08f5b386e41c7","email":"tim2@gmail.com","password":"$2b$10$8EOq1Cjrw7790UNZ.wb6Ke0wQBh3X9WBJKJjmyqs0v8/tvm1oMK9K","createdAt":"2024-11-20T13:26:59.463Z","updatedAt":"2024-11-20T13:26:59.463Z","__v":0}}
+2024-11-23T10:51:18.973Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: 2024-11-23T10:51:18.973Z
+2024-11-23T10:51:18.979Z [my-app] [31merror[39m: Error caught by errorHandler: ENOENT: no such file or directory, open 'C:\Users\kwshi\Documents\projects\work\zoowaj\backend\Zoowaj_Node\uploads\1732359078975-CUEA.png'
+2024-11-23T10:51:18.980Z [my-app] [32minfo[39m: Response for POST /api/v1/user/profile - Status: 500
+2024-11-23T10:51:18.980Z [my-app] [32minfo[39m: Response Body: {"message":"Internal Server Error","status":500}
+2024-11-23T10:52:00.289Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: 2024-11-23T10:52:00.289Z
+2024-11-23T10:52:00.336Z [my-app] [32minfo[39m: Response for POST /api/v1/user/profile - Status: 500
+2024-11-23T10:52:00.338Z [my-app] [32minfo[39m: Response Body: {"msg":"An error occurred processing your request"}
+2024-11-23T10:52:26.749Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: 2024-11-23T10:52:26.749Z
+2024-11-23T10:52:26.758Z [my-app] [32minfo[39m: Response for POST /api/v1/user/profile - Status: 500
+2024-11-23T10:52:26.758Z [my-app] [32minfo[39m: Response Body: {"msg":"An error occurred processing your request"}
+2024-11-23T10:55:21.933Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: 2024-11-23T10:55:21.933Z
+2024-11-23T10:55:21.944Z [my-app] [32minfo[39m: Response for POST /api/v1/user/profile - Status: 500
+2024-11-23T10:55:21.944Z [my-app] [32minfo[39m: Response Body: {"msg":"An error occurred processing your request"}
+2024-11-23T10:55:42.750Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-23T10:55:44.993Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-23T10:55:50.328Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: 2024-11-23T10:55:50.328Z
+2024-11-23T10:55:50.356Z [my-app] [32minfo[39m: Response for POST /api/v1/user/profile - Status: 500
+2024-11-23T10:55:50.357Z [my-app] [32minfo[39m: Response Body: {"msg":"An error occurred processing your request"}
+2024-11-23T10:56:58.960Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-23T10:57:02.042Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-23T10:57:04.583Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: 2024-11-23T10:57:04.583Z
+2024-11-23T10:57:04.608Z [my-app] [32minfo[39m: Response for POST /api/v1/user/profile - Status: 500
+2024-11-23T10:57:04.610Z [my-app] [32minfo[39m: Response Body: {"msg":"An error occurred processing your request"}
+2024-11-23T10:58:54.856Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-23T10:58:57.663Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-23T10:59:10.555Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: 2024-11-23T10:59:10.555Z
+2024-11-23T10:59:14.921Z [my-app] [32minfo[39m: Response for POST /api/v1/user/profile - Status: 500
+2024-11-23T10:59:14.922Z [my-app] [32minfo[39m: Response Body: {"msg":"An error occurred processing your request"}
+2024-11-23T11:15:50.034Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-23T11:15:52.430Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-23T11:15:56.149Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: 2024-11-23T11:15:56.149Z
+2024-11-23T11:16:00.445Z [my-app] [32minfo[39m: Response for POST /api/v1/user/profile - Status: 500
+2024-11-23T11:16:00.446Z [my-app] [32minfo[39m: Response Body: {"msg":"An error occurred processing your request"}
+2024-11-23T18:04:02.211Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/message, Timestamp: 2024-11-23T18:04:02.211Z
+2024-11-23T18:04:02.216Z [my-app] [32minfo[39m: Response for POST /api/v1/message - Status: 400
+2024-11-23T18:04:02.221Z [my-app] [32minfo[39m: Response Body: {"msg":"User, recepient, and message are required."}
+2024-11-23T18:04:48.318Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/message, Timestamp: 2024-11-23T18:04:48.318Z
+2024-11-23T18:04:49.342Z [my-app] [32minfo[39m: Response for POST /api/v1/message - Status: 201
+2024-11-23T18:04:49.342Z [my-app] [32minfo[39m: Response Body: {"message":{"user":"6739b348f82e6553db495f1b","recepient":"673af51b146f08f91d601c7f","message":"Good","_id":"67421940f8fe1b8274df2709","createdAt":"2024-11-23T18:04:48.326Z","updatedAt":"2024-11-23T18:04:48.326Z","__v":0}}
+2024-11-23T18:04:58.766Z [my-app] [32minfo[39m: Request - Method: GET, URL: /api/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b, Timestamp: 2024-11-23T18:04:58.766Z
+2024-11-23T18:05:06.668Z [my-app] [32minfo[39m: Request - Method: GET, URL: /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b, Timestamp: 2024-11-23T18:05:06.668Z
+2024-11-23T18:05:07.876Z [my-app] [32minfo[39m: Response for GET /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b - Status: 200
+2024-11-23T18:05:07.877Z [my-app] [32minfo[39m: Response Body: {"messages":[{"_id":"67421940f8fe1b8274df2709","user":null,"recepient":null,"message":"Good","createdAt":"2024-11-23T18:04:48.326Z","updatedAt":"2024-11-23T18:04:48.326Z","__v":0}]}
+>>>>>>> 613739f156a7b7717f107f424e57eb5ee9e783cb

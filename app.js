@@ -5,7 +5,7 @@ import dotenv from "dotenv"
 import userRoutes from './routes/user-routes.js';
 import messageRoutes from './routes/message-routes.js';
 import googleAuthRoutes from './routes/google-auth-routes.js';
-import passport from './passport.js';
+import passport from './utils/passport.js';
 
 import requestLogger from './utils/requestLogger.js';
 import errorHandler from './middlewares/errorHandler.js';
