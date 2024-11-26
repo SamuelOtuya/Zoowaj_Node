@@ -101,4 +101,4 @@ profileDetailesSchema.pre("validate", function (next) {
 });
 
 
-export default mongoose.model("ProfileData", profileDetailesSchema);
+export default mongoose.model("ExtraData", profileDetailesSchema);

@@ -101,36 +101,36 @@ export const getProfileDetails = async (req, res) => {
 export const addLike = async (req, res) => {
   try {
     const { profileId } = req.params;
-    const { userId } = req.body;
+    const { userId } = req.body; // ID of the user liking the profile
 
-    const profile = await ExtraData.findOneAndUpdate(
-      { _id: profileId, likes: { $ne: userId } }, // Check if userId is not already in likes
-      { $push: { likes: userId } },
-      { new: true } // Return the updated document
-    );
+    const profile = await ExtraData.findById(profileId);
 
     if (!profile) {
-      return res
-        .status(StatusCodes.BAD_REQUEST)
-        .json({ msg: "You have already liked this profile" });
+      return res.status(404).json({ msg: "Profile not found" });
     }
 
-    res
-      .status(StatusCodes.OK)
-      .json({ msg: "Profile liked successfully", likes: profile.likes.length });
+    // Check if user already liked the profile
+    if (profile.likes.includes(userId)) {
+      return res.status(400).json({ msg: "You have already liked this profile" });
+    }
+
+    profile.likes.push(userId);
+    await profile.save();
+
+    res.status(200).json({ msg: "Profile liked successfully", likes: profile.likes.length });
   } catch (error) {
-    console.error("Error in addLike:", error);
-    res
-      .status(StatusCodes.INTERNAL_SERVER_ERROR)
-      .json({ msg: "An error occurred while liking the profile" });
+    console.error(error);
+    res.status(500).json({ msg: "An error occurred while liking the profile" });
   }
 };
+
+
 
 
 export const removeLike = async (req, res) => {
   try {
     const { profileId } = req.params;
-    const { userId } = req.body;
+    const { userId } = req.body;  // ID of the user adding the profile to favorites
 
     const profile = await ExtraData.findById(profileId);
 
