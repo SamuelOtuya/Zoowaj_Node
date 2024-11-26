@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import jwt from 'jsonwebtoken';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
+import morgan from 'morgan';
 
 import app from './app.js';
 import './models/User.js';

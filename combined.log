@@ -855,6 +855,487 @@ Stack Trace: Error: Error creating user
 2024-11-21T10:37:57.311Z [my-app] [32minfo[39m: User Successfully created ahokielias0977889@gmail.com 
 2024-11-21T10:37:57.315Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
 2024-11-21T10:37:57.315Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"ahokielias0977889@gmail.com ","_id":"673f0d845d17ffe48fc20304","createdAt":"2024-11-21T10:37:57.000Z","updatedAt":"2024-11-21T10:37:57.000Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzNmMGQ4NDVkMTdmZmU0OGZjMjAzMDQiLCJlbWFpbCI6ImFob2tpZWxpYXMwOTc3ODg5QGdtYWlsLmNvbSAiLCJpYXQiOjE3MzIxODU0NzcsImV4cCI6MTczMjE5NjI3N30.EtvWcarW8OKAa768muF3-afDjdhwfMtd_vieJdqyzwM"}
+<<<<<<< HEAD
+2024-11-21T10:49:20.496Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T10:49:20.496Z
+2024-11-21T10:49:22.114Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-21T10:49:22.116Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-21T10:49:22.116Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-21T10:52:29.523Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-21T10:52:29.523Z
+2024-11-21T10:52:30.039Z [my-app] [32minfo[39m: User Successfully created ahokielias09778896@gmail.com 
+2024-11-21T10:52:30.045Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-21T10:52:30.046Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"ahokielias09778896@gmail.com ","_id":"673f10ed5d17ffe48fc20308","createdAt":"2024-11-21T10:52:29.818Z","updatedAt":"2024-11-21T10:52:29.818Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzNmMTBlZDVkMTdmZmU0OGZjMjAzMDgiLCJlbWFpbCI6ImFob2tpZWxpYXMwOTc3ODg5NkBnbWFpbC5jb20gIiwiaWF0IjoxNzMyMTg2MzUwLCJleHAiOjE3MzIxOTcxNTB9.3oXTn-c0uso9PRpjtHv0bU0iaa7biaT-L1tfKx4_cEU"}
+2024-11-25T17:03:38.891Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-25T17:03:43.967Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-25T17:28:33.054Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-25T17:28:37.078Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-25T17:30:56.058Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T17:30:56.058Z
+2024-11-25T17:30:56.461Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T17:30:56.465Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T17:30:56.466Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T17:42:41.941Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-25T17:42:45.571Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-25T18:15:54.784Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T18:15:54.784Z
+2024-11-25T18:15:57.314Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T18:15:57.317Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T18:15:57.318Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T18:22:48.857Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T18:22:48.856Z
+2024-11-25T18:22:49.683Z [my-app] [32minfo[39m: User Successfully created davidopati0@gmail.com
+2024-11-25T18:22:49.717Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T18:22:49.719Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati0@gmail.com","_id":"6744c079d1799f590d5b59df","createdAt":"2024-11-25T18:22:49.375Z","updatedAt":"2024-11-25T18:22:49.375Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0YzA3OWQxNzk5ZjU5MGQ1YjU5ZGYiLCJlbWFpbCI6ImRhdmlkb3BhdGkwQGdtYWlsLmNvbSIsImlhdCI6MTczMjU1ODk2OSwiZXhwIjoxNzMyNTY5NzY5fQ.23uK90NRLrm2spaDJT11_y643KjJ90lwgScUHGm0Cl8"}
+2024-11-25T18:25:17.232Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T18:25:17.232Z
+2024-11-25T18:25:17.506Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T18:25:17.507Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T18:25:17.508Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T18:26:01.571Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T18:26:01.571Z
+2024-11-25T18:26:01.870Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T18:26:01.872Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T18:26:01.873Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T18:26:02.587Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T18:26:02.587Z
+2024-11-25T18:26:02.674Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T18:26:02.674Z
+2024-11-25T18:26:02.906Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T18:26:02.907Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T18:26:02.908Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T18:26:02.923Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T18:26:02.922Z
+2024-11-25T18:26:03.199Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T18:26:03.199Z
+2024-11-25T18:26:03.208Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T18:26:03.208Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T18:26:03.209Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T18:26:04.739Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T18:26:04.741Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T18:26:04.741Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T18:26:05.045Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T18:26:05.047Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T18:26:05.047Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T18:26:44.992Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T18:26:44.991Z
+2024-11-25T18:26:45.291Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T18:26:45.292Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T18:26:45.292Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T18:26:47.030Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T18:26:47.030Z
+2024-11-25T18:26:47.337Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T18:26:47.338Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T18:26:47.339Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T18:26:48.128Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T18:26:48.128Z
+2024-11-25T18:26:48.464Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T18:26:48.465Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T18:26:48.466Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T18:27:12.126Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T18:27:12.126Z
+2024-11-25T18:27:12.428Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T18:27:12.429Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T18:27:12.429Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T18:27:14.889Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T18:27:14.888Z
+2024-11-25T18:27:15.196Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T18:27:15.197Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T18:27:15.197Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T18:27:15.914Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T18:27:15.914Z
+2024-11-25T18:27:16.191Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T18:27:16.192Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T18:27:16.192Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T18:27:22.681Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T18:27:22.681Z
+2024-11-25T18:27:23.388Z [my-app] [32minfo[39m: User Successfully created davidop2ati0@gmail.com
+2024-11-25T18:27:23.399Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T18:27:23.399Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidop2ati0@gmail.com","_id":"6744c18bd1799f590d5b59ee","createdAt":"2024-11-25T18:27:23.086Z","updatedAt":"2024-11-25T18:27:23.086Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0YzE4YmQxNzk5ZjU5MGQ1YjU5ZWUiLCJlbWFpbCI6ImRhdmlkb3AyYXRpMEBnbWFpbC5jb20iLCJpYXQiOjE3MzI1NTkyNDMsImV4cCI6MTczMjU3MDA0M30.UCcd1F4Mil43pQtlhOG5iDCDP7lnQttY7Jl7ZSitNFc"}
+2024-11-25T18:29:02.845Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T18:29:02.845Z
+2024-11-25T18:29:03.624Z [my-app] [32minfo[39m: User Successfully created richbrains254@gmail.com
+2024-11-25T18:29:03.630Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T18:29:03.630Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"richbrains254@gmail.com","_id":"6744c1efd1799f590d5b59f1","createdAt":"2024-11-25T18:29:03.348Z","updatedAt":"2024-11-25T18:29:03.348Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0YzFlZmQxNzk5ZjU5MGQ1YjU5ZjEiLCJlbWFpbCI6InJpY2hicmFpbnMyNTRAZ21haWwuY29tIiwiaWF0IjoxNzMyNTU5MzQzLCJleHAiOjE3MzI1NzAxNDN9.lgk3PAeXOMGfBpSVjw5OY-z2nwCssK5Ab30hflVcJOA"}
+2024-11-25T18:38:26.106Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T18:38:26.106Z
+2024-11-25T18:38:26.918Z [my-app] [32minfo[39m: User Successfully created davidofgpati0@gmail.com
+2024-11-25T18:38:26.929Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T18:38:26.929Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidofgpati0@gmail.com","_id":"6744c422d1799f590d5b59f4","createdAt":"2024-11-25T18:38:26.602Z","updatedAt":"2024-11-25T18:38:26.602Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0YzQyMmQxNzk5ZjU5MGQ1YjU5ZjQiLCJlbWFpbCI6ImRhdmlkb2ZncGF0aTBAZ21haWwuY29tIiwiaWF0IjoxNzMyNTU5OTA2LCJleHAiOjE3MzI1NzA3MDZ9.CuhikOsXG8HvKzMno4EOP8ZH8W99zjmPhPrp4HG0HXk"}
+2024-11-25T18:41:24.704Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T18:41:24.704Z
+2024-11-25T18:41:25.414Z [my-app] [32minfo[39m: User Successfully created davido43pati0@gmail.com
+2024-11-25T18:41:25.420Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T18:41:25.421Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davido43pati0@gmail.com","_id":"6744c4d5d1799f590d5b59f7","createdAt":"2024-11-25T18:41:25.099Z","updatedAt":"2024-11-25T18:41:25.099Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0YzRkNWQxNzk5ZjU5MGQ1YjU5ZjciLCJlbWFpbCI6ImRhdmlkbzQzcGF0aTBAZ21haWwuY29tIiwiaWF0IjoxNzMyNTYwMDg1LCJleHAiOjE3MzI1NzA4ODV9.wu0XwvO98BfZfwHVwMAzNZrlv3hOGdnNrYmAPdCrUXE"}
+2024-11-25T18:46:14.916Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T18:46:14.916Z
+2024-11-25T18:46:15.632Z [my-app] [32minfo[39m: User Successfully created davidopati70@gmail.com
+2024-11-25T18:46:15.669Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T18:46:15.670Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati70@gmail.com","_id":"6744c5f7d1799f590d5b59fa","createdAt":"2024-11-25T18:46:15.302Z","updatedAt":"2024-11-25T18:46:15.302Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0YzVmN2QxNzk5ZjU5MGQ1YjU5ZmEiLCJlbWFpbCI6ImRhdmlkb3BhdGk3MEBnbWFpbC5jb20iLCJpYXQiOjE3MzI1NjAzNzUsImV4cCI6MTczMjU3MTE3NX0.q9ryCvgbeEQKYjJk6r2kQy3uo4NixHr-XZgWFZZliMY"}
+2024-11-25T18:53:56.561Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T18:53:56.561Z
+2024-11-25T18:53:57.013Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T18:53:57.013Z
+2024-11-25T18:53:57.274Z [my-app] [32minfo[39m: User Successfully created davidopatir470@gmail.com
+2024-11-25T18:53:57.308Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T18:53:57.308Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopatir470@gmail.com","_id":"6744c7c4d1799f590d5b59fd","createdAt":"2024-11-25T18:53:56.917Z","updatedAt":"2024-11-25T18:53:56.917Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0YzdjNGQxNzk5ZjU5MGQ1YjU5ZmQiLCJlbWFpbCI6ImRhdmlkb3BhdGlyNDcwQGdtYWlsLmNvbSIsImlhdCI6MTczMjU2MDgzNywiZXhwIjoxNzMyNTcxNjM3fQ.1q8PMLJbKCPL__LcHGZNigHboJ72glOQQEdTgducATM"}
+2024-11-25T18:53:58.852Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T18:53:58.852Z
+2024-11-25T18:53:59.159Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T18:53:59.159Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T18:53:59.160Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T18:53:59.317Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T18:53:59.318Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T18:53:59.319Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T19:10:40.223Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T19:10:40.223Z
+2024-11-25T19:10:42.370Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T19:10:42.370Z
+2024-11-25T19:10:43.096Z [my-app] [32minfo[39m: User Successfully created davidopati700@gmail.com
+2024-11-25T19:10:43.133Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T19:10:43.133Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati700@gmail.com","_id":"6744cbb2d1799f590d5b5a05","createdAt":"2024-11-25T19:10:42.740Z","updatedAt":"2024-11-25T19:10:42.740Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0Y2JiMmQxNzk5ZjU5MGQ1YjVhMDUiLCJlbWFpbCI6ImRhdmlkb3BhdGk3MDBAZ21haWwuY29tIiwiaWF0IjoxNzMyNTYxODQzLCJleHAiOjE3MzI1NzI2NDN9.M5ge8ue0YYLYM53ZeBIATDDW22enPxFv_D50YMnucng"}
+2024-11-25T19:10:44.443Z [my-app] [31merror[39m: Error creating user: E11000 duplicate key error collection: ZooDB2.users index: email_1 dup key: { email: "davidopati700@gmail.com" }
+2024-11-25T19:10:44.445Z [my-app] [31merror[39m: Error caught by errorHandler: Error creating user
+2024-11-25T19:10:44.447Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 500
+2024-11-25T19:10:44.448Z [my-app] [32minfo[39m: Response Body: {"message":"Error creating user","status":500}
+2024-11-25T19:11:27.831Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T19:11:27.831Z
+2024-11-25T19:11:28.551Z [my-app] [32minfo[39m: User Successfully created davidopati76780@gmail.com
+2024-11-25T19:11:28.563Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T19:11:28.564Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati76780@gmail.com","_id":"6744cbe0d1799f590d5b5a08","createdAt":"2024-11-25T19:11:28.196Z","updatedAt":"2024-11-25T19:11:28.196Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0Y2JlMGQxNzk5ZjU5MGQ1YjVhMDgiLCJlbWFpbCI6ImRhdmlkb3BhdGk3Njc4MEBnbWFpbC5jb20iLCJpYXQiOjE3MzI1NjE4ODgsImV4cCI6MTczMjU3MjY4OH0.gxV87yjDdB7jRdlqjnPpAe9JrRJO6a1mtX0trQm6MS8"}
+2024-11-25T19:13:53.771Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T19:13:53.771Z
+2024-11-25T19:13:54.067Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T19:13:54.068Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T19:13:54.068Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T19:29:18.759Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T19:29:18.759Z
+2024-11-25T19:30:17.665Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T19:30:17.665Z
+2024-11-25T19:30:20.008Z [my-app] [32minfo[39m: User Successfully created davidopati70yy@gmail.com
+2024-11-25T19:30:20.019Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T19:30:20.020Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati70yy@gmail.com","_id":"6744d04bd1799f590d5b5a0d","createdAt":"2024-11-25T19:30:19.696Z","updatedAt":"2024-11-25T19:30:19.696Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZDA0YmQxNzk5ZjU5MGQ1YjVhMGQiLCJlbWFpbCI6ImRhdmlkb3BhdGk3MHl5QGdtYWlsLmNvbSIsImlhdCI6MTczMjU2MzAyMCwiZXhwIjoxNzMyNTczODIwfQ.5XdZluu4wf142DJEeSD1WWGepUJRdsmECmjjB-X0eP0"}
+2024-11-25T19:30:23.491Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T19:30:23.491Z
+2024-11-25T19:30:23.765Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T19:30:23.765Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T19:30:23.765Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T19:30:27.383Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T19:30:27.383Z
+2024-11-25T19:30:27.685Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T19:30:27.686Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T19:30:27.686Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T19:30:32.831Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T19:30:32.831Z
+2024-11-25T19:30:33.529Z [my-app] [32minfo[39m: User Successfully created davidopati70yy6@gmail.com
+2024-11-25T19:30:33.540Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T19:30:33.540Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati70yy6@gmail.com","_id":"6744d059d1799f590d5b5a12","createdAt":"2024-11-25T19:30:33.226Z","updatedAt":"2024-11-25T19:30:33.226Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZDA1OWQxNzk5ZjU5MGQ1YjVhMTIiLCJlbWFpbCI6ImRhdmlkb3BhdGk3MHl5NkBnbWFpbC5jb20iLCJpYXQiOjE3MzI1NjMwMzMsImV4cCI6MTczMjU3MzgzM30.kyQHP24S6NFp1SQXFbFdkbiJUhMQi9xRXCb_3EcZXwo"}
+2024-11-25T19:38:31.820Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T19:38:31.820Z
+2024-11-25T19:38:32.560Z [my-app] [32minfo[39m: User Successfully created davidopati707787@gmail.com
+2024-11-25T19:38:32.600Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T19:38:32.600Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati707787@gmail.com","_id":"6744d238d1799f590d5b5a15","createdAt":"2024-11-25T19:38:32.168Z","updatedAt":"2024-11-25T19:38:32.168Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZDIzOGQxNzk5ZjU5MGQ1YjVhMTUiLCJlbWFpbCI6ImRhdmlkb3BhdGk3MDc3ODdAZ21haWwuY29tIiwiaWF0IjoxNzMyNTYzNTEyLCJleHAiOjE3MzI1NzQzMTJ9.jwBsSzrin9julb9BWrU6ghxNUu-n21uokOoxQ7pyoYw"}
+2024-11-25T19:44:26.873Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T19:44:26.873Z
+2024-11-25T19:44:27.596Z [my-app] [32minfo[39m: User Successfully created davidopati77770@gmail.com
+2024-11-25T19:44:27.624Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T19:44:27.624Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati77770@gmail.com","_id":"6744d39bd1799f590d5b5a18","createdAt":"2024-11-25T19:44:27.276Z","updatedAt":"2024-11-25T19:44:27.276Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZDM5YmQxNzk5ZjU5MGQ1YjVhMTgiLCJlbWFpbCI6ImRhdmlkb3BhdGk3Nzc3MEBnbWFpbC5jb20iLCJpYXQiOjE3MzI1NjM4NjcsImV4cCI6MTczMjU3NDY2N30.zWNGCZ-Mlk9d7dHqQDd__q5zlmpaR_UtWON4_z5X2t8"}
+2024-11-25T19:45:36.902Z [my-app] [31merror[39m: Error retrieving user: read ETIMEDOUT
+2024-11-25T19:45:36.906Z [my-app] [31merror[39m: Error caught by errorHandler: Error retrieving user
+2024-11-25T19:45:36.907Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 500
+2024-11-25T19:45:36.907Z [my-app] [32minfo[39m: Response Body: {"message":"Error retrieving user","status":500}
+2024-11-25T19:51:58.864Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T19:51:58.864Z
+2024-11-25T19:51:59.580Z [my-app] [32minfo[39m: User Successfully created davidopati7066@gmail.com
+2024-11-25T19:51:59.588Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T19:51:59.588Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati7066@gmail.com","_id":"6744d55fd1799f590d5b5a1b","createdAt":"2024-11-25T19:51:59.245Z","updatedAt":"2024-11-25T19:51:59.245Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZDU1ZmQxNzk5ZjU5MGQ1YjVhMWIiLCJlbWFpbCI6ImRhdmlkb3BhdGk3MDY2QGdtYWlsLmNvbSIsImlhdCI6MTczMjU2NDMxOSwiZXhwIjoxNzMyNTc1MTE5fQ.L4nqQOv_iLfIPuDKcY1_m5EzR4xTBPEO0GzGl_kmHj4"}
+2024-11-25T19:56:39.331Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T19:56:39.331Z
+2024-11-25T19:56:40.044Z [my-app] [32minfo[39m: User Successfully created davidopati70ry@gmail.com
+2024-11-25T19:56:40.050Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T19:56:40.050Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati70ry@gmail.com","_id":"6744d677d1799f590d5b5a1e","createdAt":"2024-11-25T19:56:39.673Z","updatedAt":"2024-11-25T19:56:39.673Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZDY3N2QxNzk5ZjU5MGQ1YjVhMWUiLCJlbWFpbCI6ImRhdmlkb3BhdGk3MHJ5QGdtYWlsLmNvbSIsImlhdCI6MTczMjU2NDYwMCwiZXhwIjoxNzMyNTc1NDAwfQ.OjGYzy4d5Opm10WOwKFE027exNLgvhAzvkRvEsWerRg"}
+2024-11-25T19:59:27.983Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T19:59:27.983Z
+2024-11-25T19:59:28.693Z [my-app] [32minfo[39m: User Successfully created davidopati70ry@gmayil.com
+2024-11-25T19:59:28.700Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T19:59:28.700Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati70ry@gmayil.com","_id":"6744d720d1799f590d5b5a21","createdAt":"2024-11-25T19:59:28.378Z","updatedAt":"2024-11-25T19:59:28.378Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZDcyMGQxNzk5ZjU5MGQ1YjVhMjEiLCJlbWFpbCI6ImRhdmlkb3BhdGk3MHJ5QGdtYXlpbC5jb20iLCJpYXQiOjE3MzI1NjQ3NjgsImV4cCI6MTczMjU3NTU2OH0.trZU5NhQrVT8395enljvHYAiZVw-dykqX6dxgsPiYvE"}
+2024-11-25T19:59:35.970Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T19:59:35.970Z
+2024-11-25T19:59:36.239Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T19:59:36.239Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T19:59:36.239Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:23:38.957Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:23:38.956Z
+2024-11-25T20:23:41.419Z [my-app] [32minfo[39m: User Successfully created davidopati88870@gmail.com
+2024-11-25T20:23:41.446Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T20:23:41.447Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati88870@gmail.com","_id":"6744dccdd1799f590d5b5a25","createdAt":"2024-11-25T20:23:41.096Z","updatedAt":"2024-11-25T20:23:41.096Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZGNjZGQxNzk5ZjU5MGQ1YjVhMjUiLCJlbWFpbCI6ImRhdmlkb3BhdGk4ODg3MEBnbWFpbC5jb20iLCJpYXQiOjE3MzI1NjYyMjEsImV4cCI6MTczMjU3NzAyMX0.C8VSc0VrHSz8Fw1Sn0elxaa5nNkWV4rV5X26FE6w5rY"}
+2024-11-25T20:23:59.352Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:23:59.352Z
+2024-11-25T20:23:59.744Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:23:59.745Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:23:59.745Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:24:04.553Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:24:04.553Z
+2024-11-25T20:24:04.860Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:24:04.861Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:24:04.861Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:24:14.184Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:24:14.184Z
+2024-11-25T20:24:14.450Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:24:14.450Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:24:14.451Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:24:18.787Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:24:18.787Z
+2024-11-25T20:24:19.054Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:24:19.055Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:24:19.055Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:24:28.928Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:24:28.928Z
+2024-11-25T20:24:29.231Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:24:29.232Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:24:29.232Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:28:08.083Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:28:08.083Z
+2024-11-25T20:28:08.347Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:28:08.348Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:28:08.348Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:28:42.493Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:28:42.493Z
+2024-11-25T20:28:42.793Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:28:42.794Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:28:42.794Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:32:46.632Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:32:46.632Z
+2024-11-25T20:32:47.227Z [my-app] [32minfo[39m: User Successfully created davidopati70@gmahyyy6il.com
+2024-11-25T20:32:47.230Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T20:32:47.230Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati70@gmahyyy6il.com","_id":"6744deeed1799f590d5b5a2f","createdAt":"2024-11-25T20:32:46.958Z","updatedAt":"2024-11-25T20:32:46.958Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZGVlZWQxNzk5ZjU5MGQ1YjVhMmYiLCJlbWFpbCI6ImRhdmlkb3BhdGk3MEBnbWFoeXl5NmlsLmNvbSIsImlhdCI6MTczMjU2Njc2NywiZXhwIjoxNzMyNTc3NTY3fQ.w5DOWPYa4J3_A03youSrPUM532hDMPdZSquj9lWjoSw"}
+2024-11-25T20:33:08.442Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:33:08.442Z
+2024-11-25T20:33:08.746Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:33:08.747Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:33:08.747Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:33:25.134Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:33:25.134Z
+2024-11-25T20:33:25.397Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:33:25.398Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:33:25.398Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:33:28.819Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:33:28.819Z
+2024-11-25T20:33:29.083Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:33:29.083Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:33:29.083Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:33:40.911Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:33:40.911Z
+2024-11-25T20:33:41.177Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:33:41.178Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:33:41.178Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:33:47.868Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:33:47.868Z
+2024-11-25T20:33:48.149Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:33:48.149Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:33:48.149Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:33:52.785Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:33:52.785Z
+2024-11-25T20:33:53.089Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:33:53.090Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:33:53.090Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:40:02.668Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:40:02.668Z
+2024-11-25T20:40:02.939Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:40:02.940Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:40:02.940Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:41:12.917Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:41:12.916Z
+2024-11-25T20:41:13.220Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:41:13.221Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:41:13.221Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:41:22.334Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:41:22.334Z
+2024-11-25T20:41:22.600Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:41:22.600Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:41:22.600Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:41:27.555Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:41:27.555Z
+2024-11-25T20:41:27.864Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:41:27.865Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:41:27.865Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:41:32.061Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:41:32.060Z
+2024-11-25T20:41:32.330Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:41:32.331Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:41:32.331Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:41:38.826Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:41:38.826Z
+2024-11-25T20:41:39.129Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:41:39.130Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:41:39.131Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:41:43.742Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:41:43.741Z
+2024-11-25T20:41:44.009Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:41:44.009Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:41:44.009Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:41:56.684Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:41:56.684Z
+2024-11-25T20:41:56.995Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:41:56.996Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:41:56.996Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:46:21.797Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:46:21.797Z
+2024-11-25T20:46:22.165Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:46:22.166Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:46:22.166Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:46:32.567Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:46:32.567Z
+2024-11-25T20:46:33.438Z [my-app] [32minfo[39m: User Successfully created davidopati7057@gmail.com
+2024-11-25T20:46:33.443Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T20:46:33.443Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati7057@gmail.com","_id":"6744e228d1799f590d5b5a41","createdAt":"2024-11-25T20:46:32.952Z","updatedAt":"2024-11-25T20:46:32.952Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZTIyOGQxNzk5ZjU5MGQ1YjVhNDEiLCJlbWFpbCI6ImRhdmlkb3BhdGk3MDU3QGdtYWlsLmNvbSIsImlhdCI6MTczMjU2NzU5MywiZXhwIjoxNzMyNTc4MzkzfQ.3h7KWg7IjSCR_Y1Dif9XCNS4OPc_mgZ0ooGn_t7ZbYM"}
+2024-11-25T20:46:40.510Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:46:40.510Z
+2024-11-25T20:46:41.109Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:46:41.109Z
+2024-11-25T20:46:41.169Z [my-app] [32minfo[39m: User Successfully created davidopati705777yyygg@gmail.com
+2024-11-25T20:46:41.172Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T20:46:41.172Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati705777yyygg@gmail.com","_id":"6744e230d1799f590d5b5a44","createdAt":"2024-11-25T20:46:40.873Z","updatedAt":"2024-11-25T20:46:40.873Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZTIzMGQxNzk5ZjU5MGQ1YjVhNDQiLCJlbWFpbCI6ImRhdmlkb3BhdGk3MDU3Nzd5eXlnZ0BnbWFpbC5jb20iLCJpYXQiOjE3MzI1Njc2MDEsImV4cCI6MTczMjU3ODQwMX0.iQjVnPQsfBqDHP6cbT3Rh6Sz3dZRj8mEmbI08qXgi8Y"}
+2024-11-25T20:46:43.264Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:46:43.265Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:46:43.265Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:47:23.815Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:47:23.815Z
+2024-11-25T20:47:24.080Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:47:24.080Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:47:24.080Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:47:24.455Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:47:24.455Z
+2024-11-25T20:47:24.731Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:47:24.734Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:47:24.735Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:47:26.705Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:47:26.705Z
+2024-11-25T20:47:27.010Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:47:27.011Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:47:27.012Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:47:30.161Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:47:30.160Z
+2024-11-25T20:47:30.427Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:47:30.427Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:47:30.427Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:47:35.075Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:47:35.075Z
+2024-11-25T20:47:35.380Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T20:47:35.381Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T20:47:35.384Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T20:47:47.511Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:47:47.511Z
+2024-11-25T20:47:48.324Z [my-app] [32minfo[39m: User Successfully created davidopati705777yyy5gg@gmail.com
+2024-11-25T20:47:48.329Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T20:47:48.330Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati705777yyy5gg@gmail.com","_id":"6744e273d1799f590d5b5a4d","createdAt":"2024-11-25T20:47:47.973Z","updatedAt":"2024-11-25T20:47:47.973Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZTI3M2QxNzk5ZjU5MGQ1YjVhNGQiLCJlbWFpbCI6ImRhdmlkb3BhdGk3MDU3Nzd5eXk1Z2dAZ21haWwuY29tIiwiaWF0IjoxNzMyNTY3NjY4LCJleHAiOjE3MzI1Nzg0Njh9.sF3fkSA_FT3d34G2dK02UkxCj7ePKmqVAbCoNlhfbWc"}
+2024-11-25T20:47:55.150Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T20:47:55.150Z
+2024-11-25T20:47:55.963Z [my-app] [32minfo[39m: User Successfully created davidopati705777yy55y5gg@gmail.com
+2024-11-25T20:47:55.972Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T20:47:55.973Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati705777yy55y5gg@gmail.com","_id":"6744e27bd1799f590d5b5a50","createdAt":"2024-11-25T20:47:55.569Z","updatedAt":"2024-11-25T20:47:55.569Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZTI3YmQxNzk5ZjU5MGQ1YjVhNTAiLCJlbWFpbCI6ImRhdmlkb3BhdGk3MDU3Nzd5eTU1eTVnZ0BnbWFpbC5jb20iLCJpYXQiOjE3MzI1Njc2NzUsImV4cCI6MTczMjU3ODQ3NX0.IlqDGSbYkCFQinAU7rcosTZH9-RQf4gLXqnq_lT44Ts"}
+2024-11-25T21:20:58.423Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:20:58.423Z
+2024-11-25T21:21:01.039Z [my-app] [32minfo[39m: User Successfully created davidopati66770@gmail.com
+2024-11-25T21:21:01.047Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T21:21:01.047Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati66770@gmail.com","_id":"6744ea3cd1799f590d5b5a53","createdAt":"2024-11-25T21:21:00.767Z","updatedAt":"2024-11-25T21:21:00.767Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZWEzY2QxNzk5ZjU5MGQ1YjVhNTMiLCJlbWFpbCI6ImRhdmlkb3BhdGk2Njc3MEBnbWFpbC5jb20iLCJpYXQiOjE3MzI1Njk2NjEsImV4cCI6MTczMjU4MDQ2MX0.KjTEGa5FngI2QcCkBABmLzpB0P85rpqvEFIyEka8RtU"}
+2024-11-25T21:21:15.628Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:21:15.627Z
+2024-11-25T21:21:15.928Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:21:15.929Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:21:15.929Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:21:22.973Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:21:22.973Z
+2024-11-25T21:21:23.241Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:21:23.241Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:21:23.242Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:21:26.886Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:21:26.885Z
+2024-11-25T21:21:27.149Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:21:27.150Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:21:27.150Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:21:30.368Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:21:30.368Z
+2024-11-25T21:21:30.637Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:21:30.637Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:21:30.638Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:21:35.179Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:21:35.179Z
+2024-11-25T21:21:35.450Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:21:35.452Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:21:35.453Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:21:38.252Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:21:38.252Z
+2024-11-25T21:21:38.560Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:21:38.561Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:21:38.562Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:21:38.968Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:21:38.968Z
+2024-11-25T21:21:39.275Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:21:39.276Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:21:39.277Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:21:58.427Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:21:58.427Z
+2024-11-25T21:21:59.139Z [my-app] [32minfo[39m: User Successfully created davidopati7450@gmail.com
+2024-11-25T21:21:59.145Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T21:21:59.145Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati7450@gmail.com","_id":"6744ea76d1799f590d5b5a5d","createdAt":"2024-11-25T21:21:58.827Z","updatedAt":"2024-11-25T21:21:58.827Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZWE3NmQxNzk5ZjU5MGQ1YjVhNWQiLCJlbWFpbCI6ImRhdmlkb3BhdGk3NDUwQGdtYWlsLmNvbSIsImlhdCI6MTczMjU2OTcxOSwiZXhwIjoxNzMyNTgwNTE5fQ.8eYRPiitHT9jzhXngVSntA-131BMaywde_h11inCRqQ"}
+2024-11-25T21:22:07.337Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:22:07.337Z
+2024-11-25T21:22:08.007Z [my-app] [32minfo[39m: User Successfully created davidopati745670@gmail.com
+2024-11-25T21:22:08.014Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T21:22:08.014Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati745670@gmail.com","_id":"6744ea7fd1799f590d5b5a60","createdAt":"2024-11-25T21:22:07.732Z","updatedAt":"2024-11-25T21:22:07.732Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZWE3ZmQxNzk5ZjU5MGQ1YjVhNjAiLCJlbWFpbCI6ImRhdmlkb3BhdGk3NDU2NzBAZ21haWwuY29tIiwiaWF0IjoxNzMyNTY5NzI4LCJleHAiOjE3MzI1ODA1Mjh9.XS6k91R_oKIlogUUqX2hOWzOSUP6d7qxQYJBYK4Sytc"}
+2024-11-25T21:22:12.349Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:22:12.349Z
+2024-11-25T21:22:12.658Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:22:12.659Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:22:12.660Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:22:17.370Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:22:17.370Z
+2024-11-25T21:22:17.644Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:22:17.644Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:22:17.645Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:22:23.823Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:22:23.823Z
+2024-11-25T21:22:24.535Z [my-app] [32minfo[39m: User Successfully created davidopati7456700@gmail.com
+2024-11-25T21:22:24.542Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T21:22:24.542Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati7456700@gmail.com","_id":"6744ea90d1799f590d5b5a65","createdAt":"2024-11-25T21:22:24.233Z","updatedAt":"2024-11-25T21:22:24.233Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZWE5MGQxNzk5ZjU5MGQ1YjVhNjUiLCJlbWFpbCI6ImRhdmlkb3BhdGk3NDU2NzAwQGdtYWlsLmNvbSIsImlhdCI6MTczMjU2OTc0NCwiZXhwIjoxNzMyNTgwNTQ0fQ.AvPayDKpIJtRrUvikac0rXw1ssd1p6QuQfdKpHDwDUc"}
+2024-11-25T21:22:29.603Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:22:29.603Z
+2024-11-25T21:22:30.372Z [my-app] [32minfo[39m: User Successfully created davidopati74567007@gmail.com
+2024-11-25T21:22:30.385Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T21:22:30.385Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati74567007@gmail.com","_id":"6744ea96d1799f590d5b5a68","createdAt":"2024-11-25T21:22:30.026Z","updatedAt":"2024-11-25T21:22:30.026Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZWE5NmQxNzk5ZjU5MGQ1YjVhNjgiLCJlbWFpbCI6ImRhdmlkb3BhdGk3NDU2NzAwN0BnbWFpbC5jb20iLCJpYXQiOjE3MzI1Njk3NTAsImV4cCI6MTczMjU4MDU1MH0.FByPV7JSbGrvXLHcjMcZwWiq2e3ipNoHAci58cfXkeY"}
+2024-11-25T21:22:45.224Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:22:45.224Z
+2024-11-25T21:22:45.527Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:22:45.528Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:22:45.529Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:23:01.427Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:23:01.427Z
+2024-11-25T21:23:01.713Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:23:01.714Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:23:01.714Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:23:20.035Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:23:20.035Z
+2024-11-25T21:23:20.752Z [my-app] [32minfo[39m: User Successfully created davidopati7456700677@gmail.com
+2024-11-25T21:23:20.759Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T21:23:20.759Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati7456700677@gmail.com","_id":"6744eac8d1799f590d5b5a6d","createdAt":"2024-11-25T21:23:20.446Z","updatedAt":"2024-11-25T21:23:20.446Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZWFjOGQxNzk5ZjU5MGQ1YjVhNmQiLCJlbWFpbCI6ImRhdmlkb3BhdGk3NDU2NzAwNjc3QGdtYWlsLmNvbSIsImlhdCI6MTczMjU2OTgwMCwiZXhwIjoxNzMyNTgwNjAwfQ.0zZYbl-obJiwUMjVKL-kUBGHaUvTV96UdyxBJwLA1O4"}
+2024-11-25T21:23:27.516Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:23:27.516Z
+2024-11-25T21:23:27.820Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:23:27.821Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:23:27.822Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:23:34.500Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:23:34.500Z
+2024-11-25T21:23:34.782Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:23:34.783Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:23:34.784Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:23:36.933Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:23:36.933Z
+2024-11-25T21:23:37.238Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:23:37.238Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:23:37.238Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:23:38.980Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:23:38.980Z
+2024-11-25T21:23:39.310Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:23:39.311Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:23:39.312Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:23:41.005Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:23:41.005Z
+2024-11-25T21:23:41.335Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:23:41.336Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:23:41.336Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:23:50.146Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:23:50.146Z
+2024-11-25T21:23:50.858Z [my-app] [32minfo[39m: User Successfully created davidopati74567006778@gmail.com
+2024-11-25T21:23:50.864Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T21:23:50.864Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati74567006778@gmail.com","_id":"6744eae6d1799f590d5b5a75","createdAt":"2024-11-25T21:23:50.506Z","updatedAt":"2024-11-25T21:23:50.506Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZWFlNmQxNzk5ZjU5MGQ1YjVhNzUiLCJlbWFpbCI6ImRhdmlkb3BhdGk3NDU2NzAwNjc3OEBnbWFpbC5jb20iLCJpYXQiOjE3MzI1Njk4MzAsImV4cCI6MTczMjU4MDYzMH0.a21LhdJ9ZWtofa2op-5H2l3dk8rHetl3tlb63GCLcHY"}
+2024-11-25T21:23:57.621Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:23:57.621Z
+2024-11-25T21:23:57.924Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:23:57.925Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:23:57.925Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:24:12.995Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:24:12.994Z
+2024-11-25T21:24:13.693Z [my-app] [32minfo[39m: User Successfully created davidopati74567006774448@gmail.com
+2024-11-25T21:24:13.699Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T21:24:13.699Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati74567006774448@gmail.com","_id":"6744eafdd1799f590d5b5a79","createdAt":"2024-11-25T21:24:13.382Z","updatedAt":"2024-11-25T21:24:13.382Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZWFmZGQxNzk5ZjU5MGQ1YjVhNzkiLCJlbWFpbCI6ImRhdmlkb3BhdGk3NDU2NzAwNjc3NDQ0OEBnbWFpbC5jb20iLCJpYXQiOjE3MzI1Njk4NTMsImV4cCI6MTczMjU4MDY1M30.5UJZlD7rUk5i6UCI08FiEidOJznA50ggnyKw6Jubsi8"}
+2024-11-25T21:24:17.053Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:24:17.053Z
+2024-11-25T21:24:17.380Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:24:17.381Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:24:17.381Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:28:19.558Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:28:19.558Z
+2024-11-25T21:28:19.962Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:28:19.963Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:28:19.963Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:29:33.081Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:29:33.081Z
+2024-11-25T21:29:33.343Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:29:33.343Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:29:33.344Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:29:36.239Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:29:36.239Z
+2024-11-25T21:29:36.561Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:29:36.562Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:29:36.562Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:29:44.339Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:29:44.339Z
+2024-11-25T21:29:45.057Z [my-app] [32minfo[39m: User Successfully created davidopati76670@gmail.com
+2024-11-25T21:29:45.067Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T21:29:45.068Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati76670@gmail.com","_id":"6744ec48d1799f590d5b5a80","createdAt":"2024-11-25T21:29:44.743Z","updatedAt":"2024-11-25T21:29:44.743Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZWM0OGQxNzk5ZjU5MGQ1YjVhODAiLCJlbWFpbCI6ImRhdmlkb3BhdGk3NjY3MEBnbWFpbC5jb20iLCJpYXQiOjE3MzI1NzAxODUsImV4cCI6MTczMjU4MDk4NX0.5x_lKIJajDe7mcIUcmn4BZtEDFauarA9Y9AC9BAMomU"}
+2024-11-25T21:31:46.027Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-25T21:31:49.195Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-25T21:32:07.972Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:32:07.972Z
+2024-11-25T21:32:09.207Z [my-app] [32minfo[39m: User Successfully created davidopati69969970@gmail.com
+2024-11-25T21:32:09.236Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T21:32:09.237Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati69969970@gmail.com","_id":"6744ecd89b2b21e9975c978f","createdAt":"2024-11-25T21:32:08.522Z","updatedAt":"2024-11-25T21:32:08.522Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZWNkODliMmIyMWU5OTc1Yzk3OGYiLCJlbWFpbCI6ImRhdmlkb3BhdGk2OTk2OTk3MEBnbWFpbC5jb20iLCJpYXQiOjE3MzI1NzAzMjksImV4cCI6MTczMjU4MTEyOX0.sTpa2D-hX8SchnugwxRyDFm3OUaekNwG2dMmq_JntRE"}
+2024-11-25T21:32:16.515Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:32:16.515Z
+2024-11-25T21:32:17.179Z [my-app] [32minfo[39m: User Successfully created davidopati6996997888870@gmail.com
+2024-11-25T21:32:17.189Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T21:32:17.191Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati6996997888870@gmail.com","_id":"6744ece09b2b21e9975c9792","createdAt":"2024-11-25T21:32:16.869Z","updatedAt":"2024-11-25T21:32:16.869Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZWNlMDliMmIyMWU5OTc1Yzk3OTIiLCJlbWFpbCI6ImRhdmlkb3BhdGk2OTk2OTk3ODg4ODcwQGdtYWlsLmNvbSIsImlhdCI6MTczMjU3MDMzNywiZXhwIjoxNzMyNTgxMTM3fQ.uf1K9hOCXqJGlcAMWHDZrTXVonNMP7ZtVE7k1VDa5t8"}
+2024-11-25T21:32:22.044Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:32:22.044Z
+2024-11-25T21:32:22.345Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:32:22.345Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:32:22.345Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:32:25.917Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:32:25.917Z
+2024-11-25T21:32:26.204Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:32:26.204Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:32:26.205Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:32:38.839Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:32:38.839Z
+2024-11-25T21:32:39.507Z [my-app] [32minfo[39m: User Successfully created davidopati699699788887660@gmail.com
+2024-11-25T21:32:39.516Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T21:32:39.517Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati699699788887660@gmail.com","_id":"6744ecf79b2b21e9975c9797","createdAt":"2024-11-25T21:32:39.238Z","updatedAt":"2024-11-25T21:32:39.238Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZWNmNzliMmIyMWU5OTc1Yzk3OTciLCJlbWFpbCI6ImRhdmlkb3BhdGk2OTk2OTk3ODg4ODc2NjBAZ21haWwuY29tIiwiaWF0IjoxNzMyNTcwMzU5LCJleHAiOjE3MzI1ODExNTl9.srIkIpaZsD2_yM63W5OY-60UdTAWQIyyjDlb_rMPdD4"}
+2024-11-25T21:32:43.297Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:32:43.297Z
+2024-11-25T21:32:43.643Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:32:43.645Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:32:43.645Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:33:13.363Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:33:13.363Z
+2024-11-25T21:33:13.748Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:33:13.750Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:33:13.751Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:34:43.259Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:34:43.259Z
+2024-11-25T21:34:43.556Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:34:43.557Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:34:43.557Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:34:46.832Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:34:46.832Z
+2024-11-25T21:34:47.139Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:34:47.140Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:34:47.141Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:34:47.905Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:34:47.905Z
+2024-11-25T21:34:48.177Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:34:48.178Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:34:48.179Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:34:53.910Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:34:53.910Z
+2024-11-25T21:34:54.614Z [my-app] [32minfo[39m: User Successfully created davidopati7067@gmail.com
+2024-11-25T21:34:54.626Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T21:34:54.626Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati7067@gmail.com","_id":"6744ed7e9b2b21e9975c979f","createdAt":"2024-11-25T21:34:54.281Z","updatedAt":"2024-11-25T21:34:54.281Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZWQ3ZTliMmIyMWU5OTc1Yzk3OWYiLCJlbWFpbCI6ImRhdmlkb3BhdGk3MDY3QGdtYWlsLmNvbSIsImlhdCI6MTczMjU3MDQ5NCwiZXhwIjoxNzMyNTgxMjk0fQ.a8g82alXBDmOlKCEET5Y61u-oAaKDj96qlxBRMwWmqk"}
+2024-11-25T21:34:57.281Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:34:57.281Z
+2024-11-25T21:34:57.707Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-11-25T21:34:57.708Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-11-25T21:34:57.708Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-11-25T21:50:29.566Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:50:29.566Z
+2024-11-25T21:54:42.085Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-11-25T21:54:42.085Z
+2024-11-25T21:54:44.433Z [my-app] [32minfo[39m: User Successfully created davidopati750@gmail.com
+2024-11-25T21:54:44.439Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 201
+2024-11-25T21:54:44.440Z [my-app] [32minfo[39m: Response Body: {"user":{"email":"davidopati750@gmail.com","_id":"6744f2249b2b21e9975c97a4","createdAt":"2024-11-25T21:54:44.124Z","updatedAt":"2024-11-25T21:54:44.124Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0ZjIyNDliMmIyMWU5OTc1Yzk3YTQiLCJlbWFpbCI6ImRhdmlkb3BhdGk3NTBAZ21haWwuY29tIiwiaWF0IjoxNzMyNTcxNjg0LCJleHAiOjE3MzI1ODI0ODR9.6LA-w60oH9qjqNqJTkatLT17lbgdUbQnlykZ2e8g0Pc"}
+=======
 >>>>>>> 42383f24d3eec309f18d2a2ef108c2823d7c893d
 2024-11-23T10:26:21.605Z [my-app] [32minfo[39m: Server listening on port 8000
 2024-11-23T10:26:23.464Z [my-app] [32minfo[39m: MongoDB Connected!
@@ -927,6 +1408,7 @@ Stack Trace: Error: Error creating user
 2024-11-23T18:05:06.668Z [my-app] [32minfo[39m: Request - Method: GET, URL: /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b, Timestamp: 2024-11-23T18:05:06.668Z
 2024-11-23T18:05:07.876Z [my-app] [32minfo[39m: Response for GET /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b - Status: 200
 2024-11-23T18:05:07.877Z [my-app] [32minfo[39m: Response Body: {"messages":[{"_id":"67421940f8fe1b8274df2709","user":null,"recepient":null,"message":"Good","createdAt":"2024-11-23T18:04:48.326Z","updatedAt":"2024-11-23T18:04:48.326Z","__v":0}]}
+<<<<<<< HEAD
 2024-11-24T14:07:04.965Z [my-app] [32minfo[39m: Server listening on port 8000
 2024-11-24T14:07:11.145Z [my-app] [32minfo[39m: MongoDB Connected!
 2024-11-24T14:15:20.049Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: 2024-11-24T14:15:20.049Z
@@ -1129,3 +1611,6 @@ Stack Trace: Error: Error creating user
 2024-11-25T15:08:09.251Z [my-app] [32minfo[39m: Request - Method: GET, URL: /api/v1/user/profile/673de3a3a2e08f5b386e41c7, Timestamp: 2024-11-25T15:08:09.250Z
 2024-11-25T15:08:09.526Z [my-app] [32minfo[39m: Response for GET /api/v1/user/profile/673de3a3a2e08f5b386e41c7 - Status: 200
 2024-11-25T15:08:09.528Z [my-app] [32minfo[39m: Response Body: {"profile":{"about":{"first_name":"Test","last_name":"Tim","username":"TimTheTestMan","phone_number":"+1234567890","gender":"Male","birthDate":"1990-05-15T00:00:00.000Z","height":"6'0\"","maritalStatus":"Single","tagline":"Living life to the fullest!"},"religiosity":{"muslimSect":"Sunni","isConvert":"No","religiousPractice":"Moderate","doYouPray":"Occasionally","diet":"Halal","doYouSmoke":"No","hasTattoos":"No"},"marriageIntentions":{"lookingToMarry":"1-2 years","willingToRelocate":"Yes","wantsChildren":"Yes","livingArrangments":"Living alone","iceBreaker":"What’s your favorite movie?"},"languageAndEthnicity":{"languages":"English","ethnicGroup":"Asian","ethnicOrigin":"Indian","biography":"I'm an avid traveler and love exploring new cultures."},"educationAndCareer":{"profession":"Engineer","education":"Master's","jobTitle":"Developer"},"_id":"67448e07e98d8deb386e6c1b","userId":"673de3a3a2e08f5b386e41c7","profilePhoto":{"url":"https://res.cloudinary.com/dxwdp8xww/image/upload/v1732546052/profile_photos/h5aomjuzlvukh8s4crmc.png","public_id":"profile_photos/h5aomjuzlvukh8s4crmc"},"coverPhotos":[{"url":"https://res.cloudinary.com/dxwdp8xww/image/upload/v1732546053/cover_photos/w9dkqgx1tq37pthdwi5e.png","public_id":"cover_photos/w9dkqgx1tq37pthdwi5e","_id":"67448e07e98d8deb386e6c1c"},{"url":"https://res.cloudinary.com/dxwdp8xww/image/upload/v1732546054/cover_photos/gozbtw9jkxv1q3pmnoqy.jpg","public_id":"cover_photos/gozbtw9jkxv1q3pmnoqy","_id":"67448e07e98d8deb386e6c1d"}],"interests":["Karaoke","Running"],"likes":[null],"favorites":[],"createdAt":"2024-11-25T14:47:35.664Z","updatedAt":"2024-11-25T14:56:59.757Z","__v":1}}
+=======
+>>>>>>> 613739f156a7b7717f107f424e57eb5ee9e783cb
+>>>>>>> 3bae5ecce11d7c0f2db8198d749aa65f9849cf87

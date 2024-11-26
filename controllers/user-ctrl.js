@@ -58,3 +58,4 @@ export const retrieveUserById = asyncHandler(async (req, res) => {
   const user = await UserService.getuserById(id);
   return res.status(StatusCodes.OK).json(user);
 });
+
