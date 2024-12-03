@@ -2,10 +2,7 @@ import { StatusCodes } from 'http-status-codes';
 import AuthService from '../services/auth.service.js';
 import UserService from '../services/user.service.js';
 import logger from '../logger/logger.js';
-import {
-  BadRequestError,
-  InternalServerError,
-} from '../errors/application-error.js';
+import { BadRequestError } from '../errors/application-error.js';
 import asyncHandler from '../utils/asyncHandler.js';
 
 export const loginUser = asyncHandler(async (req, res) => {
@@ -21,7 +18,7 @@ export const loginUser = asyncHandler(async (req, res) => {
 
   const token = AuthService.generateToken(authUser.toObject());
   logger.debug(`User login successful ${authUser.email}`);
-  res.status(200).json({ message: 'Login successful', token, authUser });
+  res.status(200).json({ message: 'Login successful', token, user: authUser });
 });
 
 export const registerUser = asyncHandler(async (req, res) => {
@@ -32,11 +29,11 @@ export const registerUser = asyncHandler(async (req, res) => {
     throw new BadRequestError('Email and password are required');
   }
 
-   // Check if the email already exists
-   const existingUser = await UserService.getUserByEmail(email);
-   if (existingUser) {
-     throw new BadRequestError('Email already exists');
-   }
+  // Check if the email already exists
+  const existingUser = await UserService.getUserByEmail(email);
+  if (existingUser) {
+    throw new BadRequestError('Email already exists');
+  }
 
   const newUser = await UserService.createUser(email, password);
   // if (!newUser) throw new InternalServerError('Failed to create User');
@@ -55,7 +52,6 @@ export const retrieveAllUsers = async (req, res) => {
 
 export const retrieveUserById = asyncHandler(async (req, res) => {
   const { id } = req.query;
-  const user = await UserService.getuserById(id);
+  const user = await UserService.getUserById(id);
   return res.status(StatusCodes.OK).json(user);
 });
-

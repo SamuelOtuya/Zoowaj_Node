@@ -3,7 +3,7 @@ import {
   createMessage,
   getMessages,
   deleteMessage,
-} from '../controllers/message-controller.js';
+} from '../controllers/message.controller.js';
 
 const router = express.Router();
 
@@ -11,7 +11,7 @@ const router = express.Router();
 router.post('/', createMessage);
 
 // Get messages between two users
-router.get('/:userId/:recepientId', getMessages);
+router.get('/:userId/:recipientId', getMessages);
 
 // Delete a message
 router.delete('/:messageId', deleteMessage);

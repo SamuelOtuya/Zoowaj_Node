@@ -26,6 +26,16 @@ export default class AuthService {
     return token;
   };
 
+  // Decode token
+  static decodeToken = (token) => {
+    try {
+      const decoded = jwt.verify(token, process.env.JWT_SECRET);
+      return decoded; // This will return payload containing userId and email
+    } catch (error) {
+      throw new Error('Invalid or expired token');
+    }
+  };
+
   // Get auth User from Token
   static getUserFromToken = async (token) => {
     const payload = await jwt.verify(token, process.env.SECRET);

@@ -1,22 +1,27 @@
 import { StatusCodes } from 'http-status-codes';
 import Message from '../models/Message.js';
+import {
+  BadRequestError,
+  InternalServerError,
+  NotFoundError,
+} from '../errors/application-error.js';
 
 // Create a new message
 export const createMessage = async (req, res) => {
   try {
-    const { user, recepient, message } = req.body;
+    const { user, recipient, message } = req.body;
 
     // Validate required fields
-    if (!user || !recepient || !message) {
+    if (!user || !recipient || !message) {
       return res
         .status(StatusCodes.BAD_REQUEST)
-        .json({ msg: 'User, recepient, and message are required.' });
+        .json({ msg: 'User, recipient, and message are required.' });
     }
 
     // Create and save the message
     const newMessage = await Message.create({
       user,
-      recepient,
+      recipient,
       message,
     });
 
@@ -32,32 +37,30 @@ export const createMessage = async (req, res) => {
 // Get messages between two users
 export const getMessages = async (req, res) => {
   try {
-    const { userId, recepientId } = req.params;
+    const { userId, recipientId } = req.params;
 
     // Validate required parameters
-    if (!userId || !recepientId) {
-      return res
-        .status(StatusCodes.BAD_REQUEST)
-        .json({ msg: 'Both userId and recepientId are required.' });
+    if (!userId || !recipientId) {
+      throw new BadRequestError('Both userId and recipientId are required');
     }
 
     // Fetch messages between the two users
     const messages = await Message.find({
       $or: [
-        { user: userId, recepient: recepientId },
-        { user: recepientId, recepient: userId },
+        { user: userId, recipient: recipientId },
+        { user: recipientId, recipient: userId },
       ],
     })
       .populate('user', 'username email') // Populate sender details
-      .populate('recepient', 'username email') // Populate recipient details
+      .populate('recipient', 'username email') // Populate recipient details
       .sort({ createdAt: 1 }); // Sort by oldest to newest
 
     return res.status(StatusCodes.OK).json({ messages });
   } catch (error) {
     console.error(error);
-    res
-      .status(StatusCodes.INTERNAL_SERVER_ERROR)
-      .json({ msg: 'An error occurred while retrieving messages.' });
+    throw new InternalServerError(
+      'An error occurred while retrieving messages',
+    );
   }
 };
 
@@ -68,18 +71,14 @@ export const deleteMessage = async (req, res) => {
 
     // Validate the message ID
     if (!messageId) {
-      return res
-        .status(StatusCodes.BAD_REQUEST)
-        .json({ msg: 'Message ID is required.' });
+      throw new BadRequestError('Message ID is required');
     }
 
     // Delete the message
     const deletedMessage = await Message.findByIdAndDelete(messageId);
 
     if (!deletedMessage) {
-      return res
-        .status(StatusCodes.NOT_FOUND)
-        .json({ msg: 'Message not found.' });
+      throw new NotFoundError('Message not found');
     }
 
     return res

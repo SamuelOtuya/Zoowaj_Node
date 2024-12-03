@@ -1,5 +1,6 @@
 // middlewares/requestLogger.js
 import logger from '../logger/logger.js';
+import formatTimestamp from './timeFormat.js';
 
 const requestLogger = (req, res, next) => {
   const { method, url, body, query, params } = req;
@@ -7,11 +8,11 @@ const requestLogger = (req, res, next) => {
 
   // Log request details
   logger.info(
-    `Request - Method: ${method}, URL: ${url}, Timestamp: ${timestamp}`,
+    `Request - Method: ${method}, URL: ${url}, Timestamp: ${formatTimestamp(timestamp)}`,
   );
-  // logger.info(`Request Body: ${JSON.stringify(body)}`);
-  // logger.info(`Request Query: ${JSON.stringify(query)}`);
-  // logger.info(`Request Params: ${JSON.stringify(params)}`);
+  logger.info(`Request Body: ${JSON.stringify(body, null, 2)}`);
+  logger.info(`Request Query: ${JSON.stringify(query, null, 2)}`);
+  logger.info(`Request Params: ${JSON.stringify(params, null, 2)}`);
 
   // Intercept the response
   const originalSend = res.send;
