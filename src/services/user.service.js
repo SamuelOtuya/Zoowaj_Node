@@ -22,6 +22,100 @@ export default class UserService {
     }
   };
 
+  static getAllData = async () => {
+    try {
+      const profileData = await ExtraData.find();
+      logger.info(`retrieved ${profileData.length} profile data`);
+      return profileData;
+    } catch (error) {
+      logger.error('Error retrieving profile data:', error);
+      throw new InternalServerError('Error retrieving profile data');
+    }
+  };
+
+  static getAllWithData = async () => {
+    try {
+      const usersWithProfile = await User.find().populate('extraData');
+      logger.info(`Retrieved ${usersWithProfile.length} user's profile data`);
+      return usersWithProfile;
+    } catch (error) {
+      logger.error('Error retrieving users with profile data:', error);
+      throw new InternalServerError('Error retrieving users with profile data');
+    }
+  };
+
+  static getAllCombinedData = async () => {
+    try {
+      const usersWithProfile = await User.find().populate('extraData');
+
+      // Combine user and profile details
+      const combinedData = usersWithProfile.map((user) => {
+        return {
+          ...user.toObject(), // Convert Mongoose document to plain object
+          profile: user.extraData, // Add profile data under a "profile" key
+        };
+      });
+
+      logger.info(
+        `Retrieved ${combinedData.length} combined user and profile data`,
+      );
+      return combinedData;
+    } catch (error) {
+      logger.error('Error retrieving combined data:', error);
+      throw new InternalServerError('Error retrieving combined data');
+    }
+  };
+
+  static getAggregateData = async () => {
+    try {
+      const usersWithExtraData = await User.aggregate([
+        {
+          $lookup: {
+            from: 'ExtraData', // The name of your ExtraData collection
+            localField: '_id',
+            foreignField: 'userId',
+            as: 'extraData',
+          },
+        },
+        {
+          $unwind: {
+            path: '$extraData',
+            preserveNullAndEmptyArrays: true, // Optional: keep users without extra data
+          },
+        },
+      ]);
+      logger.info(
+        `Retrieved ${usersWithExtraData.length} users with their Data`,
+      );
+      return usersWithExtraData;
+    } catch (error) {
+      logger.error('Error retrieving users with their Data:', error);
+      throw new InternalServerError('Error retrieving users with their Data');
+    }
+  };
+
+  static getUserData = async (userId) => {
+    try {
+      const users = await ExtraData.findOne({ userId });
+      logger.info(`retrieved ${users.length} users Data`);
+      return users;
+    } catch (error) {
+      logger.error('Error retrieving users:', error);
+      throw new InternalServerError('Error retrieving users Data');
+    }
+  };
+
+  static getUserWithData = async (userId) => {
+    try {
+      const users = await User.findOne({ userId }).populate('extraData');
+      logger.info(`Retrieved ${users.length} users with their Data`);
+      return users;
+    } catch (error) {
+      logger.error('Error retrieving users with their Data:', error);
+      throw new InternalServerError('Error retrieving users with their Data');
+    }
+  };
+
   // Retrieve a user by ID
   static getUserById = async (id) => {
     try {
@@ -95,7 +189,7 @@ export default class UserService {
       const existingProfile = await ExtraData.findOne({ userId });
 
       if (existingProfile) {
-        logger.error(`Profile already exists for this user ${userId}`)
+        logger.error(`Profile already exists for this user ${userId}`);
         throw new BadRequestError('Profile already exists for this user.');
       }
 

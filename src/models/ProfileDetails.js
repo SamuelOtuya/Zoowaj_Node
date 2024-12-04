@@ -2,7 +2,11 @@ import mongoose from 'mongoose';
 
 const profileDetailsSchema = new mongoose.Schema(
   {
-    userId: { type: String },
+    userId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      required: true,
+    },
     profilePhoto: {
       url: { type: String, default: 'https://placeholder/400' },
       public_id: { type: String, default: '' },
@@ -19,7 +23,7 @@ const profileDetailsSchema = new mongoose.Schema(
       username: {
         type: String,
         required: 'Username is required',
-        unique: true,
+        unique: false,
       },
       phone_number: { type: String, required: 'Phone number is required' },
       gender: { type: String, enum: ['Male', 'Female'] },
@@ -164,13 +168,5 @@ const profileDetailsSchema = new mongoose.Schema(
   },
   { timestamps: true },
 );
-
-// Example Mongoose validation middleware
-profileDetailsSchema.pre('validate', function (next) {
-  if (Array.isArray(this.interests)) {
-    this.interests = [...new Set(this.interests)];
-  }
-  next();
-});
 
 export default mongoose.model('ExtraData', profileDetailsSchema);

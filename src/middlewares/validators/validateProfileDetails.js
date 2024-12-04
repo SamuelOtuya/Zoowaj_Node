@@ -1,9 +1,10 @@
+import asyncHandler from '../../utils/asyncHandler.js';
 import {
   profileSchema,
   transformProfileSchema,
 } from '../../utils/profileDataValidation.js';
 
-export const validateProfileDetails = async (req, res, next) => {
+export const validateProfileDetails = asyncHandler(async (req, res, next) => {
   const transformedData = await transformProfileSchema(req.body);
 
   const { error } = await profileSchema.validate(transformedData, {
@@ -18,4 +19,4 @@ export const validateProfileDetails = async (req, res, next) => {
 
   req.body = transformedData; // Assign validated and transformed data back to req.body
   next(); // Proceed to the next middleware/controller
-};
+});

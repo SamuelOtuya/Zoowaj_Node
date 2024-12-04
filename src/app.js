@@ -3,6 +3,7 @@ import cors from 'cors';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
 import userRoutes from './routes/user.route.js';
+import devRoutes from './routes/dev.route.js';
 import messageRoutes from './routes/message.route.js';
 import googleAuthRoutes from './routes/google-auth.route.js';
 import passport from './utils/passport.js';
@@ -29,6 +30,7 @@ app.use(requestLogger);
 
 // Bring in the routes
 app.use('/api/v1/user', userRoutes);
+app.use('/api/v1/dev', devRoutes);
 app.use('/api/v1/message', messageRoutes);
 app.use('/api/v1/auth', googleAuthRoutes);
 

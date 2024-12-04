@@ -20,9 +20,7 @@ export const createProfileDetails = asyncHandler(async (req, res) => {
     `User profile created successfully: ${JSON.stringify(profile, null, 2)}`,
   );
 
-  res
-    .status(StatusCodes.CREATED)
-    .json({ msg: 'Profile created successfully', profile });
+  res.status(StatusCodes.CREATED).json({ profile });
 });
 
 export const createProfileImages = asyncHandler(async (req, res) => {
@@ -50,9 +48,7 @@ export const createProfileImages = asyncHandler(async (req, res) => {
     coverPhotosData,
   );
 
-  res
-    .status(StatusCodes.CREATED)
-    .json({ msg: 'Profile updated successfully', profile });
+  res.status(StatusCodes.CREATED).json({ profile });
 });
 
 export const updateProfilePhoto = asyncHandler(async (req, res) => {});

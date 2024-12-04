@@ -3,7 +3,7 @@ import { upload } from '../middlewares/file-upload.js';
 import {
   registerUser,
   loginUser,
-  retrieveAllUsers,
+  retrieveAllUsersWithData,
 } from '../controllers/user.controller.js';
 import {
   getProfileDetails,
@@ -23,7 +23,7 @@ const router = express.Router();
 
 router.route('/register').post(registerUser);
 router.route('/login').post(loginUser);
-router.route('/all').get(retrieveAllUsers);
+router.route('/get').get(retrieveAllUsersWithData);
 
 router.post(
   '/profile',
@@ -42,17 +42,13 @@ router.post(
 );
 router.post(
   '/profile-photo',
-  upload.fields([
-    { name: 'profilePhoto', maxCount: 1 }, // Single profile photo
-  ]),
+  upload.single('profilePhoto'),
   authMiddleware,
   updateProfilePhoto,
 );
 router.post(
   '/profile-cover',
-  upload.fields([
-    { name: 'coverPhotos', maxCount: 6 }, // Up to 6 cover photos
-  ]),
+  upload.fields([{ name: 'coverPhotos' }]),
   authMiddleware,
   updateCoverPhotos,
 );

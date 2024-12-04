@@ -7,20 +7,20 @@ const requestLogger = (req, res, next) => {
   const timestamp = new Date().toISOString();
 
   // Log request details
-  logger.info(
+  logger.debug(
     `Request - Method: ${method}, URL: ${url}, Timestamp: ${formatTimestamp(timestamp)}`,
   );
-  logger.info(`Request Body: ${JSON.stringify(body, null, 2)}`);
-  logger.info(`Request Query: ${JSON.stringify(query, null, 2)}`);
-  logger.info(`Request Params: ${JSON.stringify(params, null, 2)}`);
+  logger.debug(`Request Body: ${JSON.stringify(body, null, 2)}`);
+  logger.debug(`Request Query: ${JSON.stringify(query, null, 2)}`);
+  logger.debug(`Request Params: ${JSON.stringify(params, null, 2)}`);
 
   // Intercept the response
   const originalSend = res.send;
 
   res.send = function (body) {
     // Log the response body
-    logger.info(`Response for ${method} ${url} - Status: ${res.statusCode}`);
-    logger.info(
+    logger.debug(`Response for ${method} ${url} - Status: ${res.statusCode}`);
+    logger.debug(
       `Response Body: ${typeof body === 'object' ? JSON.stringify(body) : body}`,
     );
 

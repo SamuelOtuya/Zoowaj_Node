@@ -53,6 +53,7 @@ export default class AuthService {
           user.password.trim(),
         );
         if (isPasswordValid) {
+          user.password = undefined;
           return user;
         }
       }
