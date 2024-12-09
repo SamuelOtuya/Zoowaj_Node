@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "proxy": "ngrok http --url=social-smart-raven.ngrok-free.app 8000",
-    "format": "prettier --write ."
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "proxy": "ngrok http 8000 --domain social-smart-raven.ngrok-free.app",
+    "format": "prettier --write .",
+    "proxy2": "ngrok http 8000 --domain capital-obviously-terrier.ngrok-free.app"
   },
   "author": "",
   "license": "ISC",
@@ -25,6 +26,7 @@
     "express": "^4.21.1",
     "helmet": "^8.0.0",
     "http-status-codes": "^2.3.0",
+    "joi": "^17.13.3",
     "js-sha256": "^0.11.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.8.1",
