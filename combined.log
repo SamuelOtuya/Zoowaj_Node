@@ -1746,3 +1746,7 @@ Stack Trace: Error: Error creating user
 2024-11-26T07:55:28.898Z [my-app] [32minfo[39m: Server listening on port 8000
 2024-11-26T07:55:32.170Z [my-app] [32minfo[39m: MongoDB Connected!
 >>>>>>> 94461115ac105524528b922b875a02c497bb9828
+2024-11-26T09:54:02.042Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-26T09:54:07.013Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-11-26T10:30:36.754Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-11-26T10:30:45.894Z [my-app] [32minfo[39m: MongoDB Connected!
