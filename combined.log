@@ -6259,3 +6259,664 @@ Stack Trace: Error: Error creating user
 2024-12-04T05:03:04.101Z [my-app] [32minfo[39m: MongoDB Connected!
 2024-12-04T05:57:51.286Z [my-app] [32minfo[39m: Server listening on port 8000
 2024-12-04T05:57:51.353Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-12-14T13:53:31.098Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-12-14T13:53:31.210Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-12-14T15:46:58.673Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-12-14T15:47:02.104Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-12-14T16:02:53.235Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-12-14T16:02:53.460Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-12-14T16:25:32.676Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: December 14, 2024 at 7:25:31 PM
+2024-12-14T16:25:32.676Z [my-app] [34mdebug[39m: Request Body: {
+  "email": "sam@gmail.com",
+  "password": "sam123456"
+}
+2024-12-14T16:25:32.679Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-14T16:25:32.679Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-14T16:25:37.560Z [my-app] [32minfo[39m: User Successfully created sam@gmail.com
+2024-12-14T16:25:37.678Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/register - Status: 201
+2024-12-14T16:25:37.678Z [my-app] [34mdebug[39m: Response Body: {"user":{"email":"sam@gmail.com","_id":"675db181d715b1b3711dd6fd","createdAt":"2024-12-14T16:25:37.258Z","updatedAt":"2024-12-14T16:25:37.258Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzVkYjE4MWQ3MTViMWIzNzExZGQ2ZmQiLCJlbWFpbCI6InNhbUBnbWFpbC5jb20iLCJpYXQiOjE3MzQxOTM1MzcsImV4cCI6MTczNDIwNDMzN30.o_FLgJBba9YdJtS1DpW1jTKqukrM7a6FqcItJ8lIezw"}
+2024-12-14T16:28:17.921Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: December 14, 2024 at 7:28:17 PM
+2024-12-14T16:28:17.924Z [my-app] [34mdebug[39m: Request Body: {
+  "about": {
+    "first_name": "Sam",
+    "last_name": "Sam",
+    "username": "Sammy",
+    "phone_number": "0712345678",
+    "birthDate": "2000-12-14",
+    "height": "5'11\"",
+    "maritalStatus": "Single",
+    "tagline": "Haute"
+  },
+  "interests": {
+    "0": "Extreme Sports",
+    "1": "Music",
+    "2": "Video Games"
+  },
+  "religiosity": {
+    "muslimSect": "Sunni",
+    "isConvert": "Yes",
+    "religiousPractice": "Strict",
+    "doYouPray": "Regularly",
+    "diet": "Halal and Non-Halal",
+    "doYouSmoke": "No",
+    "hasTattoos": "Yes"
+  },
+  "marriageIntentions": {
+    "lookingToMarry": "1-2 years",
+    "willingToRelocate": "Yes",
+    "wantsChildren": "Yes",
+    "livingArrangements": "Living with family",
+    "iceBreaker": "Food"
+  },
+  "languageAndEthnicity": {
+    "languages": [
+      "Urdu",
+      "Bengali"
+    ],
+    "ethnicGroup": "Asian",
+    "ethnicOrigin": "Indian",
+    "biography": "Polo man"
+  },
+  "educationAndCareer": {
+    "profession": "Doctor",
+    "education": "Bachelor's",
+    "jobTitle": "Developer"
+  }
+}
+2024-12-14T16:28:17.925Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-14T16:28:17.926Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-14T16:28:18.156Z [my-app] [32minfo[39m: User profile created successfully: {
+  "userId": "675db181d715b1b3711dd6fd",
+  "profilePhoto": {
+    "url": "https://placeholder/400",
+    "public_id": ""
+  },
+  "about": {
+    "first_name": "Sam",
+    "last_name": "Sam",
+    "username": "Sammy",
+    "phone_number": "0712345678",
+    "birthDate": "2000-12-14T00:00:00.000Z",
+    "height": "5'11\"",
+    "maritalStatus": "Single",
+    "tagline": "Haute"
+  },
+  "interests": [],
+  "religiosity": {
+    "muslimSect": "Sunni",
+    "isConvert": "Yes",
+    "religiousPractice": "Strict",
+    "doYouPray": "Regularly",
+    "diet": "Halal and Non-Halal",
+    "doYouSmoke": "No",
+    "hasTattoos": "Yes"
+  },
+  "marriageIntentions": {
+    "lookingToMarry": "1-2 years",
+    "willingToRelocate": "Yes",
+    "wantsChildren": "Yes",
+    "livingArrangements": "Living with family",
+    "iceBreaker": "Food"
+  },
+  "languageAndEthnicity": {
+    "languages": "Urdu",
+    "ethnicGroup": "Asian",
+    "ethnicOrigin": "Indian",
+    "biography": "Polo man"
+  },
+  "educationAndCareer": {
+    "profession": "Doctor",
+    "education": "Bachelor's",
+    "jobTitle": "Developer"
+  },
+  "likes": [],
+  "favorites": [],
+  "_id": "675db222d715b1b3711dd700",
+  "coverPhotos": [],
+  "createdAt": "2024-12-14T16:28:18.133Z",
+  "updatedAt": "2024-12-14T16:28:18.133Z",
+  "__v": 0
+}
+2024-12-14T16:28:18.157Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile - Status: 201
+2024-12-14T16:28:18.158Z [my-app] [34mdebug[39m: Response Body: {"profile":{"userId":"675db181d715b1b3711dd6fd","profilePhoto":{"url":"https://placeholder/400","public_id":""},"about":{"first_name":"Sam","last_name":"Sam","username":"Sammy","phone_number":"0712345678","birthDate":"2000-12-14T00:00:00.000Z","height":"5'11\"","maritalStatus":"Single","tagline":"Haute"},"interests":[],"religiosity":{"muslimSect":"Sunni","isConvert":"Yes","religiousPractice":"Strict","doYouPray":"Regularly","diet":"Halal and Non-Halal","doYouSmoke":"No","hasTattoos":"Yes"},"marriageIntentions":{"lookingToMarry":"1-2 years","willingToRelocate":"Yes","wantsChildren":"Yes","livingArrangements":"Living with family","iceBreaker":"Food"},"languageAndEthnicity":{"languages":"Urdu","ethnicGroup":"Asian","ethnicOrigin":"Indian","biography":"Polo man"},"educationAndCareer":{"profession":"Doctor","education":"Bachelor's","jobTitle":"Developer"},"likes":[],"favorites":[],"_id":"675db222d715b1b3711dd700","coverPhotos":[],"createdAt":"2024-12-14T16:28:18.133Z","updatedAt":"2024-12-14T16:28:18.133Z","__v":0}}
+2024-12-14T17:14:11.635Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: December 14, 2024 at 8:14:11 PM
+2024-12-14T17:14:11.697Z [my-app] [34mdebug[39m: Request Body: {
+  "email": "ali@ali.com",
+  "password": "12345678"
+}
+2024-12-14T17:14:11.698Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-14T17:14:11.698Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-14T17:14:12.190Z [my-app] [32minfo[39m: User Successfully created ali@ali.com
+2024-12-14T17:14:12.363Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/register - Status: 201
+2024-12-14T17:14:12.379Z [my-app] [34mdebug[39m: Response Body: {"user":{"email":"ali@ali.com","_id":"675dbce4d715b1b3711dd703","createdAt":"2024-12-14T17:14:12.144Z","updatedAt":"2024-12-14T17:14:12.144Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzVkYmNlNGQ3MTViMWIzNzExZGQ3MDMiLCJlbWFpbCI6ImFsaUBhbGkuY29tIiwiaWF0IjoxNzM0MTk2NDUyLCJleHAiOjE3MzQyMDcyNTJ9.0FRVblWelEueHAkFhACZewwjwSJJD9lt6JKmkNvUlew"}
+2024-12-14T17:16:08.069Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: December 14, 2024 at 8:16:08 PM
+2024-12-14T17:16:08.069Z [my-app] [34mdebug[39m: Request Body: {
+  "about": {
+    "first_name": "Ali",
+    "last_name": "Ali",
+    "username": "Alialai",
+    "phone_number": "0712345678",
+    "birthDate": "2000-12-12",
+    "height": "5'11\"",
+    "maritalStatus": "Single",
+    "tagline": "Haute"
+  },
+  "interests": {
+    "0": "Video Games",
+    "1": "Drinking",
+    "2": "Music"
+  },
+  "religiosity": {
+    "muslimSect": "Sunni",
+    "isConvert": "Yes",
+    "religiousPractice": "Moderate",
+    "doYouPray": "Occasionally",
+    "diet": "Halal and Non-Halal",
+    "doYouSmoke": "No",
+    "hasTattoos": "Yes"
+  },
+  "marriageIntentions": {
+    "lookingToMarry": "Within 1 year",
+    "willingToRelocate": "Yes",
+    "wantsChildren": "No",
+    "livingArrangements": "Living alone",
+    "iceBreaker": "Seflie"
+  },
+  "languageAndEthnicity": {
+    "languages": [
+      "English",
+      "Arabic"
+    ],
+    "ethnicGroup": "Hispanic",
+    "ethnicOrigin": "Bangladeshi",
+    "biography": "Biology"
+  },
+  "educationAndCareer": {
+    "profession": "Engineer",
+    "education": "Master's",
+    "jobTitle": "Analyst"
+  }
+}
+2024-12-14T17:16:08.069Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-14T17:16:08.069Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-14T17:16:08.493Z [my-app] [32minfo[39m: User profile created successfully: {
+  "userId": "675dbce4d715b1b3711dd703",
+  "profilePhoto": {
+    "url": "https://placeholder/400",
+    "public_id": ""
+  },
+  "about": {
+    "first_name": "Ali",
+    "last_name": "Ali",
+    "username": "Alialai",
+    "phone_number": "0712345678",
+    "birthDate": "2000-12-12T00:00:00.000Z",
+    "height": "5'11\"",
+    "maritalStatus": "Single",
+    "tagline": "Haute"
+  },
+  "interests": [],
+  "religiosity": {
+    "muslimSect": "Sunni",
+    "isConvert": "Yes",
+    "religiousPractice": "Moderate",
+    "doYouPray": "Occasionally",
+    "diet": "Halal and Non-Halal",
+    "doYouSmoke": "No",
+    "hasTattoos": "Yes"
+  },
+  "marriageIntentions": {
+    "lookingToMarry": "Within 1 year",
+    "willingToRelocate": "Yes",
+    "wantsChildren": "No",
+    "livingArrangements": "Living alone",
+    "iceBreaker": "Seflie"
+  },
+  "languageAndEthnicity": {
+    "languages": "English",
+    "ethnicGroup": "Hispanic",
+    "ethnicOrigin": "Bangladeshi",
+    "biography": "Biology"
+  },
+  "educationAndCareer": {
+    "profession": "Engineer",
+    "education": "Master's",
+    "jobTitle": "Analyst"
+  },
+  "likes": [],
+  "favorites": [],
+  "_id": "675dbd58d715b1b3711dd706",
+  "coverPhotos": [],
+  "createdAt": "2024-12-14T17:16:08.455Z",
+  "updatedAt": "2024-12-14T17:16:08.455Z",
+  "__v": 0
+}
+2024-12-14T17:16:08.599Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile - Status: 201
+2024-12-14T17:16:08.600Z [my-app] [34mdebug[39m: Response Body: {"profile":{"userId":"675dbce4d715b1b3711dd703","profilePhoto":{"url":"https://placeholder/400","public_id":""},"about":{"first_name":"Ali","last_name":"Ali","username":"Alialai","phone_number":"0712345678","birthDate":"2000-12-12T00:00:00.000Z","height":"5'11\"","maritalStatus":"Single","tagline":"Haute"},"interests":[],"religiosity":{"muslimSect":"Sunni","isConvert":"Yes","religiousPractice":"Moderate","doYouPray":"Occasionally","diet":"Halal and Non-Halal","doYouSmoke":"No","hasTattoos":"Yes"},"marriageIntentions":{"lookingToMarry":"Within 1 year","willingToRelocate":"Yes","wantsChildren":"No","livingArrangements":"Living alone","iceBreaker":"Seflie"},"languageAndEthnicity":{"languages":"English","ethnicGroup":"Hispanic","ethnicOrigin":"Bangladeshi","biography":"Biology"},"educationAndCareer":{"profession":"Engineer","education":"Master's","jobTitle":"Analyst"},"likes":[],"favorites":[],"_id":"675dbd58d715b1b3711dd706","coverPhotos":[],"createdAt":"2024-12-14T17:16:08.455Z","updatedAt":"2024-12-14T17:16:08.455Z","__v":0}}
+2024-12-14T17:19:40.825Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: December 14, 2024 at 8:19:40 PM
+2024-12-14T17:19:40.825Z [my-app] [34mdebug[39m: Request Body: {
+  "email": "pro@gmail.com",
+  "password": "12345678"
+}
+2024-12-14T17:19:40.826Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-14T17:19:40.826Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-14T17:19:41.016Z [my-app] [32minfo[39m: User Successfully created pro@gmail.com
+2024-12-14T17:19:41.017Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/register - Status: 201
+2024-12-14T17:19:41.017Z [my-app] [34mdebug[39m: Response Body: {"user":{"email":"pro@gmail.com","_id":"675dbe2cd715b1b3711dd709","createdAt":"2024-12-14T17:19:40.992Z","updatedAt":"2024-12-14T17:19:40.992Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzVkYmUyY2Q3MTViMWIzNzExZGQ3MDkiLCJlbWFpbCI6InByb0BnbWFpbC5jb20iLCJpYXQiOjE3MzQxOTY3ODEsImV4cCI6MTczNDIwNzU4MX0.qpte6eusZQEkSD6-tJ_-U6CjzXYqnKUZtbrOzB7EQMw"}
+2024-12-14T17:21:15.186Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: December 14, 2024 at 8:21:15 PM
+2024-12-14T17:21:15.187Z [my-app] [34mdebug[39m: Request Body: {
+  "about": {
+    "first_name": "Pro",
+    "last_name": "Pro",
+    "username": "Person",
+    "phone_number": "0712345678",
+    "birthDate": "1994-12-14",
+    "height": "5'11'",
+    "maritalStatus": "Single",
+    "tagline": "Haute"
+  },
+  "interests": {
+    "0": "Running",
+    "1": "Tennis",
+    "2": "Shopping",
+    "3": "Video Games",
+    "4": "Music"
+  },
+  "religiosity": {
+    "muslimSect": "Sunni",
+    "isConvert": "Yes",
+    "religiousPractice": "Moderate",
+    "doYouPray": "Rarely",
+    "diet": "Vegan",
+    "doYouSmoke": "No",
+    "hasTattoos": "Yes"
+  },
+  "marriageIntentions": {
+    "lookingToMarry": "Within 1 year",
+    "willingToRelocate": "No",
+    "wantsChildren": "Maybe",
+    "livingArrangements": "Living with family",
+    "iceBreaker": "Blah"
+  },
+  "languageAndEthnicity": {
+    "languages": [
+      "English",
+      "Arabic"
+    ],
+    "ethnicGroup": "Black",
+    "ethnicOrigin": "Pakistani",
+    "biography": "Buo"
+  },
+  "educationAndCareer": {
+    "profession": "Engineer",
+    "education": "High School",
+    "jobTitle": "Manager"
+  }
+}
+2024-12-14T17:21:15.187Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-14T17:21:15.188Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-14T17:21:15.295Z [my-app] [32minfo[39m: User profile created successfully: {
+  "userId": "675dbe2cd715b1b3711dd709",
+  "profilePhoto": {
+    "url": "https://placeholder/400",
+    "public_id": ""
+  },
+  "about": {
+    "first_name": "Pro",
+    "last_name": "Pro",
+    "username": "Person",
+    "phone_number": "0712345678",
+    "birthDate": "1994-12-14T00:00:00.000Z",
+    "height": "5'11'",
+    "maritalStatus": "Single",
+    "tagline": "Haute"
+  },
+  "interests": [],
+  "religiosity": {
+    "muslimSect": "Sunni",
+    "isConvert": "Yes",
+    "religiousPractice": "Moderate",
+    "doYouPray": "Rarely",
+    "diet": "Vegan",
+    "doYouSmoke": "No",
+    "hasTattoos": "Yes"
+  },
+  "marriageIntentions": {
+    "lookingToMarry": "Within 1 year",
+    "willingToRelocate": "No",
+    "wantsChildren": "Maybe",
+    "livingArrangements": "Living with family",
+    "iceBreaker": "Blah"
+  },
+  "languageAndEthnicity": {
+    "languages": "English",
+    "ethnicGroup": "Black",
+    "ethnicOrigin": "Pakistani",
+    "biography": "Buo"
+  },
+  "educationAndCareer": {
+    "profession": "Engineer",
+    "education": "High School",
+    "jobTitle": "Manager"
+  },
+  "likes": [],
+  "favorites": [],
+  "_id": "675dbe8bd715b1b3711dd70c",
+  "coverPhotos": [],
+  "createdAt": "2024-12-14T17:21:15.289Z",
+  "updatedAt": "2024-12-14T17:21:15.289Z",
+  "__v": 0
+}
+2024-12-14T17:21:15.325Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile - Status: 201
+2024-12-14T17:21:15.325Z [my-app] [34mdebug[39m: Response Body: {"profile":{"userId":"675dbe2cd715b1b3711dd709","profilePhoto":{"url":"https://placeholder/400","public_id":""},"about":{"first_name":"Pro","last_name":"Pro","username":"Person","phone_number":"0712345678","birthDate":"1994-12-14T00:00:00.000Z","height":"5'11'","maritalStatus":"Single","tagline":"Haute"},"interests":[],"religiosity":{"muslimSect":"Sunni","isConvert":"Yes","religiousPractice":"Moderate","doYouPray":"Rarely","diet":"Vegan","doYouSmoke":"No","hasTattoos":"Yes"},"marriageIntentions":{"lookingToMarry":"Within 1 year","willingToRelocate":"No","wantsChildren":"Maybe","livingArrangements":"Living with family","iceBreaker":"Blah"},"languageAndEthnicity":{"languages":"English","ethnicGroup":"Black","ethnicOrigin":"Pakistani","biography":"Buo"},"educationAndCareer":{"profession":"Engineer","education":"High School","jobTitle":"Manager"},"likes":[],"favorites":[],"_id":"675dbe8bd715b1b3711dd70c","coverPhotos":[],"createdAt":"2024-12-14T17:21:15.289Z","updatedAt":"2024-12-14T17:21:15.289Z","__v":0}}
+2024-12-14T17:27:46.852Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: December 14, 2024 at 8:27:46 PM
+2024-12-14T17:27:46.853Z [my-app] [34mdebug[39m: Request Body: {
+  "email": "tim@gmail.com",
+  "password": "12345678"
+}
+2024-12-14T17:27:46.853Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-14T17:27:46.853Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-14T17:27:47.006Z [my-app] [32minfo[39m: User Successfully created tim@gmail.com
+2024-12-14T17:27:47.007Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/register - Status: 201
+2024-12-14T17:27:47.008Z [my-app] [34mdebug[39m: Response Body: {"user":{"email":"tim@gmail.com","_id":"675dc013d715b1b3711dd70f","createdAt":"2024-12-14T17:27:47.004Z","updatedAt":"2024-12-14T17:27:47.004Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzVkYzAxM2Q3MTViMWIzNzExZGQ3MGYiLCJlbWFpbCI6InRpbUBnbWFpbC5jb20iLCJpYXQiOjE3MzQxOTcyNjcsImV4cCI6MTczNDIwODA2N30.98Nt0g62gbzCEtrr5QRjy9JVHHLm4Q0ecHoz0UK1hDw"}
+2024-12-14T17:29:46.279Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: December 14, 2024 at 8:29:46 PM
+2024-12-14T17:29:46.280Z [my-app] [34mdebug[39m: Request Body: {
+  "about": {
+    "first_name": "Tim",
+    "last_name": "Tin",
+    "username": "Tintin",
+    "phone_number": "0784512369",
+    "birthDate": "2001-12-10",
+    "height": "5'11\"",
+    "maritalStatus": "Single",
+    "tagline": "Haute"
+  },
+  "interests": {
+    "0": "Extreme Sports",
+    "1": "Music",
+    "2": "Drinking",
+    "3": "Video Games",
+    "4": "Art"
+  },
+  "religiosity": {
+    "muslimSect": "Shia",
+    "isConvert": "Yes",
+    "religiousPractice": "Moderate",
+    "doYouPray": "Occasionally",
+    "diet": "Halal and Non-Halal",
+    "doYouSmoke": "No",
+    "hasTattoos": "Yes"
+  },
+  "marriageIntentions": {
+    "lookingToMarry": "2-3 years",
+    "willingToRelocate": "No",
+    "wantsChildren": "Yes",
+    "livingArrangements": "Living with family",
+    "iceBreaker": "Call"
+  },
+  "languageAndEthnicity": {
+    "languages": [
+      "Other",
+      "Bengali",
+      "Urdu",
+      "Arabic",
+      "English"
+    ],
+    "ethnicGroup": "Black",
+    "ethnicOrigin": "Bangladeshi",
+    "biography": "Biog"
+  },
+  "educationAndCareer": {
+    "profession": "Engineer",
+    "education": "High School",
+    "jobTitle": "Developer"
+  }
+}
+2024-12-14T17:29:46.281Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-14T17:29:46.281Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-14T17:29:46.309Z [my-app] [32minfo[39m: User profile created successfully: {
+  "userId": "675dc013d715b1b3711dd70f",
+  "profilePhoto": {
+    "url": "https://placeholder/400",
+    "public_id": ""
+  },
+  "about": {
+    "first_name": "Tim",
+    "last_name": "Tin",
+    "username": "Tintin",
+    "phone_number": "0784512369",
+    "birthDate": "2001-12-10T00:00:00.000Z",
+    "height": "5'11\"",
+    "maritalStatus": "Single",
+    "tagline": "Haute"
+  },
+  "interests": [],
+  "religiosity": {
+    "muslimSect": "Shia",
+    "isConvert": "Yes",
+    "religiousPractice": "Moderate",
+    "doYouPray": "Occasionally",
+    "diet": "Halal and Non-Halal",
+    "doYouSmoke": "No",
+    "hasTattoos": "Yes"
+  },
+  "marriageIntentions": {
+    "lookingToMarry": "2-3 years",
+    "willingToRelocate": "No",
+    "wantsChildren": "Yes",
+    "livingArrangements": "Living with family",
+    "iceBreaker": "Call"
+  },
+  "languageAndEthnicity": {
+    "languages": "Other",
+    "ethnicGroup": "Black",
+    "ethnicOrigin": "Bangladeshi",
+    "biography": "Biog"
+  },
+  "educationAndCareer": {
+    "profession": "Engineer",
+    "education": "High School",
+    "jobTitle": "Developer"
+  },
+  "likes": [],
+  "favorites": [],
+  "_id": "675dc08ad715b1b3711dd712",
+  "coverPhotos": [],
+  "createdAt": "2024-12-14T17:29:46.301Z",
+  "updatedAt": "2024-12-14T17:29:46.301Z",
+  "__v": 0
+}
+2024-12-14T17:29:46.310Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile - Status: 201
+2024-12-14T17:29:46.310Z [my-app] [34mdebug[39m: Response Body: {"profile":{"userId":"675dc013d715b1b3711dd70f","profilePhoto":{"url":"https://placeholder/400","public_id":""},"about":{"first_name":"Tim","last_name":"Tin","username":"Tintin","phone_number":"0784512369","birthDate":"2001-12-10T00:00:00.000Z","height":"5'11\"","maritalStatus":"Single","tagline":"Haute"},"interests":[],"religiosity":{"muslimSect":"Shia","isConvert":"Yes","religiousPractice":"Moderate","doYouPray":"Occasionally","diet":"Halal and Non-Halal","doYouSmoke":"No","hasTattoos":"Yes"},"marriageIntentions":{"lookingToMarry":"2-3 years","willingToRelocate":"No","wantsChildren":"Yes","livingArrangements":"Living with family","iceBreaker":"Call"},"languageAndEthnicity":{"languages":"Other","ethnicGroup":"Black","ethnicOrigin":"Bangladeshi","biography":"Biog"},"educationAndCareer":{"profession":"Engineer","education":"High School","jobTitle":"Developer"},"likes":[],"favorites":[],"_id":"675dc08ad715b1b3711dd712","coverPhotos":[],"createdAt":"2024-12-14T17:29:46.301Z","updatedAt":"2024-12-14T17:29:46.301Z","__v":0}}
+2024-12-14T17:33:01.947Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: December 14, 2024 at 8:33:01 PM
+2024-12-14T17:33:01.948Z [my-app] [34mdebug[39m: Request Body: {
+  "email": "too@gmail.com",
+  "password": "12345678"
+}
+2024-12-14T17:33:01.948Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-14T17:33:01.949Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-14T17:33:02.361Z [my-app] [32minfo[39m: User Successfully created too@gmail.com
+2024-12-14T17:33:02.406Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/register - Status: 201
+2024-12-14T17:33:02.406Z [my-app] [34mdebug[39m: Response Body: {"user":{"email":"too@gmail.com","_id":"675dc14ed715b1b3711dd715","createdAt":"2024-12-14T17:33:02.300Z","updatedAt":"2024-12-14T17:33:02.300Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzVkYzE0ZWQ3MTViMWIzNzExZGQ3MTUiLCJlbWFpbCI6InRvb0BnbWFpbC5jb20iLCJpYXQiOjE3MzQxOTc1ODIsImV4cCI6MTczNDIwODM4Mn0.Rg-oSIEyVVliodcvO39p8i5gJGj8Zn4sPxaZkrcsKXo"}
+2024-12-14T17:34:47.830Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: December 14, 2024 at 8:34:47 PM
+2024-12-14T17:34:47.831Z [my-app] [34mdebug[39m: Request Body: {
+  "about": {
+    "first_name": "Too",
+    "last_name": "Too",
+    "username": "toouo",
+    "phone_number": "0789456123",
+    "birthDate": "1988-12-14",
+    "height": "5'11\"",
+    "maritalStatus": "Single",
+    "tagline": "Ghu"
+  },
+  "interests": {
+    "0": "Photography",
+    "1": "Shopping",
+    "2": "Karaoke",
+    "3": "Yoga",
+    "4": "Cooking"
+  },
+  "religiosity": {
+    "muslimSect": "Sunni",
+    "isConvert": "Yes",
+    "religiousPractice": "Moderate",
+    "doYouPray": "Occasionally",
+    "diet": "Halal and Non-Halal",
+    "doYouSmoke": "No",
+    "hasTattoos": "Yes"
+  },
+  "marriageIntentions": {
+    "lookingToMarry": "Within 1 year",
+    "willingToRelocate": "Yes",
+    "wantsChildren": "Yes",
+    "livingArrangements": "Living with family",
+    "iceBreaker": "Coo coo"
+  },
+  "languageAndEthnicity": {
+    "languages": [
+      "Arabic",
+      "Urdu",
+      "English"
+    ],
+    "ethnicGroup": "Black",
+    "ethnicOrigin": "Pakistani",
+    "biography": "Gyh"
+  },
+  "educationAndCareer": {
+    "profession": "Doctor",
+    "education": "High School",
+    "jobTitle": "Manager"
+  }
+}
+2024-12-14T17:34:47.831Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-14T17:34:47.832Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-14T17:34:47.973Z [my-app] [32minfo[39m: User profile created successfully: {
+  "userId": "675dc14ed715b1b3711dd715",
+  "profilePhoto": {
+    "url": "https://placeholder/400",
+    "public_id": ""
+  },
+  "about": {
+    "first_name": "Too",
+    "last_name": "Too",
+    "username": "toouo",
+    "phone_number": "0789456123",
+    "birthDate": "1988-12-14T00:00:00.000Z",
+    "height": "5'11\"",
+    "maritalStatus": "Single",
+    "tagline": "Ghu"
+  },
+  "interests": [],
+  "religiosity": {
+    "muslimSect": "Sunni",
+    "isConvert": "Yes",
+    "religiousPractice": "Moderate",
+    "doYouPray": "Occasionally",
+    "diet": "Halal and Non-Halal",
+    "doYouSmoke": "No",
+    "hasTattoos": "Yes"
+  },
+  "marriageIntentions": {
+    "lookingToMarry": "Within 1 year",
+    "willingToRelocate": "Yes",
+    "wantsChildren": "Yes",
+    "livingArrangements": "Living with family",
+    "iceBreaker": "Coo coo"
+  },
+  "languageAndEthnicity": {
+    "languages": "Arabic",
+    "ethnicGroup": "Black",
+    "ethnicOrigin": "Pakistani",
+    "biography": "Gyh"
+  },
+  "educationAndCareer": {
+    "profession": "Doctor",
+    "education": "High School",
+    "jobTitle": "Manager"
+  },
+  "likes": [],
+  "favorites": [],
+  "_id": "675dc1b7d715b1b3711dd718",
+  "coverPhotos": [],
+  "createdAt": "2024-12-14T17:34:47.929Z",
+  "updatedAt": "2024-12-14T17:34:47.929Z",
+  "__v": 0
+}
+2024-12-14T17:34:47.974Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile - Status: 201
+2024-12-14T17:34:47.975Z [my-app] [34mdebug[39m: Response Body: {"profile":{"userId":"675dc14ed715b1b3711dd715","profilePhoto":{"url":"https://placeholder/400","public_id":""},"about":{"first_name":"Too","last_name":"Too","username":"toouo","phone_number":"0789456123","birthDate":"1988-12-14T00:00:00.000Z","height":"5'11\"","maritalStatus":"Single","tagline":"Ghu"},"interests":[],"religiosity":{"muslimSect":"Sunni","isConvert":"Yes","religiousPractice":"Moderate","doYouPray":"Occasionally","diet":"Halal and Non-Halal","doYouSmoke":"No","hasTattoos":"Yes"},"marriageIntentions":{"lookingToMarry":"Within 1 year","willingToRelocate":"Yes","wantsChildren":"Yes","livingArrangements":"Living with family","iceBreaker":"Coo coo"},"languageAndEthnicity":{"languages":"Arabic","ethnicGroup":"Black","ethnicOrigin":"Pakistani","biography":"Gyh"},"educationAndCareer":{"profession":"Doctor","education":"High School","jobTitle":"Manager"},"likes":[],"favorites":[],"_id":"675dc1b7d715b1b3711dd718","coverPhotos":[],"createdAt":"2024-12-14T17:34:47.929Z","updatedAt":"2024-12-14T17:34:47.929Z","__v":0}}
+2024-12-14T17:39:44.545Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /, Timestamp: December 14, 2024 at 8:39:44 PM
+2024-12-14T17:39:44.610Z [my-app] [34mdebug[39m: Request Body: {}
+2024-12-14T17:39:44.611Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-14T17:39:44.611Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-14T18:20:04.457Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile-images, Timestamp: December 14, 2024 at 9:20:03 PM
+2024-12-14T18:20:04.477Z [my-app] [34mdebug[39m: Request Body: {}
+2024-12-14T18:20:04.477Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-14T18:20:04.477Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-14T18:20:35.216Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile-images - Status: 201
+2024-12-14T18:20:35.217Z [my-app] [34mdebug[39m: Response Body: {"profile":{"profilePhoto":{"url":"https://res.cloudinary.com/dxwdp8xww/image/upload/v1734200411/profile_photos/nrq9td93dfjeo42cau9w.jpg","public_id":"profile_photos/nrq9td93dfjeo42cau9w"},"about":{"first_name":"Too","last_name":"Too","username":"toouo","phone_number":"0789456123","birthDate":"1988-12-14T00:00:00.000Z","height":"5'11\"","maritalStatus":"Single","tagline":"Ghu"},"religiosity":{"muslimSect":"Sunni","isConvert":"Yes","religiousPractice":"Moderate","doYouPray":"Occasionally","diet":"Halal and Non-Halal","doYouSmoke":"No","hasTattoos":"Yes"},"marriageIntentions":{"lookingToMarry":"Within 1 year","willingToRelocate":"Yes","wantsChildren":"Yes","livingArrangements":"Living with family","iceBreaker":"Coo coo"},"languageAndEthnicity":{"languages":"Arabic","ethnicGroup":"Black","ethnicOrigin":"Pakistani","biography":"Gyh"},"educationAndCareer":{"profession":"Doctor","education":"High School","jobTitle":"Manager"},"_id":"675dc1b7d715b1b3711dd718","userId":"675dc14ed715b1b3711dd715","interests":[],"likes":[],"favorites":[],"coverPhotos":[{"url":"https://res.cloudinary.com/dxwdp8xww/image/upload/v1734200422/cover_photos/zdhxjpjoeowhni65ofjo.jpg","public_id":"cover_photos/zdhxjpjoeowhni65ofjo","_id":"675dcc6fd715b1b3711dd71b"},{"url":"https://res.cloudinary.com/dxwdp8xww/image/upload/v1734200425/cover_photos/gyudtt6kv9jozdi9ee7w.jpg","public_id":"cover_photos/gyudtt6kv9jozdi9ee7w","_id":"675dcc6fd715b1b3711dd71c"}],"createdAt":"2024-12-14T17:34:47.929Z","updatedAt":"2024-12-14T18:20:31.407Z","__v":1}}
+2024-12-15T07:44:30.760Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-12-15T07:44:30.809Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-12-15T07:54:24.210Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/dev/user, Timestamp: December 15, 2024 at 10:54:23 AM
+2024-12-15T07:54:24.873Z [my-app] [34mdebug[39m: Request Body: {}
+2024-12-15T07:54:24.895Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-15T07:54:24.896Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-15T07:54:42.495Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/dev/user-a'', Timestamp: December 15, 2024 at 10:54:42 AM
+2024-12-15T07:54:42.504Z [my-app] [34mdebug[39m: Request Body: {}
+2024-12-15T07:54:42.505Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-15T07:54:42.505Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-15T07:54:45.264Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/dev/user-all, Timestamp: December 15, 2024 at 10:54:45 AM
+2024-12-15T07:54:45.265Z [my-app] [34mdebug[39m: Request Body: {}
+2024-12-15T07:54:45.265Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-15T07:54:45.275Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-15T07:54:54.895Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/dev/user/get, Timestamp: December 15, 2024 at 10:54:54 AM
+2024-12-15T07:54:54.895Z [my-app] [34mdebug[39m: Request Body: {}
+2024-12-15T07:54:54.895Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-15T07:54:54.896Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-15T07:54:58.895Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/dev/user/all, Timestamp: December 15, 2024 at 10:54:58 AM
+2024-12-15T07:54:58.896Z [my-app] [34mdebug[39m: Request Body: {}
+2024-12-15T07:54:58.897Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-15T07:54:58.897Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-15T07:56:38.291Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/dev/all, Timestamp: December 15, 2024 at 10:56:38 AM
+2024-12-15T07:56:38.291Z [my-app] [34mdebug[39m: Request Body: {}
+2024-12-15T07:56:38.291Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-15T07:56:38.291Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-15T07:57:02.006Z [my-app] [32minfo[39m: retrieved 5 users
+2024-12-15T07:57:03.200Z [my-app] [34mdebug[39m: Response for GET /api/v1/dev/all - Status: 200
+2024-12-15T07:57:03.200Z [my-app] [34mdebug[39m: Response Body: [{"_id":"675db181d715b1b3711dd6fd","email":"sam@gmail.com","createdAt":"2024-12-14T16:25:37.258Z","updatedAt":"2024-12-14T16:25:37.258Z","__v":0},{"_id":"675dbce4d715b1b3711dd703","email":"ali@ali.com","createdAt":"2024-12-14T17:14:12.144Z","updatedAt":"2024-12-14T17:14:12.144Z","__v":0},{"_id":"675dbe2cd715b1b3711dd709","email":"pro@gmail.com","createdAt":"2024-12-14T17:19:40.992Z","updatedAt":"2024-12-14T17:19:40.992Z","__v":0},{"_id":"675dc013d715b1b3711dd70f","email":"tim@gmail.com","createdAt":"2024-12-14T17:27:47.004Z","updatedAt":"2024-12-14T17:27:47.004Z","__v":0},{"_id":"675dc14ed715b1b3711dd715","email":"too@gmail.com","createdAt":"2024-12-14T17:33:02.300Z","updatedAt":"2024-12-14T17:33:02.300Z","__v":0}]
+2024-12-15T07:58:00.090Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/data, Timestamp: December 15, 2024 at 10:58:00 AM
+2024-12-15T07:58:00.090Z [my-app] [34mdebug[39m: Request Body: {}
+2024-12-15T07:58:00.091Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-15T07:58:00.091Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-15T07:58:11.024Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/dev/data, Timestamp: December 15, 2024 at 10:58:11 AM
+2024-12-15T07:58:11.034Z [my-app] [34mdebug[39m: Request Body: {}
+2024-12-15T07:58:11.034Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-15T07:58:11.034Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-15T07:58:11.950Z [my-app] [32minfo[39m: retrieved 4 profile data
+2024-12-15T07:58:11.961Z [my-app] [34mdebug[39m: Response for GET /api/v1/dev/data - Status: 200
+2024-12-15T07:58:11.962Z [my-app] [34mdebug[39m: Response Body: [{"profilePhoto":{"url":"https://placeholder/400","public_id":""},"about":{"first_name":"Ali","last_name":"Ali","username":"Alialai","phone_number":"0712345678","birthDate":"2000-12-12T00:00:00.000Z","height":"5'11\"","maritalStatus":"Single","tagline":"Haute"},"religiosity":{"muslimSect":"Sunni","isConvert":"Yes","religiousPractice":"Moderate","doYouPray":"Occasionally","diet":"Halal and Non-Halal","doYouSmoke":"No","hasTattoos":"Yes"},"marriageIntentions":{"lookingToMarry":"Within 1 year","willingToRelocate":"Yes","wantsChildren":"No","livingArrangements":"Living alone","iceBreaker":"Seflie"},"languageAndEthnicity":{"languages":"English","ethnicGroup":"Hispanic","ethnicOrigin":"Bangladeshi","biography":"Biology"},"educationAndCareer":{"profession":"Engineer","education":"Master's","jobTitle":"Analyst"},"_id":"675dbd58d715b1b3711dd706","userId":"675dbce4d715b1b3711dd703","interests":[],"likes":[],"favorites":[],"coverPhotos":[],"createdAt":"2024-12-14T17:16:08.455Z","updatedAt":"2024-12-14T17:16:08.455Z","__v":0},{"profilePhoto":{"url":"https://placeholder/400","public_id":""},"about":{"first_name":"Pro","last_name":"Pro","username":"Person","phone_number":"0712345678","birthDate":"1994-12-14T00:00:00.000Z","height":"5'11'","maritalStatus":"Single","tagline":"Haute"},"religiosity":{"muslimSect":"Sunni","isConvert":"Yes","religiousPractice":"Moderate","doYouPray":"Rarely","diet":"Vegan","doYouSmoke":"No","hasTattoos":"Yes"},"marriageIntentions":{"lookingToMarry":"Within 1 year","willingToRelocate":"No","wantsChildren":"Maybe","livingArrangements":"Living with family","iceBreaker":"Blah"},"languageAndEthnicity":{"languages":"English","ethnicGroup":"Black","ethnicOrigin":"Pakistani","biography":"Buo"},"educationAndCareer":{"profession":"Engineer","education":"High School","jobTitle":"Manager"},"_id":"675dbe8bd715b1b3711dd70c","userId":"675dbe2cd715b1b3711dd709","interests":[],"likes":[],"favorites":[],"coverPhotos":[],"createdAt":"2024-12-14T17:21:15.289Z","updatedAt":"2024-12-14T17:21:15.289Z","__v":0},{"profilePhoto":{"url":"https://placeholder/400","public_id":""},"about":{"first_name":"Tim","last_name":"Tin","username":"Tintin","phone_number":"0784512369","birthDate":"2001-12-10T00:00:00.000Z","height":"5'11\"","maritalStatus":"Single","tagline":"Haute"},"religiosity":{"muslimSect":"Shia","isConvert":"Yes","religiousPractice":"Moderate","doYouPray":"Occasionally","diet":"Halal and Non-Halal","doYouSmoke":"No","hasTattoos":"Yes"},"marriageIntentions":{"lookingToMarry":"2-3 years","willingToRelocate":"No","wantsChildren":"Yes","livingArrangements":"Living with family","iceBreaker":"Call"},"languageAndEthnicity":{"languages":"Other","ethnicGroup":"Black","ethnicOrigin":"Bangladeshi","biography":"Biog"},"educationAndCareer":{"profession":"Engineer","education":"High School","jobTitle":"Developer"},"_id":"675dc08ad715b1b3711dd712","userId":"675dc013d715b1b3711dd70f","interests":[],"likes":[],"favorites":[],"coverPhotos":[],"createdAt":"2024-12-14T17:29:46.301Z","updatedAt":"2024-12-14T17:29:46.301Z","__v":0},{"profilePhoto":{"url":"https://res.cloudinary.com/dxwdp8xww/image/upload/v1734200411/profile_photos/nrq9td93dfjeo42cau9w.jpg","public_id":"profile_photos/nrq9td93dfjeo42cau9w"},"about":{"first_name":"Too","last_name":"Too","username":"toouo","phone_number":"0789456123","birthDate":"1988-12-14T00:00:00.000Z","height":"5'11\"","maritalStatus":"Single","tagline":"Ghu"},"religiosity":{"muslimSect":"Sunni","isConvert":"Yes","religiousPractice":"Moderate","doYouPray":"Occasionally","diet":"Halal and Non-Halal","doYouSmoke":"No","hasTattoos":"Yes"},"marriageIntentions":{"lookingToMarry":"Within 1 year","willingToRelocate":"Yes","wantsChildren":"Yes","livingArrangements":"Living with family","iceBreaker":"Coo coo"},"languageAndEthnicity":{"languages":"Arabic","ethnicGroup":"Black","ethnicOrigin":"Pakistani","biography":"Gyh"},"educationAndCareer":{"profession":"Doctor","education":"High School","jobTitle":"Manager"},"_id":"675dc1b7d715b1b3711dd718","userId":"675dc14ed715b1b3711dd715","interests":[],"likes":[],"favorites":[],"coverPhotos":[{"url":"https://res.cloudinary.com/dxwdp8xww/image/upload/v1734200422/cover_photos/zdhxjpjoeowhni65ofjo.jpg","public_id":"cover_photos/zdhxjpjoeowhni65ofjo","_id":"675dcc6fd715b1b3711dd71b"},{"url":"https://res.cloudinary.com/dxwdp8xww/image/upload/v1734200425/cover_photos/gyudtt6kv9jozdi9ee7w.jpg","public_id":"cover_photos/gyudtt6kv9jozdi9ee7w","_id":"675dcc6fd715b1b3711dd71c"}],"createdAt":"2024-12-14T17:34:47.929Z","updatedAt":"2024-12-14T18:20:31.407Z","__v":1}]
+2024-12-15T07:58:41.675Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/get-all, Timestamp: December 15, 2024 at 10:58:41 AM
+2024-12-15T07:58:41.675Z [my-app] [34mdebug[39m: Request Body: {}
+2024-12-15T07:58:41.675Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-15T07:58:41.675Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-15T07:58:47.786Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/dev/get-all, Timestamp: December 15, 2024 at 10:58:47 AM
+2024-12-15T07:58:47.787Z [my-app] [34mdebug[39m: Request Body: {}
+2024-12-15T07:58:47.787Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-15T07:58:47.787Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-15T07:58:48.180Z [my-app] [32minfo[39m: Retrieved 5 user's profile data
+2024-12-15T07:58:48.187Z [my-app] [34mdebug[39m: Response for GET /api/v1/dev/get-all - Status: 200
+2024-12-15T07:58:48.187Z [my-app] [34mdebug[39m: Response Body: [{"_id":"675db181d715b1b3711dd6fd","email":"sam@gmail.com","createdAt":"2024-12-14T16:25:37.258Z","updatedAt":"2024-12-14T16:25:37.258Z","__v":0},{"_id":"675dbce4d715b1b3711dd703","email":"ali@ali.com","createdAt":"2024-12-14T17:14:12.144Z","updatedAt":"2024-12-14T17:14:12.144Z","__v":0},{"_id":"675dbe2cd715b1b3711dd709","email":"pro@gmail.com","createdAt":"2024-12-14T17:19:40.992Z","updatedAt":"2024-12-14T17:19:40.992Z","__v":0},{"_id":"675dc013d715b1b3711dd70f","email":"tim@gmail.com","createdAt":"2024-12-14T17:27:47.004Z","updatedAt":"2024-12-14T17:27:47.004Z","__v":0},{"_id":"675dc14ed715b1b3711dd715","email":"too@gmail.com","createdAt":"2024-12-14T17:33:02.300Z","updatedAt":"2024-12-14T17:33:02.300Z","__v":0}]
+2024-12-15T07:59:24.288Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/dev/combined, Timestamp: December 15, 2024 at 10:59:24 AM
+2024-12-15T07:59:24.289Z [my-app] [34mdebug[39m: Request Body: {}
+2024-12-15T07:59:24.289Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-15T07:59:24.289Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-15T07:59:24.389Z [my-app] [32minfo[39m: Retrieved 5 combined user and profile data
+2024-12-15T07:59:24.390Z [my-app] [34mdebug[39m: Response for GET /api/v1/dev/combined - Status: 200
+2024-12-15T07:59:24.391Z [my-app] [34mdebug[39m: Response Body: [{"_id":"675db181d715b1b3711dd6fd","email":"sam@gmail.com","createdAt":"2024-12-14T16:25:37.258Z","updatedAt":"2024-12-14T16:25:37.258Z","__v":0},{"_id":"675dbce4d715b1b3711dd703","email":"ali@ali.com","createdAt":"2024-12-14T17:14:12.144Z","updatedAt":"2024-12-14T17:14:12.144Z","__v":0},{"_id":"675dbe2cd715b1b3711dd709","email":"pro@gmail.com","createdAt":"2024-12-14T17:19:40.992Z","updatedAt":"2024-12-14T17:19:40.992Z","__v":0},{"_id":"675dc013d715b1b3711dd70f","email":"tim@gmail.com","createdAt":"2024-12-14T17:27:47.004Z","updatedAt":"2024-12-14T17:27:47.004Z","__v":0},{"_id":"675dc14ed715b1b3711dd715","email":"too@gmail.com","createdAt":"2024-12-14T17:33:02.300Z","updatedAt":"2024-12-14T17:33:02.300Z","__v":0}]
+2024-12-15T07:59:55.138Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/dev/aggregate, Timestamp: December 15, 2024 at 10:59:55 AM
+2024-12-15T07:59:55.139Z [my-app] [34mdebug[39m: Request Body: {}
+2024-12-15T07:59:55.139Z [my-app] [34mdebug[39m: Request Query: {}
+2024-12-15T07:59:55.139Z [my-app] [34mdebug[39m: Request Params: {}
+2024-12-15T07:59:56.267Z [my-app] [32minfo[39m: Retrieved 5 users with their Data
+2024-12-15T07:59:56.268Z [my-app] [34mdebug[39m: Response for GET /api/v1/dev/aggregate - Status: 200
+2024-12-15T07:59:56.269Z [my-app] [34mdebug[39m: Response Body: [{"_id":"675db181d715b1b3711dd6fd","email":"sam@gmail.com","password":"$2b$10$43HSJHq7hotKbeZ3a41NquiS30A8kz3TG58ygxNk.HAer2kZOxovK","createdAt":"2024-12-14T16:25:37.258Z","updatedAt":"2024-12-14T16:25:37.258Z","__v":0},{"_id":"675dbce4d715b1b3711dd703","email":"ali@ali.com","password":"$2b$10$E7BMHNyhIzijG31DzNGgRu/7sfobfWj562MukU0sJu3b3lRDKLV5i","createdAt":"2024-12-14T17:14:12.144Z","updatedAt":"2024-12-14T17:14:12.144Z","__v":0},{"_id":"675dbe2cd715b1b3711dd709","email":"pro@gmail.com","password":"$2b$10$/qA/TNKeNovx6Vuy6hom3uCbzRpZtB4ol6EcBiN3bfA.wBcLwJL9i","createdAt":"2024-12-14T17:19:40.992Z","updatedAt":"2024-12-14T17:19:40.992Z","__v":0},{"_id":"675dc013d715b1b3711dd70f","email":"tim@gmail.com","password":"$2b$10$zh6ZXS.jw6X4VSUJqWJLAeeIvAm1wGprT4JQMdX6FB.Q91.WkuXQO","createdAt":"2024-12-14T17:27:47.004Z","updatedAt":"2024-12-14T17:27:47.004Z","__v":0},{"_id":"675dc14ed715b1b3711dd715","email":"too@gmail.com","password":"$2b$10$zh2UEGadXZ/d2fqtywHRfufrtds./1yfNObB7iEpaaoOfrwIVnA7e","createdAt":"2024-12-14T17:33:02.300Z","updatedAt":"2024-12-14T17:33:02.300Z","__v":0}]
