@@ -4,7 +4,7 @@ import {
   registerUser,
   loginUser,
   retrieveAllUsers,
-} from '../controllers/user-ctrl.js';
+} from '../controllers/user.controller.js';
 import {
   postProfileDetails,
   getProfileDetails,
@@ -12,7 +12,7 @@ import {
   removeLike,
   addFavorite,
   removeFavorite, 
-} from '../controllers/profiledetails-ctrl.js';
+} from '../controllers/profile.controller.js';
 
 const router = express.Router();
 

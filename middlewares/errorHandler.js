@@ -8,7 +8,7 @@ const errorHandler = (err, req, res, next) => {
   // Log the error with detailed information
   logger.error(
     `Error caught by errorHandler: ${err.message}` //\n` +
-      // `Stack Trace: ${err.stack || 'No stack trace available'}`,
+    // `Stack Trace: ${err.stack || 'No stack trace available'}`,
   );
 
   if (err instanceof ApplicationError) {
