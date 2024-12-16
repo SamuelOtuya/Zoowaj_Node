@@ -2,9 +2,9 @@ import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import dotenv from "dotenv"
-import userRoutes from './routes/user-routes.js';
-import messageRoutes from './routes/message-routes.js';
-import googleAuthRoutes from './routes/google-auth-routes.js';
+import userRoutes from './routes/user.route.js';
+import messageRoutes from './routes/message.route.js';
+import googleAuthRoutes from './routes/google-auth.route.js';
 import passport from './utils/passport.js';
 
 import requestLogger from './utils/requestLogger.js';
