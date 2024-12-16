@@ -1,5 +1,5 @@
 import express from 'express';
-import { upload } from '../middlewares/file-upload.js';
+import { upload } from '../middlewares/validators/file-upload.js';
 import {
   registerUser,
   loginUser,

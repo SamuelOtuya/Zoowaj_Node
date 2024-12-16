@@ -1,13 +1,13 @@
 import {
   ApplicationError,
   InternalServerError,
-} from '../errors/application-error.js';
-import logger from '../logger/logger.js';
+} from '../../errors/application-error.js';
+import logger from '../../logger/logger.js';
 
 const errorHandler = (err, req, res, next) => {
   // Log the error with detailed information
   logger.error(
-    `Error caught by errorHandler: ${err.message}` //\n` +
+    `Error caught by errorHandler: ${err.message}`, //\n` +
     // `Stack Trace: ${err.stack || 'No stack trace available'}`,
   );
 
