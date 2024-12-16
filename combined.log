@@ -1750,3 +1750,79 @@ Stack Trace: Error: Error creating user
 2024-11-26T09:54:07.013Z [my-app] [32minfo[39m: MongoDB Connected!
 2024-11-26T10:30:36.754Z [my-app] [32minfo[39m: Server listening on port 8000
 2024-11-26T10:30:45.894Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-12-15T10:21:07.726Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-12-15T10:21:10.727Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-12-15T10:23:13.843Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/message, Timestamp: 2024-12-15T10:23:13.843Z
+2024-12-15T10:23:14.174Z [my-app] [32minfo[39m: Response for POST /api/v1/message - Status: 201
+2024-12-15T10:23:14.176Z [my-app] [32minfo[39m: Response Body: {"message":{"user":"673de3a3a2e08f5b386e41c7","recepient":"673af51b146f08f91d601c7f","message":"Good","_id":"675eae11d108106ca8430c1b","createdAt":"2024-12-15T10:23:13.877Z","updatedAt":"2024-12-15T10:23:13.877Z","__v":0}}
+2024-12-15T10:23:26.888Z [my-app] [32minfo[39m: Request - Method: GET, URL: /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b, Timestamp: 2024-12-15T10:23:26.888Z
+2024-12-15T10:23:27.898Z [my-app] [32minfo[39m: Response for GET /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b - Status: 200
+2024-12-15T10:23:27.901Z [my-app] [32minfo[39m: Response Body: {"messages":[{"_id":"67421940f8fe1b8274df2709","user":null,"recepient":null,"message":"Good","createdAt":"2024-11-23T18:04:48.326Z","updatedAt":"2024-11-23T18:04:48.326Z","__v":0}]}
+2024-12-15T10:28:28.726Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-12-15T10:28:34.185Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/message, Timestamp: 2024-12-15T10:28:34.185Z
+2024-12-15T10:28:44.241Z [my-app] [32minfo[39m: Response for POST /api/v1/message - Status: 500
+2024-12-15T10:28:44.242Z [my-app] [32minfo[39m: Response Body: {"msg":"An error occurred while sending the message."}
+2024-12-15T10:28:58.722Z [my-app] [32minfo[39m: Mongoose Connection ERROR: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2024-12-15T10:29:07.362Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-12-15T10:29:37.373Z [my-app] [32minfo[39m: Mongoose Connection ERROR: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2024-12-15T10:30:04.876Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-12-15T10:30:13.975Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-12-15T10:30:31.930Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/message, Timestamp: 2024-12-15T10:30:31.930Z
+2024-12-15T10:30:32.237Z [my-app] [32minfo[39m: Response for POST /api/v1/message - Status: 201
+2024-12-15T10:30:32.238Z [my-app] [32minfo[39m: Response Body: {"message":{"user":"673de3a3a2e08f5b386e41c7","recepient":"673af51b146f08f91d601c7f","message":"Good","read":false,"_id":"675eafc70fea5c1197f811bb","createdAt":"2024-12-15T10:30:31.941Z","updatedAt":"2024-12-15T10:30:31.941Z","__v":0}}
+2024-12-15T10:38:40.675Z [my-app] [32minfo[39m: Request - Method: GET, URL: /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b, Timestamp: 2024-12-15T10:38:40.675Z
+2024-12-15T10:38:41.216Z [my-app] [32minfo[39m: Response for GET /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b - Status: 200
+2024-12-15T10:38:41.218Z [my-app] [32minfo[39m: Response Body: {"messages":[{"read":false,"_id":"67421940f8fe1b8274df2709","user":null,"recepient":null,"message":"Good","createdAt":"2024-11-23T18:04:48.326Z","updatedAt":"2024-11-23T18:04:48.326Z","__v":0}]}
+2024-12-15T14:25:16.910Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-12-15T14:25:26.306Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-12-15T14:25:47.519Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: 2024-12-15T14:25:47.519Z
+2024-12-15T14:25:47.822Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2024-12-15T14:25:47.826Z [my-app] [32minfo[39m: Response for POST /api/v1/user/register - Status: 400
+2024-12-15T14:25:47.827Z [my-app] [32minfo[39m: Response Body: {"message":"Email already exists","status":400}
+2024-12-15T14:25:55.031Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/user/login, Timestamp: 2024-12-15T14:25:55.030Z
+2024-12-15T14:25:55.489Z [my-app] [34mdebug[39m: User login successful tim2@gmail.com
+2024-12-15T14:25:55.492Z [my-app] [32minfo[39m: Response for POST /api/v1/user/login - Status: 200
+2024-12-15T14:25:55.493Z [my-app] [32minfo[39m: Response Body: {"message":"Login successful","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzNkZTNhM2EyZTA4ZjViMzg2ZTQxYzciLCJlbWFpbCI6InRpbTJAZ21haWwuY29tIiwiaWF0IjoxNzM0MjcyNzU1LCJleHAiOjE3MzQyODM1NTV9.z1L5oeYDWfUePwepHAzj6elURS71TPlBT_YgtekXn5Q","authUser":{"_id":"673de3a3a2e08f5b386e41c7","email":"tim2@gmail.com","password":"$2b$10$8EOq1Cjrw7790UNZ.wb6Ke0wQBh3X9WBJKJjmyqs0v8/tvm1oMK9K","createdAt":"2024-11-20T13:26:59.463Z","updatedAt":"2024-11-20T13:26:59.463Z","__v":0}}
+2024-12-15T14:31:46.823Z [my-app] [32minfo[39m: Request - Method: GET, URL: /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1bsss, Timestamp: 2024-12-15T14:31:46.823Z
+2024-12-15T14:31:46.839Z [my-app] [32minfo[39m: Response for GET /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1bsss - Status: 500
+2024-12-15T14:31:46.841Z [my-app] [32minfo[39m: Response Body: {"msg":"An error occurred while retrieving messages."}
+2024-12-15T14:31:57.761Z [my-app] [32minfo[39m: Request - Method: GET, URL: /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b, Timestamp: 2024-12-15T14:31:57.761Z
+2024-12-15T14:32:27.804Z [my-app] [32minfo[39m: Response for GET /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b - Status: 500
+2024-12-15T14:32:27.806Z [my-app] [32minfo[39m: Response Body: {"msg":"An error occurred while retrieving messages."}
+2024-12-15T14:35:54.945Z [my-app] [32minfo[39m: Request - Method: GET, URL: /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b, Timestamp: 2024-12-15T14:35:54.945Z
+2024-12-15T14:35:58.246Z [my-app] [32minfo[39m: Response for GET /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b - Status: 200
+2024-12-15T14:35:58.247Z [my-app] [32minfo[39m: Response Body: {"messages":[{"read":false,"_id":"67421940f8fe1b8274df2709","user":null,"recepient":null,"message":"Good","createdAt":"2024-11-23T18:04:48.326Z","updatedAt":"2024-11-23T18:04:48.326Z","__v":0}]}
+2024-12-15T14:44:21.901Z [my-app] [32minfo[39m: Request - Method: POST, URL: /api/v1/message, Timestamp: 2024-12-15T14:44:21.901Z
+2024-12-15T14:44:22.229Z [my-app] [32minfo[39m: Response for POST /api/v1/message - Status: 201
+2024-12-15T14:44:22.230Z [my-app] [32minfo[39m: Response Body: {"message":{"user":"673af51b146f08f91d601c7f","recepient":"673de3a3a2e08f5b386e41c7","message":"Cool","read":false,"_id":"675eeb45c7172fe026368b98","createdAt":"2024-12-15T14:44:21.930Z","updatedAt":"2024-12-15T14:44:21.930Z","__v":0}}
+2024-12-15T14:44:26.893Z [my-app] [32minfo[39m: Request - Method: GET, URL: /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b, Timestamp: 2024-12-15T14:44:26.893Z
+2024-12-15T14:44:27.971Z [my-app] [32minfo[39m: Response for GET /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b - Status: 200
+2024-12-15T14:44:27.973Z [my-app] [32minfo[39m: Response Body: {"messages":[{"read":false,"_id":"67421940f8fe1b8274df2709","user":null,"recepient":null,"message":"Good","createdAt":"2024-11-23T18:04:48.326Z","updatedAt":"2024-11-23T18:04:48.326Z","__v":0}]}
+2024-12-15T14:44:46.494Z [my-app] [32minfo[39m: Request - Method: GET, URL: /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b, Timestamp: 2024-12-15T14:44:46.494Z
+2024-12-15T14:44:47.072Z [my-app] [32minfo[39m: Response for GET /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b - Status: 200
+2024-12-15T14:44:47.072Z [my-app] [32minfo[39m: Response Body: {"messages":[{"read":false,"_id":"67421940f8fe1b8274df2709","user":null,"recepient":null,"message":"Good","createdAt":"2024-11-23T18:04:48.326Z","updatedAt":"2024-11-23T18:04:48.326Z","__v":0}]}
+2024-12-15T14:45:35.827Z [my-app] [32minfo[39m: Request - Method: GET, URL: /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b, Timestamp: 2024-12-15T14:45:35.827Z
+2024-12-15T14:45:36.284Z [my-app] [32minfo[39m: Response for GET /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b - Status: 200
+2024-12-15T14:45:36.286Z [my-app] [32minfo[39m: Response Body: {"messages":[{"read":false,"_id":"67421940f8fe1b8274df2709","user":null,"recepient":null,"message":"Good","createdAt":"2024-11-23T18:04:48.326Z","updatedAt":"2024-11-23T18:04:48.326Z","__v":0}]}
+2024-12-15T14:45:39.706Z [my-app] [32minfo[39m: Request - Method: GET, URL: /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b, Timestamp: 2024-12-15T14:45:39.705Z
+2024-12-15T14:45:40.138Z [my-app] [32minfo[39m: Response for GET /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b - Status: 200
+2024-12-15T14:45:40.138Z [my-app] [32minfo[39m: Response Body: {"messages":[{"read":false,"_id":"67421940f8fe1b8274df2709","user":null,"recepient":null,"message":"Good","createdAt":"2024-11-23T18:04:48.326Z","updatedAt":"2024-11-23T18:04:48.326Z","__v":0}]}
+2024-12-15T14:45:51.286Z [my-app] [32minfo[39m: Request - Method: GET, URL: /api/v1/message/6739b348f82e6553db495f1b/673af51b146f08f91d601c7f, Timestamp: 2024-12-15T14:45:51.286Z
+2024-12-15T14:45:51.854Z [my-app] [32minfo[39m: Response for GET /api/v1/message/6739b348f82e6553db495f1b/673af51b146f08f91d601c7f - Status: 200
+2024-12-15T14:45:51.855Z [my-app] [32minfo[39m: Response Body: {"messages":[{"read":false,"_id":"67421940f8fe1b8274df2709","user":null,"recepient":null,"message":"Good","createdAt":"2024-11-23T18:04:48.326Z","updatedAt":"2024-11-23T18:04:48.326Z","__v":0}]}
+2024-12-15T14:45:57.995Z [my-app] [32minfo[39m: Request - Method: GET, URL: /api/v1/message/6739b348f82e6553db495f1b/673af51b146f08f91d601c7f, Timestamp: 2024-12-15T14:45:57.995Z
+2024-12-15T14:45:58.591Z [my-app] [32minfo[39m: Response for GET /api/v1/message/6739b348f82e6553db495f1b/673af51b146f08f91d601c7f - Status: 200
+2024-12-15T14:45:58.593Z [my-app] [32minfo[39m: Response Body: {"messages":[{"read":false,"_id":"67421940f8fe1b8274df2709","user":null,"recepient":null,"message":"Good","createdAt":"2024-11-23T18:04:48.326Z","updatedAt":"2024-11-23T18:04:48.326Z","__v":0}]}
+2024-12-15T14:47:56.879Z [my-app] [32minfo[39m: Request - Method: GET, URL: /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b, Timestamp: 2024-12-15T14:47:56.879Z
+2024-12-15T14:47:57.166Z [my-app] [32minfo[39m: Response for GET /api/v1/message/673af51b146f08f91d601c7f/6739b348f82e6553db495f1b - Status: 200
+2024-12-15T14:47:57.167Z [my-app] [32minfo[39m: Response Body: {"messages":[]}
+2024-12-15T14:48:24.942Z [my-app] [32minfo[39m: Request - Method: GET, URL: /api/v1/message/673af51b146f08f91d601c7f/673de3a3a2e08f5b386e41c7, Timestamp: 2024-12-15T14:48:24.942Z
+2024-12-15T14:48:25.393Z [my-app] [32minfo[39m: Response for GET /api/v1/message/673af51b146f08f91d601c7f/673de3a3a2e08f5b386e41c7 - Status: 200
+2024-12-15T14:48:25.395Z [my-app] [32minfo[39m: Response Body: {"messages":[{"_id":"675eafc70fea5c1197f811bb","user":{"_id":"673de3a3a2e08f5b386e41c7","email":"tim2@gmail.com"},"recepient":null,"message":"Good","read":false,"createdAt":"2024-12-15T10:30:31.941Z","updatedAt":"2024-12-15T10:30:31.941Z","__v":0},{"_id":"675eeb45c7172fe026368b98","user":null,"recepient":{"_id":"673de3a3a2e08f5b386e41c7","email":"tim2@gmail.com"},"message":"Cool","read":false,"createdAt":"2024-12-15T14:44:21.930Z","updatedAt":"2024-12-15T14:44:21.930Z","__v":0}]}
+2024-12-15T14:52:28.085Z [my-app] [32minfo[39m: Request - Method: GET, URL: /api/v1/message/673af51b146f08f91d601c7f/673de3a3a2e08f5b386e41c7, Timestamp: 2024-12-15T14:52:28.085Z
+2024-12-15T14:52:28.734Z [my-app] [32minfo[39m: Response for GET /api/v1/message/673af51b146f08f91d601c7f/673de3a3a2e08f5b386e41c7 - Status: 200
+2024-12-15T14:52:28.736Z [my-app] [32minfo[39m: Response Body: {"messages":[{"_id":"675eafc70fea5c1197f811bb","user":{"_id":"673de3a3a2e08f5b386e41c7","email":"tim2@gmail.com"},"recepient":null,"message":"Good","read":false,"createdAt":"2024-12-15T10:30:31.941Z","updatedAt":"2024-12-15T10:30:31.941Z","__v":0},{"_id":"675eeb45c7172fe026368b98","user":null,"recepient":{"_id":"673de3a3a2e08f5b386e41c7","email":"tim2@gmail.com"},"message":"Cool","read":false,"createdAt":"2024-12-15T14:44:21.930Z","updatedAt":"2024-12-15T14:44:21.930Z","__v":0}]}
+2024-12-15T14:52:59.701Z [my-app] [32minfo[39m: Request - Method: GET, URL: /api/v1/message/673af51b146f08f91d601c7f/673de3a3a2e08f5b386e41c7, Timestamp: 2024-12-15T14:52:59.701Z
+2024-12-15T14:53:00.217Z [my-app] [32minfo[39m: Response for GET /api/v1/message/673af51b146f08f91d601c7f/673de3a3a2e08f5b386e41c7 - Status: 200
+2024-12-15T14:53:00.218Z [my-app] [32minfo[39m: Response Body: {"messages":[{"_id":"675eafc70fea5c1197f811bb","user":{"_id":"673de3a3a2e08f5b386e41c7","email":"tim2@gmail.com"},"recepient":null,"message":"Good","read":false,"createdAt":"2024-12-15T10:30:31.941Z","updatedAt":"2024-12-15T10:30:31.941Z","__v":0},{"_id":"675eeb45c7172fe026368b98","user":null,"recepient":{"_id":"673de3a3a2e08f5b386e41c7","email":"tim2@gmail.com"},"message":"Cool","read":false,"createdAt":"2024-12-15T14:44:21.930Z","updatedAt":"2024-12-15T14:44:21.930Z","__v":0}]}
+2024-12-15T14:53:41.474Z [my-app] [32minfo[39m: Request - Method: GET, URL: /api/v1/message/get/673af51b146f08f91d601c7f/673de3a3a2e08f5b386e41c7, Timestamp: 2024-12-15T14:53:41.474Z

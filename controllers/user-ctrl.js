@@ -8,6 +8,7 @@ import {
 } from '../errors/application-error.js';
 import asyncHandler from '../utils/asyncHandler.js';
 
+// Login as registered user
 export const loginUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
@@ -24,6 +25,7 @@ export const loginUser = asyncHandler(async (req, res) => {
   res.status(200).json({ message: 'Login successful', token, authUser });
 });
 
+// Create a new account
 export const registerUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
@@ -48,11 +50,13 @@ export const registerUser = asyncHandler(async (req, res) => {
   res.status(StatusCodes.CREATED).json({ user: newUser, token: token });
 });
 
+// Retrieve all users
 export const retrieveAllUsers = async (req, res) => {
   const users = await UserService.getAll();
   return res.status(StatusCodes.OK).json(users);
 };
 
+// Get user data by id
 export const retrieveUserById = asyncHandler(async (req, res) => {
   const { id } = req.query;
   const user = await UserService.getuserById(id);
