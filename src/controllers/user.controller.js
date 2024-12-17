@@ -67,6 +67,16 @@ export const retrieveUserById = asyncHandler(async (req, res) => {
   return res.status(StatusCodes.OK).json(user);
 });
 
+export const authenticateUserToken = asyncHandler(async (req, res) => {
+  const userId = req.userId;
+
+  const user = await UserService.getUserById(userId);
+
+  if (!user) throw new BadRequestError('invalid token');
+
+  return res.status(StatusCodes.OK).json(user);
+});
+
 export const retrieveUserData = asyncHandler(async (req, res) => {
   const user = await UserService.getUserData(req.userId);
   return res.status(StatusCodes.OK).json(user);

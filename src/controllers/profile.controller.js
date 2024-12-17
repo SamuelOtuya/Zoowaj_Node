@@ -57,7 +57,15 @@ export const updateCoverPhotos = asyncHandler(async (req, res) => {});
 
 export const getProfileDetails = asyncHandler(async (req, res) => {
   try {
-    const { userId } = req.params;
+    let userId;
+    const id = req.params.userId;
+
+    // Check if id is provided in the query
+    if (id == null || id === undefined) {
+      userId = req.userId; // Use req.userId if id is not provided
+    } else {
+      userId = id; // Use the id from the query parameter if it exists
+    }
 
     // Validate userId
     if (!userId) {
@@ -65,7 +73,7 @@ export const getProfileDetails = asyncHandler(async (req, res) => {
     }
 
     // Fetch profile details
-    const profile = await ExtraData.findOne({ userId });
+    const profile = UserService.getAllData(userId);
 
     // Check if profile exists
     if (!profile) {
