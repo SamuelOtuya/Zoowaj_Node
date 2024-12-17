@@ -1,81 +1,67 @@
-import { StatusCodes } from "http-status-codes";
-import ExtraData from "../models/ProfileDetails.js";
-import cloudinary from "../utils/cloudinary.js";
+import { StatusCodes } from 'http-status-codes';
+import ExtraData from '../models/ProfileDetails.js';
+import {
+  BadRequestError,
+  InternalServerError,
+  NotFoundError,
+} from '../errors/application-error.js';
+import asyncHandler from '../utils/asyncHandler.js';
+import logger from '../logger/logger.js';
+import UserService from '../services/user.service.js';
 
-export const postProfileDetails = async (req, res) => {
-  try {
-    const { files, body } = req;
+export const createProfileDetails = asyncHandler(async (req, res) => {
+  const { body, userId } = req;
 
-    if (!files || (!files.profilePhoto && !files.coverPhotos)) {
-      return res
-        .status(StatusCodes.BAD_REQUEST)
-        .json({ msg: "No valid files uploaded" });
-    }
+  // Call the service to create a user profile
+  const profile = await UserService.createUserProfileDetails(userId, body);
 
-    const profilePhoto = files.profilePhoto?.[0]; // Use optional chaining
-    const coverPhotos = files.coverPhotos || [];
+  // If profile creation fails, this will not happen due to error handling in service
+  logger.info(
+    `User profile created successfully: ${JSON.stringify(profile, null, 2)}`,
+  );
 
-    let profilePhotoData = null;
-    const coverPhotosData = [];
+  res.status(StatusCodes.CREATED).json({ profile });
+});
 
-    if (profilePhoto) {
-      try {
-        const uploadResult = await cloudinary.uploader.upload(profilePhoto.path, {
-          folder: "profile_photos",
-        });
-        profilePhotoData = {
-          url: uploadResult.secure_url,
-          public_id: uploadResult.public_id,
-        };
-      } catch (error) {
-        console.error("Profile photo upload failed:", error);
-        return res
-          .status(StatusCodes.INTERNAL_SERVER_ERROR)
-          .json({ msg: "Profile photo upload failed" });
-      }
-    }
+export const createProfileImages = asyncHandler(async (req, res) => {
+  const { files, userId } = req;
 
-    for (const photo of coverPhotos) {
-      try {
-        const uploadResult = await cloudinary.uploader.upload(photo.path, {
-          folder: "cover_photos",
-        });
-        coverPhotosData.push({
-          url: uploadResult.secure_url,
-          public_id: uploadResult.public_id,
-        });
-      } catch (error) {
-        console.error("Cover photo upload failed:", error);
-        // Continue processing other files instead of throwing an error
-      }
-    }
-
-    const data = {
-      ...body,
-      profilePhoto: profilePhotoData,
-      coverPhotos: coverPhotosData,
-    };
-
-    const savedData = await ExtraData.create(data);
-    res.status(StatusCodes.CREATED).json({ savedData });
-  } catch (error) {
-    console.error("Error in postProfileDetails:", error);
-    res
-      .status(StatusCodes.INTERNAL_SERVER_ERROR)
-      .json({ msg: "An error occurred processing your request" });
+  // Check if files are uploaded
+  if (!files || (!files.profilePhoto && !files.coverPhotos)) {
+    throw new BadRequestError('No valid files uploaded');
   }
-};
 
+  const profilePhoto = files.profilePhoto?.[0]; // Use optional chaining
+  const coverPhotos = files.coverPhotos || [];
 
-export const getProfileDetails = async (req, res) => {
+  // Upload profile photo
+  const profilePhotoData = await UserService.uploadProfilePhoto(
+    profilePhoto.path,
+  );
+
+  // Upload cover photos
+  const coverPhotosData = await UserService.uploadCoverPhotos(coverPhotos);
+
+  const profile = await UserService.createProfileImages(
+    userId,
+    profilePhotoData,
+    coverPhotosData,
+  );
+
+  res.status(StatusCodes.CREATED).json({ profile });
+});
+
+export const updateProfilePhoto = asyncHandler(async (req, res) => {});
+
+export const updateCoverPhotos = asyncHandler(async (req, res) => {});
+
+export const getProfileDetails = asyncHandler(async (req, res) => {
   try {
     const { userId } = req.params;
 
     // Validate userId
     if (!userId) {
-      return res
-        .status(StatusCodes.BAD_REQUEST)
-        .json({ msg: "User ID is required" });
+      throw new BadRequestError('User ID is required');
     }
 
     // Fetch profile details
@@ -83,22 +69,20 @@ export const getProfileDetails = async (req, res) => {
 
     // Check if profile exists
     if (!profile) {
-      return res
-        .status(StatusCodes.NOT_FOUND)
-        .json({ msg: "Profile not found for the given User ID" });
+      throw new NotFoundError('Profile not found for the given User ID');
     }
 
     // Send response
     res.status(StatusCodes.OK).json({ profile });
   } catch (error) {
     console.error(error);
-    res
-      .status(StatusCodes.INTERNAL_SERVER_ERROR)
-      .json({ msg: "An error occurred while fetching the profile" });
+    throw new InternalServerError(
+      'An error occurred while fetching the profile',
+    );
   }
-};
+});
 
-export const addLike = async (req, res) => {
+export const addLike = asyncHandler(async (req, res) => {
   try {
     const { profileId } = req.params;
     const { userId } = req.body; // ID of the user liking the profile
@@ -106,50 +90,27 @@ export const addLike = async (req, res) => {
     const profile = await ExtraData.findById(profileId);
 
     if (!profile) {
-      return res.status(404).json({ msg: "Profile not found" });
+      throw new NotFoundError('Profile not found');
     }
 
     // Check if user already liked the profile
     if (profile.likes.includes(userId)) {
-      return res.status(400).json({ msg: "You have already liked this profile" });
+      throw new BadRequestError('You have already liked this profile');
     }
 
     profile.likes.push(userId);
     await profile.save();
 
-    res.status(200).json({ msg: "Profile liked successfully", likes: profile.likes.length });
+    res
+      .status(200)
+      .json({ msg: 'Profile liked successfully', likes: profile.likes.length });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ msg: "An error occurred while liking the profile" });
+    throw new InternalServerError('An error occurred while liking the profile');
   }
-};
+});
 
-
-
-
-export const removeLike = async (req, res) => {
-  try {
-    const { profileId } = req.params;
-    const { userId } = req.body;  // ID of the user adding the profile to favorites
-
-    const profile = await ExtraData.findById(profileId);
-
-    if (!profile) {
-      return res.status(404).json({ msg: "Profile not found" });
-    }
-
-    profile.likes = profile.likes.filter((id) => id.toString() !== userId);
-    await profile.save();
-
-    res.status(200).json({ msg: "Like removed successfully", likes: profile.likes.length });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ msg: "An error occurred while removing the like" });
-  }
-};
-
-
-export const addFavorite = async (req, res) => {
+export const removeLike = asyncHandler(async (req, res) => {
   try {
     const { profileId } = req.params;
     const { userId } = req.body; // ID of the user adding the profile to favorites
@@ -157,25 +118,53 @@ export const addFavorite = async (req, res) => {
     const profile = await ExtraData.findById(profileId);
 
     if (!profile) {
-      return res.status(404).json({ msg: "Profile not found" });
+      throw new NotFoundError('Profile not found');
     }
 
-    // Check if user already favorited the profile
+    profile.likes = profile.likes.filter((id) => id.toString() !== userId);
+    await profile.save();
+
+    res
+      .status(200)
+      .json({ msg: 'Like removed successfully', likes: profile.likes.length });
+  } catch (error) {
+    console.error(error);
+    throw new InternalServerError('An error occurred while removing the like');
+  }
+});
+
+export const addFavorite = asyncHandler(async (req, res) => {
+  try {
+    const { profileId } = req.params;
+    const { userId } = req.body; // ID of the user adding the profile to favorites
+
+    const profile = await ExtraData.findById(profileId);
+
+    if (!profile) {
+      throw new NotFoundError('Profile not found');
+    }
+
+    // Check if user already {favorite} the profile
     if (profile.favorites.includes(userId)) {
-      return res.status(400).json({ msg: "This profile is already in your favorites" });
+      throw new BadRequestError('This profile is already in your favorites');
     }
 
     profile.favorites.push(userId);
     await profile.save();
 
-    res.status(200).json({ msg: "Profile added to favorites", favorites: profile.favorites.length });
+    res.status(200).json({
+      msg: 'Profile added to favorites',
+      favorites: profile.favorites.length,
+    });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ msg: "An error occurred while adding the profile to favorites" });
+    throw new InternalServerError(
+      'An error occurred while adding the profile to favorites',
+    );
   }
-};
+});
 
-export const removeFavorite = async (req, res) => {
+export const removeFavorite = asyncHandler(async (req, res) => {
   try {
     const { profileId } = req.params;
     const { userId } = req.body;
@@ -183,15 +172,22 @@ export const removeFavorite = async (req, res) => {
     const profile = await ExtraData.findById(profileId);
 
     if (!profile) {
-      return res.status(404).json({ msg: "Profile not found" });
+      return res.status(404).json({ msg: 'Profile not found' });
     }
 
-    profile.favorites = profile.favorites.filter((id) => id.toString() !== userId);
+    profile.favorites = profile.favorites.filter(
+      (id) => id.toString() !== userId,
+    );
     await profile.save();
 
-    res.status(200).json({ msg: "Profile removed from favorites", favorites: profile.favorites.length });
+    res.status(200).json({
+      msg: 'Profile removed from favorites',
+      favorites: profile.favorites.length,
+    });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ msg: "An error occurred while removing the profile from favorites" });
+    throw new InternalServerError(
+      'An error occurred while removing the profile from favorites',
+    );
   }
-};
+});
