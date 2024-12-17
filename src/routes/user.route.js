@@ -52,7 +52,7 @@ router.post(
   authMiddleware,
   updateCoverPhotos,
 );
-router.get('/profile/:userId', getProfileDetails);
+router.get('/profile/:userId', authMiddleware, getProfileDetails);
 
 router.post('/profile/:profileId/like', addLike);
 router.delete('/profile/:profileId/like', removeLike);
