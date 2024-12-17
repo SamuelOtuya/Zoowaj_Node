@@ -10,9 +10,9 @@ const requestLogger = (req, res, next) => {
   logger.debug(
     `Request - Method: ${method}, URL: ${url}, Timestamp: ${formatTimestamp(timestamp)}`,
   );
-  logger.debug(`Request Body: ${JSON.stringify(body, null, 2)}`);
-  logger.debug(`Request Query: ${JSON.stringify(query, null, 2)}`);
-  logger.debug(`Request Params: ${JSON.stringify(params, null, 2)}`);
+  // logger.debug(`Request Body: ${JSON.stringify(body, null, 2)}`);
+  // logger.debug(`Request Query: ${JSON.stringify(query, null, 2)}`);
+  // logger.debug(`Request Params: ${JSON.stringify(params, null, 2)}`);
 
   // Intercept the response
   const originalSend = res.send;

@@ -97,11 +97,11 @@ export default class UserService {
   static getUserData = async (userId) => {
     try {
       const users = await ExtraData.findOne({ userId });
-      logger.info(`retrieved ${users.length} users Data`);
+      logger.info(`retrieved ${users.length} user's Data`);
       return users;
     } catch (error) {
-      logger.error('Error retrieving users:', error);
-      throw new InternalServerError('Error retrieving users Data');
+      logger.error('Error retrieving user Data:', error);
+      throw new InternalServerError('Error retrieving user Data');
     }
   };
 

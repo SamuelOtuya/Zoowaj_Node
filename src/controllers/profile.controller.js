@@ -20,7 +20,7 @@ export const createProfileDetails = asyncHandler(async (req, res) => {
     `User profile created successfully: ${JSON.stringify(profile, null, 2)}`,
   );
 
-  res.status(StatusCodes.CREATED).json({ profile });
+  res.status(StatusCodes.CREATED).json({ profile: profile });
 });
 
 export const createProfileImages = asyncHandler(async (req, res) => {
@@ -48,7 +48,7 @@ export const createProfileImages = asyncHandler(async (req, res) => {
     coverPhotosData,
   );
 
-  res.status(StatusCodes.CREATED).json({ profile });
+  res.status(StatusCodes.CREATED).json({ profile: profile });
 });
 
 export const updateProfilePhoto = asyncHandler(async (req, res) => {});
@@ -58,7 +58,7 @@ export const updateCoverPhotos = asyncHandler(async (req, res) => {});
 export const getProfileDetails = asyncHandler(async (req, res) => {
   try {
     let userId;
-    const id = req.params.userId;
+    const id = req.query.userId;
 
     // Check if id is provided in the query
     if (id == null || id === undefined) {
@@ -66,6 +66,7 @@ export const getProfileDetails = asyncHandler(async (req, res) => {
     } else {
       userId = id; // Use the id from the query parameter if it exists
     }
+    logger.debug(`USerID ${userId}`);
 
     // Validate userId
     if (!userId) {
@@ -73,7 +74,7 @@ export const getProfileDetails = asyncHandler(async (req, res) => {
     }
 
     // Fetch profile details
-    const profile = UserService.getAllData(userId);
+    const profile = await UserService.getUserData(userId);
 
     // Check if profile exists
     if (!profile) {
@@ -81,7 +82,7 @@ export const getProfileDetails = asyncHandler(async (req, res) => {
     }
 
     // Send response
-    res.status(StatusCodes.OK).json({ profile });
+    res.status(StatusCodes.OK).json({ profile: profile });
   } catch (error) {
     console.error(error);
     throw new InternalServerError(
