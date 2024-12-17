@@ -51,9 +51,50 @@ export const createProfileImages = asyncHandler(async (req, res) => {
   res.status(StatusCodes.CREATED).json({ profile });
 });
 
-export const updateProfilePhoto = asyncHandler(async (req, res) => {});
+export const updateProfilePhoto = asyncHandler(async (req, res) => {
+  const { file, userId } = req;
 
-export const updateCoverPhotos = asyncHandler(async (req, res) => {});
+  // Check if files are uploaded
+  if (!files || (!file.profilePhoto )) {
+    throw new BadRequestError('No valid file uploaded');
+  }
+
+  const profilePhoto = files.profilePhoto?.[0]; // Use optional chaining
+
+  // Upload profile photo
+  const profilePhotoData = await UserService.uploadProfilePhoto(
+    profilePhoto.path,
+  );
+
+
+  const profile = await UserService.createProfileImages(
+    userId,
+    profilePhotoData,
+  );
+
+  res.status(StatusCodes.CREATED).json({ profile });
+});
+
+export const updateCoverPhotos = asyncHandler(async (req, res) => {
+  const { files, userId } = req;
+
+  // Check if files are uploaded
+  if (!files || ( !files.coverPhotos)) {
+    throw new BadRequestError('No valid files uploaded');
+  }
+
+  const coverPhotos = files.coverPhotos || [];
+
+  // Upload cover photos
+  const coverPhotosData = await UserService.uploadCoverPhotos(coverPhotos);
+
+  const profile = await UserService.createProfileImages(
+    userId,
+    coverPhotosData,
+  );
+
+  res.status(StatusCodes.CREATED).json({ profile });
+});
 
 export const getProfileDetails = asyncHandler(async (req, res) => {
   try {
