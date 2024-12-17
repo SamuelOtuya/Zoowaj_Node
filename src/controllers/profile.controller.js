@@ -1,5 +1,5 @@
 import { StatusCodes } from 'http-status-codes';
-import ExtraData from '../models/ProfileDetails.js';
+import ProfileData from '../models/ProfileDetails.js';
 import {
   BadRequestError,
   InternalServerError,
@@ -20,7 +20,7 @@ export const createProfileDetails = asyncHandler(async (req, res) => {
     `User profile created successfully: ${JSON.stringify(profile, null, 2)}`,
   );
 
-  res.status(StatusCodes.CREATED).json({ profile: profile });
+  res.status(StatusCodes.CREATED).json({ profile });
 });
 
 export const createProfileImages = asyncHandler(async (req, res) => {
@@ -48,17 +48,58 @@ export const createProfileImages = asyncHandler(async (req, res) => {
     coverPhotosData,
   );
 
-  res.status(StatusCodes.CREATED).json({ profile: profile });
+  res.status(StatusCodes.CREATED).json({ profile });
 });
 
-export const updateProfilePhoto = asyncHandler(async (req, res) => {});
+export const updateProfilePhoto = asyncHandler(async (req, res) => {
+  const { file, userId } = req;
 
-export const updateCoverPhotos = asyncHandler(async (req, res) => {});
+  // Check if files are uploaded
+  if (!files || (!file.profilePhoto )) {
+    throw new BadRequestError('No valid file uploaded');
+  }
+
+  const profilePhoto = files.profilePhoto?.[0]; // Use optional chaining
+
+  // Upload profile photo
+  const profilePhotoData = await UserService.uploadProfilePhoto(
+    profilePhoto.path,
+  );
+
+
+  const profile = await UserService.createProfileImages(
+    userId,
+    profilePhotoData,
+  );
+
+  res.status(StatusCodes.CREATED).json({ profile });
+});
+
+export const updateCoverPhotos = asyncHandler(async (req, res) => {
+  const { files, userId } = req;
+
+  // Check if files are uploaded
+  if (!files || ( !files.coverPhotos)) {
+    throw new BadRequestError('No valid files uploaded');
+  }
+
+  const coverPhotos = files.coverPhotos || [];
+
+  // Upload cover photos
+  const coverPhotosData = await UserService.uploadCoverPhotos(coverPhotos);
+
+  const profile = await UserService.createProfileImages(
+    userId,
+    coverPhotosData,
+  );
+
+  res.status(StatusCodes.CREATED).json({ profile });
+});
 
 export const getProfileDetails = asyncHandler(async (req, res) => {
   try {
     let userId;
-    const id = req.query.userId;
+    const id = req.params.userId;
 
     // Check if id is provided in the query
     if (id == null || id === undefined) {
@@ -66,7 +107,6 @@ export const getProfileDetails = asyncHandler(async (req, res) => {
     } else {
       userId = id; // Use the id from the query parameter if it exists
     }
-    logger.debug(`USerID ${userId}`);
 
     // Validate userId
     if (!userId) {
@@ -74,7 +114,7 @@ export const getProfileDetails = asyncHandler(async (req, res) => {
     }
 
     // Fetch profile details
-    const profile = await UserService.getUserData(userId);
+    const profile = UserService.getAllData(userId);
 
     // Check if profile exists
     if (!profile) {
@@ -82,7 +122,7 @@ export const getProfileDetails = asyncHandler(async (req, res) => {
     }
 
     // Send response
-    res.status(StatusCodes.OK).json({ profile: profile });
+    res.status(StatusCodes.OK).json({ profile });
   } catch (error) {
     console.error(error);
     throw new InternalServerError(
@@ -96,7 +136,7 @@ export const addLike = asyncHandler(async (req, res) => {
     const { profileId } = req.params;
     const { userId } = req.body; // ID of the user liking the profile
 
-    const profile = await ExtraData.findById(profileId);
+    const profile = await ProfileData.findById(profileId);
 
     if (!profile) {
       throw new NotFoundError('Profile not found');
@@ -124,7 +164,7 @@ export const removeLike = asyncHandler(async (req, res) => {
     const { profileId } = req.params;
     const { userId } = req.body; // ID of the user adding the profile to favorites
 
-    const profile = await ExtraData.findById(profileId);
+    const profile = await ProfileData.findById(profileId);
 
     if (!profile) {
       throw new NotFoundError('Profile not found');
@@ -147,7 +187,7 @@ export const addFavorite = asyncHandler(async (req, res) => {
     const { profileId } = req.params;
     const { userId } = req.body; // ID of the user adding the profile to favorites
 
-    const profile = await ExtraData.findById(profileId);
+    const profile = await ProfileData.findById(profileId);
 
     if (!profile) {
       throw new NotFoundError('Profile not found');
@@ -178,7 +218,7 @@ export const removeFavorite = asyncHandler(async (req, res) => {
     const { profileId } = req.params;
     const { userId } = req.body;
 
-    const profile = await ExtraData.findById(profileId);
+    const profile = await ProfileData.findById(profileId);
 
     if (!profile) {
       return res.status(404).json({ msg: 'Profile not found' });

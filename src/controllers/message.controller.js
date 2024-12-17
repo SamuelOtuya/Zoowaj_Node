@@ -64,6 +64,24 @@ export const getMessages = async (req, res) => {
   }
 };
 
+// Mark messages as read
+export const markMessagesAsRead = async (req, res) => {
+  try {
+    const { senderId, receiverId } = req.body;
+
+    // Update messages where the receiver matches and read is false
+    await Message.updateMany(
+      { sender: senderId, receiver: receiverId, read: false },
+      { $set: { read: true } }
+    );
+
+    res.status(200).json({ msg: 'Messages marked as read' });
+  } catch (error) {
+    console.error('Error marking messages as read:', error);
+    res.status(500).json({ msg: 'Failed to mark messages as read' });
+  }
+};
+
 // Delete a message
 export const deleteMessage = async (req, res) => {
   try {
