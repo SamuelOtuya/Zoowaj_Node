@@ -3924,3 +3924,5 @@
 2024-12-19T14:55:12.310Z [my-app] [31merror[39m: Error caught by errorHandler: Unexpected end of form
 2024-12-19T14:55:12.311Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile-images - Status: 500
 2024-12-19T14:55:12.311Z [my-app] [34mdebug[39m: Response Body: {"message":"Internal Server Error","status":500}
+2024-12-19T15:43:10.442Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-12-19T15:43:10.472Z [my-app] [32minfo[39m: MongoDB Connected!

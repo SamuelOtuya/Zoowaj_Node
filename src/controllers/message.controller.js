@@ -5,8 +5,7 @@ import asyncHandler from '../utils/asyncHandler.js';
 
 // Create a new message
 export const createMessage = asyncHandler(async (req, res) => {
-  const { recipient, message } = req.body;
-  const userId = req.userId;
+  const { userId, recipient, message } = req.body;
 
   // Validate required fields
   if (!userId || !recipient || !message) {
@@ -23,8 +22,21 @@ export const createMessage = asyncHandler(async (req, res) => {
 
 // Get messages between two users
 export const getMessages = asyncHandler(async (req, res) => {
-  const { recipientId } = req.params;
-  const userId = req.user;
+  const { userId } = req.params;
+
+  // Validate required parameters
+  if (!userId ) {
+    throw new BadRequestError('Both userId and recipientId are required');
+  }
+
+  const messages = await MessageService.fetchMessages(userId);
+
+  return res.status(StatusCodes.OK).json({ messages });
+});
+
+// Get messages between two users
+export const getChat = asyncHandler(async (req, res) => {
+  const { userId, recipientId } = req.params;
 
   // Validate required parameters
   if (!userId || !recipientId) {

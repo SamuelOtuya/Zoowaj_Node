@@ -21,6 +21,7 @@ const authMiddleware = (req, res, next) => {
     logger.debug(`USER EMAIL: ${req.email}`);
     next(); // Call next middleware or route handler
   } catch (error) {
+    logger.error(error);
     return next(new UnauthorizedError('Invalid or expired token 🚫🚫🚫'));
   }
 };
