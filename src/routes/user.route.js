@@ -16,6 +16,7 @@ import {
   createProfileImages,
   updateProfilePhoto,
   updateCoverPhotos,
+  getUserProfiles,
 } from '../controllers/profile.controller.js';
 import { validateProfileDetails } from '../middlewares/validators/validateProfileDetails.js';
 import authMiddleware from '../middlewares/auth.js';
@@ -58,6 +59,7 @@ router.post(
 );
 
 router.get('/profile', authMiddleware, getProfileDetails);
+router.get('/profiles', authMiddleware, getUserProfiles);
 
 router.post('/profile/:profileId/like', addLike);
 router.delete('/profile/:profileId/like', removeLike);

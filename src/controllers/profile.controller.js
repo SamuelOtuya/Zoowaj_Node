@@ -1,5 +1,9 @@
 import { StatusCodes } from 'http-status-codes';
-import { BadRequestError, NotFoundError } from '../errors/application-error.js';
+import {
+  BadRequestError,
+  NotFoundError,
+  UnauthorizedError,
+} from '../errors/application-error.js';
 import asyncHandler from '../utils/asyncHandler.js';
 import logger from '../logger/logger.js';
 import MediaService from '../services/media.service.js';
@@ -104,6 +108,19 @@ export const getProfileDetails = asyncHandler(async (req, res) => {
 
   // Send response
   res.status(StatusCodes.OK).json({ profile: profile });
+});
+
+export const getUserProfiles = asyncHandler(async (req, res) => {
+  const userId = req.userId;
+  if (!userId) {
+    throw new UnauthorizedError('Authorization Required');
+  }
+
+  // Fetch user profiles
+  const profiles = await ProfileService.getAll();
+
+  // Send response
+  res.status(StatusCodes.OK).json(profiles);
 });
 
 export const addLike = asyncHandler(async (req, res) => {
