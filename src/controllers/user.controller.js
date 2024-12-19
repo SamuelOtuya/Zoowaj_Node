@@ -1,6 +1,7 @@
 import { StatusCodes } from 'http-status-codes';
 import AuthService from '../services/auth.service.js';
 import UserService from '../services/user.service.js';
+import ProfileService from '../services/profile.service.js';
 import logger from '../logger/logger.js';
 import { BadRequestError, NotFoundError } from '../errors/application-error.js';
 import asyncHandler from '../utils/asyncHandler.js';
@@ -45,6 +46,16 @@ export const registerUser = asyncHandler(async (req, res) => {
   res.status(StatusCodes.CREATED).json({ user: newUser, token: token });
 });
 
+export const authenticateUserToken = asyncHandler(async (req, res) => {
+  const userId = req.userId;
+
+  const user = await UserService.getUserById(userId);
+
+  if (!user) throw new BadRequestError('invalid token');
+
+  return res.status(StatusCodes.OK).json(user);
+});
+
 export const retrieveUserById = asyncHandler(async (req, res) => {
   let userId;
   const { id } = req.query;
@@ -67,23 +78,18 @@ export const retrieveUserById = asyncHandler(async (req, res) => {
   return res.status(StatusCodes.OK).json(user);
 });
 
-export const authenticateUserToken = asyncHandler(async (req, res) => {
-  const userId = req.userId;
-
-  const user = await UserService.getUserById(userId);
-
-  if (!user) throw new BadRequestError('invalid token');
-
+export const retrieveUser = asyncHandler(async (req, res) => {
+  const user = await UserService.getOne(req.userId);
   return res.status(StatusCodes.OK).json(user);
 });
 
 export const retrieveUserData = asyncHandler(async (req, res) => {
-  const user = await UserService.getUserData(req.userId);
+  const user = await ProfileService.getOne(req.userId);
   return res.status(StatusCodes.OK).json(user);
 });
 
 export const retrieveUserWithData = asyncHandler(async (req, res) => {
-  const user = await UserService.getUserWithData(req.userId);
+  const user = await UserService.getOneWithData(req.userId);
   return res.status(StatusCodes.OK).json(user);
 });
 
@@ -93,7 +99,7 @@ export const retrieveAllUsers = asyncHandler(async (req, res) => {
 });
 
 export const retrieveAllUsersData = asyncHandler(async (req, res) => {
-  const users = await UserService.getAllData();
+  const users = await ProfileService.getAll();
   return res.status(StatusCodes.OK).json(users);
 });
 

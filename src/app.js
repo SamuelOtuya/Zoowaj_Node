@@ -7,6 +7,7 @@ import devRoutes from './routes/dev.route.js';
 import messageRoutes from './routes/message.route.js';
 import googleAuthRoutes from './routes/google-auth.route.js';
 import passport from './utils/passport.js';
+import fs from 'fs';
 
 import requestLogger from './utils/requestLogger.js';
 import errorHandler from './middlewares/errorHandler.js';
@@ -24,6 +25,11 @@ if (process.env.NODE_ENV !== 'production') {
 
 // Setup Cross Origin
 app.use(cors());
+
+const uploadDir = './uploads';
+if (!fs.existsSync(uploadDir)) {
+  fs.mkdirSync(uploadDir);
+}
 
 // Apply request logging middleware
 app.use(requestLogger);

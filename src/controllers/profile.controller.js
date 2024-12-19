@@ -1,19 +1,15 @@
 import { StatusCodes } from 'http-status-codes';
-import ProfileData from '../models/ProfileDetails.js';
-import {
-  BadRequestError,
-  InternalServerError,
-  NotFoundError,
-} from '../errors/application-error.js';
+import { BadRequestError, NotFoundError } from '../errors/application-error.js';
 import asyncHandler from '../utils/asyncHandler.js';
 import logger from '../logger/logger.js';
-import UserService from '../services/user.service.js';
+import MediaService from '../services/media.service.js';
+import ProfileService from '../services/profile.service.js';
 
 export const createProfileDetails = asyncHandler(async (req, res) => {
   const { body, userId } = req;
 
   // Call the service to create a user profile
-  const profile = await UserService.createUserProfileDetails(userId, body);
+  const profile = await ProfileService.createUserProfileDetails(userId, body);
 
   // If profile creation fails, this will not happen due to error handling in service
   logger.info(
@@ -35,14 +31,14 @@ export const createProfileImages = asyncHandler(async (req, res) => {
   const coverPhotos = files.coverPhotos || [];
 
   // Upload profile photo
-  const profilePhotoData = await UserService.uploadProfilePhoto(
+  const profilePhotoData = await MediaService.uploadProfilePhoto(
     profilePhoto.path,
   );
 
   // Upload cover photos
-  const coverPhotosData = await UserService.uploadCoverPhotos(coverPhotos);
+  const coverPhotosData = await MediaService.uploadCoverPhotos(coverPhotos);
 
-  const profile = await UserService.createProfileImages(
+  const profile = await ProfileService.createProfileImages(
     userId,
     profilePhotoData,
     coverPhotosData,
@@ -55,19 +51,18 @@ export const updateProfilePhoto = asyncHandler(async (req, res) => {
   const { file, userId } = req;
 
   // Check if files are uploaded
-  if (!files || (!file.profilePhoto )) {
+  if (!file.profilePhoto) {
     throw new BadRequestError('No valid file uploaded');
   }
 
-  const profilePhoto = files.profilePhoto?.[0]; // Use optional chaining
+  const profilePhoto = file.profilePhoto?.[0]; // Use optional chaining
 
   // Upload profile photo
-  const profilePhotoData = await UserService.uploadProfilePhoto(
+  const profilePhotoData = await MediaService.uploadProfilePhoto(
     profilePhoto.path,
   );
 
-
-  const profile = await UserService.createProfileImages(
+  const profile = await ProfileService.createProfileImages(
     userId,
     profilePhotoData,
   );
@@ -79,16 +74,16 @@ export const updateCoverPhotos = asyncHandler(async (req, res) => {
   const { files, userId } = req;
 
   // Check if files are uploaded
-  if (!files || ( !files.coverPhotos)) {
+  if (!files || !files.coverPhotos) {
     throw new BadRequestError('No valid files uploaded');
   }
 
   const coverPhotos = files.coverPhotos || [];
 
   // Upload cover photos
-  const coverPhotosData = await UserService.uploadCoverPhotos(coverPhotos);
+  const coverPhotosData = await MediaService.uploadCoverPhotos(coverPhotos);
 
-  const profile = await UserService.createProfileImages(
+  const profile = await ProfileService.createProfileImages(
     userId,
     coverPhotosData,
   );
@@ -97,146 +92,58 @@ export const updateCoverPhotos = asyncHandler(async (req, res) => {
 });
 
 export const getProfileDetails = asyncHandler(async (req, res) => {
-  try {
-    let userId;
-    const id = req.params.userId;
+  const userId = req.userId;
 
-    // Check if id is provided in the query
-    if (id == null || id === undefined) {
-      userId = req.userId; // Use req.userId if id is not provided
-    } else {
-      userId = id; // Use the id from the query parameter if it exists
-    }
+  // Fetch profile details
+  const profile = await ProfileService.getOne(userId);
 
-    // Validate userId
-    if (!userId) {
-      throw new BadRequestError('User ID is required');
-    }
-
-    // Fetch profile details
-    const profile = UserService.getAllData(userId);
-
-    // Check if profile exists
-    if (!profile) {
-      throw new NotFoundError('Profile not found for the given User ID');
-    }
-
-    // Send response
-    res.status(StatusCodes.OK).json({ profile });
-  } catch (error) {
-    console.error(error);
-    throw new InternalServerError(
-      'An error occurred while fetching the profile',
-    );
+  // Check if profile exists
+  if (!profile) {
+    throw new NotFoundError('Profile not found for the given User ID');
   }
+
+  // Send response
+  res.status(StatusCodes.OK).json({ profile: profile });
 });
 
 export const addLike = asyncHandler(async (req, res) => {
-  try {
-    const { profileId } = req.params;
-    const { userId } = req.body; // ID of the user liking the profile
+  const { profileId } = req.params;
+  const { userId } = req.body; // ID of the user liking the profile
 
-    const profile = await ProfileData.findById(profileId);
+  const likes = await ProfileService.addLike(profileId, userId);
 
-    if (!profile) {
-      throw new NotFoundError('Profile not found');
-    }
-
-    // Check if user already liked the profile
-    if (profile.likes.includes(userId)) {
-      throw new BadRequestError('You have already liked this profile');
-    }
-
-    profile.likes.push(userId);
-    await profile.save();
-
-    res
-      .status(200)
-      .json({ msg: 'Profile liked successfully', likes: profile.likes.length });
-  } catch (error) {
-    console.error(error);
-    throw new InternalServerError('An error occurred while liking the profile');
-  }
+  res.status(200).json({ msg: 'Profile liked successfully', likes: likes });
 });
 
 export const removeLike = asyncHandler(async (req, res) => {
-  try {
-    const { profileId } = req.params;
-    const { userId } = req.body; // ID of the user adding the profile to favorites
+  const { profileId } = req.params;
+  const { userId } = req.body; // ID of the user adding the profile to favorites
 
-    const profile = await ProfileData.findById(profileId);
+  const likes = await ProfileService.removeLike(profileId, userId);
 
-    if (!profile) {
-      throw new NotFoundError('Profile not found');
-    }
-
-    profile.likes = profile.likes.filter((id) => id.toString() !== userId);
-    await profile.save();
-
-    res
-      .status(200)
-      .json({ msg: 'Like removed successfully', likes: profile.likes.length });
-  } catch (error) {
-    console.error(error);
-    throw new InternalServerError('An error occurred while removing the like');
-  }
+  res.status(200).json({ msg: 'Like removed successfully', likes: likes });
 });
 
 export const addFavorite = asyncHandler(async (req, res) => {
-  try {
-    const { profileId } = req.params;
-    const { userId } = req.body; // ID of the user adding the profile to favorites
+  const { profileId } = req.params;
+  const { userId } = req.body; // ID of the user adding the profile to favorites
 
-    const profile = await ProfileData.findById(profileId);
+  const favorites = await ProfileService.addFavorite(profileId, userId);
 
-    if (!profile) {
-      throw new NotFoundError('Profile not found');
-    }
-
-    // Check if user already {favorite} the profile
-    if (profile.favorites.includes(userId)) {
-      throw new BadRequestError('This profile is already in your favorites');
-    }
-
-    profile.favorites.push(userId);
-    await profile.save();
-
-    res.status(200).json({
-      msg: 'Profile added to favorites',
-      favorites: profile.favorites.length,
-    });
-  } catch (error) {
-    console.error(error);
-    throw new InternalServerError(
-      'An error occurred while adding the profile to favorites',
-    );
-  }
+  res.status(200).json({
+    msg: 'Profile added to favorites',
+    favorites: favorites,
+  });
 });
 
 export const removeFavorite = asyncHandler(async (req, res) => {
-  try {
-    const { profileId } = req.params;
-    const { userId } = req.body;
+  const { profileId } = req.params;
+  const { userId } = req.body;
 
-    const profile = await ProfileData.findById(profileId);
+  const favorites = await ProfileService.removeFavorite(profileId, userId);
 
-    if (!profile) {
-      return res.status(404).json({ msg: 'Profile not found' });
-    }
-
-    profile.favorites = profile.favorites.filter(
-      (id) => id.toString() !== userId,
-    );
-    await profile.save();
-
-    res.status(200).json({
-      msg: 'Profile removed from favorites',
-      favorites: profile.favorites.length,
-    });
-  } catch (error) {
-    console.error(error);
-    throw new InternalServerError(
-      'An error occurred while removing the profile from favorites',
-    );
-  }
+  res.status(200).json({
+    msg: 'Profile removed from favorites',
+    favorites: favorites,
+  });
 });

@@ -5,6 +5,7 @@ import {
   loginUser,
   retrieveAllUsersWithData,
 } from '../controllers/user.controller.js';
+
 import {
   getProfileDetails,
   addLike,
@@ -31,6 +32,7 @@ router.post(
   authMiddleware,
   createProfileDetails,
 );
+
 router.post(
   '/profile-images',
   upload.fields([
@@ -40,18 +42,21 @@ router.post(
   authMiddleware,
   createProfileImages,
 );
+
 router.post(
   '/profile-photo',
   upload.single('profilePhoto'),
   authMiddleware,
   updateProfilePhoto,
 );
+
 router.post(
-  '/profile-cover',
+  '/profile-covers',
   upload.fields([{ name: 'coverPhotos' }]),
   authMiddleware,
   updateCoverPhotos,
 );
+
 router.get('/profile', authMiddleware, getProfileDetails);
 
 router.post('/profile/:profileId/like', addLike);

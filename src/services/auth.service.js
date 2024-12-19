@@ -1,7 +1,11 @@
+/* eslint-disable no-undef */
 import bcrypt from 'bcrypt'; // Use bcrypt if switching to native bindings
 import jwt from 'jsonwebtoken';
 import UserService from './user.service.js';
-import { InternalServerError } from '../errors/application-error.js';
+import {
+  InternalServerError,
+  UnauthorizedError,
+} from '../errors/application-error.js';
 import logger from '../logger/logger.js';
 
 export default class AuthService {
@@ -32,7 +36,8 @@ export default class AuthService {
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
       return decoded; // This will return payload containing userId and email
     } catch (error) {
-      throw new Error('Invalid or expired token');
+      logger.error(error);
+      throw new UnauthorizedError('Invalid or expired token');
     }
   };
 
