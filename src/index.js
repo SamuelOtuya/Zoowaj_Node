@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -29,7 +30,6 @@ const io = new Server(server, {
 
 // Bring in mongoose models for socket events
 import Message from './models/Message.js';
-import User from './models/User.js';
 import logger from './logger/logger.js';
 
 // Authenticate socket connection using JWT

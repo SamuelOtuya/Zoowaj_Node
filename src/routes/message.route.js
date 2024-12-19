@@ -5,19 +5,20 @@ import {
   deleteMessage,
   markMessagesAsRead,
 } from '../controllers/message.controller.js';
+import authMiddleware from '../middlewares/auth.js';
 
 const router = express.Router();
 
 // Create a message
-router.post('/', createMessage);
+router.post('/', authMiddleware, createMessage);
 
 // Get messages between two users
-router.get('/get/:userId/:recepientId', getMessages);
+router.get('/get/:userId/:recipientId', authMiddleware, getMessages);
 
 // Read messages
-router.get('/read/:userId/:recepientId', markMessagesAsRead);
+router.get('/read/:userId/:recipientId', authMiddleware, markMessagesAsRead);
 
 // Delete a message
-router.delete('/delete/:messageId', deleteMessage);
+router.delete('/delete/:messageId', authMiddleware, deleteMessage);
 
 export default router;

@@ -3,11 +3,11 @@ import logger from '../logger/logger.js';
 import Message from '../models/Message.js';
 
 export default class MessageService {
-  static createMessage = async (user, recipient, message) => {
+  static createMessage = async (userId, recipient, message) => {
     try {
       // Create and save the message
       const newMessage = await Message.create({
-        user,
+        userId,
         recipient,
         message,
       });

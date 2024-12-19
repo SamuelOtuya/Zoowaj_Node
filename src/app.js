@@ -19,6 +19,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// eslint-disable-next-line no-undef
 if (process.env.NODE_ENV !== 'production') {
   app.use(morgan('dev'));
 }

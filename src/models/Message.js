@@ -2,14 +2,14 @@ import mongoose from 'mongoose';
 
 const messageSchema = new mongoose.Schema(
   {
-    user: {
+    userId: {
       type: mongoose.Schema.Types.ObjectId,
       required: 'User is required!',
       ref: 'User',
     },
-    recepient: {
+    recipient: {
       type: mongoose.Schema.Types.ObjectId,
-      required: 'Recepient is required!',
+      required: 'Recipient is required!',
       ref: 'User',
     },
     message: {
@@ -18,8 +18,8 @@ const messageSchema = new mongoose.Schema(
     },
     read: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   { timestamps: true },
 );
