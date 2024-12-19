@@ -4,17 +4,17 @@ const messageSchema = new mongoose.Schema(
   {
     userId: {
       type: mongoose.Schema.Types.ObjectId,
-      required: 'User is required!',
+      required: 'Sender is required!',
       ref: 'User',
     },
-    recipient: {
+    recipientId: {
       type: mongoose.Schema.Types.ObjectId,
       required: 'Recipient is required!',
       ref: 'User',
     },
-    message: {
+    text: {
       type: String,
-      required: 'Message is required!',
+      required: 'Message text is required!',
     },
     read: {
       type: Boolean,

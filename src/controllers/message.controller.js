@@ -5,16 +5,16 @@ import asyncHandler from '../utils/asyncHandler.js';
 
 // Create a new message
 export const createMessage = asyncHandler(async (req, res) => {
-  const { userId, recipient, message } = req.body;
+  const { userId, recipientId, text } = req.body;
 
   // Validate required fields
-  if (!userId || !recipient || !message) {
+  if (!userId || !recipientId || !text) {
     throw new BadRequestError('User, recipient, and message are required.');
   }
   const newMessage = await MessageService.createMessage(
     userId,
-    recipient,
-    message,
+    recipientId,
+    text,
   );
 
   return res.status(StatusCodes.CREATED).json({ message: newMessage });
@@ -25,17 +25,17 @@ export const getMessages = asyncHandler(async (req, res) => {
   const { userId } = req.params;
 
   // Validate required parameters
-  if (!userId ) {
+  if (!userId) {
     throw new BadRequestError('Both userId and recipientId are required');
   }
 
-  const messages = await MessageService.fetchMessages(userId);
+  const messages = await MessageService.fetchAllMessagesForUser(userId);
 
   return res.status(StatusCodes.OK).json({ messages });
 });
 
 // Get messages between two users
-export const getChat = asyncHandler(async (req, res) => {
+export const getChats = asyncHandler(async (req, res) => {
   const { userId, recipientId } = req.params;
 
   // Validate required parameters
@@ -43,7 +43,7 @@ export const getChat = asyncHandler(async (req, res) => {
     throw new BadRequestError('Both userId and recipientId are required');
   }
 
-  const messages = await MessageService.fetchMessages(userId, recipientId);
+  const messages = await MessageService.fetchChatMessagesBetweenUsers(userId, recipientId);
 
   return res.status(StatusCodes.OK).json({ messages });
 });
@@ -65,7 +65,7 @@ export const deleteMessage = asyncHandler(async (req, res) => {
   if (!messageId) {
     throw new BadRequestError('Message ID is required');
   }
-  await MessageService.deleteMessage(messageId);
+  await MessageService.deleteMessageById(messageId);
 
   return res
     .status(StatusCodes.OK)

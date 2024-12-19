@@ -3926,3 +3926,5 @@
 2024-12-19T14:55:12.311Z [my-app] [34mdebug[39m: Response Body: {"message":"Internal Server Error","status":500}
 2024-12-19T15:43:10.442Z [my-app] [32minfo[39m: Server listening on port 8000
 2024-12-19T15:43:10.472Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-12-19T17:10:49.183Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-12-19T17:10:49.216Z [my-app] [32minfo[39m: MongoDB Connected!

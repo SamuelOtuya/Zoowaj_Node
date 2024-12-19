@@ -3,32 +3,14 @@ import logger from '../logger/logger.js';
 import Message from '../models/Message.js';
 
 export default class MessageService {
-  static createMessage = async (userId, recipient, message) => {
+  // Fetch all messages for a user with distinct recipients
+  static fetchAllMessagesForUser = async (userId) => {
     try {
-      // Create and save the message
-      const newMessage = await Message.create({
-        userId,
-        recipient,
-        message,
-      });
-      return newMessage;
-    } catch (error) {
-      logger.error(error);
-      throw new InternalServerError('Unable to create Message');
-    }
-  };
-
-  static fetchMessages = async (userId, recipientId) => {
-    try {
-      // Fetch messages between the two users
       const messages = await Message.find({
-        $or: [
-          { user: userId, recipient: recipientId },
-          { user: recipientId, recipient: userId },
-        ],
+        $or: [{ userId }, { recipientId: userId }],
       })
-        .populate('user', 'username email') // Populate sender details
-        .populate('recipient', 'username email') // Populate recipient details
+        .populate('userId', 'username email') // Populate sender details
+        .populate('recipientId', 'username email') // Populate recipient details
         .sort({ createdAt: 1 }); // Sort by oldest to newest
 
       return messages;
@@ -38,22 +20,83 @@ export default class MessageService {
     }
   };
 
+  // Fetch chat texts between two users
+  static fetchChatMessagesBetweenUsers = async (userId, recipientId) => {
+    try {
+      const messages = await Message.find({
+        $or: [
+          { userId, recipientId },
+          { userId: recipientId, recipientId: userId },
+        ],
+      })
+        .populate('userId', 'username email') // Populate sender details
+        .populate('recipientId', 'username email') // Populate recipient details
+        .sort({ createdAt: 1 }); // Sort by oldest to newest
+
+      return messages;
+    } catch (error) {
+      logger.error(error);
+      throw new InternalServerError('Unable to fetch chat messages');
+    }
+  };
+
+  // Create a new message
+  static createMessage = async (userId, recipientId, text) => {
+    try {
+      const newMessage = await Message.create({
+        userId,
+        recipientId,
+        text,
+      });
+
+      return newMessage;
+    } catch (error) {
+      logger.error(error);
+      throw new InternalServerError('Unable to create message');
+    }
+  };
+
+  // Update a specific message text
+  static updateMessageText = async (messageId, newText) => {
+    try {
+      const updatedMessage = await Message.findByIdAndUpdate(
+        messageId,
+        { text: newText },
+        { new: true }, // Return the updated document
+      );
+
+      if (!updatedMessage) {
+        throw new InternalServerError('Message not found');
+      }
+
+      return updatedMessage;
+    } catch (error) {
+      logger.error(error);
+      throw new InternalServerError('Unable to update message');
+    }
+  };
+
+  // Mark messages as read
   static markMessagesAsRead = async (senderId, receiverId) => {
     try {
-      // Update messages where the receiver matches and read is false
       await Message.updateMany(
-        { sender: senderId, receiver: receiverId, read: false },
+        { userId: senderId, recipientId: receiverId, read: false },
         { $set: { read: true } },
       );
     } catch (error) {
       logger.error(error);
-      throw new InternalServerError('Unable to change messages state to read');
+      throw new InternalServerError('Unable to mark messages as read');
     }
   };
 
-  static deleteMessage = async (messageId) => {
+  // Delete a specific message by ID
+  static deleteMessageById = async (messageId) => {
     try {
-      await Message.findByIdAndDelete(messageId);
+      const result = await Message.findByIdAndDelete(messageId);
+
+      if (!result) {
+        throw new InternalServerError('Message not found');
+      }
     } catch (error) {
       logger.error(error);
       throw new InternalServerError('Unable to delete message');
