@@ -1,111 +1,58 @@
 import { StatusCodes } from 'http-status-codes';
-import Message from '../models/Message.js';
-import {
-  BadRequestError,
-  InternalServerError,
-  NotFoundError,
-} from '../errors/application-error.js';
+import { BadRequestError } from '../errors/application-error.js';
+import MessageService from '../services/message.service.js';
 
 // Create a new message
 export const createMessage = async (req, res) => {
-  try {
-    const { user, recipient, message } = req.body;
+  const { user, recipient, message } = req.body;
 
-    // Validate required fields
-    if (!user || !recipient || !message) {
-      return res
-        .status(StatusCodes.BAD_REQUEST)
-        .json({ msg: 'User, recipient, and message are required.' });
-    }
-
-    // Create and save the message
-    const newMessage = await Message.create({
-      user,
-      recipient,
-      message,
-    });
-
-    return res.status(StatusCodes.CREATED).json({ message: newMessage });
-  } catch (error) {
-    console.error(error);
-    res
-      .status(StatusCodes.INTERNAL_SERVER_ERROR)
-      .json({ msg: 'An error occurred while sending the message.' });
+  // Validate required fields
+  if (!user || !recipient || !message) {
+    throw new BadRequestError('User, recipient, and message are required.');
   }
+  const newMessage = await MessageService.createMessage(
+    user,
+    recipient,
+    message,
+  );
+
+  return res.status(StatusCodes.CREATED).json({ message: newMessage });
 };
 
 // Get messages between two users
 export const getMessages = async (req, res) => {
-  try {
-    const { userId, recipientId } = req.params;
+  const { userId, recipientId } = req.params;
 
-    // Validate required parameters
-    if (!userId || !recipientId) {
-      throw new BadRequestError('Both userId and recipientId are required');
-    }
-
-    // Fetch messages between the two users
-    const messages = await Message.find({
-      $or: [
-        { user: userId, recipient: recipientId },
-        { user: recipientId, recipient: userId },
-      ],
-    })
-      .populate('user', 'username email') // Populate sender details
-      .populate('recipient', 'username email') // Populate recipient details
-      .sort({ createdAt: 1 }); // Sort by oldest to newest
-
-    return res.status(StatusCodes.OK).json({ messages });
-  } catch (error) {
-    console.error(error);
-    throw new InternalServerError(
-      'An error occurred while retrieving messages',
-    );
+  // Validate required parameters
+  if (!userId || !recipientId) {
+    throw new BadRequestError('Both userId and recipientId are required');
   }
+
+  const messages = await MessageService.fetchMessages(userId, recipientId);
+
+  return res.status(StatusCodes.OK).json({ messages });
 };
 
 // Mark messages as read
 export const markMessagesAsRead = async (req, res) => {
-  try {
-    const { senderId, receiverId } = req.body;
+  const { senderId, receiverId } = req.body;
 
-    // Update messages where the receiver matches and read is false
-    await Message.updateMany(
-      { sender: senderId, receiver: receiverId, read: false },
-      { $set: { read: true } }
-    );
+  await MessageService.markMessagesAsRead(senderId, receiverId);
 
-    res.status(200).json({ msg: 'Messages marked as read' });
-  } catch (error) {
-    console.error('Error marking messages as read:', error);
-    res.status(500).json({ msg: 'Failed to mark messages as read' });
-  }
+  res.status(200).json({ msg: 'Messages marked as read' });
 };
 
 // Delete a message
 export const deleteMessage = async (req, res) => {
-  try {
-    const { messageId } = req.params;
+  const { messageId } = req.params;
 
-    // Validate the message ID
-    if (!messageId) {
-      throw new BadRequestError('Message ID is required');
-    }
-
-    // Delete the message
-    const deletedMessage = await Message.findByIdAndDelete(messageId);
-
-    if (!deletedMessage) {
-      throw new NotFoundError('Message not found');
-    }
-
-    return res
-      .status(StatusCodes.OK)
-      .json({ msg: 'Message deleted successfully.' });
-  } catch (error) {
-    console.error(error);
-    res
-      .status(StatusCodes.INTERNAL_SERVER_ERROR)
-      .json({ msg: 'An error occurred while deleting the message.' });
+  // Validate the message ID
+  if (!messageId) {
+    throw new BadRequestError('Message ID is required');
   }
+  await MessageService.deleteMessage(messageId);
+
+  return res
+    .status(StatusCodes.OK)
+    .json({ msg: 'Message deleted successfully' });
 };
