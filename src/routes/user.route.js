@@ -8,16 +8,22 @@ import {
 
 import {
   getProfileDetails,
-  addLike,
-  removeLike,
-  addFavorite,
-  removeFavorite,
   createProfileDetails,
   createProfileImages,
   updateProfilePhoto,
   updateCoverPhotos,
   getUserProfiles,
 } from '../controllers/profile.controller.js';
+
+import {
+  addLike,
+  removeLike,
+  getAllLikes,
+  addFavorite,
+  removeFavorite,
+  getAllFavorites
+} from '../controllers/likes_favorites.controller.js';
+
 import { validateProfileDetails } from '../middlewares/validators/validateProfileDetails.js';
 import authMiddleware from '../middlewares/auth.js';
 
@@ -63,8 +69,10 @@ router.get('/profiles', authMiddleware, getUserProfiles);
 
 router.post('/profile/like', addLike);
 router.delete('/profile/like/remove', removeLike);
+router.get('/profile/likes/all', getAllLikes);
 
 router.post('/profile/favorite', addFavorite);
 router.delete('/profile/favorite/remove', removeFavorite);
+router.get('/profile/favorites/all', getAllFavorites);
 
 export default router;

@@ -165,8 +165,8 @@ const profileDetailsSchema = new mongoose.Schema(
       },
     },
 
-    likes: [{ type: mongoose.Schema.Types.ObjectId, ref: 'ProfileData' }], // Tracks users who liked this profile
-    favorites: [{ type: mongoose.Schema.Types.ObjectId, ref: 'ProfileData' }], // Tracks users who marked this profile as favorite
+    likes: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Like' }], // Tracks users who liked this profile
+    favorites: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Favorite' }], // Tracks users who marked this profile as favorite
   },
   { timestamps: true },
 );
