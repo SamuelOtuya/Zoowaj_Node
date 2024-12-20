@@ -7,7 +7,7 @@ const setupSocket = (server) => {
   const io = new Server(server, {
     allowEIO3: true,
     cors: {
-      origin: true,
+      origin: '*',
       methods: ['GET', 'POST'],
       credentials: true,
     },
