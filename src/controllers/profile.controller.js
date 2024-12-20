@@ -123,12 +123,13 @@ export const getUserProfiles = asyncHandler(async (req, res) => {
   res.status(StatusCodes.OK).json(profiles);
 });
 
-export const getAllUsersWithMessages = asyncHandler(async (req, res, next) => {
+export const getChatUsers = asyncHandler(async (req, res, next) => {
   try {
-    const users = await ProfileService.getUsersWithMessages();
+    const currentUserId = req.userId; // Assuming you have user info in request
+    const users = await ProfileService.getChatUsersList(currentUserId);
     res.status(200).json(users);
   } catch (error) {
-    logger.error('Controller error getting users with messages:', error);
+    logger.error('Controller error getting chat users:', error);
     next(error);
   }
 });
@@ -136,8 +137,9 @@ export const getAllUsersWithMessages = asyncHandler(async (req, res, next) => {
 // Get a single user's profile with message data
 export const getUserProfileWithMessages = asyncHandler(async (req, res, next) => {
   try {
-    const { userId } = req.params;
-    const profile = await ProfileService.getUserProfileWithMessages(userId);
+    const currentUserId = req.userId; // Current user
+    const { userId: otherUserId } = req.params; // User whose profile we're viewing
+    const profile = await ProfileService.getUserProfileWithMessages(currentUserId, otherUserId);
     res.status(200).json(profile);
   } catch (error) {
     logger.error('Controller error getting user profile:', error);

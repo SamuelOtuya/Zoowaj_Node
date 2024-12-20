@@ -102,26 +102,47 @@ export default class ProfileService {
     }
   };
 
-  static async getUsersWithMessages() {
+  static async getChatUsersList(currentUserId) {
     try {
-      const profileData = await ExtraData.find()
-        .select('profilePhoto about.username about.first_name about.last_name userId');
+      if (!mongoose.Types.ObjectId.isValid(currentUserId)) {
+        throw new BadRequestError('Invalid user ID');
+      }
+
+      // Find all messages where current user is either sender or recipient
+      const chatMessages = await Message.find({
+        $or: [
+          { userId: currentUserId },
+          { recipientId: currentUserId }
+        ]
+      })
+      .sort({ createdAt: -1 });
+
+      // Get unique user IDs from messages (excluding current user)
+      const chatUserIds = [...new Set(chatMessages.map(msg => 
+        msg.userId.toString() === currentUserId.toString() ? msg.recipientId : msg.userId
+      ))];
+
+      // Get profiles for chat users
+      const chatProfiles = await ExtraData.find({
+        userId: { $in: chatUserIds }
+      }).select('profilePhoto about.username about.first_name about.last_name userId');
 
       const usersWithMessages = await Promise.all(
-        profileData.map(async (profile) => {
-          // Get latest message
+        chatProfiles.map(async (profile) => {
+          // Get latest message between current user and this profile
           const latestMessage = await Message.findOne({
             $or: [
-              { userId: profile.userId },
-              { recipientId: profile.userId }
+              { userId: currentUserId, recipientId: profile.userId },
+              { userId: profile.userId, recipientId: currentUserId }
             ]
           })
           .sort({ createdAt: -1 })
           .lean();
 
-          // Get unread count
+          // Get unread count for messages sent to current user
           const unreadCount = await Message.countDocuments({
-            recipientId: profile.userId,
+            userId: profile.userId,
+            recipientId: currentUserId,
             read: false
           });
 
@@ -132,41 +153,51 @@ export default class ProfileService {
             fullName: `${profile.about?.first_name || ''} ${profile.about?.last_name || ''}`.trim(),
             lastMessage: latestMessage?.text || null,
             lastMessageTime: latestMessage?.createdAt || null,
-            unreadCount
+            unreadCount,
+            isLastMessageFromMe: latestMessage?.userId.toString() === currentUserId.toString()
           };
         })
       );
 
-      logger.debug(`Retrieved ${usersWithMessages.length} users with messages`);
-      return usersWithMessages;
+      // Sort by last message time
+      const sortedUsers = usersWithMessages.sort((a, b) => 
+        (b.lastMessageTime || 0) - (a.lastMessageTime || 0)
+      );
+
+      logger.debug(`Retrieved ${sortedUsers.length} chat users for user ${currentUserId}`);
+      return sortedUsers;
 
     } catch (error) {
-      logger.error('Error retrieving users with messages:', error);
-      throw new InternalServerError('Error retrieving users with messages');
+      logger.error('Error retrieving chat users:', error);
+      throw error instanceof Error ? error : new InternalServerError('Error retrieving chat users');
     }
   }
 
-  static async getUserProfileWithMessages(userId) {
+  static async getUserProfileWithMessages(currentUserId, otherUserId) {
     try {
-      if (!mongoose.Types.ObjectId.isValid(userId)) {
+      if (!mongoose.Types.ObjectId.isValid(currentUserId) || !mongoose.Types.ObjectId.isValid(otherUserId)) {
         throw new BadRequestError('Invalid user ID');
       }
 
-      const profile = await ExtraData.findOne({ userId });
+      const profile = await ExtraData.findOne({ userId: otherUserId });
       if (!profile) {
         throw new NotFoundError('Profile not found');
       }
 
-      // Get message-related data
+      // Get message-related data between these two users specifically
       const [latestMessage, unreadCount] = await Promise.all([
         Message.findOne({
-          $or: [{ userId }, { recipientId: userId }]
+          $or: [
+            { userId: currentUserId, recipientId: otherUserId },
+            { userId: otherUserId, recipientId: currentUserId }
+          ]
         })
         .sort({ createdAt: -1 })
         .lean(),
         
         Message.countDocuments({
-          recipientId: userId,
+          userId: otherUserId,
+          recipientId: currentUserId,
           read: false
         })
       ]);
@@ -176,11 +207,12 @@ export default class ProfileService {
         messaging: {
           lastMessage: latestMessage?.text || null,
           lastMessageTime: latestMessage?.createdAt || null,
+          isLastMessageFromMe: latestMessage?.userId.toString() === currentUserId.toString(),
           unreadCount
         }
       };
 
-      logger.debug(`Retrieved profile with messages for user ${userId}`);
+      logger.debug(`Retrieved profile with messages between users ${currentUserId} and ${otherUserId}`);
       return profileWithMessages;
 
     } catch (error) {

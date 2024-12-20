@@ -13,7 +13,7 @@ import {
   updateProfilePhoto,
   updateCoverPhotos,
   getUserProfiles,
-  getAllUsersWithMessages,
+  getChatUsers,
   getUserProfileWithMessages
 } from '../controllers/profile.controller.js';
 
@@ -35,8 +35,8 @@ router.route('/register').post(registerUser);
 router.route('/login').post(loginUser);
 router.route('/get').get(retrieveAllUsersWithData);
 
-router.get('/chats', getAllUsersWithMessages);
-router.get('/profile/messages', getUserProfileWithMessages);
+router.get('/chats', authMiddleware, getChatUsers);
+router.get('/profile-with-messages/:userId', authMiddleware, getUserProfileWithMessages);
 
 router.post(
   '/profile',
