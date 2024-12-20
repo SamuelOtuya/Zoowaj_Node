@@ -122,3 +122,25 @@ export const getUserProfiles = asyncHandler(async (req, res) => {
   // Send response
   res.status(StatusCodes.OK).json(profiles);
 });
+
+export const getAllUsersWithMessages = asyncHandler(async (req, res, next) => {
+  try {
+    const users = await ProfileService.getUsersWithMessages();
+    res.status(200).json(users);
+  } catch (error) {
+    logger.error('Controller error getting users with messages:', error);
+    next(error);
+  }
+});
+
+// Get a single user's profile with message data
+export const getUserProfileWithMessages = asyncHandler(async (req, res, next) => {
+  try {
+    const { userId } = req.params;
+    const profile = await ProfileService.getUserProfileWithMessages(userId);
+    res.status(200).json(profile);
+  } catch (error) {
+    logger.error('Controller error getting user profile:', error);
+    next(error);
+  }
+});

@@ -6809,3 +6809,199 @@
 2024-12-20T15:22:13.059Z [my-app] [31merror[39m: Error caught by errorHandler: An error occurred while removing the profile from favorites
 2024-12-20T15:22:13.059Z [my-app] [34mdebug[39m: Response for DELETE /api/v1/user/profile/favorite/remove - Status: 500
 2024-12-20T15:22:13.060Z [my-app] [34mdebug[39m: Response Body: {"message":"An error occurred while removing the profile from favorites","status":500}
+2024-12-20T15:23:09.421Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-12-20T15:23:12.458Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-12-20T15:23:17.710Z [my-app] [34mdebug[39m: Request - Method: DELETE, URL: /api/v1/user/profile/favorite/remove, Timestamp: December 20, 2024 at 6:23:17 PM
+2024-12-20T15:23:18.344Z [my-app] [34mdebug[39m: Response for DELETE /api/v1/user/profile/favorite/remove - Status: 200
+2024-12-20T15:23:18.345Z [my-app] [34mdebug[39m: Response Body: {"msg":"Profile removed from favorites","favorites":1}
+2024-12-20T15:23:24.647Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/profile/favorites/all, Timestamp: December 20, 2024 at 6:23:24 PM
+2024-12-20T15:23:25.077Z [my-app] [34mdebug[39m: Response for GET /api/v1/user/profile/favorites/all - Status: 200
+2024-12-20T15:23:25.078Z [my-app] [34mdebug[39m: Response Body: {"msg":"All favorites retrieved successfully","totalFavorites":1,"favorites":[{"_id":"676587658c065367b52aa893","profile":"6762aab1b0153de832b77aa2","user":"6762b0116235d8cfd5287a1e","__v":0}]}
+2024-12-20T15:23:29.858Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile/like, Timestamp: December 20, 2024 at 6:23:29 PM
+2024-12-20T15:23:30.653Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile/like - Status: 200
+2024-12-20T15:23:30.654Z [my-app] [34mdebug[39m: Response Body: {"msg":"Profile liked successfully","likes":2}
+2024-12-20T15:23:36.398Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/profile/likes/all, Timestamp: December 20, 2024 at 6:23:36 PM
+2024-12-20T15:23:36.830Z [my-app] [34mdebug[39m: Response for GET /api/v1/user/profile/likes/all - Status: 200
+2024-12-20T15:23:36.831Z [my-app] [34mdebug[39m: Response Body: {"msg":"All likes retrieved successfully","totalLikes":1,"likes":[{"_id":"67658bf2f8d4aa5503643ee6","profile":"6762aab1b0153de832b77aa2","user":"676193287c3365dec5a85b47","__v":0}]}
+2024-12-20T15:23:41.302Z [my-app] [34mdebug[39m: Request - Method: DELETE, URL: /api/v1/user/profile/like/remove, Timestamp: December 20, 2024 at 6:23:41 PM
+2024-12-20T15:23:41.502Z [my-app] [31merror[39m: Error Un-Liking Profile undefined Profile not found
+2024-12-20T15:23:41.503Z [my-app] [31merror[39m: Error caught by errorHandler: An error occurred while removing like from profile
+2024-12-20T15:23:41.504Z [my-app] [34mdebug[39m: Response for DELETE /api/v1/user/profile/like/remove - Status: 500
+2024-12-20T15:23:41.505Z [my-app] [34mdebug[39m: Response Body: {"message":"An error occurred while removing like from profile","status":500}
+2024-12-20T15:24:03.676Z [my-app] [34mdebug[39m: Request - Method: DELETE, URL: /api/v1/user/profile/like/remove, Timestamp: December 20, 2024 at 6:24:03 PM
+2024-12-20T15:24:03.870Z [my-app] [31merror[39m: Error Un-Liking Profile undefined Profile not found
+2024-12-20T15:24:03.871Z [my-app] [31merror[39m: Error caught by errorHandler: An error occurred while removing like from profile
+2024-12-20T15:24:03.872Z [my-app] [34mdebug[39m: Response for DELETE /api/v1/user/profile/like/remove - Status: 500
+2024-12-20T15:24:03.874Z [my-app] [34mdebug[39m: Response Body: {"message":"An error occurred while removing like from profile","status":500}
+2024-12-20T15:24:09.524Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile/like, Timestamp: December 20, 2024 at 6:24:09 PM
+2024-12-20T15:24:09.914Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile/like - Status: 200
+2024-12-20T15:24:09.915Z [my-app] [34mdebug[39m: Response Body: {"msg":"Profile liked successfully"}
+2024-12-20T15:24:13.145Z [my-app] [34mdebug[39m: Request - Method: DELETE, URL: /api/v1/user/profile/like/remove, Timestamp: December 20, 2024 at 6:24:13 PM
+2024-12-20T15:24:13.348Z [my-app] [31merror[39m: Error Un-Liking Profile undefined Profile not found
+2024-12-20T15:24:13.348Z [my-app] [31merror[39m: Error caught by errorHandler: An error occurred while removing like from profile
+2024-12-20T15:24:13.349Z [my-app] [34mdebug[39m: Response for DELETE /api/v1/user/profile/like/remove - Status: 500
+2024-12-20T15:24:13.349Z [my-app] [34mdebug[39m: Response Body: {"message":"An error occurred while removing like from profile","status":500}
+2024-12-20T15:24:55.299Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/profile, Timestamp: December 20, 2024 at 6:24:55 PM
+2024-12-20T15:24:55.306Z [my-app] [34mdebug[39m: USER ID: 676193287c3365dec5a85b47
+2024-12-20T15:24:55.307Z [my-app] [34mdebug[39m: USER EMAIL: tim2@gmail.com
+2024-12-20T15:24:55.502Z [my-app] [34mdebug[39m: retrieved Tjsele's Data
+2024-12-20T15:24:55.503Z [my-app] [34mdebug[39m: Response for GET /api/v1/user/profile - Status: 200
+2024-12-20T15:24:55.504Z [my-app] [34mdebug[39m: Response Body: {"profile":{"profilePhoto":{"url":"https://placeholder/400","public_id":""},"about":{"first_name":"Tim","last_name":"J","username":"Tjsele","phone_number":"0748956312","birthDate":"1999-12-17T00:00:00.000Z","height":"5'11\"","maritalStatus":"Single","tagline":"Haute"},"religiosity":{"muslimSect":"Sunni","isConvert":"Yes","religiousPractice":"Moderate","doYouPray":"Occasionally","diet":"Vegan","doYouSmoke":"No","hasTattoos":"Yes"},"marriageIntentions":{"lookingToMarry":"Within 1 year","willingToRelocate":"Yes","wantsChildren":"No","livingArrangements":"Living with family","iceBreaker":"Cofee"},"languageAndEthnicity":{"languages":["Arabic"],"ethnicGroup":"Black","ethnicOrigin":"Pakistani","biography":"Bio"},"educationAndCareer":{"profession":"Doctor","education":"High School","jobTitle":"Manager"},"_id":"67632acbe45dcd287664be0b","userId":"676193287c3365dec5a85b47","interests":[],"likes":[],"favorites":[],"createdAt":"2024-12-18T20:04:28.027Z","updatedAt":"2024-12-18T20:13:09.276Z","__v":0,"coverPhotos":[]}}
+2024-12-20T15:26:02.026Z [my-app] [34mdebug[39m: Request - Method: DELETE, URL: /api/v1/user/profile/like/remove, Timestamp: December 20, 2024 at 6:26:02 PM
+2024-12-20T15:26:02.756Z [my-app] [31merror[39m: Error Un-Liking Profile 6762aab1b0153de832b77aa2 Cannot read properties of null (reading 'toString')
+2024-12-20T15:26:02.757Z [my-app] [31merror[39m: Error caught by errorHandler: An error occurred while removing like from profile
+2024-12-20T15:26:02.757Z [my-app] [34mdebug[39m: Response for DELETE /api/v1/user/profile/like/remove - Status: 500
+2024-12-20T15:26:02.758Z [my-app] [34mdebug[39m: Response Body: {"message":"An error occurred while removing like from profile","status":500}
+2024-12-20T15:26:13.374Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile/like, Timestamp: December 20, 2024 at 6:26:13 PM
+2024-12-20T15:26:14.158Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile/like - Status: 200
+2024-12-20T15:26:14.159Z [my-app] [34mdebug[39m: Response Body: {"msg":"Profile liked successfully","likes":3}
+2024-12-20T15:26:17.395Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile/like, Timestamp: December 20, 2024 at 6:26:17 PM
+2024-12-20T15:26:17.783Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile/like - Status: 200
+2024-12-20T15:26:17.784Z [my-app] [34mdebug[39m: Response Body: {"msg":"Profile liked successfully"}
+2024-12-20T15:26:21.094Z [my-app] [34mdebug[39m: Request - Method: DELETE, URL: /api/v1/user/profile/like/remove, Timestamp: December 20, 2024 at 6:26:21 PM
+2024-12-20T15:26:21.487Z [my-app] [31merror[39m: Error Un-Liking Profile 6762aab1b0153de832b77aa2 Cannot read properties of null (reading 'toString')
+2024-12-20T15:26:21.488Z [my-app] [31merror[39m: Error caught by errorHandler: An error occurred while removing like from profile
+2024-12-20T15:26:21.488Z [my-app] [34mdebug[39m: Response for DELETE /api/v1/user/profile/like/remove - Status: 500
+2024-12-20T15:26:21.490Z [my-app] [34mdebug[39m: Response Body: {"message":"An error occurred while removing like from profile","status":500}
+2024-12-20T15:27:27.630Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: December 20, 2024 at 6:27:27 PM
+2024-12-20T15:27:27.639Z [my-app] [34mdebug[39m: USER ID: 676193287c3365dec5a85b47
+2024-12-20T15:27:27.640Z [my-app] [34mdebug[39m: USER EMAIL: tim2@gmail.com
+2024-12-20T15:27:27.839Z [my-app] [31merror[39m: Profile already exists for this user 676193287c3365dec5a85b47
+2024-12-20T15:27:27.841Z [my-app] [31merror[39m: Error creating user's profile details: Profile already exists for this user.
+2024-12-20T15:27:27.842Z [my-app] [31merror[39m: Error caught by errorHandler: Account setup unsuccessful, try again
+2024-12-20T15:27:27.843Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile - Status: 500
+2024-12-20T15:27:27.843Z [my-app] [34mdebug[39m: Response Body: {"message":"Account setup unsuccessful, try again","status":500}
+2024-12-20T15:27:37.467Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: December 20, 2024 at 6:27:37 PM
+2024-12-20T15:27:37.471Z [my-app] [34mdebug[39m: USER ID: 676193287c3365dec5a85b47
+2024-12-20T15:27:37.472Z [my-app] [34mdebug[39m: USER EMAIL: tim2@gmail.com
+2024-12-20T15:27:37.673Z [my-app] [31merror[39m: Profile already exists for this user 676193287c3365dec5a85b47
+2024-12-20T15:27:37.674Z [my-app] [31merror[39m: Error creating user's profile details: Profile already exists for this user.
+2024-12-20T15:27:37.674Z [my-app] [31merror[39m: Error caught by errorHandler: Account setup unsuccessful, try again
+2024-12-20T15:27:37.675Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile - Status: 500
+2024-12-20T15:27:37.675Z [my-app] [34mdebug[39m: Response Body: {"message":"Account setup unsuccessful, try again","status":500}
+2024-12-20T15:28:02.412Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: December 20, 2024 at 6:28:02 PM
+2024-12-20T15:28:02.414Z [my-app] [34mdebug[39m: USER ID: 676193287c3365dec5a85b47
+2024-12-20T15:28:02.415Z [my-app] [34mdebug[39m: USER EMAIL: tim2@gmail.com
+2024-12-20T15:28:02.818Z [my-app] [32minfo[39m: User profile created successfully: {
+  "userId": "676193287c3365dec5a85b47",
+  "profilePhoto": {
+    "url": "https://placeholder/400",
+    "public_id": ""
+  },
+  "about": {
+    "first_name": "Tim",
+    "last_name": "J",
+    "username": "Tjsele",
+    "phone_number": "0748956312",
+    "birthDate": "1999-12-17T00:00:00.000Z",
+    "height": "5'11\"",
+    "maritalStatus": "Single",
+    "tagline": "Haute"
+  },
+  "interests": [],
+  "religiosity": {
+    "muslimSect": "Sunni",
+    "isConvert": "Yes",
+    "religiousPractice": "Moderate",
+    "doYouPray": "Occasionally",
+    "diet": "Vegan",
+    "doYouSmoke": "No",
+    "hasTattoos": "Yes"
+  },
+  "marriageIntentions": {
+    "lookingToMarry": "Within 1 year",
+    "willingToRelocate": "Yes",
+    "wantsChildren": "No",
+    "livingArrangements": "Living with family",
+    "iceBreaker": "Cofee"
+  },
+  "languageAndEthnicity": {
+    "languages": [
+      "Arabic",
+      "English",
+      "Urdu"
+    ],
+    "ethnicGroup": "Black",
+    "ethnicOrigin": "Pakistani",
+    "biography": "Bio"
+  },
+  "educationAndCareer": {
+    "profession": "Doctor",
+    "education": "High School",
+    "jobTitle": "Manager"
+  },
+  "likes": [],
+  "favorites": [],
+  "_id": "67658d02f8d4aa5503643f07",
+  "coverPhotos": [],
+  "createdAt": "2024-12-20T15:28:02.614Z",
+  "updatedAt": "2024-12-20T15:28:02.614Z",
+  "__v": 0
+}
+2024-12-20T15:28:02.829Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile - Status: 201
+2024-12-20T15:28:02.830Z [my-app] [34mdebug[39m: Response Body: {"profile":{"userId":"676193287c3365dec5a85b47","profilePhoto":{"url":"https://placeholder/400","public_id":""},"about":{"first_name":"Tim","last_name":"J","username":"Tjsele","phone_number":"0748956312","birthDate":"1999-12-17T00:00:00.000Z","height":"5'11\"","maritalStatus":"Single","tagline":"Haute"},"interests":[],"religiosity":{"muslimSect":"Sunni","isConvert":"Yes","religiousPractice":"Moderate","doYouPray":"Occasionally","diet":"Vegan","doYouSmoke":"No","hasTattoos":"Yes"},"marriageIntentions":{"lookingToMarry":"Within 1 year","willingToRelocate":"Yes","wantsChildren":"No","livingArrangements":"Living with family","iceBreaker":"Cofee"},"languageAndEthnicity":{"languages":["Arabic","English","Urdu"],"ethnicGroup":"Black","ethnicOrigin":"Pakistani","biography":"Bio"},"educationAndCareer":{"profession":"Doctor","education":"High School","jobTitle":"Manager"},"likes":[],"favorites":[],"_id":"67658d02f8d4aa5503643f07","coverPhotos":[],"createdAt":"2024-12-20T15:28:02.614Z","updatedAt":"2024-12-20T15:28:02.614Z","__v":0}}
+2024-12-20T15:28:17.408Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile/like, Timestamp: December 20, 2024 at 6:28:17 PM
+2024-12-20T15:28:17.610Z [my-app] [31merror[39m: Error Liking Profile 6762aab1b0153de832b77aa2 Profile not found
+2024-12-20T15:28:17.611Z [my-app] [31merror[39m: Error caught by errorHandler: An error occurred while liking the profile
+2024-12-20T15:28:17.612Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile/like - Status: 500
+2024-12-20T15:28:17.613Z [my-app] [34mdebug[39m: Response Body: {"message":"An error occurred while liking the profile","status":500}
+2024-12-20T15:28:19.335Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile/like, Timestamp: December 20, 2024 at 6:28:19 PM
+2024-12-20T15:28:19.529Z [my-app] [31merror[39m: Error Liking Profile 6762aab1b0153de832b77aa2 Profile not found
+2024-12-20T15:28:19.530Z [my-app] [31merror[39m: Error caught by errorHandler: An error occurred while liking the profile
+2024-12-20T15:28:19.530Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile/like - Status: 500
+2024-12-20T15:28:19.531Z [my-app] [34mdebug[39m: Response Body: {"message":"An error occurred while liking the profile","status":500}
+2024-12-20T15:29:18.670Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile/like, Timestamp: December 20, 2024 at 6:29:18 PM
+2024-12-20T15:29:18.864Z [my-app] [31merror[39m: Error Liking Profile 6764155a6d4552d4632b3dff Profile not found
+2024-12-20T15:29:18.864Z [my-app] [31merror[39m: Error caught by errorHandler: An error occurred while liking the profile
+2024-12-20T15:29:18.865Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile/like - Status: 500
+2024-12-20T15:29:18.865Z [my-app] [34mdebug[39m: Response Body: {"message":"An error occurred while liking the profile","status":500}
+2024-12-20T15:29:48.393Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile/like, Timestamp: December 20, 2024 at 6:29:48 PM
+2024-12-20T15:29:49.199Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile/like - Status: 200
+2024-12-20T15:29:49.199Z [my-app] [34mdebug[39m: Response Body: {"msg":"Profile liked successfully","likes":1}
+2024-12-20T15:29:52.814Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile/favorite, Timestamp: December 20, 2024 at 6:29:52 PM
+2024-12-20T15:29:53.597Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile/favorite - Status: 200
+2024-12-20T15:29:53.598Z [my-app] [34mdebug[39m: Response Body: {"msg":"Profile added to favorites","favorites":1}
+2024-12-20T15:29:56.171Z [my-app] [34mdebug[39m: Request - Method: DELETE, URL: /api/v1/user/profile/like/remove, Timestamp: December 20, 2024 at 6:29:56 PM
+2024-12-20T15:29:56.769Z [my-app] [34mdebug[39m: Response for DELETE /api/v1/user/profile/like/remove - Status: 200
+2024-12-20T15:29:56.770Z [my-app] [34mdebug[39m: Response Body: {"msg":"Like removed successfully","likes":0}
+2024-12-20T15:30:00.296Z [my-app] [34mdebug[39m: Request - Method: DELETE, URL: /api/v1/user/profile/favorite/remove, Timestamp: December 20, 2024 at 6:30:00 PM
+2024-12-20T15:30:00.935Z [my-app] [34mdebug[39m: Response for DELETE /api/v1/user/profile/favorite/remove - Status: 200
+2024-12-20T15:30:00.936Z [my-app] [34mdebug[39m: Response Body: {"msg":"Profile removed from favorites","favorites":0}
+2024-12-20T15:30:05.415Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile/like, Timestamp: December 20, 2024 at 6:30:05 PM
+2024-12-20T15:30:06.205Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile/like - Status: 200
+2024-12-20T15:30:06.205Z [my-app] [34mdebug[39m: Response Body: {"msg":"Profile liked successfully","likes":1}
+2024-12-20T15:30:09.640Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/profile, Timestamp: December 20, 2024 at 6:30:09 PM
+2024-12-20T15:30:09.642Z [my-app] [34mdebug[39m: USER ID: 676193287c3365dec5a85b47
+2024-12-20T15:30:09.643Z [my-app] [34mdebug[39m: USER EMAIL: tim2@gmail.com
+2024-12-20T15:30:09.840Z [my-app] [34mdebug[39m: retrieved Tjsele's Data
+2024-12-20T15:30:09.841Z [my-app] [34mdebug[39m: Response for GET /api/v1/user/profile - Status: 200
+2024-12-20T15:30:09.842Z [my-app] [34mdebug[39m: Response Body: {"profile":{"profilePhoto":{"url":"https://placeholder/400","public_id":""},"about":{"first_name":"Tim","last_name":"J","username":"Tjsele","phone_number":"0748956312","birthDate":"1999-12-17T00:00:00.000Z","height":"5'11\"","maritalStatus":"Single","tagline":"Haute"},"religiosity":{"muslimSect":"Sunni","isConvert":"Yes","religiousPractice":"Moderate","doYouPray":"Occasionally","diet":"Vegan","doYouSmoke":"No","hasTattoos":"Yes"},"marriageIntentions":{"lookingToMarry":"Within 1 year","willingToRelocate":"Yes","wantsChildren":"No","livingArrangements":"Living with family","iceBreaker":"Cofee"},"languageAndEthnicity":{"languages":["Arabic","English","Urdu"],"ethnicGroup":"Black","ethnicOrigin":"Pakistani","biography":"Bio"},"educationAndCareer":{"profession":"Doctor","education":"High School","jobTitle":"Manager"},"_id":"67658d02f8d4aa5503643f07","userId":"676193287c3365dec5a85b47","interests":[],"likes":[],"favorites":[],"coverPhotos":[],"createdAt":"2024-12-20T15:28:02.614Z","updatedAt":"2024-12-20T15:28:02.614Z","__v":0}}
+2024-12-20T15:30:26.860Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile/like, Timestamp: December 20, 2024 at 6:30:26 PM
+2024-12-20T15:30:27.260Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile/like - Status: 200
+2024-12-20T15:30:27.260Z [my-app] [34mdebug[39m: Response Body: {"msg":"Profile liked successfully"}
+2024-12-20T15:30:30.733Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile/favorite, Timestamp: December 20, 2024 at 6:30:30 PM
+2024-12-20T15:30:31.517Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile/favorite - Status: 200
+2024-12-20T15:30:31.517Z [my-app] [34mdebug[39m: Response Body: {"msg":"Profile added to favorites","favorites":1}
+2024-12-20T15:30:33.516Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile/favorite, Timestamp: December 20, 2024 at 6:30:33 PM
+2024-12-20T15:30:33.904Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile/favorite - Status: 200
+2024-12-20T15:30:33.905Z [my-app] [34mdebug[39m: Response Body: {"msg":"Profile added to favorites"}
+2024-12-20T15:30:37.748Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/profile, Timestamp: December 20, 2024 at 6:30:37 PM
+2024-12-20T15:30:37.750Z [my-app] [34mdebug[39m: USER ID: 676193287c3365dec5a85b47
+2024-12-20T15:30:37.751Z [my-app] [34mdebug[39m: USER EMAIL: tim2@gmail.com
+2024-12-20T15:30:37.947Z [my-app] [34mdebug[39m: retrieved Tjsele's Data
+2024-12-20T15:30:37.948Z [my-app] [34mdebug[39m: Response for GET /api/v1/user/profile - Status: 200
+2024-12-20T15:30:37.949Z [my-app] [34mdebug[39m: Response Body: {"profile":{"profilePhoto":{"url":"https://placeholder/400","public_id":""},"about":{"first_name":"Tim","last_name":"J","username":"Tjsele","phone_number":"0748956312","birthDate":"1999-12-17T00:00:00.000Z","height":"5'11\"","maritalStatus":"Single","tagline":"Haute"},"religiosity":{"muslimSect":"Sunni","isConvert":"Yes","religiousPractice":"Moderate","doYouPray":"Occasionally","diet":"Vegan","doYouSmoke":"No","hasTattoos":"Yes"},"marriageIntentions":{"lookingToMarry":"Within 1 year","willingToRelocate":"Yes","wantsChildren":"No","livingArrangements":"Living with family","iceBreaker":"Cofee"},"languageAndEthnicity":{"languages":["Arabic","English","Urdu"],"ethnicGroup":"Black","ethnicOrigin":"Pakistani","biography":"Bio"},"educationAndCareer":{"profession":"Doctor","education":"High School","jobTitle":"Manager"},"_id":"67658d02f8d4aa5503643f07","userId":"676193287c3365dec5a85b47","interests":[],"likes":[],"favorites":[],"coverPhotos":[],"createdAt":"2024-12-20T15:28:02.614Z","updatedAt":"2024-12-20T15:28:02.614Z","__v":0}}
+2024-12-20T15:30:44.301Z [my-app] [34mdebug[39m: Request - Method: DELETE, URL: /api/v1/user/profile/favorite/remove, Timestamp: December 20, 2024 at 6:30:44 PM
+2024-12-20T15:30:45.303Z [my-app] [34mdebug[39m: Response for DELETE /api/v1/user/profile/favorite/remove - Status: 200
+2024-12-20T15:30:45.304Z [my-app] [34mdebug[39m: Response Body: {"msg":"Profile removed from favorites","favorites":0}
+2024-12-20T16:12:32.844Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-12-20T16:12:35.017Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-12-20T16:12:49.180Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/messages, Timestamp: December 20, 2024 at 7:12:49 PM
+2024-12-20T16:13:02.260Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/chats, Timestamp: December 20, 2024 at 7:13:02 PM
+2024-12-20T16:13:41.463Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/chats, Timestamp: December 20, 2024 at 7:13:41 PM
+2024-12-20T16:13:51.067Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-12-20T16:13:53.176Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-12-20T16:13:58.362Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/chats, Timestamp: December 20, 2024 at 7:13:58 PM
+2024-12-20T16:14:00.010Z [my-app] [34mdebug[39m: Retrieved 6 users with messages
+2024-12-20T16:14:00.012Z [my-app] [34mdebug[39m: Response for GET /api/v1/user/chats - Status: 200
+2024-12-20T16:14:00.013Z [my-app] [34mdebug[39m: Response Body: [{"id":"6762af8a6235d8cfd5287a1b","username":"Samido","profilePicture":"https://res.cloudinary.com/dxwdp8xww/image/upload/v1734521397/profile_photos/hauyw0x746pdncjhy8h8.jpg","fullName":"Sam Otuya","lastMessage":null,"lastMessageTime":null,"unreadCount":0},{"id":"6762ef26dfe6ee1b0dcefccc","username":"Tjsele","profilePicture":"https://placeholder/400","fullName":"Tim J","lastMessage":null,"lastMessageTime":null,"unreadCount":0},{"id":"6764155a6d4552d4632b3dff","username":"Sem","profilePicture":"https://res.cloudinary.com/dxwdp8xww/image/upload/v1734612553/profile_photos/ywm2wkii8hp0i0qsspq6.jpg","fullName":"Dan Deno","lastMessage":"Hi","lastMessageTime":"2024-12-20T11:53:01.962Z","unreadCount":3},{"id":"67643b7bf937b0f2e2d962ee","username":"Devii","profilePicture":"https://res.cloudinary.com/dxwdp8xww/image/upload/v1734622353/profile_photos/ryh2ysagatnjfolqneo7.jpg","fullName":"Dev Pati","lastMessage":"How are you doing?🌚","lastMessageTime":"2024-12-20T11:13:13.145Z","unreadCount":3},{"id":"67654f0b3a3b4a3c956c08c6","username":"Mats","profilePicture":"https://res.cloudinary.com/dxwdp8xww/image/upload/v1734692918/profile_photos/skgtmuh6d6lveecgawuo.jpg","fullName":"Sam Otuya","lastMessage":"Hi","lastMessageTime":"2024-12-20T12:09:58.315Z","unreadCount":2},{"id":"676193287c3365dec5a85b47","username":"Tjsele","profilePicture":"https://placeholder/400","fullName":"Tim J","lastMessage":null,"lastMessageTime":null,"unreadCount":0}]

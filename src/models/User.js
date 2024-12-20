@@ -19,6 +19,10 @@ const userSchema = new mongoose.Schema(
       },
       select: false, // Exclude password from queries by default
     },
+    subscribed: {
+      type: Boolean,
+      default: false,
+    },
     extraData: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'ExtraData', // Reference to the ExtraData model

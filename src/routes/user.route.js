@@ -13,6 +13,8 @@ import {
   updateProfilePhoto,
   updateCoverPhotos,
   getUserProfiles,
+  getAllUsersWithMessages,
+  getUserProfileWithMessages
 } from '../controllers/profile.controller.js';
 
 import {
@@ -32,6 +34,9 @@ const router = express.Router();
 router.route('/register').post(registerUser);
 router.route('/login').post(loginUser);
 router.route('/get').get(retrieveAllUsersWithData);
+
+router.get('/chats', getAllUsersWithMessages);
+router.get('/profile/messages', getUserProfileWithMessages);
 
 router.post(
   '/profile',
