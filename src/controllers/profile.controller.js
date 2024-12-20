@@ -124,43 +124,108 @@ export const getUserProfiles = asyncHandler(async (req, res) => {
 });
 
 export const addLike = asyncHandler(async (req, res) => {
-  const { profileId } = req.params;
-  const { userId } = req.body; // ID of the user liking the profile
+  try {
+    // const { profileId } = req.params;
+    const { userId, targetId } = req.body; // ID of the user liking the profile
 
-  const likes = await ProfileService.addLike(profileId, userId);
+    const profile = await ProfileData.findById(userId);
 
-  res.status(200).json({ msg: 'Profile liked successfully', likes: likes });
+    if (!profile) {
+      throw new NotFoundError('Profile not found');
+    }
+
+    // Check if user already liked the profile
+    if (profile.likes.includes(targetId)) {
+      throw new BadRequestError('You have already liked this profile');
+    }
+
+    profile.likes.push(targetId);
+    await profile.save();
+
+    res
+      .status(200)
+      .json({ msg: 'Profile liked successfully', likes: profile.likes.length });
+  } catch (error) {
+    console.error(error);
+    throw new InternalServerError('An error occurred while liking the profile');
+  }
 });
 
 export const removeLike = asyncHandler(async (req, res) => {
-  const { profileId } = req.params;
-  const { userId } = req.body; // ID of the user adding the profile to favorites
+  try {
+    const { userId, targetId } = req.body; // ID of the user adding the profile to favorites
 
-  const likes = await ProfileService.removeLike(profileId, userId);
+    const profile = await ProfileData.findById(userId);
 
-  res.status(200).json({ msg: 'Like removed successfully', likes: likes });
+    if (!profile) {
+      throw new NotFoundError('Profile not found');
+    }
+
+    profile.likes = profile.likes.filter((id) => id.toString() !== targetId);
+    await profile.save();
+
+    res
+      .status(200)
+      .json({ msg: 'Like removed successfully', likes: profile.likes.length });
+  } catch (error) {
+    console.error(error);
+    throw new InternalServerError('An error occurred while removing the like');
+  }
 });
 
 export const addFavorite = asyncHandler(async (req, res) => {
-  const { profileId } = req.params;
-  const { userId } = req.body; // ID of the user adding the profile to favorites
+  try {
+    const { userId, targetId } = req.body; // ID of the user adding the profile to favorites
 
-  const favorites = await ProfileService.addFavorite(profileId, userId);
+    const profile = await ProfileData.findById(userId);
 
-  res.status(200).json({
-    msg: 'Profile added to favorites',
-    favorites: favorites,
-  });
+    if (!profile) {
+      throw new NotFoundError('Profile not found');
+    }
+
+    // Check if user already {favorite} the profile
+    if (profile.favorites.includes(targetId)) {
+      throw new BadRequestError('This profile is already in your favorites');
+    }
+
+    profile.favorites.push(targetId);
+    await profile.save();
+
+    res.status(200).json({
+      msg: 'Profile added to favorites',
+      favorites: profile.favorites.length,
+    });
+  } catch (error) {
+    console.error(error);
+    throw new InternalServerError(
+      'An error occurred while adding the profile to favorites',
+    );
+  }
 });
 
 export const removeFavorite = asyncHandler(async (req, res) => {
-  const { profileId } = req.params;
-  const { userId } = req.body;
+  try {
+    const { userId, targetId } = req.body;
 
-  const favorites = await ProfileService.removeFavorite(profileId, userId);
+    const profile = await ProfileData.findById(userId);
 
-  res.status(200).json({
-    msg: 'Profile removed from favorites',
-    favorites: favorites,
-  });
+    if (!profile) {
+      return res.status(404).json({ msg: 'Profile not found' });
+    }
+
+    profile.favorites = profile.favorites.filter(
+      (id) => id.toString() !== targetId,
+    );
+    await profile.save();
+
+    res.status(200).json({
+      msg: 'Profile removed from favorites',
+      favorites: profile.favorites.length,
+    });
+  } catch (error) {
+    console.error(error);
+    throw new InternalServerError(
+      'An error occurred while removing the profile from favorites',
+    );
+  }
 });

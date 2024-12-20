@@ -61,10 +61,10 @@ router.post(
 router.get('/profile', authMiddleware, getProfileDetails);
 router.get('/profiles', authMiddleware, getUserProfiles);
 
-router.post('/profile/:profileId/like', addLike);
-router.delete('/profile/:profileId/like', removeLike);
+router.post('/profile/like', addLike);
+router.delete('/profile/like/remove', removeLike);
 
-router.post('/profile/:profileId/favorite', addFavorite);
-router.delete('/profile/:profileId/favorite', removeFavorite);
+router.post('/profile/favorite', addFavorite);
+router.delete('/profile/favorite/remove', removeFavorite);
 
 export default router;
