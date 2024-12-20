@@ -113,11 +113,13 @@ const profileDetailsSchema = new mongoose.Schema(
     },
 
     languageAndEthnicity: {
-      languages: {
-        type: String,
-        enum: ['English', 'Arabic', 'Urdu', 'Bengali', 'Other'],
-        required: true,
-      },
+      languages: [
+        {
+          type: String,
+          enum: ['English', 'Arabic', 'Urdu', 'Bengali', 'Other'],
+          required: true,
+        },
+      ],
       ethnicGroup: {
         type: String,
         enum: [

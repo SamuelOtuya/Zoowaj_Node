@@ -19,6 +19,7 @@ const setupSocket = (server) => {
       const token = socket.handshake.query.token;
       const payload = AuthService.decodeToken(token);
       socket.userId = payload.userId; // Assuming payload contains userId
+      socket.user = payload.email;
       next();
     } catch (err) {
       logger.error('Authentication error:', err);
@@ -32,9 +33,12 @@ const setupSocket = (server) => {
     // Load previous messages when a new client connects
     (async () => {
       try {
+        logger.debug(`Loading messages for user: ${socket.userId}`);
+
         const messages = await MessageService.fetchAllMessagesForUser(
           socket.userId,
         );
+        logger.debug(`Retrieved ${messages.length} messages`);
         socket.emit('load messages', messages);
       } catch (error) {
         logger.error('Error loading messages:', error);
@@ -42,26 +46,50 @@ const setupSocket = (server) => {
     })();
 
     // Retrieve User's Chat messages with a Recipient
-    socket.on('load chat', async ({ recipientId }) => {
+    socket.on('load chat', async (recipientId) => {
       try {
+        logger.debug(
+          `Loading chat for user: ${socket.user} with recipient: ${recipientId}`,
+        );
+
+        // Ensure recipientId is a string
+        if (typeof recipientId !== 'string') {
+          throw new Error('Invalid recipientId format');
+        }
+
         const chatTexts = await MessageService.fetchChatMessagesBetweenUsers(
           socket.userId,
           recipientId,
         );
-        socket.emit('load chat', chatTexts); // Send chat texts back to the requesting client
+
+        if (!chatTexts) {
+          logger.debug('No chat messages found. Returning empty array.');
+          return socket.emit('load chat', []); // Send empty array if no messages
+        }
+        logger.debug(`Retrieved ${chatTexts.length} chat Texts`);
+        socket.emit('load chat', chatTexts); // Send chat texts back to the client
       } catch (error) {
-        logger.error('Error loading chat:', error);
+        logger.error('Error loading chat:', error.message);
         socket.emit('load chat error', 'Could not load chat messages');
       }
     });
 
     // Handle incoming chat messages
-    socket.on('send text', async ({ recipientId, message }) => {
+    socket.on('send text', async ({ recipientId, text }) => {
       try {
+        logger.debug(
+          `Sending messages from  ${socket.user} to user ${recipientId}`,
+        );
+
+        // Ensure recipientId is a string
+        if (typeof recipientId !== 'string') {
+          throw new Error('Invalid recipientId format');
+        }
+
         const newMessage = await MessageService.createMessage(
           socket.userId,
           recipientId,
-          message,
+          text,
         );
         io.emit('send text', newMessage); // Broadcast the message to all clients
       } catch (error) {
@@ -73,6 +101,7 @@ const setupSocket = (server) => {
     // Handle message deletion
     socket.on('delete text', async (messageId) => {
       try {
+        logger.debug('deleting message');
         await MessageService.deleteMessageById(messageId);
         io.emit('message deleted', messageId); // Notify clients about the deletion
       } catch (error) {

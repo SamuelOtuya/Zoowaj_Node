@@ -81,9 +81,11 @@ export const profileSchema = Joi.object({
   }).required(),
 
   languageAndEthnicity: Joi.object({
-    languages: Joi.string()
-      .valid('English', 'Arabic', 'Urdu', 'Bengali', 'Other')
-      .required(), // Assuming a single language
+    languages: Joi.array()
+      .items(
+        Joi.string().valid('English', 'Arabic', 'Urdu', 'Bengali', 'Other'),
+      )
+      .optional(),
     ethnicGroup: Joi.string()
       .valid('Asian', 'Black', 'Hispanic', 'Middle Eastern', 'White', 'Other')
       .required(),
@@ -117,8 +119,8 @@ export const transformProfileSchema = (data) => {
     languageAndEthnicity: {
       ...data.languageAndEthnicity,
       languages: Array.isArray(data.languageAndEthnicity.languages)
-        ? data.languageAndEthnicity.languages[0] // Assuming you want to take the first language as a string
-        : data.languageAndEthnicity.languages,
+        ? [...new Set(data.languageAndEthnicity.languages)]
+        : [],
     },
 
     marriageIntentions: {
