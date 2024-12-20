@@ -49,14 +49,11 @@ class FavoriteService {
         }
 
         // Find the Favorite document
-        const favorite = await Favorite.findOne({ profile: profileId, user: userId });
+        const favorite = await Favorite.findOneAndDelete({ profile: profileId, user: userId });
 
         if (!favorite) {
             throw new BadRequestError('This profile is not in your favorites');
         }
-
-        // Remove the Favorite document
-        await favorite.remove();
 
         // Remove reference from Profile
         profile.favorites = profile.favorites.filter((id) => id.toString() !== favorite._id.toString());

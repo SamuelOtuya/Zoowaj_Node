@@ -48,14 +48,11 @@ class LikeService {
       }
 
       // Find the Like document
-      const like = await Like.findOne({ profile: profileId, user: userId });
+      const like = await Like.findOneAndDelete({ profile: profileId, user: userId });
 
       if (!like) {
         throw new BadRequestError('You have not liked this profile');
       }
-
-      // Remove the Like document
-      await like.remove();
 
       // Remove reference from Profile
       profile.likes = profile.likes.filter((id) => id.toString() !== like._id.toString());
