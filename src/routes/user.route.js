@@ -75,12 +75,12 @@ router.get('/profile', authMiddleware, getProfileDetails);
 router.get('/profiles', authMiddleware, getUserProfiles);
 
 router.post('/profile/like', addLike);
-router.post('/likes', getLikes);
+router.get('/likes', getLikes);
 router.get('/profile/likes/all', getAllLikes);
 router.delete('/profile/like/remove', removeLike);
 
 router.post('/profile/favorite', addFavorite);
-router.post('/favorites', getFavorites);
+router.get('/favorites', getFavorites);
 router.get('/profile/favorites/all', getAllFavorites);
 router.delete('/profile/favorite/remove', removeFavorite);
 
