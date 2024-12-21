@@ -61,3 +61,29 @@ export const getAllFavorites = asyncHandler(async (req, res) => {
         favorites,
     });
 });
+
+export const getLikes = asyncHandler(async (req, res) => {
+    const { userId } = req.body; // Current user's ID
+
+    const likedBy = await LikeService.getProfilesThatLikedYou(userId); // Who liked you
+    const likedProfiles = await LikeService.getProfilesYouLiked(userId); // Profiles you liked
+
+    res.status(200).json({
+        msg: 'Successfully retrieved likes data',
+        likedBy,
+        likedProfiles,
+    });
+});
+
+export const getFavorites = asyncHandler(async (req, res) => {
+    const { userId } = req.body; // Current user's ID
+
+    const favoritedBy = await FavoriteService.getProfilesThatFavoritedYou(userId); // Who favorited you
+    const favoritedProfiles = await FavoriteService.getProfilesYouFavorited(userId); // Profiles you favorited
+
+    res.status(200).json({
+        msg: 'Successfully retrieved favorites data',
+        favoritedBy,
+        favoritedProfiles,
+    });
+});

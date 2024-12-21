@@ -73,11 +73,13 @@ router.get('/profile', authMiddleware, getProfileDetails);
 router.get('/profiles', authMiddleware, getUserProfiles);
 
 router.post('/profile/like', addLike);
-router.delete('/profile/like/remove', removeLike);
+router.post('/likes', getLikes);
 router.get('/profile/likes/all', getAllLikes);
+router.delete('/profile/like/remove', removeLike);
 
 router.post('/profile/favorite', addFavorite);
-router.delete('/profile/favorite/remove', removeFavorite);
+router.post('/favorites', getFavorites);
 router.get('/profile/favorites/all', getAllFavorites);
+router.delete('/profile/favorite/remove', removeFavorite);
 
 export default router;

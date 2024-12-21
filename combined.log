@@ -7055,3 +7055,11 @@
 2024-12-20T16:37:48.845Z [my-app] [31merror[39m: Error caught by errorHandler: Cannot read properties of undefined (reading 'id')
 2024-12-20T16:37:48.845Z [my-app] [34mdebug[39m: Response for GET /api/v1/user/chats - Status: 500
 2024-12-20T16:37:48.846Z [my-app] [34mdebug[39m: Response Body: {"message":"Internal Server Error","status":500}
+2024-12-20T16:37:55.039Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-12-20T16:37:57.066Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-12-20T16:37:59.864Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/chats, Timestamp: December 20, 2024 at 7:37:59 PM
+2024-12-20T16:37:59.871Z [my-app] [34mdebug[39m: USER ID: 676193287c3365dec5a85b47
+2024-12-20T16:37:59.872Z [my-app] [34mdebug[39m: USER EMAIL: tim2@gmail.com
+2024-12-20T16:38:00.278Z [my-app] [34mdebug[39m: Retrieved 0 chat users for user 676193287c3365dec5a85b47
+2024-12-20T16:38:00.280Z [my-app] [34mdebug[39m: Response for GET /api/v1/user/chats - Status: 200
+2024-12-20T16:38:00.281Z [my-app] [34mdebug[39m: Response Body: []

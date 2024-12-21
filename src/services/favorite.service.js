@@ -66,6 +66,24 @@ class FavoriteService {
         }
     };
 
+    static async getProfilesThatFavoritedYou(userId) {
+      try {
+          return await Favorite.find({ profileId: userId }).populate('userId'); // Profiles that favorited you
+      } catch (error) {
+          logger.error(`Error fetching profiles that favorited ${userId}`, error);
+          throw new InternalServerError('An error occurred while fetching favorites.');
+      }
+    }
+
+    static async getProfilesYouFavorited(userId) {
+        try {
+            return await Favorite.find({ userId }).populate('profileId'); // Profiles you favorited
+        } catch (error) {
+            logger.error(`Error fetching profiles favorited by ${userId}`, error);
+            throw new InternalServerError('An error occurred while fetching favorites.');
+        }
+    }
+
     static getAllFavorites = async () => {
       try {
         // Fetch all profiles and their favorites
