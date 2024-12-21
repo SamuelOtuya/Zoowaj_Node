@@ -23,7 +23,9 @@ import {
   getAllLikes,
   addFavorite,
   removeFavorite,
-  getAllFavorites
+  getAllFavorites,
+  getLikes,
+  getFavorites
 } from '../controllers/likes_favorites.controller.js';
 
 import { validateProfileDetails } from '../middlewares/validators/validateProfileDetails.js';
