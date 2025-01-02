@@ -7063,3 +7063,17 @@
 2024-12-20T16:38:00.278Z [my-app] [34mdebug[39m: Retrieved 0 chat users for user 676193287c3365dec5a85b47
 2024-12-20T16:38:00.280Z [my-app] [34mdebug[39m: Response for GET /api/v1/user/chats - Status: 200
 2024-12-20T16:38:00.281Z [my-app] [34mdebug[39m: Response Body: []
+2024-12-21T08:26:25.858Z [my-app] [32minfo[39m: Server listening on port 8000
+2024-12-21T08:26:29.307Z [my-app] [32minfo[39m: MongoDB Connected!
+2024-12-21T08:26:34.075Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/profile/likes/all, Timestamp: December 21, 2024 at 11:26:34 AM
+2024-12-21T08:26:36.014Z [my-app] [34mdebug[39m: Response for GET /api/v1/user/profile/likes/all - Status: 200
+2024-12-21T08:26:36.015Z [my-app] [34mdebug[39m: Response Body: {"msg":"All likes retrieved successfully","totalLikes":1,"likes":[{"_id":"67658d7df8d4aa5503643f28","profile":"6764160a6d4552d4632b3e02","user":"676193287c3365dec5a85b47","__v":0}]}
+2024-12-21T08:27:05.084Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/likes, Timestamp: December 21, 2024 at 11:27:05 AM
+2024-12-21T08:27:05.484Z [my-app] [34mdebug[39m: Response for GET /api/v1/user/likes - Status: 200
+2024-12-21T08:27:05.485Z [my-app] [34mdebug[39m: Response Body: {"msg":"Successfully retrieved likes data","likedBy":[],"likedProfiles":[]}
+2024-12-21T08:27:19.056Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/likes, Timestamp: December 21, 2024 at 11:27:19 AM
+2024-12-21T08:27:19.449Z [my-app] [34mdebug[39m: Response for GET /api/v1/user/likes - Status: 200
+2024-12-21T08:27:19.449Z [my-app] [34mdebug[39m: Response Body: {"msg":"Successfully retrieved likes data","likedBy":[],"likedProfiles":[]}
+2024-12-21T08:28:39.344Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/likes, Timestamp: December 21, 2024 at 11:28:39 AM
+2024-12-21T08:28:39.732Z [my-app] [34mdebug[39m: Response for GET /api/v1/user/likes - Status: 200
+2024-12-21T08:28:39.733Z [my-app] [34mdebug[39m: Response Body: {"msg":"Successfully retrieved likes data","likedBy":[],"likedProfiles":[]}

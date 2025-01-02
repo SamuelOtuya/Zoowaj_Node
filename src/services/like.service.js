@@ -67,7 +67,7 @@ class LikeService {
 
   static async getProfilesThatLikedYou(userId) {
     try {
-        return await Like.find({ profileId: userId }).populate('userId'); // Profiles that liked you
+        return await Like.find({ profile: userId }).populate('user'); // Profiles that liked you
     } catch (error) {
         logger.error(`Error fetching profiles that liked ${userId}`, error);
         throw new InternalServerError('An error occurred while fetching likes.');
@@ -76,7 +76,7 @@ class LikeService {
 
   static async getProfilesYouLiked(userId) {
       try {
-          return await Like.find({ userId }).populate('profileId'); // Profiles you liked
+          return await Like.find({ user: userId }).populate('profile'); // Profiles you liked
       } catch (error) {
           logger.error(`Error fetching profiles liked by ${userId}`, error);
           throw new InternalServerError('An error occurred while fetching likes.');
