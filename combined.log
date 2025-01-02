@@ -7077,3 +7077,8 @@
 2024-12-21T08:28:39.344Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/likes, Timestamp: December 21, 2024 at 11:28:39 AM
 2024-12-21T08:28:39.732Z [my-app] [34mdebug[39m: Response for GET /api/v1/user/likes - Status: 200
 2024-12-21T08:28:39.733Z [my-app] [34mdebug[39m: Response Body: {"msg":"Successfully retrieved likes data","likedBy":[],"likedProfiles":[]}
+2025-01-02T11:53:04.993Z [my-app] [32minfo[39m: Server listening on port 8000
+2025-01-02T11:53:23.456Z [my-app] [32minfo[39m: MongoDB Connected!
+2025-01-02T12:42:40.500Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/profile/likes/all, Timestamp: January 2, 2025 at 3:42:40 PM
+2025-01-02T12:42:54.957Z [my-app] [34mdebug[39m: Response for GET /api/v1/user/profile/likes/all - Status: 200
+2025-01-02T12:42:54.958Z [my-app] [34mdebug[39m: Response Body: {"msg":"All likes retrieved successfully","totalLikes":0,"likes":[]}
