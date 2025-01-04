@@ -7082,3 +7082,133 @@
 2025-01-02T12:42:40.500Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/profile/likes/all, Timestamp: January 2, 2025 at 3:42:40 PM
 2025-01-02T12:42:54.957Z [my-app] [34mdebug[39m: Response for GET /api/v1/user/profile/likes/all - Status: 200
 2025-01-02T12:42:54.958Z [my-app] [34mdebug[39m: Response Body: {"msg":"All likes retrieved successfully","totalLikes":0,"likes":[]}
+2025-01-04T11:59:54.939Z [my-app] [32minfo[39m: Server listening on port 8000
+2025-01-04T11:59:57.702Z [my-app] [32minfo[39m: MongoDB Connected!
+2025-01-04T12:06:54.649Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: January 4, 2025 at 3:06:54 PM
+2025-01-04T12:06:54.870Z [my-app] [31merror[39m: Error caught by errorHandler: Email already exists
+2025-01-04T12:06:54.872Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/register - Status: 400
+2025-01-04T12:06:54.873Z [my-app] [34mdebug[39m: Response Body: {"message":"Email already exists","status":400}
+2025-01-04T12:07:15.529Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/login, Timestamp: January 4, 2025 at 3:07:15 PM
+2025-01-04T12:07:15.947Z [my-app] [34mdebug[39m: User login successful kwshield2003@gmail.com
+2025-01-04T12:07:15.949Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/login - Status: 200
+2025-01-04T12:07:15.951Z [my-app] [34mdebug[39m: Response Body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzcxMzE5ZDg1NDFlYTUwYWNjYjExNjgiLCJlbWFpbCI6Imt3c2hpZWxkMjAwM0BnbWFpbC5jb20iLCJpYXQiOjE3MzU5OTI0MzUsImV4cCI6MTczNjAwMzIzNX0.yNwx7DKCzz4HCTC5071G9H060gHDacDJCGludxftLgk","user":{"_id":"6771319d8541ea50accb1168","email":"kwshield2003@gmail.com","subscribed":false,"createdAt":"2024-12-29T11:25:17.305Z","updatedAt":"2024-12-29T11:25:17.305Z","__v":0}}
+2025-01-04T12:07:27.835Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/get, Timestamp: January 4, 2025 at 3:07:27 PM
+2025-01-04T12:07:28.051Z [my-app] [34mdebug[39m: Retrieved 6 user's profile data
+2025-01-04T12:07:28.055Z [my-app] [34mdebug[39m: Response for GET /api/v1/user/get - Status: 200
+2025-01-04T12:07:28.056Z [my-app] [34mdebug[39m: Response Body: [{"_id":"676fbaf149781c7ee282476f","email":"alvo@gmail.com","subscribed":false,"createdAt":"2024-12-28T08:46:41.309Z","updatedAt":"2024-12-28T08:46:41.309Z","__v":0},{"_id":"676fbbec49781c7ee2824786","email":"job@gmail.com","subscribed":false,"createdAt":"2024-12-28T08:50:52.030Z","updatedAt":"2024-12-28T08:50:52.030Z","__v":0},{"_id":"67710e70c9232d7ab9910bd4","email":"samuelotuya0@gmail.com","subscribed":false,"createdAt":"2024-12-29T08:55:12.711Z","updatedAt":"2024-12-29T08:55:12.711Z","__v":0},{"_id":"6771319d8541ea50accb1168","email":"kwshield2003@gmail.com","subscribed":false,"createdAt":"2024-12-29T11:25:17.305Z","updatedAt":"2024-12-29T11:25:17.305Z","__v":0},{"_id":"677132108541ea50accb116c","email":"sam@gmail.com","subscribed":false,"createdAt":"2024-12-29T11:27:12.549Z","updatedAt":"2024-12-29T11:27:12.549Z","__v":0},{"_id":"677571084b3a04b46f6b9130","email":"bossy@gmail.com","subscribed":false,"createdAt":"2025-01-01T16:44:56.478Z","updatedAt":"2025-01-01T16:44:56.478Z","__v":0}]
+2025-01-04T12:07:38.683Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/data, Timestamp: January 4, 2025 at 3:07:38 PM
+2025-01-04T12:07:41.430Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/data, Timestamp: January 4, 2025 at 3:07:41 PM
+2025-01-04T12:07:58.370Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/dev/get-all, Timestamp: January 4, 2025 at 3:07:58 PM
+2025-01-04T12:07:58.568Z [my-app] [34mdebug[39m: Retrieved 6 user's profile data
+2025-01-04T12:07:58.571Z [my-app] [34mdebug[39m: Response for GET /api/v1/dev/get-all - Status: 200
+2025-01-04T12:07:58.572Z [my-app] [34mdebug[39m: Response Body: [{"_id":"676fbaf149781c7ee282476f","email":"alvo@gmail.com","subscribed":false,"createdAt":"2024-12-28T08:46:41.309Z","updatedAt":"2024-12-28T08:46:41.309Z","__v":0},{"_id":"676fbbec49781c7ee2824786","email":"job@gmail.com","subscribed":false,"createdAt":"2024-12-28T08:50:52.030Z","updatedAt":"2024-12-28T08:50:52.030Z","__v":0},{"_id":"67710e70c9232d7ab9910bd4","email":"samuelotuya0@gmail.com","subscribed":false,"createdAt":"2024-12-29T08:55:12.711Z","updatedAt":"2024-12-29T08:55:12.711Z","__v":0},{"_id":"6771319d8541ea50accb1168","email":"kwshield2003@gmail.com","subscribed":false,"createdAt":"2024-12-29T11:25:17.305Z","updatedAt":"2024-12-29T11:25:17.305Z","__v":0},{"_id":"677132108541ea50accb116c","email":"sam@gmail.com","subscribed":false,"createdAt":"2024-12-29T11:27:12.549Z","updatedAt":"2024-12-29T11:27:12.549Z","__v":0},{"_id":"677571084b3a04b46f6b9130","email":"bossy@gmail.com","subscribed":false,"createdAt":"2025-01-01T16:44:56.478Z","updatedAt":"2025-01-01T16:44:56.478Z","__v":0}]
+2025-01-04T12:08:05.697Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/dev/get-all, Timestamp: January 4, 2025 at 3:08:05 PM
+2025-01-04T12:08:05.897Z [my-app] [34mdebug[39m: Retrieved 6 user's profile data
+2025-01-04T12:08:05.899Z [my-app] [34mdebug[39m: Response for GET /api/v1/dev/get-all - Status: 200
+2025-01-04T12:08:05.899Z [my-app] [34mdebug[39m: Response Body: [{"_id":"676fbaf149781c7ee282476f","email":"alvo@gmail.com","subscribed":false,"createdAt":"2024-12-28T08:46:41.309Z","updatedAt":"2024-12-28T08:46:41.309Z","__v":0},{"_id":"676fbbec49781c7ee2824786","email":"job@gmail.com","subscribed":false,"createdAt":"2024-12-28T08:50:52.030Z","updatedAt":"2024-12-28T08:50:52.030Z","__v":0},{"_id":"67710e70c9232d7ab9910bd4","email":"samuelotuya0@gmail.com","subscribed":false,"createdAt":"2024-12-29T08:55:12.711Z","updatedAt":"2024-12-29T08:55:12.711Z","__v":0},{"_id":"6771319d8541ea50accb1168","email":"kwshield2003@gmail.com","subscribed":false,"createdAt":"2024-12-29T11:25:17.305Z","updatedAt":"2024-12-29T11:25:17.305Z","__v":0},{"_id":"677132108541ea50accb116c","email":"sam@gmail.com","subscribed":false,"createdAt":"2024-12-29T11:27:12.549Z","updatedAt":"2024-12-29T11:27:12.549Z","__v":0},{"_id":"677571084b3a04b46f6b9130","email":"bossy@gmail.com","subscribed":false,"createdAt":"2025-01-01T16:44:56.478Z","updatedAt":"2025-01-01T16:44:56.478Z","__v":0}]
+2025-01-04T12:08:10.181Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/dev/get-all, Timestamp: January 4, 2025 at 3:08:10 PM
+2025-01-04T12:08:10.408Z [my-app] [34mdebug[39m: Retrieved 6 user's profile data
+2025-01-04T12:08:10.412Z [my-app] [34mdebug[39m: Response for GET /api/v1/dev/get-all - Status: 200
+2025-01-04T12:08:10.413Z [my-app] [34mdebug[39m: Response Body: [{"_id":"676fbaf149781c7ee282476f","email":"alvo@gmail.com","subscribed":false,"createdAt":"2024-12-28T08:46:41.309Z","updatedAt":"2024-12-28T08:46:41.309Z","__v":0},{"_id":"676fbbec49781c7ee2824786","email":"job@gmail.com","subscribed":false,"createdAt":"2024-12-28T08:50:52.030Z","updatedAt":"2024-12-28T08:50:52.030Z","__v":0},{"_id":"67710e70c9232d7ab9910bd4","email":"samuelotuya0@gmail.com","subscribed":false,"createdAt":"2024-12-29T08:55:12.711Z","updatedAt":"2024-12-29T08:55:12.711Z","__v":0},{"_id":"6771319d8541ea50accb1168","email":"kwshield2003@gmail.com","subscribed":false,"createdAt":"2024-12-29T11:25:17.305Z","updatedAt":"2024-12-29T11:25:17.305Z","__v":0},{"_id":"677132108541ea50accb116c","email":"sam@gmail.com","subscribed":false,"createdAt":"2024-12-29T11:27:12.549Z","updatedAt":"2024-12-29T11:27:12.549Z","__v":0},{"_id":"677571084b3a04b46f6b9130","email":"bossy@gmail.com","subscribed":false,"createdAt":"2025-01-01T16:44:56.478Z","updatedAt":"2025-01-01T16:44:56.478Z","__v":0}]
+2025-01-04T12:08:23.154Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/profile, Timestamp: January 4, 2025 at 3:08:23 PM
+2025-01-04T12:08:23.158Z [my-app] [31merror[39m: jwt expired
+2025-01-04T12:08:23.158Z [my-app] [31merror[39m: Invalid or expired token
+2025-01-04T12:08:23.159Z [my-app] [31merror[39m: Error caught by errorHandler: Invalid or expired token 🚫🚫🚫
+2025-01-04T12:08:23.159Z [my-app] [34mdebug[39m: Response for GET /api/v1/user/profile - Status: 401
+2025-01-04T12:08:23.160Z [my-app] [34mdebug[39m: Response Body: {"message":"Invalid or expired token 🚫🚫🚫","status":401}
+2025-01-04T12:17:06.726Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile, Timestamp: January 4, 2025 at 3:17:06 PM
+2025-01-04T12:17:06.733Z [my-app] [34mdebug[39m: USER ID: 6771319d8541ea50accb1168
+2025-01-04T12:17:06.734Z [my-app] [34mdebug[39m: USER EMAIL: kwshield2003@gmail.com
+2025-01-04T12:17:07.175Z [my-app] [32minfo[39m: User profile created successfully: {
+  "userId": "6771319d8541ea50accb1168",
+  "profilePhoto": {
+    "url": "https://placeholder/400",
+    "public_id": ""
+  },
+  "about": {
+    "first_name": "K",
+    "last_name": "Sh",
+    "username": "Kwshield",
+    "phone_number": "0748956312",
+    "birthDate": "1999-12-17T00:00:00.000Z",
+    "height": "5'11\"",
+    "maritalStatus": "Single",
+    "tagline": "Haute"
+  },
+  "interests": [],
+  "religiosity": {
+    "muslimSect": "Sunni",
+    "isConvert": "Yes",
+    "religiousPractice": "Moderate",
+    "doYouPray": "Occasionally",
+    "diet": "Vegan",
+    "doYouSmoke": "No",
+    "hasTattoos": "Yes"
+  },
+  "marriageIntentions": {
+    "lookingToMarry": "Within 1 year",
+    "willingToRelocate": "Yes",
+    "wantsChildren": "No",
+    "livingArrangements": "Living with family",
+    "iceBreaker": "Cofee"
+  },
+  "languageAndEthnicity": {
+    "languages": [
+      "Arabic",
+      "English",
+      "Urdu"
+    ],
+    "ethnicGroup": "Black",
+    "ethnicOrigin": "Pakistani",
+    "biography": "Bio"
+  },
+  "educationAndCareer": {
+    "profession": "Doctor",
+    "education": "High School",
+    "jobTitle": "Manager"
+  },
+  "likes": [],
+  "favorites": [],
+  "_id": "677926c2bb3b50f4deac247c",
+  "coverPhotos": [],
+  "createdAt": "2025-01-04T12:17:06.969Z",
+  "updatedAt": "2025-01-04T12:17:06.969Z",
+  "__v": 0
+}
+2025-01-04T12:17:07.183Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile - Status: 201
+2025-01-04T12:17:07.184Z [my-app] [34mdebug[39m: Response Body: {"profile":{"userId":"6771319d8541ea50accb1168","profilePhoto":{"url":"https://placeholder/400","public_id":""},"about":{"first_name":"K","last_name":"Sh","username":"Kwshield","phone_number":"0748956312","birthDate":"1999-12-17T00:00:00.000Z","height":"5'11\"","maritalStatus":"Single","tagline":"Haute"},"interests":[],"religiosity":{"muslimSect":"Sunni","isConvert":"Yes","religiousPractice":"Moderate","doYouPray":"Occasionally","diet":"Vegan","doYouSmoke":"No","hasTattoos":"Yes"},"marriageIntentions":{"lookingToMarry":"Within 1 year","willingToRelocate":"Yes","wantsChildren":"No","livingArrangements":"Living with family","iceBreaker":"Cofee"},"languageAndEthnicity":{"languages":["Arabic","English","Urdu"],"ethnicGroup":"Black","ethnicOrigin":"Pakistani","biography":"Bio"},"educationAndCareer":{"profession":"Doctor","education":"High School","jobTitle":"Manager"},"likes":[],"favorites":[],"_id":"677926c2bb3b50f4deac247c","coverPhotos":[],"createdAt":"2025-01-04T12:17:06.969Z","updatedAt":"2025-01-04T12:17:06.969Z","__v":0}}
+2025-01-04T12:17:32.459Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile/like, Timestamp: January 4, 2025 at 3:17:32 PM
+2025-01-04T12:17:33.276Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile/like - Status: 200
+2025-01-04T12:17:33.277Z [my-app] [34mdebug[39m: Response Body: {"msg":"Profile liked successfully","likes":1}
+2025-01-04T12:17:52.640Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile/like, Timestamp: January 4, 2025 at 3:17:52 PM
+2025-01-04T12:17:52.836Z [my-app] [31merror[39m: Error Liking Profile 677132108541ea50accb116c Profile not found
+2025-01-04T12:17:52.837Z [my-app] [31merror[39m: Error caught by errorHandler: An error occurred while liking the profile
+2025-01-04T12:17:52.837Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile/like - Status: 500
+2025-01-04T12:17:52.838Z [my-app] [34mdebug[39m: Response Body: {"message":"An error occurred while liking the profile","status":500}
+2025-01-04T12:18:14.727Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile/like, Timestamp: January 4, 2025 at 3:18:14 PM
+2025-01-04T12:18:15.516Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile/like - Status: 200
+2025-01-04T12:18:15.517Z [my-app] [34mdebug[39m: Response Body: {"msg":"Profile liked successfully","likes":1}
+2025-01-04T12:18:16.744Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile/like, Timestamp: January 4, 2025 at 3:18:16 PM
+2025-01-04T12:18:17.142Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile/like - Status: 200
+2025-01-04T12:18:17.143Z [my-app] [34mdebug[39m: Response Body: {"msg":"Profile liked successfully"}
+2025-01-04T12:18:24.569Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/profile/likes/all, Timestamp: January 4, 2025 at 3:18:24 PM
+2025-01-04T12:18:24.996Z [my-app] [34mdebug[39m: Response for GET /api/v1/user/profile/likes/all - Status: 200
+2025-01-04T12:18:24.997Z [my-app] [34mdebug[39m: Response Body: {"msg":"All likes retrieved successfully","totalLikes":2,"likes":[{"_id":"677926dcbb3b50f4deac2482","profile":"676fbcb549781c7ee2824789","user":"6771319d8541ea50accb1168","__v":0},{"_id":"67792707bb3b50f4deac248a","profile":"6775717b4b3a04b46f6b9133","user":"6771319d8541ea50accb1168","__v":0}]}
+2025-01-04T12:19:23.189Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/profile/like, Timestamp: January 4, 2025 at 3:19:23 PM
+2025-01-04T12:19:23.975Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/profile/like - Status: 200
+2025-01-04T12:19:23.975Z [my-app] [34mdebug[39m: Response Body: {"msg":"Profile liked successfully","likes":1}
+2025-01-04T12:19:26.797Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/profile/likes/all, Timestamp: January 4, 2025 at 3:19:26 PM
+2025-01-04T12:19:27.191Z [my-app] [34mdebug[39m: Response for GET /api/v1/user/profile/likes/all - Status: 200
+2025-01-04T12:19:27.192Z [my-app] [34mdebug[39m: Response Body: {"msg":"All likes retrieved successfully","totalLikes":3,"likes":[{"_id":"6779274bbb3b50f4deac249f","profile":"676fbb5749781c7ee2824772","user":"6771319d8541ea50accb1168","__v":0},{"_id":"677926dcbb3b50f4deac2482","profile":"676fbcb549781c7ee2824789","user":"6771319d8541ea50accb1168","__v":0},{"_id":"67792707bb3b50f4deac248a","profile":"6775717b4b3a04b46f6b9133","user":"6771319d8541ea50accb1168","__v":0}]}
+2025-01-04T12:19:44.868Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/likes, Timestamp: January 4, 2025 at 3:19:44 PM
+2025-01-04T12:19:45.261Z [my-app] [31merror[39m: Error fetching profiles liked by 6771319d8541ea50accb1168 Schema hasn't been registered for model "Profile".
+Use mongoose.model(name, schema)
+2025-01-04T12:19:45.262Z [my-app] [31merror[39m: Error caught by errorHandler: An error occurred while fetching likes.
+2025-01-04T12:19:45.262Z [my-app] [34mdebug[39m: Response for GET /api/v1/user/likes - Status: 500
+2025-01-04T12:19:45.262Z [my-app] [34mdebug[39m: Response Body: {"message":"An error occurred while fetching likes.","status":500}
+2025-01-04T12:21:14.331Z [my-app] [34mdebug[39m: Request - Method: GET, URL: /api/v1/user/likes, Timestamp: January 4, 2025 at 3:21:14 PM
+2025-01-04T12:21:14.717Z [my-app] [31merror[39m: Error fetching profiles liked by 6771319d8541ea50accb1168 Schema hasn't been registered for model "Profile".
+Use mongoose.model(name, schema)
+2025-01-04T12:21:14.720Z [my-app] [31merror[39m: Error caught by errorHandler: An error occurred while fetching likes.
+2025-01-04T12:21:14.721Z [my-app] [34mdebug[39m: Response for GET /api/v1/user/likes - Status: 500
+2025-01-04T12:21:14.722Z [my-app] [34mdebug[39m: Response Body: {"message":"An error occurred while fetching likes.","status":500}
