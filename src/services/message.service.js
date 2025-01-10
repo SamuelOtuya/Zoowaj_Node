@@ -35,7 +35,7 @@ export default class MessageService {
       })
         .populate('userId', 'username email') // Populate sender details
         .populate('recipientId', 'username email') // Populate recipient details
-        .sort({ createdAt: 1 }); // Sort by oldest to newest
+        .sort({ createdAt: -1 }); // Sort by oldest to newest
 
       return messages.length > 0 ? messages : null; // Return null if no messages found
     } catch (error) {

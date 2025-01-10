@@ -27,6 +27,11 @@ const userSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: 'ExtraData', // Reference to the ExtraData model
     },
+    role: {
+      type: String,
+      enum: ['admin', 'user'],
+      default: 'user'
+    },
   },
   { timestamps: true },
 );

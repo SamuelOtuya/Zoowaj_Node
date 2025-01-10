@@ -33,6 +33,8 @@ import authMiddleware from '../middlewares/auth.js';
 
 const router = express.Router();
 
+router.get('/verify-token', authMiddleware, verifyToken);
+
 router.route('/register').post(registerUser);
 router.route('/login').post(loginUser);
 router.route('/get').get(retrieveAllUsersWithData);
