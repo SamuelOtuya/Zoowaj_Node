@@ -6,6 +6,7 @@ import userRoutes from './routes/user.route.js';
 import devRoutes from './routes/dev.route.js';
 import messageRoutes from './routes/message.route.js';
 import googleAuthRoutes from './routes/google-auth.route.js';
+import paymentRoutes from './routes/payment.route.js';
 import passport from './utils/passport.js';
 import fs from 'fs';
 
@@ -40,6 +41,7 @@ app.use('/api/v1/user', userRoutes);
 app.use('/api/v1/dev', devRoutes);
 app.use('/api/v1/message', messageRoutes);
 app.use('/api/v1/auth', googleAuthRoutes);
+app.use('/api/v1/payment', paymentRoutes);
 
 app.use(passport.initialize());
 
