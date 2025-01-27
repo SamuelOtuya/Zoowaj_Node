@@ -7,119 +7,105 @@ import logger from '../logger/logger.js';
 const paymentService = new PaymentService();
 
 export const PaymentController = {
-  // Initialize payment
-  initializePayment: async (req, res, next) => {
+  // Create subscription plan
+  createPlan: async (req, res, next) => {
     try {
-      const { amount, subscriptionType } = req.body;
-      const userId = req.user.id; // Assuming you have user info in request
+      const { name, amount, interval } = req.body;
+      const plan = await paymentService.createPlan({ name, amount, interval });
+      res.status(201).json(plan);
+    } catch (error) {
+      logger.error('Plan creation controller error:', error);
+      next(error);
+    }
+  },
 
-      // Get user details
+  // Subscribe user to plan
+  subscribe: async (req, res, next) => {
+    try {
+      const { planCode } = req.body;
+      const userId = req.user.id;
+
       const user = await User.findById(userId);
       if (!user) {
         return res.status(404).json({ message: 'User not found' });
       }
 
-      const paymentData = {
+      const subscription = await paymentService.createSubscription({
         email: user.email,
-        amount,
+        planCode,
         userId,
-        subscriptionType,
-        reference: `PAY-${uuidv4()}`, // Generate unique reference
-        callback_url: `${process.env.FRONTEND_URL}/payment/callback`,
-      };
-
-      const response = await paymentService.initializePayment(paymentData);
-      res.status(200).json(response);
-    } catch (error) {
-      logger.error('Payment initialization controller error:', error);
-      next(error);
-    }
-  },
-
-  // Verify payment
-  verifyPayment: async (req, res, next) => {
-    try {
-      const { reference } = req.query;
-      if (!reference) {
-        return res.status(400).json({ message: 'Payment reference is required' });
-      }
-
-      const paymentData = await paymentService.verifyPayment(reference);
-      
-      // If payment is successful, update user subscription
-      if (paymentData.status === 'success') {
-        const { userId, subscriptionType } = paymentData.metadata;
-        
-        await User.findByIdAndUpdate(userId, {
-          subscribed: true,
-          // Add any other subscription-related fields
-        });
-
-        logger.info(`Subscription updated for user ${userId}`);
-      }
-
-      res.status(200).json(paymentData);
-    } catch (error) {
-      logger.error('Payment verification controller error:', error);
-      next(error);
-    }
-  },
-
-  // Webhook handler for PayStack events
-  handleWebhook: async (req, res, next) => {
-    try {
-      // Verify webhook signature
-      const hash = crypto.createHmac('sha512', process.env.PAYSTACK_SECRET_KEY)
-        .update(JSON.stringify(req.body))
-        .digest('hex');
-
-      if (hash !== req.headers['x-paystack-signature']) {
-        return res.status(400).json({ message: 'Invalid signature' });
-      }
-
-      const event = req.body;
-
-      // Handle different event types
-      switch (event.event) {
-        case 'charge.success':
-          // Handle successful charge
-          const { reference, metadata } = event.data;
-          await User.findByIdAndUpdate(metadata.userId, {
-            subscribed: true,
-            // Update other subscription details
-          });
-          break;
-
-        case 'subscription.disable':
-          // Handle subscription cancellation
-          await User.findByIdAndUpdate(metadata.userId, {
-            subscribed: false,
-          });
-          break;
-
-        // Add other event types as needed
-      }
-
-      res.status(200).json({ message: 'Webhook processed successfully' });
-    } catch (error) {
-      logger.error('Webhook processing error:', error);
-      next(error);
-    }
-  },
-
-  // Get payment history
-  getPaymentHistory: async (req, res, next) => {
-    try {
-      const userId = req.user.id;
-      const transactions = await paymentService.listTransactions({
-        customer: req.user.email,
-        status: 'success',
+        subscriptionType: 'premium' // or whatever type
       });
 
-      res.status(200).json(transactions);
+      res.status(200).json(subscription);
     } catch (error) {
-      logger.error('Payment history error:', error);
+      logger.error('Subscription controller error:', error);
       next(error);
     }
   },
+
+  // Process refund
+  processRefund: async (req, res, next) => {
+    try {
+      const { transactionReference, reason } = req.body;
+      const refund = await paymentService.processRefund({
+        transactionReference,
+        reason
+      });
+
+      res.status(200).json(refund);
+    } catch (error) {
+      logger.error('Refund controller error:', error);
+      next(error);
+    }
+  },
+
+  // Get payment analytics
+  getAnalytics: async (req, res, next) => {
+    try {
+      const { startDate, endDate } = req.query;
+      const analytics = await paymentService.getAnalytics(startDate, endDate);
+      res.status(200).json(analytics);
+    } catch (error) {
+      logger.error('Analytics controller error:', error);
+      next(error);
+    }
+  },
+
+  // Cancel subscription
+  cancelSubscription: async (req, res, next) => {
+    try {
+      const { subscriptionCode } = req.params;
+      const response = await paymentService.makeRequest(
+        `/subscription/${subscriptionCode}/disable`,
+        'POST'
+      );
+
+      // Update user's subscription status
+      await User.findByIdAndUpdate(req.user.id, {
+        subscribed: false
+      });
+
+      res.status(200).json(response.data);
+    } catch (error) {
+      logger.error('Subscription cancellation error:', error);
+      next(error);
+    }
+  },
+
+  // Get subscription details
+  getSubscriptionDetails: async (req, res, next) => {
+    try {
+      const { subscriptionCode } = req.params;
+      const response = await paymentService.makeRequest(
+        `/subscription/${subscriptionCode}`,
+        'GET'
+      );
+
+      res.status(200).json(response.data);
+    } catch (error) {
+      logger.error('Subscription details error:', error);
+      next(error);
+    }
+  }
 };

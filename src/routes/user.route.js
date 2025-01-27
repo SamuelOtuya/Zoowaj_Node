@@ -29,7 +29,7 @@ import {
 } from '../controllers/likes_favorites.controller.js';
 
 import { validateProfileDetails } from '../middlewares/validators/validateProfileDetails.js';
-import authMiddleware from '../middlewares/auth.js';
+import authMiddleware from '../middlewares/auth.middleware.js';
 
 const router = express.Router();
 

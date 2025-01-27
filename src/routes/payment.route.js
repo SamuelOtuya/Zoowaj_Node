@@ -1,15 +1,17 @@
 import { Router } from 'express';
 import { PaymentController } from '../controllers/payment.controller.js';
-import { authMiddleware } from '../middlewares/auth.middleware.js';
+import { authMiddleware, adminMiddleware } from '../middlewares/auth.middleware.js';
 
 const router = Router();
 
-// Protected routes
-router.post('/initialize', authMiddleware, PaymentController.initializePayment);
-router.get('/verify', authMiddleware, PaymentController.verifyPayment);
-router.get('/history', authMiddleware, PaymentController.getPaymentHistory);
+// Admin routes
+router.post('/plans', adminMiddleware, PaymentController.createPlan);
+router.get('/analytics', adminMiddleware, PaymentController.getAnalytics);
 
-// Webhook doesn't need auth middleware
-router.post('/webhook', PaymentController.handleWebhook);
+// User routes
+router.post('/subscribe', authMiddleware, PaymentController.subscribe);
+router.post('/refund', authMiddleware, PaymentController.processRefund);
+router.get('/subscription/:subscriptionCode', authMiddleware, PaymentController.getSubscriptionDetails);
+router.post('/subscription/:subscriptionCode/cancel', authMiddleware, PaymentController.cancelSubscription);
 
 export default router;

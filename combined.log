@@ -7212,3 +7212,5 @@ Use mongoose.model(name, schema)
 2025-01-04T12:21:14.720Z [my-app] [31merror[39m: Error caught by errorHandler: An error occurred while fetching likes.
 2025-01-04T12:21:14.721Z [my-app] [34mdebug[39m: Response for GET /api/v1/user/likes - Status: 500
 2025-01-04T12:21:14.722Z [my-app] [34mdebug[39m: Response Body: {"message":"An error occurred while fetching likes.","status":500}
+2025-01-27T13:12:51.090Z [my-app] [32minfo[39m: Server listening on port 8000
+2025-01-27T13:12:53.148Z [my-app] [32minfo[39m: MongoDB Connected!

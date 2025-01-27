@@ -1,8 +1,9 @@
-import { UnauthorizedError } from '../errors/application-error.js';
+import { UnauthorizedError, ForbiddenError } from '../errors/application-error.js';
 import logger from '../logger/logger.js';
 import AuthService from '../services/auth.service.js';
 
-const authMiddleware = (req, res, next) => {
+// Auth Middleware
+export const authMiddleware = (req, res, next) => {
   const authHeader = req.headers.authorization;
 
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
@@ -17,8 +18,10 @@ const authMiddleware = (req, res, next) => {
     const decoded = AuthService.decodeToken(token); // Use the decodeToken method
     req.userId = decoded.userId; // Attach userId to req object
     req.email = decoded.email; // Attach email to req object
+    req.role = decoded.role; // Attach role to req object
     logger.debug(`USER ID: ${req.userId}`);
     logger.debug(`USER EMAIL: ${req.email}`);
+    logger.debug(`USER ROLE: ${req.role}`);
     next(); // Call next middleware or route handler
   } catch (error) {
     logger.error(error);
@@ -26,4 +29,10 @@ const authMiddleware = (req, res, next) => {
   }
 };
 
-export default authMiddleware;
+// Admin Middleware
+export const adminMiddleware = (req, res, next) => {
+  if (req.role !== 'admin') {
+    return next(new ForbiddenError('Access denied. Admin privileges required.'));
+  }
+  next();
+};

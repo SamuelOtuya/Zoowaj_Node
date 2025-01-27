@@ -11,152 +11,158 @@ export default class PaymentService {
     this.secretKey = process.env.PAYSTACK_SECRET_KEY;
   }
 
-  // Initialize payment
-  async initializePayment(data) {
+  // Create subscription plan
+  async createPlan({ name, amount, interval }) {
     try {
       const params = JSON.stringify({
-        email: data.email,
-        amount: data.amount * 100, // Convert to kobo/cents
-        callback_url: data.callback_url,
-        reference: data.reference,
+        name,
+        amount: amount * 100,
+        interval,
+        currency: 'NGN'
+      });
+
+      const response = await this.makeRequest('/plan', 'POST', params);
+      logger.info(`Created subscription plan: ${name}`);
+      return response.data;
+    } catch (error) {
+      logger.error('Plan creation error:', error);
+      throw new InternalServerError('Failed to create subscription plan');
+    }
+  }
+
+  // Create subscription
+  async createSubscription(data) {
+    try {
+      const params = JSON.stringify({
+        customer: data.email,
+        plan: data.planCode,
         metadata: {
           userId: data.userId,
-          subscriptionType: data.subscriptionType,
-        },
+          subscriptionType: data.subscriptionType
+        }
       });
 
-      const options = {
-        hostname: 'api.paystack.co',
-        port: 443,
-        path: '/transaction/initialize',
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${this.secretKey}`,
-          'Content-Type': 'application/json',
-        },
-      };
+      const response = await this.makeRequest('/subscription', 'POST', params);
+      logger.info(`Created subscription for user: ${data.email}`);
+      return response.data;
+    } catch (error) {
+      logger.error('Subscription creation error:', error);
+      throw new InternalServerError('Failed to create subscription');
+    }
+  }
 
-      return new Promise((resolve, reject) => {
-        const req = https.request(options, (res) => {
-          let data = '';
+  // Process refund
+  async processRefund(data) {
+    try {
+      const params = JSON.stringify({
+        transaction: data.transactionReference,
+        merchant_note: data.reason
+      });
 
-          res.on('data', (chunk) => {
-            data += chunk;
-          });
+      const response = await this.makeRequest('/refund', 'POST', params);
+      logger.info(`Processed refund for transaction: ${data.transactionReference}`);
+      return response.data;
+    } catch (error) {
+      logger.error('Refund processing error:', error);
+      throw new InternalServerError('Failed to process refund');
+    }
+  }
 
-          res.on('end', () => {
+  // Get payment analytics
+  async getAnalytics(startDate, endDate) {
+    try {
+      const params = new URLSearchParams({
+        from: startDate,
+        to: endDate
+      });
+
+      const [transactions, totalRevenue] = await Promise.all([
+        this.makeRequest(`/transaction?${params}`, 'GET'),
+        this.makeRequest(`/transaction/totals?${params}`, 'GET')
+      ]);
+
+      const analytics = this.processAnalytics(transactions.data, totalRevenue.data);
+      logger.info('Retrieved payment analytics');
+      return analytics;
+    } catch (error) {
+      logger.error('Analytics retrieval error:', error);
+      throw new InternalServerError('Failed to retrieve analytics');
+    }
+  }
+
+  // Helper method to process analytics data
+  processAnalytics(transactions, totals) {
+    const analytics = {
+      totalRevenue: totals.total_volume / 100,
+      successfulTransactions: totals.total_transactions,
+      averageTransactionValue: (totals.total_volume / totals.total_transactions / 100) || 0,
+      transactionsByDay: {},
+      subscriptionMetrics: {
+        activeSubscriptions: 0,
+        cancelledSubscriptions: 0,
+        renewalRate: 0
+      }
+    };
+
+    // Process transactions by day
+    transactions.forEach(transaction => {
+      const date = new Date(transaction.created_at).toISOString().split('T')[0];
+      if (!analytics.transactionsByDay[date]) {
+        analytics.transactionsByDay[date] = {
+          count: 0,
+          volume: 0
+        };
+      }
+      analytics.transactionsByDay[date].count++;
+      analytics.transactionsByDay[date].volume += transaction.amount / 100;
+    });
+
+    return analytics;
+  }
+
+  // Helper method to make PayStack API requests
+  makeRequest(path, method, params = null) {
+    const options = {
+      hostname: 'api.paystack.co',
+      port: 443,
+      path,
+      method,
+      headers: {
+        Authorization: `Bearer ${this.secretKey}`,
+        'Content-Type': 'application/json'
+      }
+    };
+
+    return new Promise((resolve, reject) => {
+      const req = https.request(options, (res) => {
+        let data = '';
+
+        res.on('data', (chunk) => {
+          data += chunk;
+        });
+
+        res.on('end', () => {
+          try {
             const response = JSON.parse(data);
             if (response.status) {
-              logger.info(`Payment initialized for user ${params.email}`);
               resolve(response);
             } else {
-              logger.error('Payment initialization failed:', response);
               reject(new Error(response.message));
             }
-          });
+          } catch (error) {
+            reject(error);
+          }
         });
+      });
 
-        req.on('error', (error) => {
-          logger.error('Payment initialization error:', error);
-          reject(error);
-        });
+      req.on('error', (error) => {
+        reject(error);
+      });
 
+      if (params) {
         req.write(params);
-        req.end();
-      });
-    } catch (error) {
-      logger.error('Payment service error:', error);
-      throw new InternalServerError('Payment initialization failed');
-    }
-  }
-
-  // Verify payment
-  async verifyPayment(reference) {
-    try {
-      const options = {
-        hostname: 'api.paystack.co',
-        port: 443,
-        path: `/transaction/verify/${reference}`,
-        method: 'GET',
-        headers: {
-          Authorization: `Bearer ${this.secretKey}`,
-        },
-      };
-
-      return new Promise((resolve, reject) => {
-        const req = https.request(options, (res) => {
-          let data = '';
-
-          res.on('data', (chunk) => {
-            data += chunk;
-          });
-
-          res.on('end', () => {
-            const response = JSON.parse(data);
-            if (response.status && response.data.status === 'success') {
-              logger.info(`Payment verified for reference ${reference}`);
-              resolve(response.data);
-            } else {
-              logger.error('Payment verification failed:', response);
-              reject(new Error(response.message));
-            }
-          });
-        });
-
-        req.on('error', (error) => {
-          logger.error('Payment verification error:', error);
-          reject(error);
-        });
-
-        req.end();
-      });
-    } catch (error) {
-      logger.error('Payment verification service error:', error);
-      throw new InternalServerError('Payment verification failed');
-    }
-  }
-
-  // List transactions
-  async listTransactions(params = {}) {
-    try {
-      const queryString = new URLSearchParams(params).toString();
-      const options = {
-        hostname: 'api.paystack.co',
-        port: 443,
-        path: `/transaction?${queryString}`,
-        method: 'GET',
-        headers: {
-          Authorization: `Bearer ${this.secretKey}`,
-        },
-      };
-
-      return new Promise((resolve, reject) => {
-        const req = https.request(options, (res) => {
-          let data = '';
-
-          res.on('data', (chunk) => {
-            data += chunk;
-          });
-
-          res.on('end', () => {
-            const response = JSON.parse(data);
-            if (response.status) {
-              resolve(response.data);
-            } else {
-              reject(new Error(response.message));
-            }
-          });
-        });
-
-        req.on('error', (error) => {
-          reject(error);
-        });
-
-        req.end();
-      });
-    } catch (error) {
-      logger.error('List transactions error:', error);
-      throw new InternalServerError('Failed to list transactions');
-    }
+      }
+      req.end();
+    });
   }
 }
