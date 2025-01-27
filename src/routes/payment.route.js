@@ -5,7 +5,7 @@ import { authMiddleware, adminMiddleware } from '../middlewares/auth.middleware.
 const router = Router();
 
 // Admin routes
-router.post('/plans', adminMiddleware, PaymentController.createPlan);
+router.post('/plans', authMiddleware, adminMiddleware, PaymentController.createPlan);
 router.get('/analytics', adminMiddleware, PaymentController.getAnalytics);
 
 // User routes

@@ -7214,3 +7214,149 @@ Use mongoose.model(name, schema)
 2025-01-04T12:21:14.722Z [my-app] [34mdebug[39m: Response Body: {"message":"An error occurred while fetching likes.","status":500}
 2025-01-27T13:12:51.090Z [my-app] [32minfo[39m: Server listening on port 8000
 2025-01-27T13:12:53.148Z [my-app] [32minfo[39m: MongoDB Connected!
+2025-01-27T13:34:21.803Z [my-app] [32minfo[39m: Server listening on port 8000
+2025-01-27T13:34:24.028Z [my-app] [32minfo[39m: MongoDB Connected!
+2025-01-27T13:40:15.438Z [my-app] [32minfo[39m: Server listening on port 8000
+2025-01-27T13:40:18.623Z [my-app] [32minfo[39m: MongoDB Connected!
+2025-01-27T15:08:17.994Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/payment/plans, Timestamp: January 27, 2025 at 6:08:17 PM
+2025-01-27T15:08:17.996Z [my-app] [31merror[39m: Error caught by errorHandler: Access denied. Admin privileges required.
+2025-01-27T15:08:17.998Z [my-app] [34mdebug[39m: Response for POST /api/v1/payment/plans - Status: 403
+2025-01-27T15:08:17.999Z [my-app] [34mdebug[39m: Response Body: {"message":"Access denied. Admin privileges required.","status":403}
+2025-01-27T15:13:35.225Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/register, Timestamp: January 27, 2025 at 6:13:35 PM
+2025-01-27T15:13:35.797Z [my-app] [34mdebug[39m: User Successfully created kwshield2003@gmail.com
+2025-01-27T15:13:35.804Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/register - Status: 201
+2025-01-27T15:13:35.805Z [my-app] [34mdebug[39m: Response Body: {"user":{"email":"kwshield2003@gmail.com","subscribed":false,"role":"user","_id":"6797a29f0617ae5ed0baa560","createdAt":"2025-01-27T15:13:35.569Z","updatedAt":"2025-01-27T15:13:35.569Z","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Nzk3YTI5ZjA2MTdhZTVlZDBiYWE1NjAiLCJlbWFpbCI6Imt3c2hpZWxkMjAwM0BnbWFpbC5jb20iLCJpYXQiOjE3Mzc5OTA4MTUsImV4cCI6MTczODAwMTYxNX0.k7sx37ftD4FtoVr45m48-3Z3mwaqYbL0qay31Ap846k"}
+2025-01-27T15:15:39.145Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/payment/plans, Timestamp: January 27, 2025 at 6:15:39 PM
+2025-01-27T15:15:39.146Z [my-app] [31merror[39m: Error caught by errorHandler: Access denied. Admin privileges required.
+2025-01-27T15:15:39.147Z [my-app] [34mdebug[39m: Response for POST /api/v1/payment/plans - Status: 403
+2025-01-27T15:15:39.148Z [my-app] [34mdebug[39m: Response Body: {"message":"Access denied. Admin privileges required.","status":403}
+2025-01-27T15:21:18.942Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/payment/plans, Timestamp: January 27, 2025 at 6:21:18 PM
+2025-01-27T15:21:18.942Z [my-app] [31merror[39m: Error caught by errorHandler: Access denied. Admin privileges required.
+2025-01-27T15:21:18.943Z [my-app] [34mdebug[39m: Response for POST /api/v1/payment/plans - Status: 403
+2025-01-27T15:21:18.943Z [my-app] [34mdebug[39m: Response Body: {"message":"Access denied. Admin privileges required.","status":403}
+2025-01-27T15:23:01.832Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/login, Timestamp: January 27, 2025 at 6:23:01 PM
+2025-01-27T15:23:02.131Z [my-app] [34mdebug[39m: User login successful kwshield2003@gmail.com
+2025-01-27T15:23:02.132Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/login - Status: 200
+2025-01-27T15:23:02.133Z [my-app] [34mdebug[39m: Response Body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Nzk3YTI5ZjA2MTdhZTVlZDBiYWE1NjAiLCJlbWFpbCI6Imt3c2hpZWxkMjAwM0BnbWFpbC5jb20iLCJpYXQiOjE3Mzc5OTEzODIsImV4cCI6MTczODAwMjE4Mn0.0rlYpEiHHf7z5eDjLzBtuKanLNBzp3MBNNSMMvClrzY","user":{"_id":"6797a29f0617ae5ed0baa560","email":"kwshield2003@gmail.com","subscribed":false,"role":"admin","createdAt":"2025-01-27T15:13:35.569Z","updatedAt":"2025-01-27T15:13:35.569Z","__v":0}}
+2025-01-27T15:23:28.866Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/payment/plans, Timestamp: January 27, 2025 at 6:23:28 PM
+2025-01-27T15:23:28.867Z [my-app] [31merror[39m: Error caught by errorHandler: Access denied. Admin privileges required.
+2025-01-27T15:23:28.868Z [my-app] [34mdebug[39m: Response for POST /api/v1/payment/plans - Status: 403
+2025-01-27T15:23:28.868Z [my-app] [34mdebug[39m: Response Body: {"message":"Access denied. Admin privileges required.","status":403}
+2025-01-27T15:24:47.928Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/payment/plans, Timestamp: January 27, 2025 at 6:24:47 PM
+2025-01-27T15:24:47.929Z [my-app] [31merror[39m: Error caught by errorHandler: Access denied. Admin privileges required.
+2025-01-27T15:24:47.930Z [my-app] [34mdebug[39m: Response for POST /api/v1/payment/plans - Status: 403
+2025-01-27T15:24:47.930Z [my-app] [34mdebug[39m: Response Body: {"message":"Access denied. Admin privileges required.","status":403}
+2025-01-27T15:24:55.074Z [my-app] [32minfo[39m: Server listening on port 8000
+2025-01-27T15:24:57.532Z [my-app] [32minfo[39m: MongoDB Connected!
+2025-01-27T15:25:01.198Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/payment/plans, Timestamp: January 27, 2025 at 6:25:01 PM
+2025-01-27T15:25:01.219Z [my-app] [31merror[39m: Error caught by errorHandler: Access denied. Admin privileges required.
+2025-01-27T15:25:01.221Z [my-app] [34mdebug[39m: Response for POST /api/v1/payment/plans - Status: 403
+2025-01-27T15:25:01.222Z [my-app] [34mdebug[39m: Response Body: {"message":"Access denied. Admin privileges required.","status":403}
+2025-01-27T15:25:34.070Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/payment/plans, Timestamp: January 27, 2025 at 6:25:34 PM
+2025-01-27T15:25:34.073Z [my-app] [31merror[39m: Error caught by errorHandler: Access denied. Admin privileges required.
+2025-01-27T15:25:34.073Z [my-app] [34mdebug[39m: Response for POST /api/v1/payment/plans - Status: 403
+2025-01-27T15:25:34.074Z [my-app] [34mdebug[39m: Response Body: {"message":"Access denied. Admin privileges required.","status":403}
+2025-01-27T15:26:02.276Z [my-app] [32minfo[39m: Server listening on port 8000
+2025-01-27T15:26:04.835Z [my-app] [32minfo[39m: MongoDB Connected!
+2025-01-27T15:26:11.542Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/payment/plans, Timestamp: January 27, 2025 at 6:26:11 PM
+2025-01-27T15:26:11.544Z [my-app] [31merror[39m: Error caught by errorHandler: Access denied. Admin privileges required.
+2025-01-27T15:26:11.545Z [my-app] [34mdebug[39m: Response for POST /api/v1/payment/plans - Status: 403
+2025-01-27T15:26:11.546Z [my-app] [34mdebug[39m: Response Body: {"message":"Access denied. Admin privileges required.","status":403}
+2025-01-27T15:27:36.775Z [my-app] [32minfo[39m: Server listening on port 8000
+2025-01-27T15:27:39.148Z [my-app] [32minfo[39m: MongoDB Connected!
+2025-01-27T15:27:41.299Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/payment/plans, Timestamp: January 27, 2025 at 6:27:41 PM
+2025-01-27T15:27:41.300Z [my-app] [31merror[39m: Error caught by errorHandler: Authorization header is missing or invalid
+2025-01-27T15:27:41.301Z [my-app] [34mdebug[39m: Response for POST /api/v1/payment/plans - Status: 401
+2025-01-27T15:27:41.301Z [my-app] [34mdebug[39m: Response Body: {"message":"Authorization header is missing or invalid","status":401}
+2025-01-27T15:28:19.827Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/payment/plans, Timestamp: January 27, 2025 at 6:28:19 PM
+2025-01-27T15:28:19.828Z [my-app] [31merror[39m: Error caught by errorHandler: Authorization header is missing or invalid
+2025-01-27T15:28:19.829Z [my-app] [34mdebug[39m: Response for POST /api/v1/payment/plans - Status: 401
+2025-01-27T15:28:19.829Z [my-app] [34mdebug[39m: Response Body: {"message":"Authorization header is missing or invalid","status":401}
+2025-01-27T15:28:27.003Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/payment/plans, Timestamp: January 27, 2025 at 6:28:27 PM
+2025-01-27T15:28:27.009Z [my-app] [34mdebug[39m: USER ID: 6797a29f0617ae5ed0baa560
+2025-01-27T15:28:27.009Z [my-app] [34mdebug[39m: USER EMAIL: kwshield2003@gmail.com
+2025-01-27T15:28:27.010Z [my-app] [34mdebug[39m: USER ROLE: undefined
+2025-01-27T15:28:27.010Z [my-app] [31merror[39m: Error caught by errorHandler: Access denied. Admin privileges required.
+2025-01-27T15:28:27.011Z [my-app] [34mdebug[39m: Response for POST /api/v1/payment/plans - Status: 403
+2025-01-27T15:28:27.012Z [my-app] [34mdebug[39m: Response Body: {"message":"Access denied. Admin privileges required.","status":403}
+2025-01-27T15:28:42.162Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/login, Timestamp: January 27, 2025 at 6:28:42 PM
+2025-01-27T15:28:42.464Z [my-app] [34mdebug[39m: User login successful kwshield2003@gmail.com
+2025-01-27T15:28:42.465Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/login - Status: 200
+2025-01-27T15:28:42.466Z [my-app] [34mdebug[39m: Response Body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Nzk3YTI5ZjA2MTdhZTVlZDBiYWE1NjAiLCJlbWFpbCI6Imt3c2hpZWxkMjAwM0BnbWFpbC5jb20iLCJpYXQiOjE3Mzc5OTE3MjIsImV4cCI6MTczODAwMjUyMn0.6t3ze4EF9bZJ37mCsGbsNjJiFcuX6nxihJ1U3WL6zz0","user":{"_id":"6797a29f0617ae5ed0baa560","email":"kwshield2003@gmail.com","subscribed":false,"role":"admin","createdAt":"2025-01-27T15:13:35.569Z","updatedAt":"2025-01-27T15:13:35.569Z","__v":0}}
+2025-01-27T15:28:53.193Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/payment/plans, Timestamp: January 27, 2025 at 6:28:53 PM
+2025-01-27T15:28:53.194Z [my-app] [31merror[39m: Error caught by errorHandler: Authorization header is missing or invalid
+2025-01-27T15:28:53.195Z [my-app] [34mdebug[39m: Response for POST /api/v1/payment/plans - Status: 401
+2025-01-27T15:28:53.195Z [my-app] [34mdebug[39m: Response Body: {"message":"Authorization header is missing or invalid","status":401}
+2025-01-27T15:29:03.158Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/payment/plans, Timestamp: January 27, 2025 at 6:29:03 PM
+2025-01-27T15:29:03.160Z [my-app] [34mdebug[39m: USER ID: 6797a29f0617ae5ed0baa560
+2025-01-27T15:29:03.160Z [my-app] [34mdebug[39m: USER EMAIL: kwshield2003@gmail.com
+2025-01-27T15:29:03.160Z [my-app] [34mdebug[39m: USER ROLE: undefined
+2025-01-27T15:29:03.161Z [my-app] [31merror[39m: Error caught by errorHandler: Access denied. Admin privileges required.
+2025-01-27T15:29:03.161Z [my-app] [34mdebug[39m: Response for POST /api/v1/payment/plans - Status: 403
+2025-01-27T15:29:03.161Z [my-app] [34mdebug[39m: Response Body: {"message":"Access denied. Admin privileges required.","status":403}
+2025-01-27T15:29:36.992Z [my-app] [32minfo[39m: Server listening on port 8000
+2025-01-27T15:29:40.481Z [my-app] [32minfo[39m: MongoDB Connected!
+2025-01-27T15:29:42.966Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/payment/plans, Timestamp: January 27, 2025 at 6:29:42 PM
+2025-01-27T15:29:42.970Z [my-app] [34mdebug[39m: USER ID: 6797a29f0617ae5ed0baa560
+2025-01-27T15:29:42.970Z [my-app] [34mdebug[39m: USER EMAIL: kwshield2003@gmail.com
+2025-01-27T15:29:42.971Z [my-app] [34mdebug[39m: USER ROLE: undefined
+2025-01-27T15:29:42.973Z [my-app] [31merror[39m: Error caught by errorHandler: Access denied. Admin privileges required.
+2025-01-27T15:29:42.974Z [my-app] [34mdebug[39m: Response for POST /api/v1/payment/plans - Status: 403
+2025-01-27T15:29:42.975Z [my-app] [34mdebug[39m: Response Body: {"message":"Access denied. Admin privileges required.","status":403}
+2025-01-27T15:29:55.872Z [my-app] [32minfo[39m: Server listening on port 8000
+2025-01-27T15:29:59.765Z [my-app] [32minfo[39m: MongoDB Connected!
+2025-01-27T15:30:05.547Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/payment/plans, Timestamp: January 27, 2025 at 6:30:05 PM
+2025-01-27T15:30:05.552Z [my-app] [34mdebug[39m: USER ID: 6797a29f0617ae5ed0baa560
+2025-01-27T15:30:05.552Z [my-app] [34mdebug[39m: USER EMAIL: kwshield2003@gmail.com
+2025-01-27T15:30:05.553Z [my-app] [34mdebug[39m: USER ROLE: undefined
+2025-01-27T15:30:05.651Z [my-app] [31merror[39m: Error caught by errorHandler: Access denied. Admin privileges required.
+2025-01-27T15:30:05.652Z [my-app] [34mdebug[39m: Response for POST /api/v1/payment/plans - Status: 403
+2025-01-27T15:30:05.653Z [my-app] [34mdebug[39m: Response Body: {"message":"Access denied. Admin privileges required.","status":403}
+2025-01-27T15:33:39.636Z [my-app] [32minfo[39m: Server listening on port 8000
+2025-01-27T15:33:41.897Z [my-app] [32minfo[39m: MongoDB Connected!
+2025-01-27T15:33:44.171Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/login, Timestamp: January 27, 2025 at 6:33:44 PM
+2025-01-27T15:33:44.477Z [my-app] [34mdebug[39m: User login successful kwshield2003@gmail.com
+2025-01-27T15:33:44.478Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/login - Status: 200
+2025-01-27T15:33:44.478Z [my-app] [34mdebug[39m: Response Body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Nzk3YTI5ZjA2MTdhZTVlZDBiYWE1NjAiLCJlbWFpbCI6Imt3c2hpZWxkMjAwM0BnbWFpbC5jb20iLCJpYXQiOjE3Mzc5OTIwMjQsImV4cCI6MTczODAwMjgyNH0.nEv7knumFcYOWTHkm6k2UqDfoISBj0s-SkaEkFzflZ0","user":{"_id":"6797a29f0617ae5ed0baa560","email":"kwshield2003@gmail.com","subscribed":false,"role":"admin","createdAt":"2025-01-27T15:13:35.569Z","updatedAt":"2025-01-27T15:13:35.569Z","__v":0}}
+2025-01-27T15:33:52.216Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/payment/plans, Timestamp: January 27, 2025 at 6:33:52 PM
+2025-01-27T15:33:52.220Z [my-app] [34mdebug[39m: USER ID: 6797a29f0617ae5ed0baa560
+2025-01-27T15:33:52.221Z [my-app] [34mdebug[39m: USER EMAIL: kwshield2003@gmail.com
+2025-01-27T15:33:52.221Z [my-app] [34mdebug[39m: USER ROLE: undefined
+2025-01-27T15:33:52.226Z [my-app] [31merror[39m: Error caught by errorHandler: Access denied. Admin privileges required.
+2025-01-27T15:33:52.228Z [my-app] [34mdebug[39m: Response for POST /api/v1/payment/plans - Status: 403
+2025-01-27T15:33:52.228Z [my-app] [34mdebug[39m: Response Body: {"message":"Access denied. Admin privileges required.","status":403}
+2025-01-27T19:53:08.906Z [my-app] [32minfo[39m: Server listening on port 8000
+2025-01-27T19:53:12.006Z [my-app] [32minfo[39m: MongoDB Connected!
+2025-01-27T19:53:24.583Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/user/login, Timestamp: January 27, 2025 at 10:53:24 PM
+2025-01-27T19:53:24.905Z [my-app] [34mdebug[39m: User login successful kwshield2003@gmail.com
+2025-01-27T19:53:24.906Z [my-app] [34mdebug[39m: Response for POST /api/v1/user/login - Status: 200
+2025-01-27T19:53:24.907Z [my-app] [34mdebug[39m: Response Body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Nzk3YTI5ZjA2MTdhZTVlZDBiYWE1NjAiLCJlbWFpbCI6Imt3c2hpZWxkMjAwM0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzgwMDc2MDQsImV4cCI6MTczODAxODQwNH0.UCBFN3qIecfuCdOuGaserCTe2zPDn_yl9q32sdlA85Y","user":{"_id":"6797a29f0617ae5ed0baa560","email":"kwshield2003@gmail.com","subscribed":false,"role":"admin","createdAt":"2025-01-27T15:13:35.569Z","updatedAt":"2025-01-27T15:13:35.569Z","__v":0}}
+2025-01-27T19:53:54.283Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/payment/plans, Timestamp: January 27, 2025 at 10:53:54 PM
+2025-01-27T19:53:54.287Z [my-app] [34mdebug[39m: USER ID: 6797a29f0617ae5ed0baa560
+2025-01-27T19:53:54.288Z [my-app] [34mdebug[39m: USER EMAIL: kwshield2003@gmail.com
+2025-01-27T19:53:54.289Z [my-app] [34mdebug[39m: USER ROLE: admin
+2025-01-27T19:53:56.694Z [my-app] [31merror[39m: Plan creation error: USD not a supported currency
+2025-01-27T19:53:56.695Z [my-app] [31merror[39m: Plan creation controller error: Failed to create subscription plan
+2025-01-27T19:53:56.696Z [my-app] [31merror[39m: Error caught by errorHandler: Failed to create subscription plan
+2025-01-27T19:53:56.696Z [my-app] [34mdebug[39m: Response for POST /api/v1/payment/plans - Status: 500
+2025-01-27T19:53:56.697Z [my-app] [34mdebug[39m: Response Body: {"message":"Failed to create subscription plan","status":500}
+2025-01-27T19:56:06.361Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/payment/plans, Timestamp: January 27, 2025 at 10:56:06 PM
+2025-01-27T19:56:06.367Z [my-app] [34mdebug[39m: USER ID: 6797a29f0617ae5ed0baa560
+2025-01-27T19:56:06.368Z [my-app] [34mdebug[39m: USER EMAIL: kwshield2003@gmail.com
+2025-01-27T19:56:06.368Z [my-app] [34mdebug[39m: USER ROLE: admin
+2025-01-27T19:56:13.120Z [my-app] [31merror[39m: Plan creation error: USD not a supported currency
+2025-01-27T19:56:13.121Z [my-app] [31merror[39m: Plan creation controller error: Failed to create subscription plan
+2025-01-27T19:56:13.122Z [my-app] [31merror[39m: Error caught by errorHandler: Failed to create subscription plan
+2025-01-27T19:56:13.123Z [my-app] [34mdebug[39m: Response for POST /api/v1/payment/plans - Status: 500
+2025-01-27T19:56:13.123Z [my-app] [34mdebug[39m: Response Body: {"message":"Failed to create subscription plan","status":500}
+2025-01-27T19:56:23.050Z [my-app] [32minfo[39m: Server listening on port 8000
+2025-01-27T19:56:26.643Z [my-app] [32minfo[39m: MongoDB Connected!
+2025-01-27T19:56:37.201Z [my-app] [34mdebug[39m: Request - Method: POST, URL: /api/v1/payment/plans, Timestamp: January 27, 2025 at 10:56:37 PM
+2025-01-27T19:56:37.206Z [my-app] [34mdebug[39m: USER ID: 6797a29f0617ae5ed0baa560
+2025-01-27T19:56:37.206Z [my-app] [34mdebug[39m: USER EMAIL: kwshield2003@gmail.com
+2025-01-27T19:56:37.207Z [my-app] [34mdebug[39m: USER ROLE: admin
+2025-01-27T19:57:00.350Z [my-app] [31merror[39m: Plan creation error: KSH not a supported currency
+2025-01-27T19:57:00.352Z [my-app] [31merror[39m: Plan creation controller error: Failed to create subscription plan
+2025-01-27T19:57:00.353Z [my-app] [31merror[39m: Error caught by errorHandler: Failed to create subscription plan
+2025-01-27T19:57:00.354Z [my-app] [34mdebug[39m: Response for POST /api/v1/payment/plans - Status: 500
+2025-01-27T19:57:00.355Z [my-app] [34mdebug[39m: Response Body: {"message":"Failed to create subscription plan","status":500}

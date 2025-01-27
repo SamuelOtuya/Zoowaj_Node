@@ -18,7 +18,7 @@ export default class PaymentService {
         name,
         amount: amount * 100,
         interval,
-        currency: 'NGN'
+        currency: 'KES'
       });
 
       const response = await this.makeRequest('/plan', 'POST', params);

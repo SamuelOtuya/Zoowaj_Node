@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import bcrypt from 'bcrypt'; // Use bcrypt if switching to native bindings
 import jwt from 'jsonwebtoken';
 import UserService from './user.service.js';
@@ -23,7 +22,11 @@ export default class AuthService {
 
   // Generate token
   static generateToken = (user) => {
-    const payload = { userId: user._id, email: user.email };
+    const payload = { 
+      userId: user._id, 
+      email: user.email, 
+      role: user.role // Include the role in the token payload
+    };
     const token = jwt.sign(payload, process.env.JWT_SECRET, {
       expiresIn: process.env.JWT_EXPIRES_IN || '1h',
     });
@@ -34,7 +37,7 @@ export default class AuthService {
   static decodeToken = (token) => {
     try {
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
-      return decoded; // This will return payload containing userId and email
+      return decoded; // This will return payload containing userId, email, and role
     } catch (error) {
       logger.error(error);
       throw new UnauthorizedError('Invalid or expired token');
